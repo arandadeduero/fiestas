@@ -1,0 +1,22 @@
+scripts/build.mjs
+  s_8ac52af66e15af::t_b87653e08bacd1 183-209
+  s_8ac52af66e15af::t_6cde62c434fd56 1492
+tests/e2e/pages.spec.js
+  s_8ac52af66e15af::t_01b332838eff8c 6-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "561070be159b385b19b5a36c6561960bd6a4e2d3",
+  "prompts": {},
+  "sessions": {
+    "s_8ac52af66e15af": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b63ac998-a9f6-4233-9da0-de40f9b9931b",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
