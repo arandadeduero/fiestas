@@ -27,7 +27,7 @@
     </button>
     <span class="fiestas-scroll-day" data-fiestas-scroll-day aria-live="polite">Agenda de fiestas</span>
     <div class="fiestas-scroll-actions">
-      <button class="fiestas-scroll-action" type="button" data-fiestas-share-site aria-label="Compartir Fiestas Valladolid 2026" title="Compartir Fiestas Valladolid 2026">
+      <button class="fiestas-scroll-action" type="button" data-fiestas-share-site aria-label="Compartir Fiestas Aranda de Duero 2026" title="Compartir Fiestas Aranda de Duero 2026">
         <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
       </button>
       <button class="fiestas-scroll-action" type="button" data-fiestas-scroll-search aria-label="Abrir buscador" title="Abrir buscador">
@@ -39,12 +39,12 @@
     <header class="fiestas-hero" aria-labelledby="fiestas-title">
       <img class="fiestas-hero-fireworks" src="/assets/hero-fireworks.webp" alt="" aria-hidden="true" width="320" height="213" fetchpriority="high" />
       <div class="fiestas-hero-top">
-        <a class="fiestas-brand" href="/" aria-label="Portada de Fiestas 2026">
+        <a class="fiestas-brand" href="/" aria-label="Portada de Fiestas Patronales 2026">
           <img src="/assets/favicon-128.png" alt="" />
-          <span id="fiestas-title" class="fiestas-title">Fiestas 2026</span>
+          <span id="fiestas-title" class="fiestas-title">Fiestas Patronales 2026</span>
         </a>
         <div class="fiestas-hero-actions">
-          <button class="fiestas-share-toggle" type="button" data-fiestas-share-site aria-label="Compartir Fiestas Valladolid 2026" title="Compartir Fiestas Valladolid 2026">
+          <button class="fiestas-share-toggle" type="button" data-fiestas-share-site aria-label="Compartir Fiestas Aranda de Duero 2026" title="Compartir Fiestas Aranda de Duero 2026">
             <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
           </button>
           <button class="fiestas-search-toggle" type="button" data-fiestas-search-toggle aria-expanded="false" aria-controls="fiestas-search-panel" aria-label="Abrir buscador">
@@ -56,8 +56,10 @@
         <p class="fiestas-hero-credit">
           <span>Creado por</span>
           <a class="fiestas-hero-subtitle" href="https://aldeapucela.org" target="_blank" rel="noopener noreferrer">Aldea Pucela</a>
+          <span>y adaptado por</span>
+          <a class="fiestas-hero-subtitle" href="https://www.sentiraranda.es" target="_blank" rel="noopener noreferrer">Sentir Aranda</a>
         </p>
-        <p class="fiestas-intro">Valladolid · 4-13 septiembre</p>
+        <p class="fiestas-intro">Aranda de Duero · 11-20 septiembre</p>
         <p class="fiestas-share-feedback" data-fiestas-share-feedback role="status" aria-live="polite" hidden></p>
       </div>
     </header>
@@ -71,7 +73,7 @@
         <button class="fiestas-date-card is-active" type="button" data-date="all" aria-pressed="true">
           <span>Todos</span>
           <strong>Días</strong>
-          <small>4-13 SEP</small>
+          <small>11-20 SEP</small>
         </button>
         {% for day in fiestasDates %}
         <button class="fiestas-date-card" type="button" data-date="{{ day.date }}" aria-pressed="false">
@@ -241,10 +243,11 @@
     <i class="fa-regular fa-heart" aria-hidden="true"></i>
     <span>Mi plan</span>
   </a>
-  <a class="fiestas-bottom-link" href="/casetas/">
+{# <a class="fiestas-bottom-link" href="/casetas/">
     <i class="fa-solid fa-store" aria-hidden="true"></i>
     <span>Casetas</span>
   </a>
+#}
   <button class="fiestas-bottom-link" type="button" data-menu-open aria-label="Abrir más opciones">
     <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
     <span>Más</span>
