@@ -1,0 +1,40 @@
+src/styles/base.css
+  s_8ac52af66e15af::t_5c8cc5f90aa248 2800-2897
+tests/analytics.test.mjs
+  s_8ac52af66e15af::t_31e4d52f38c8f1 172
+  s_8ac52af66e15af::t_fee28e3f24469d 4,10-11,13-14,26-33,37-38,42,45-51,53-55,59,63-77,79-83,85-86,89-108,110-122,126,131,137,140,143,145,148-149,156-159,167,176,181,187-191,195-196,198
+docs/analytics.md
+  s_8ac52af66e15af::t_f16bdcc4164e29 1-38
+src/templates/layout.njk
+  s_8ac52af66e15af::t_b68c83554d6a90 177-186
+docs/local-development.md
+  s_8ac52af66e15af::t_984a76719435b8 187-188,190
+scripts/build.mjs
+  s_8ac52af66e15af::t_c7d2215c22f928 35
+tests/e2e/consent.spec.js
+  s_8ac52af66e15af::t_24daa1fb2cfcc4 1-78
+src/scripts/analytics.js
+  s_8ac52af66e15af::t_b1be432858bd85 28-30
+  s_8ac52af66e15af::t_68e59c87723ac7 342-343
+  s_8ac52af66e15af::t_45b6c51f26fc93 2,4-7
+  s_8ac52af66e15af::t_03190c4cfcc7be 326-328,340-341,344
+  s_8ac52af66e15af::t_cd2f748153d025 36-37,43-44,46-87,91-93,95-115
+tests/e2e/fixtures.js
+  s_8ac52af66e15af::t_a4307db9ce6cc3 58-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "d57ce56ac0cd6d5bb5a67942a8e44065d86c3ec7",
+  "prompts": {},
+  "sessions": {
+    "s_8ac52af66e15af": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b63ac998-a9f6-4233-9da0-de40f9b9931b",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
