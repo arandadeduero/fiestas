@@ -1,0 +1,81 @@
+tests/e2e/agenda.spec.js
+  s_8ac52af66e15af::t_52cb4776284b90 204
+tests/e2e/mobile.spec.js
+  s_8ac52af66e15af::t_52cb4776284b90 28
+README.md
+  s_8ac52af66e15af::t_7928fe69107594 105
+  s_8ac52af66e15af::t_3ae19dfa6c9797 5
+  s_8ac52af66e15af::t_278266c96800d6 94
+  s_8ac52af66e15af::t_3f4602a4362dbf 103,107-111,114,116
+  s_8ac52af66e15af::t_8effa8cd237464 71-72,74,76,78-81,83
+  s_8ac52af66e15af::t_42b032672808a9 118,120,122-123,125,127,129
+  s_8ac52af66e15af::t_e70737ebeb0787 28,31,33,38,40-50
+  s_8ac52af66e15af::t_20343d7a4b78c3 106
+src/templates/partials/menu-drawer.njk
+  s_8ac52af66e15af::t_fafdd0e0150c39 69-72
+src/scripts/reminders.js
+  s_8ac52af66e15af::t_fe6ee1cc8d6abf 31-32
+  s_8ac52af66e15af::t_79d797a04d705e 45,48,173
+  s_8ac52af66e15af::t_a7640c293654d8 1-30,33-44,46-47,49-172,174-252
+src/pwa/sw.js
+  s_8ac52af66e15af::t_0d8d15b5395c55 53-68
+tests/plan-export.test.mjs
+  s_8ac52af66e15af::t_4ff2c6074f6099 28-35
+src/scripts/reminders.test.js
+  s_8ac52af66e15af::t_c08808e80554eb 27-30
+  s_8ac52af66e15af::t_42a88f0ba86eb4 1-26,31-79
+scripts/build.mjs
+  s_8ac52af66e15af::t_b26e9bbb141abd 251,1148,1155,1158,1222
+src/scripts/plan-export.js
+  s_8ac52af66e15af::t_0f181be311b9f3 94-95
+  s_8ac52af66e15af::t_6e890aa9b2cc23 15-16
+  s_8ac52af66e15af::t_2012bffa18f0d8 46-52
+  s_8ac52af66e15af::t_1665e0ed8f94fc 123
+src/scripts/plans-page.js
+  h_3aa52f59e1a7c5 1492
+  h_3aa52f59e1a7c5 1339-1340
+tests/e2e/detail.spec.js
+  s_8ac52af66e15af::t_52cb4776284b90 6
+src/assets/fontawesome/manifest.json
+  s_8ac52af66e15af::t_8227285b98bd1f 9-10
+tests/e2e/plan.spec.js
+  s_8ac52af66e15af::t_52cb4776284b90 23,136
+src/styles/base.css
+  s_8ac52af66e15af::t_2f93405b43a2ba 1950-1958
+src/styles/fontawesome-subset.css
+  s_8ac52af66e15af::t_8227285b98bd1f 2-4,15-16
+AGENTS.md
+  s_8ac52af66e15af::t_8bddd290ff9f6b 40-46
+  s_8ac52af66e15af::t_119514134d2d36 26-30
+  s_8ac52af66e15af::t_3dcc089bfbc733 10-12,15-16,19
+  s_8ac52af66e15af::t_e17675ac1e5591 73-79
+scripts/enrich-event-locations.mjs
+  s_8ac52af66e15af::t_a0f6f808cc6582 191-192
+docs/local-development.md
+  s_8ac52af66e15af::t_0e5e38ac782013 191,197-199,202-205
+  s_8ac52af66e15af::t_e105cbafd6cbd3 87-103
+  s_8ac52af66e15af::t_a7f5a639cfa2be 162
+src/scripts/fiestas-2026.js
+  s_8ac52af66e15af::t_0971d2960f7fab 30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e1e5171b1e69bf043dbd74a772c4ebdd9d1851dd",
+  "prompts": {},
+  "humans": {
+    "h_3aa52f59e1a7c5": {
+      "author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_8ac52af66e15af": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b63ac998-a9f6-4233-9da0-de40f9b9931b",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
