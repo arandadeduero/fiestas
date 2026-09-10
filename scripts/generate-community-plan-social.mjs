@@ -99,13 +99,13 @@ function buildSvg({ plan }) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="#fcfaf8" />
-  <rect x="560" width="640" height="630" fill="#211631" />
-  <circle cx="900" cy="104" r="290" fill="#0b9e95" />
-  <circle cx="1090" cy="560" r="245" fill="#36234f" />
+  <rect x="560" width="640" height="630" fill="#31161a" />
+  <circle cx="900" cy="104" r="290" fill="#0083c1" />
+  <circle cx="1090" cy="560" r="245" fill="#4f232a" />
 
-  <text x="133" y="86" font-family="Outfit, DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="0.5" fill="#67508e">FIESTAS DE ARANDA DE DUERO 2026</text>
+  <text x="133" y="86" font-family="Outfit, DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="0.5" fill="#ce0e2d">FIESTAS DE ARANDA DE DUERO 2026</text>
 
-  <rect x="70" y="195" width="9" height="194" rx="4" fill="#0b9e95" />
+  <rect x="70" y="195" width="9" height="194" rx="4" fill="#0083c1" />
   <text x="107" y="251" font-family="Outfit, DejaVu Sans, Arial, sans-serif" font-size="56" font-weight="700" fill="#20232b">${titleMarkup}</text>
   <text x="107" y="450" font-family="Outfit, DejaVu Sans, Arial, sans-serif" font-size="28" fill="#6a7285">por ${escapeXml(plan.author || 'Ayuntamiento de Aranda de Duero. Concejalía de Innovación')}</text>
 </svg>`;
@@ -119,10 +119,10 @@ function buildIllustratedOverlaySvg({ plan }) {
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <text x="133" y="86" font-family="Outfit, DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="0.5" fill="#b9eee8">FIESTAS DE ARANDA DE DUERO 2026</text>
-  <rect x="70" y="195" width="9" height="194" rx="4" fill="#4cd5c7" />
+  <text x="133" y="86" font-family="Outfit, DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="0.5" fill="#b9ddee">FIESTAS DE ARANDA DE DUERO 2026</text>
+  <rect x="70" y="195" width="9" height="194" rx="4" fill="#4caad5" />
   <text x="107" y="251" font-family="Outfit, DejaVu Sans, Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff">${titleMarkup}</text>
-  <text x="107" y="450" font-family="Outfit, DejaVu Sans, Arial, sans-serif" font-size="28" fill="#b9eee8">por ${escapeXml(plan.author || 'Ayuntamiento de Aranda de Duero. Concejalía de Innovación')}</text>
+  <text x="107" y="450" font-family="Outfit, DejaVu Sans, Arial, sans-serif" font-size="28" fill="#b9ddee">por ${escapeXml(plan.author || 'Ayuntamiento de Aranda de Duero. Concejalía de Innovación')}</text>
 </svg>`;
 }
 

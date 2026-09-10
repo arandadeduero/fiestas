@@ -358,7 +358,7 @@ function normalizeCasetas(entries) {
         publicSlug: String(entry.publicSlug || '').trim(),
         zone: String(entry.zone || '').trim(),
         location: String(entry.location || '').trim(),
-        color: String(entry.color || '#0f9f8d').trim(),
+        color: String(entry.color || '#0083c1').trim(),
         details
       };
     })

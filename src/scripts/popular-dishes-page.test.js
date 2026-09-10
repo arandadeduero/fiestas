@@ -8,7 +8,7 @@ const casetas = [
     name: 'Madame X',
     slug: 'madame-x',
     location: 'San Benito',
-    color: '#73579f',
+    color: '#0083c1',
     details: {
       menuSections: [
         { votable: true, items: [{ id: 'pincho-brocheta-pollo', name: 'Brocheta de pollo' }] }

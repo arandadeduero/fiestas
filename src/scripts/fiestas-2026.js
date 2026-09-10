@@ -1560,8 +1560,8 @@ function renderUserMarker(leaflet) {
   if (!state.userLocation || state.locationStatus !== 'granted') return;
   state.userMarker = leaflet.circleMarker([state.userLocation.lat, state.userLocation.lng], {
     radius: 8,
-    color: '#0f9f8d',
-    fillColor: '#17b8a4',
+    color: '#0083c1',
+    fillColor: '#3cb4e5',
     fillOpacity: 0.85,
     weight: 3
   }).addTo(state.map);

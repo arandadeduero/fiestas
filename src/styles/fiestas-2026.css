@@ -6,23 +6,24 @@
     padding-bottom: 1.5rem;
   }
 
-  .fiestas-type-danza { --fiestas-type-color: #d95570; }
-  .fiestas-type-deporte { --fiestas-type-color: #1976a8; }
-  .fiestas-type-exposicion { --fiestas-type-color: #8b5fc0; }
-  .fiestas-type-folklore { --fiestas-type-color: #d48625; }
-  .fiestas-type-fuegos-artificiales { --fiestas-type-color: #e25592; }
-  .fiestas-type-gastronomia { --fiestas-type-color: #c66c2b; }
-  .fiestas-type-humor-y-monologos { --fiestas-type-color: #b94f72; }
-  .fiestas-type-infantil-y-familiar { --fiestas-type-color: #73579f; }
-  .fiestas-type-magia { --fiestas-type-color: #5064ad; }
-  .fiestas-type-musica { --fiestas-type-color: #0f9f8d; }
-  .fiestas-type-otros { --fiestas-type-color: #667085; }
-  .fiestas-type-penas { --fiestas-type-color: #d99724; }
-  .fiestas-type-religioso { --fiestas-type-color: #315f8a; }
-  .fiestas-type-talleres { --fiestas-type-color: #087e8c; }
-  .fiestas-type-teatro { --fiestas-type-color: #8058b2; }
-  .fiestas-type-toros { --fiestas-type-color: #ba3d3d; }
-  .fiestas-type-evento { --fiestas-type-color: #73579f; }
+  /* Colores por categoría, derivados de la paleta municipal (azul/rojo + cálidos). */
+  .fiestas-type-danza { --fiestas-type-color: #d84f8f; }
+  .fiestas-type-deporte { --fiestas-type-color: #3cb4e5; }
+  .fiestas-type-exposicion { --fiestas-type-color: #6b93c4; }
+  .fiestas-type-folklore { --fiestas-type-color: #f5a800; }
+  .fiestas-type-fuegos-artificiales { --fiestas-type-color: #e0559a; }
+  .fiestas-type-gastronomia { --fiestas-type-color: #c9772e; }
+  .fiestas-type-humor-y-monologos { --fiestas-type-color: #e35a70; }
+  .fiestas-type-infantil-y-familiar { --fiestas-type-color: #e97b1f; }
+  .fiestas-type-magia { --fiestas-type-color: #6b52a3; }
+  .fiestas-type-musica { --fiestas-type-color: #0083c1; }
+  .fiestas-type-otros { --fiestas-type-color: #646464; }
+  .fiestas-type-penas { --fiestas-type-color: #a4541c; }
+  .fiestas-type-religioso { --fiestas-type-color: #4f6f9c; }
+  .fiestas-type-talleres { --fiestas-type-color: #0b7ba0; }
+  .fiestas-type-teatro { --fiestas-type-color: #ce0e2d; }
+  .fiestas-type-toros { --fiestas-type-color: #a12b34; }
+  .fiestas-type-evento { --fiestas-type-color: #0083c1; }
 
   .site-footer--fiestas {
     margin-top: 2.25rem;
@@ -146,13 +147,13 @@
     border-radius: 50%;
     background: transparent;
     box-shadow: none;
-    color: #66517d;
+    color: #a80a24;
     font-size: 1.25rem;
   }
 
   .fiestas-scroll-action:hover,
   .fiestas-scroll-action:focus-visible {
-    background: #0f8f80;
+    background: #0074ac;
     color: #fff;
   }
 
@@ -230,7 +231,7 @@
 
   .fiestas-hero-subtitle {
     width: fit-content;
-    color: #73579f;
+    color: #ce0e2d;
     font-size: inherit;
     font-weight: 850;
     line-height: 1.1;
@@ -239,13 +240,13 @@
 
   .fiestas-hero-subtitle:hover,
   .fiestas-hero-subtitle:focus-visible {
-    color: #0f9f8d;
+    color: #0083c1;
     text-decoration: underline;
   }
 
   .fiestas-title {
     margin: 0;
-    color: #66517d;
+    color: #a80a24;
     overflow: hidden;
     font-size: clamp(1.52rem, 7.2vw, 1.9rem);
     font-weight: 850;
@@ -265,7 +266,7 @@
 
   .fiestas-share-feedback {
     margin: 0;
-    color: #0f766e;
+    color: #00658f;
     font-size: 0.78rem;
     font-weight: 800;
   }
@@ -285,9 +286,9 @@
     justify-content: center;
     border: 0;
     border-radius: 50%;
-    background: rgba(248, 247, 250, 0.96);
-    box-shadow: 0 0.3rem 0.85rem rgba(72, 61, 86, 0.16);
-    color: #66517d;
+    background: rgba(251, 246, 247, 0.96);
+    box-shadow: 0 0.3rem 0.85rem rgba(99, 48, 55, 0.16);
+    color: #a80a24;
     font-size: 1.42rem;
     transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
   }
@@ -301,28 +302,28 @@
     justify-content: center;
     border: 0;
     border-radius: 50%;
-    background: rgba(248, 247, 250, 0.96);
-    box-shadow: 0 0.3rem 0.85rem rgba(72, 61, 86, 0.16);
-    color: #66517d;
+    background: rgba(251, 246, 247, 0.96);
+    box-shadow: 0 0.3rem 0.85rem rgba(99, 48, 55, 0.16);
+    color: #a80a24;
     font-size: 1.42rem;
     transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
   }
 
   .fiestas-share-toggle:hover,
   .fiestas-share-toggle:focus-visible {
-    background: #0f8f80;
+    background: #0074ac;
     color: #fff;
   }
 
   .fiestas-search-toggle:hover,
   .fiestas-search-toggle:focus-visible,
   .fiestas-search-toggle.is-active {
-    background: rgba(15, 159, 141, 0.11);
-    color: #0f8f80;
+    background: rgba(15, 113, 159, 0.11);
+    color: #0074ac;
   }
 
   .fiestas-search-toggle.is-active {
-    color: #0f9f8d;
+    color: #0083c1;
   }
 
   .fiestas-date-panel,
@@ -383,7 +384,7 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.97);
     box-shadow: 0 0.45rem 1rem rgba(36, 41, 53, 0.1);
-    color: #66517d;
+    color: #a80a24;
     font-size: 0.95rem;
     transform: translateY(-50%);
     transition: border-color 160ms ease, background 160ms ease, color 160ms ease, opacity 160ms ease;
@@ -395,9 +396,9 @@
 
   .fiestas-date-nav:hover,
   .fiestas-date-nav:focus-visible {
-    border-color: #66517d;
-    background: #f4f0f8;
-    color: #0f9f8d;
+    border-color: #a80a24;
+    background: #f8f0f1;
+    color: #0083c1;
   }
 
   .fiestas-date-nav:disabled {
@@ -497,7 +498,7 @@
   }
 
   .fiestas-date-card.is-active .fiestas-date-temperature {
-    color: #3f7f78;
+    color: #3f6b7f;
     opacity: 1;
   }
 
@@ -573,15 +574,15 @@
   }
 
   .fiestas-weather-attribution a {
-    color: #66517d;
+    color: #a80a24;
     font-weight: 750;
     text-decoration: underline;
     text-underline-offset: 0.12em;
   }
 
   .fiestas-date-card.is-active {
-    border-color: #0f9f8d;
-    color: #0f9f8d;
+    border-color: #0083c1;
+    color: #0083c1;
     box-shadow: none;
   }
 
@@ -593,7 +594,7 @@
     width: 38%;
     height: 0.45rem;
     border-radius: 9999px;
-    background: #0f9f8d;
+    background: #0083c1;
     transform: translateX(-50%);
   }
 
@@ -610,8 +611,8 @@
   }
 
   .fiestas-search-panel:not([hidden]) .fiestas-search {
-    border-color: #0f9f8d;
-    box-shadow: inset 0 0 0 1px #0f9f8d;
+    border-color: #0083c1;
+    box-shadow: inset 0 0 0 1px #0083c1;
   }
 
   .fiestas-search-scope {
@@ -626,7 +627,7 @@
   }
 
   .fiestas-search-scope i {
-    color: #0f9f8d;
+    color: #0083c1;
     font-size: 0.7rem;
   }
 
@@ -798,7 +799,7 @@
     height: 1.1rem;
     flex: 0 0 auto;
     fill: none;
-    stroke: #73579f;
+    stroke: #ce0e2d;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 1.8;
@@ -840,14 +841,14 @@
   .fiestas-type-menu-button.is-active,
   .fiestas-favorite-filter.is-active,
   .fiestas-active-chip {
-    border-color: #0f9f8d;
-    background: #0f9f8d;
+    border-color: #0083c1;
+    background: #0083c1;
     color: #fff;
   }
 
   .fiestas-type-menu-button i,
   .fiestas-favorite-filter i {
-    color: #73579f;
+    color: #ce0e2d;
   }
 
   .fiestas-type-menu-button.is-active i,
@@ -929,9 +930,9 @@
     align-items: center;
     justify-content: center;
     gap: 0.45rem;
-    border: 1px solid #0f9f8d;
+    border: 1px solid #0083c1;
     border-radius: 0.75rem;
-    background: #0f9f8d;
+    background: #0083c1;
     color: #fff;
     font: inherit;
     font-size: 0.95rem;
@@ -956,7 +957,7 @@
   }
 
   .fiestas-type-option input {
-    accent-color: #0f9f8d;
+    accent-color: #0083c1;
   }
 
   .fiestas-active-filters:empty {
@@ -1064,11 +1065,11 @@
 
   .fiestas-finished-toggle:hover,
   .fiestas-finished-toggle:focus-visible {
-    color: #73579f;
+    color: #ce0e2d;
   }
 
   .fiestas-finished-toggle:focus-visible {
-    outline: 2px solid rgba(15, 159, 141, 0.35);
+    outline: 2px solid rgba(15, 113, 159, 0.35);
     outline-offset: 3px;
   }
 
@@ -1114,11 +1115,11 @@
 
   .fiestas-agenda-sort-toggle:hover,
   .fiestas-agenda-sort-toggle:focus-visible {
-    color: #73579f;
+    color: #ce0e2d;
   }
 
   .fiestas-agenda-sort-toggle:focus-visible {
-    outline: 2px solid rgba(15, 159, 141, 0.35);
+    outline: 2px solid rgba(15, 113, 159, 0.35);
     outline-offset: 3px;
   }
 
@@ -1150,7 +1151,7 @@
     min-width: 0;
     justify-content: center;
     gap: 0.1rem;
-    color: #0f9f8d;
+    color: #0083c1;
     font-size: 1rem;
     font-weight: 900;
     line-height: 1.05;
@@ -1177,8 +1178,8 @@
     height: 4.2rem;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid color-mix(in srgb, var(--fiestas-type-color, #73579f) 42%, #e3e6ec);
-    color: var(--fiestas-type-color, #73579f);
+    border-left: 1px solid color-mix(in srgb, var(--fiestas-type-color, #ce0e2d) 42%, #e3e6ec);
+    color: var(--fiestas-type-color, #ce0e2d);
     font-size: 2rem;
   }
 
@@ -1186,7 +1187,7 @@
     overflow: hidden;
     border-left-color: transparent;
     border-radius: 0.85rem;
-    background: #edf7f5;
+    background: #edf4f7;
   }
 
   .fiestas-event-image {
@@ -1223,7 +1224,7 @@
   }
 
   .fiestas-event-date {
-    color: #73579f;
+    color: #ce0e2d;
     font-size: 0.68rem;
     font-weight: 900;
     line-height: 1;
@@ -1242,7 +1243,7 @@
 
   .fiestas-event-place i {
     flex: 0 0 auto;
-    color: #38aa99;
+    color: #3886aa;
     opacity: 0.85;
     transform: scale(0.84);
   }
@@ -1287,7 +1288,7 @@
     justify-content: center;
     border: 0;
     background: transparent;
-    color: #0f9f8d;
+    color: #0083c1;
     font-size: 1.45rem;
   }
 
@@ -1321,7 +1322,7 @@
   }
 
   .fiestas-save.is-active {
-    color: #73579f;
+    color: #ce0e2d;
   }
 
   .fiestas-more-options {
@@ -1356,7 +1357,7 @@
     gap: 0.7rem;
     align-items: center;
     border-radius: 1rem;
-    background: #f0eaf8;
+    background: #f8eaec;
     color: #1d222d;
     padding: 1rem;
     text-decoration: none;
@@ -1370,7 +1371,7 @@
     justify-content: center;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.55);
-    color: #73579f;
+    color: #ce0e2d;
     font-size: 1.2rem;
   }
 
@@ -1388,7 +1389,7 @@
   }
 
   .fiestas-plan-card strong {
-    color: #73579f;
+    color: #ce0e2d;
     font-size: 1.05rem;
     font-weight: 900;
   }
@@ -1405,7 +1406,7 @@
     gap: 0.7rem;
     align-items: center;
     border-radius: 1rem;
-    background: #f0eaf8;
+    background: #f8eaec;
     color: #1d222d;
     padding: 1rem;
     text-decoration: none;
@@ -1414,12 +1415,12 @@
 
   .fiestas-community-plans-cta:hover,
   .fiestas-community-plans-cta:focus-visible {
-    background: #ece3f7;
+    background: #f7e3e6;
     transform: translateY(-1px);
   }
 
   .fiestas-community-plans-cta:focus-visible {
-    outline: 3px solid rgba(15, 159, 141, 0.45);
+    outline: 3px solid rgba(15, 113, 159, 0.45);
     outline-offset: 0.2rem;
   }
 
@@ -1429,7 +1430,7 @@
     height: 3.2rem;
     align-items: center;
     justify-content: center;
-    color: #73579f;
+    color: #ce0e2d;
     font-size: 2.1rem;
   }
 
@@ -1441,7 +1442,7 @@
     justify-content: center;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.55);
-    color: #73579f;
+    color: #ce0e2d;
     font-size: 1.2rem;
   }
 
@@ -1452,7 +1453,7 @@
   }
 
   .fiestas-community-plans-cta strong {
-    color: #73579f;
+    color: #ce0e2d;
     font-size: 1.05rem;
     font-weight: 900;
   }
@@ -1464,18 +1465,18 @@
   }
 
   .fiestas-community-plans-cta.is-install {
-    background: #e8f7f4;
+    background: #e9f4f9;
   }
 
   .fiestas-community-plans-cta.is-install:hover,
   .fiestas-community-plans-cta.is-install:focus-visible {
-    background: #ddf3ee;
+    background: #ddecf3;
   }
 
   .fiestas-community-plans-cta.is-install .fiestas-community-plans-cta-icon,
   .fiestas-community-plans-cta.is-install strong,
   .fiestas-community-plans-cta.is-install > i:last-child {
-    color: #0f8f80;
+    color: #0074ac;
   }
 
   .fiestas-bottom-nav {
@@ -1558,7 +1559,7 @@
   }
 
   .fiestas-bottom-link.is-active {
-    color: #0f9f8d;
+    color: #0083c1;
   }
 
   .fiestas-bottom-link.is-active::before {
@@ -1569,7 +1570,7 @@
     width: 46%;
     height: 0.25rem;
     border-radius: 9999px;
-    background: #0f9f8d;
+    background: #0083c1;
     transform: translateX(-50%);
   }
 
@@ -1738,7 +1739,7 @@
     border: 1px solid #dfe5ec;
     border-radius: 9999px;
     background: #fff;
-    color: #0f766e;
+    color: #00658f;
     padding: 0 0.85rem;
     font: inherit;
     font-size: 0.9rem;
@@ -1761,15 +1762,15 @@
     border: 0;
     border-radius: 9999px;
     background: transparent;
-    color: #0f766e;
+    color: #00658f;
     cursor: pointer;
     font-size: 1.05rem;
   }
 
   .fiestas-map-share-button:hover,
   .fiestas-map-share-button:focus-visible {
-    color: #0f9f8d;
-    outline: 3px solid rgba(15, 159, 141, 0.18);
+    color: #0083c1;
+    outline: 3px solid rgba(15, 113, 159, 0.18);
     outline-offset: 2px;
   }
 
@@ -1788,12 +1789,12 @@
     top: calc(max(0.55rem, env(safe-area-inset-top)) + 5.45rem);
     right: 0.85rem;
     z-index: 42;
-    color: #0f766e;
+    color: #00658f;
   }
 
   .fiestas-map-filter-toggle.is-active {
-    border-color: #0f9f8d;
-    background: #0f9f8d;
+    border-color: #0083c1;
+    background: #0083c1;
     color: #fff;
   }
 
@@ -1803,8 +1804,8 @@
     height: 1.35rem;
     place-items: center;
     border-radius: 9999px;
-    background: rgba(15, 159, 141, 0.14);
-    color: #0f766e;
+    background: rgba(15, 113, 159, 0.14);
+    color: #00658f;
     font-size: 0.75rem;
     line-height: 1;
   }
@@ -1887,7 +1888,7 @@
 
   .fiestas-map-filter-kicker {
     display: block;
-    color: #0f9f8d;
+    color: #0083c1;
     font-size: 0.7rem;
     font-weight: 900;
     letter-spacing: 0.1em;
@@ -2073,7 +2074,7 @@
 
   .fiestas-map-control i,
   .fiestas-map-sheet-tab i {
-    color: #0f9f8d;
+    color: #0083c1;
   }
 
   .fiestas-map-control--icon {
@@ -2095,7 +2096,7 @@
     place-items: center;
     border: 2px solid #fff;
     border-radius: 9999px;
-    background: var(--fiestas-type-color, #73579f);
+    background: var(--fiestas-type-color, #ce0e2d);
     color: #fff;
     font-size: 0.95rem;
     font-weight: 900;
@@ -2105,15 +2106,15 @@
   .fiestas-map-marker.is-selected button {
     width: 2.75rem;
     height: 2.75rem;
-    background: var(--fiestas-type-color, #0f9f8d);
-    box-shadow: 0 0 0 4px color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 26%, transparent), 0 0.45rem 1.1rem rgba(15, 23, 42, 0.28);
+    background: var(--fiestas-type-color, #0083c1);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--fiestas-type-color, #0083c1) 26%, transparent), 0 0.45rem 1.1rem rgba(15, 23, 42, 0.28);
   }
 
   .fiestas-map-cluster button {
     width: 2.75rem;
     height: 2.75rem;
-    background: var(--fiestas-type-color, #0f9f8d);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 20%, transparent), 0 0.45rem 1.1rem rgba(15, 23, 42, 0.28);
+    background: var(--fiestas-type-color, #0083c1);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--fiestas-type-color, #0083c1) 20%, transparent), 0 0.45rem 1.1rem rgba(15, 23, 42, 0.28);
   }
 
   .fiestas-map-popup {
@@ -2128,7 +2129,7 @@
   }
 
   .fiestas-map-popup a {
-    color: #0f766e;
+    color: #00658f;
     font-weight: 850;
   }
 
@@ -2214,10 +2215,10 @@
     justify-content: center;
     gap: 0.45rem;
     margin: 0 1rem 0.65rem;
-    border: 1px solid rgba(15, 159, 141, 0.2);
+    border: 1px solid rgba(15, 113, 159, 0.2);
     border-radius: 0.8rem;
-    background: rgba(15, 159, 141, 0.08);
-    color: #285b55;
+    background: rgba(15, 113, 159, 0.08);
+    color: #284b5b;
     padding: 0.65rem 0.75rem;
     cursor: pointer;
     font-size: 0.88rem;
@@ -2227,10 +2228,10 @@
 
   .fiestas-map-location-note:hover,
   .fiestas-map-location-note:focus-visible {
-    border-color: #0f9f8d;
-    background: rgba(15, 159, 141, 0.14);
-    color: #0f766e;
-    outline: 3px solid rgba(15, 159, 141, 0.2);
+    border-color: #0083c1;
+    background: rgba(15, 113, 159, 0.14);
+    color: #00658f;
+    outline: 3px solid rgba(15, 113, 159, 0.2);
     outline-offset: 2px;
   }
 
@@ -2293,8 +2294,8 @@
     position: absolute;
     z-index: 0;
     inset: 0 -1rem;
-    background: color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 8%, #fff);
-    box-shadow: inset 0.25rem 0 0 var(--fiestas-type-color, #0f9f8d);
+    background: color-mix(in srgb, var(--fiestas-type-color, #0083c1) 8%, #fff);
+    box-shadow: inset 0.25rem 0 0 var(--fiestas-type-color, #0083c1);
     content: '';
     pointer-events: none;
   }
@@ -2313,10 +2314,10 @@
     min-height: 2.35rem;
     align-items: center;
     gap: 0.45rem;
-    border: 1px solid rgba(15, 159, 141, 0.28);
+    border: 1px solid rgba(15, 113, 159, 0.28);
     border-radius: 9999px;
-    background: rgba(15, 159, 141, 0.1);
-    color: #0f766e;
+    background: rgba(15, 113, 159, 0.1);
+    color: #00658f;
     padding: 0 0.8rem;
     font-size: 0.84rem;
     font-weight: 850;
@@ -2339,14 +2340,14 @@
     height: 3rem;
     place-items: center;
     border-radius: 9999px;
-    background: var(--fiestas-type-color, #73579f);
+    background: var(--fiestas-type-color, #ce0e2d);
     color: #fff;
     font-size: 1.35rem;
   }
 
   .fiestas-map-result-icon--emblem {
     overflow: hidden;
-    border: 2px solid var(--fiestas-type-color, #73579f);
+    border: 2px solid var(--fiestas-type-color, #ce0e2d);
     background: #fff;
   }
 
@@ -2389,8 +2390,8 @@
     max-width: 8rem;
     overflow: hidden;
     border-radius: 0.35rem;
-    background: color-mix(in srgb, var(--fiestas-type-color, #73579f) 14%, #fff);
-    color: var(--fiestas-type-color, #73579f);
+    background: color-mix(in srgb, var(--fiestas-type-color, #ce0e2d) 14%, #fff);
+    color: var(--fiestas-type-color, #ce0e2d);
     padding: 0.18rem 0.38rem;
     font-size: 0.68rem;
     font-weight: 850;
@@ -2436,7 +2437,7 @@
   }
 
   .fiestas-map-result-distance {
-    color: #0f766e;
+    color: #00658f;
     font-size: 0.78rem;
     font-weight: 850;
   }
@@ -2452,7 +2453,7 @@
     place-items: center;
     border: 0;
     background: transparent;
-    color: #0f9f8d;
+    color: #0083c1;
     font-size: 1.15rem;
     text-decoration: none;
   }
@@ -2478,20 +2479,20 @@
   }
 
   .fiestas-map-result-favorite.is-active {
-    color: var(--fiestas-type-color, #0f9f8d);
+    color: var(--fiestas-type-color, #0083c1);
   }
 
   .fiestas-map-result-favorite:hover,
   .fiestas-map-result-favorite:focus-visible {
-    background: rgba(15, 159, 141, 0.1);
-    color: #0f766e;
-    outline: 3px solid rgba(15, 159, 141, 0.18);
+    background: rgba(15, 113, 159, 0.1);
+    color: #00658f;
+    outline: 3px solid rgba(15, 113, 159, 0.18);
     outline-offset: 1px;
   }
 
   .fiestas-map-result-favorite.is-active:hover,
   .fiestas-map-result-favorite.is-active:focus-visible {
-    color: var(--fiestas-type-color, #0f9f8d);
+    color: var(--fiestas-type-color, #0083c1);
   }
 
   .fiestas-map-sheet-tab {
@@ -2532,8 +2533,8 @@
   .fiestas-empty button {
     width: fit-content;
     margin: 0 auto;
-    border-color: #0f9f8d;
-    color: #0f9f8d;
+    border-color: #0083c1;
+    color: #0083c1;
   }
 
   .fiestas-detail-app {
@@ -2577,12 +2578,12 @@
     border: 0;
     border-radius: 50%;
     background: transparent;
-    color: #0f9f8d;
+    color: #0083c1;
     font-size: 1.35rem;
   }
 
   .fiestas-detail-top-button.is-active {
-    color: #73579f;
+    color: #ce0e2d;
   }
 
   .fiestas-detail-top-button .fiestas-save-count--badge {
@@ -2658,7 +2659,7 @@
   }
 
   .fiestas-detail-hero-button:focus-visible {
-    outline: 3px solid #0f9f8d;
+    outline: 3px solid #0083c1;
     outline-offset: -3px;
   }
 
@@ -2889,8 +2890,8 @@
     align-items: center;
     gap: 0.45rem;
     border-radius: 9999px;
-    background: color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 12%, #fff);
-    color: var(--fiestas-type-color, #0f8f80);
+    background: color-mix(in srgb, var(--fiestas-type-color, #0083c1) 12%, #fff);
+    color: var(--fiestas-type-color, #0074ac);
     padding: 0.2rem 0.74rem;
     font-size: 0.88rem;
     font-weight: 800;
@@ -2900,12 +2901,12 @@
 
   .fiestas-detail-type:hover,
   .fiestas-detail-type:focus-visible {
-    background: color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 20%, #fff);
-    color: var(--fiestas-type-color, #087569);
+    background: color-mix(in srgb, var(--fiestas-type-color, #0083c1) 20%, #fff);
+    color: var(--fiestas-type-color, #005c86);
   }
 
   .fiestas-related-heading h2 > i[class*="fiestas-type-"] {
-    color: var(--fiestas-type-color, #73579f);
+    color: var(--fiestas-type-color, #ce0e2d);
   }
 
   .fiestas-detail-card,
@@ -2942,7 +2943,7 @@
 
   .fiestas-detail-fact i {
     justify-self: center;
-    color: #73579f;
+    color: #ce0e2d;
     font-size: 1.18rem;
   }
 
@@ -3002,7 +3003,7 @@
     max-width: 100%;
     align-items: center;
     gap: 0.45rem;
-    color: #0f8f80;
+    color: #0074ac;
     font-weight: 850;
     text-decoration: none;
   }
@@ -3015,7 +3016,7 @@
   .fiestas-detail-fact-link i {
     flex: 0 0 auto;
     justify-self: auto;
-    color: #0f9f8d;
+    color: #0083c1;
     font-size: 0.9rem;
   }
 
@@ -3062,7 +3063,7 @@
   }
 
   .fiestas-detail-card h2 i {
-    color: #73579f;
+    color: #ce0e2d;
   }
 
   .fiestas-detail-card p {
@@ -3085,7 +3086,7 @@
     border: 0;
     border-radius: 0.85rem;
     background: transparent;
-    color: #0f9f8d;
+    color: #0083c1;
     padding: 0.55rem 0.35rem;
     font: inherit;
     font-size: 0.78rem;
@@ -3097,13 +3098,13 @@
 
   .fiestas-detail-action:hover,
   .fiestas-detail-action:focus-visible {
-    background: rgba(15, 159, 141, 0.08);
-    color: #087569;
+    background: rgba(15, 113, 159, 0.08);
+    color: #005c86;
   }
 
   .fiestas-detail-action.is-active {
-    background: rgba(115, 87, 159, 0.1);
-    color: #73579f;
+    background: rgba(166, 80, 93, 0.1);
+    color: #ce0e2d;
   }
 
   .fiestas-detail-action i {
@@ -3162,26 +3163,26 @@
     width: max-content;
     max-width: min(16rem, 72vw);
     transform: translate(-50%, -2.75rem);
-    color: #0f9f8d;
+    color: #0083c1;
     text-align: center;
   }
 
   .fiestas-detail .fiestas-detail-map-marker-icon {
-    color: #0f9f8d;
+    color: #0083c1;
     font-size: 2.8rem;
     line-height: 1;
-    filter: drop-shadow(0 0.15rem 0.18rem rgba(22, 76, 70, 0.24));
+    filter: drop-shadow(0 0.15rem 0.18rem rgba(22, 59, 76, 0.24));
     -webkit-text-fill-color: currentColor;
     -webkit-text-stroke: 0;
   }
 
   .fiestas-caseta-detail .fiestas-detail-map-marker-icon {
-    color: var(--fiestas-type-color, #0f9f8d);
+    color: var(--fiestas-type-color, #0083c1);
   }
 
   .fiestas-detail-map-marker-label {
     margin-top: 0.12rem;
-    color: #0f8f80;
+    color: #0074ac;
     font-size: 0.82rem;
     font-weight: 650;
     line-height: 1.15;
@@ -3197,15 +3198,15 @@
     place-items: center;
     gap: 0.45rem;
     background:
-      linear-gradient(135deg, rgba(15, 159, 141, 0.12), rgba(115, 87, 159, 0.1)),
-      #f7faf9;
+      linear-gradient(135deg, rgba(15, 113, 159, 0.12), rgba(166, 80, 93, 0.1)),
+      #f7f9fa;
     color: #596273;
     padding: 1.4rem;
     text-align: center;
   }
 
   .fiestas-detail-map-empty i {
-    color: #0f9f8d;
+    color: #0083c1;
     font-size: 2rem;
   }
 
@@ -3236,7 +3237,7 @@
   }
 
   .fiestas-detail-map-note i {
-    color: #73579f;
+    color: #ce0e2d;
   }
 
   .fiestas-detail-map-actions {
@@ -3252,7 +3253,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.65rem;
-    color: #0f9f8d;
+    color: #0083c1;
     padding: 0.75rem;
     font-size: 1rem;
     font-weight: 500;
@@ -3271,7 +3272,7 @@
   .fiestas-detail-map-action:focus-visible {
     position: relative;
     z-index: 1;
-    outline: 3px solid rgba(15, 159, 141, 0.35);
+    outline: 3px solid rgba(15, 113, 159, 0.35);
     outline-offset: -3px;
   }
 
@@ -3286,7 +3287,7 @@
 
   .fiestas-detail-directions-options {
     border-top: 1px solid #e7eaf0;
-    background: rgba(15, 159, 141, 0.035);
+    background: rgba(15, 113, 159, 0.035);
     padding: 0.65rem;
   }
 
@@ -3306,7 +3307,7 @@
     flex-direction: column;
     border: 0;
     background: transparent;
-    color: #0f8f80;
+    color: #0074ac;
     padding: 0.45rem 0.25rem;
     text-align: center;
     text-decoration: none;
@@ -3316,7 +3317,7 @@
   }
 
   .fiestas-detail .fiestas-detail-directions-option i {
-    color: #0f8f80;
+    color: #0074ac;
     font-size: 1.1rem;
     -webkit-text-fill-color: currentColor;
     -webkit-text-stroke: 0;
@@ -3352,18 +3353,18 @@
 
   .fiestas-detail-directions-option:hover,
   .fiestas-detail-directions-option:focus-visible {
-    background: rgba(15, 159, 141, 0.08);
-    color: #087569;
+    background: rgba(15, 113, 159, 0.08);
+    color: #005c86;
   }
 
   .fiestas-detail-directions-option:focus-visible {
-    outline: 3px solid rgba(15, 159, 141, 0.3);
+    outline: 3px solid rgba(15, 113, 159, 0.3);
     outline-offset: 2px;
   }
 
   .fiestas-detail-transit {
     border-top: 1px solid #e7eaf0;
-    background: linear-gradient(135deg, rgba(15, 159, 141, 0.055), rgba(115, 87, 159, 0.055));
+    background: linear-gradient(135deg, rgba(15, 113, 159, 0.055), rgba(166, 80, 93, 0.055));
     padding: 0.8rem 0.85rem 0.9rem;
   }
 
@@ -3381,8 +3382,8 @@
     height: 2.1rem;
     place-items: center;
     border-radius: 9999px;
-    background: rgba(15, 159, 141, 0.12);
-    color: #0f8f80;
+    background: rgba(15, 113, 159, 0.12);
+    color: #0074ac;
     font-size: 0.9rem;
   }
 
@@ -3425,12 +3426,12 @@
 
   .fiestas-detail-transit-scroll:hover,
   .fiestas-detail-transit-scroll:focus-visible {
-    background: rgba(15, 159, 141, 0.14);
-    color: #0f8f80;
+    background: rgba(15, 113, 159, 0.14);
+    color: #0074ac;
   }
 
   .fiestas-detail-transit-scroll:focus-visible {
-    outline: 3px solid rgba(15, 159, 141, 0.35);
+    outline: 3px solid rgba(15, 113, 159, 0.35);
     outline-offset: 2px;
   }
 
@@ -3477,7 +3478,7 @@
   }
 
   .fiestas-detail-transit-line:focus-visible {
-    outline: 3px solid rgba(15, 159, 141, 0.35);
+    outline: 3px solid rgba(15, 113, 159, 0.35);
     outline-offset: 2px;
   }
 
@@ -3486,52 +3487,52 @@
   .fiestas-detail-transit-line[data-fiestas-transit-line="2"] { --fiestas-bus-line-color: #f2c435; --fiestas-bus-line-text: #000; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="3"] { --fiestas-bus-line-color: #ee4ba4; --fiestas-bus-line-text: #000; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="4"] { --fiestas-bus-line-color: #aa541a; --fiestas-bus-line-text: #fff; }
-  .fiestas-detail-transit-line[data-fiestas-transit-line="5"] { --fiestas-bus-line-color: #2fb7b7; --fiestas-bus-line-text: #fff; }
+  .fiestas-detail-transit-line[data-fiestas-transit-line="5"] { --fiestas-bus-line-color: #2f8cb7; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="6"] { --fiestas-bus-line-color: #f29cc2; --fiestas-bus-line-text: #000; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="7"] { --fiestas-bus-line-color: #7a2b37; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="8"] { --fiestas-bus-line-color: #ea5d00; --fiestas-bus-line-text: #fff; }
-  .fiestas-detail-transit-line[data-fiestas-transit-line="9"] { --fiestas-bus-line-color: #009ee6; --fiestas-bus-line-text: #fff; }
+  .fiestas-detail-transit-line[data-fiestas-transit-line="9"] { --fiestas-bus-line-color: #009de6; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="10"] { --fiestas-bus-line-color: #a01a4a; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="13"] { --fiestas-bus-line-color: #0051a1; --fiestas-bus-line-text: #fff; }
-  .fiestas-detail-transit-line[data-fiestas-transit-line="14"] { --fiestas-bus-line-color: #887cb9; --fiestas-bus-line-text: #000; }
+  .fiestas-detail-transit-line[data-fiestas-transit-line="14"] { --fiestas-bus-line-color: #be7782; --fiestas-bus-line-text: #000; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="16"] { --fiestas-bus-line-color: #84cef5; --fiestas-bus-line-text: #000; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="17"] { --fiestas-bus-line-color: #c2d403; --fiestas-bus-line-text: #000; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="18"] { --fiestas-bus-line-color: #b9b8b8; --fiestas-bus-line-text: #000; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="19"] { --fiestas-bus-line-color: #eaa874; --fiestas-bus-line-text: #000; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="23"] { --fiestas-bus-line-color: #fcc600; --fiestas-bus-line-text: #000; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="24"] { --fiestas-bus-line-color: #11459f; --fiestas-bus-line-text: #fff; }
-  .fiestas-detail-transit-line[data-fiestas-transit-line="26"] { --fiestas-bus-line-color: #80d0f7; --fiestas-bus-line-text: #000; }
+  .fiestas-detail-transit-line[data-fiestas-transit-line="26"] { --fiestas-bus-line-color: #80d1f7; --fiestas-bus-line-text: #000; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="C0"],
   .fiestas-detail-transit-line[data-fiestas-transit-line="C1"],
   .fiestas-detail-transit-line[data-fiestas-transit-line="C2"] { --fiestas-bus-line-color: #555553; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="H"] { --fiestas-bus-line-color: #e5232e; --fiestas-bus-line-text: #000; }
-  .fiestas-detail-transit-line[data-fiestas-transit-line^="M"] { --fiestas-bus-line-color: #532fa2; --fiestas-bus-line-text: #fff; }
+  .fiestas-detail-transit-line[data-fiestas-transit-line^="M"] { --fiestas-bus-line-color: #a22f40; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line^="P"],
   .fiestas-detail-transit-line[data-fiestas-transit-line="PSC1"],
   .fiestas-detail-transit-line[data-fiestas-transit-line="PSC2"],
   .fiestas-detail-transit-line[data-fiestas-transit-line="PSC3"],
   .fiestas-detail-transit-line[data-fiestas-transit-line="R"],
-  .fiestas-detail-transit-line[data-fiestas-transit-line^="R"] { --fiestas-bus-line-color: #532fa2; --fiestas-bus-line-text: #fff; }
+  .fiestas-detail-transit-line[data-fiestas-transit-line^="R"] { --fiestas-bus-line-color: #a22f40; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line^="B"],
   .fiestas-detail-transit-line[data-fiestas-transit-line="SL"],
   .fiestas-detail-transit-line[data-fiestas-transit-line="SC"],
   .fiestas-detail-transit-line[data-fiestas-transit-line="CC"],
   .fiestas-detail-transit-line[data-fiestas-transit-line="Buho"] { --fiestas-bus-line-color: #000; --fiestas-bus-line-text: #fff; }
-  .fiestas-detail-transit-line[data-fiestas-transit-line="LP"] { --fiestas-bus-line-color: #2fb7b7; --fiestas-bus-line-text: #fff; }
+  .fiestas-detail-transit-line[data-fiestas-transit-line="LP"] { --fiestas-bus-line-color: #2f8cb7; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="LC"] { --fiestas-bus-line-color: #5ebd5a; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="LD"] { --fiestas-bus-line-color: #ee4ba4; --fiestas-bus-line-text: #fff; }
-  .fiestas-detail-transit-line[data-fiestas-transit-line^="F"] { --fiestas-bus-line-color: #006d38; --fiestas-bus-line-text: #fff; }
-  .fiestas-detail-transit-line[data-fiestas-transit-line="L01"] { --fiestas-bus-line-color: #23b4ca; --fiestas-bus-line-text: #fff; }
+  .fiestas-detail-transit-line[data-fiestas-transit-line^="F"] { --fiestas-bus-line-color: #004a6d; --fiestas-bus-line-text: #fff; }
+  .fiestas-detail-transit-line[data-fiestas-transit-line="L01"] { --fiestas-bus-line-color: #2395ca; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="L02"] { --fiestas-bus-line-color: #40af64; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="Roja"] { --fiestas-bus-line-color: #eb4f4f; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="Azul"] { --fiestas-bus-line-color: #156de7; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="Verde"] { --fiestas-bus-line-color: #40bd48; --fiestas-bus-line-text: #fff; }
   .fiestas-detail-transit-line[data-fiestas-transit-line="RioSh"] { --fiestas-bus-line-color: #e20613; --fiestas-bus-line-text: #fff; }
-  .fiestas-detail-transit-line[data-fiestas-transit-line="Aerop"] { --fiestas-bus-line-color: #006680; --fiestas-bus-line-text: #fff; }
+  .fiestas-detail-transit-line[data-fiestas-transit-line="Aerop"] { --fiestas-bus-line-color: #005780; --fiestas-bus-line-text: #fff; }
 
   .fiestas-detail-transit-details {
     margin-top: 0.75rem;
-    border-top: 1px solid rgba(115, 87, 159, 0.18);
+    border-top: 1px solid rgba(166, 80, 93, 0.18);
     padding-top: 0.7rem;
   }
 
@@ -3576,7 +3577,7 @@
   }
 
   .fiestas-detail-transit-stop:focus-visible {
-    outline: 3px solid rgba(15, 159, 141, 0.35);
+    outline: 3px solid rgba(15, 113, 159, 0.35);
     outline-offset: 2px;
   }
 
@@ -3608,7 +3609,7 @@
     height: 1.8rem;
     place-items: center;
     border-radius: 9999px;
-    color: #73579f;
+    color: #ce0e2d;
   }
 
   .fiestas-detail-transit-planner {
@@ -3616,7 +3617,7 @@
     align-items: center;
     gap: 0.42rem;
     margin-top: 0.55rem;
-    color: #0f8f80;
+    color: #0074ac;
     font-size: 0.78rem;
     font-weight: 800;
     text-decoration: none;
@@ -3624,7 +3625,7 @@
 
   .fiestas-detail-transit-planner:hover,
   .fiestas-detail-transit-planner:focus-visible {
-    color: #087569;
+    color: #005c86;
     text-decoration: underline;
   }
 
@@ -3637,7 +3638,7 @@
     display: grid;
     justify-items: center;
     transform: translate(-50%, -50%);
-    color: #0f9f8d;
+    color: #0083c1;
     filter: drop-shadow(0 0.12rem 0.12rem rgba(28, 34, 45, 0.28));
   }
 
@@ -3648,7 +3649,7 @@
     place-items: center;
     border: 2px solid #fff;
     border-radius: 9999px;
-    background: #0f9f8d;
+    background: #0083c1;
     color: #fff;
     font-size: 0.88rem;
     -webkit-text-fill-color: currentColor;
@@ -3659,7 +3660,7 @@
     margin-top: 0.12rem;
     border-radius: 9999px;
     background: rgba(255, 255, 255, 0.94);
-    color: #087569;
+    color: #005c86;
     padding: 0.1rem 0.3rem;
     font-size: 0.58rem;
     font-weight: 800;
@@ -3691,7 +3692,7 @@
 
   .fiestas-detail-copy-fallback {
     border-radius: 1rem;
-    background: rgba(15, 159, 141, 0.08);
+    background: rgba(15, 113, 159, 0.08);
     padding: 0.9rem;
   }
 
@@ -3721,7 +3722,7 @@
     margin-top: 0.7rem;
     border: 0;
     border-radius: 0.65rem;
-    background: #0f9f8d;
+    background: #0083c1;
     color: #fff;
     padding: 0.7rem 0.9rem;
     font: inherit;
@@ -3730,7 +3731,7 @@
   }
 
   .fiestas-detail-copy-button:hover {
-    background: #0b8879;
+    background: #0b6088;
   }
 
   .fiestas-community-card {
@@ -3739,7 +3740,7 @@
     margin-top: 0.9375rem;
     border: 1px solid #ebeef3;
     border-radius: 1.15rem;
-    background: #f7f5fb;
+    background: #fbf5f6;
     padding: 1.05rem;
   }
 
@@ -3761,7 +3762,7 @@
 
   .fiestas-community-kicker {
     margin: 0 0 0.2rem;
-    color: #73579f;
+    color: #ce0e2d;
     font-size: 0.68rem;
     font-weight: 900;
     letter-spacing: 0.16em;
@@ -3789,7 +3790,7 @@
     justify-content: flex-start;
     gap: 0.75rem;
     border-radius: 0.9rem;
-    background: #73579f;
+    background: #ce0e2d;
     color: #fff;
     padding: 0.72rem 0.9rem;
     font-size: 0.92rem;
@@ -3799,7 +3800,7 @@
 
   .fiestas-community-primary:hover,
   .fiestas-community-primary:focus-visible {
-    background: #624887;
+    background: #8c434e;
   }
 
   .fiestas-community-secondary {
@@ -3827,17 +3828,17 @@
   }
 
   .fiestas-community-secondary a.fiestas-community-telegram i {
-    color: #229ed9;
+    color: #229fd9;
   }
 
   .fiestas-community-secondary a.fiestas-community-telegram:hover i,
   .fiestas-community-secondary a.fiestas-community-telegram:focus-visible i {
-    color: #168ac1;
+    color: #168bc1;
   }
 
   .fiestas-community-secondary i {
     width: 1.15rem;
-    color: #0f9f8d;
+    color: #0083c1;
     font-size: 1rem;
     text-align: center;
   }
@@ -3892,7 +3893,7 @@
   }
 
   .fiestas-related-heading > span {
-    color: #73579f;
+    color: #ce0e2d;
     font-size: 0.76rem;
     font-weight: 800;
     text-align: right;
@@ -3918,13 +3919,13 @@
 
   .fiestas-related-item:hover,
   .fiestas-related-item:focus-visible {
-    border-color: rgba(15, 159, 141, 0.45);
-    background: rgba(15, 159, 141, 0.05);
+    border-color: rgba(15, 113, 159, 0.45);
+    background: rgba(15, 113, 159, 0.05);
   }
 
   .fiestas-related-time {
     min-width: 2.45rem;
-    color: #0f9f8d;
+    color: #0083c1;
     font-size: 0.78rem;
     font-weight: 850;
     text-align: center;
@@ -3962,7 +3963,7 @@
   }
 
   .fiestas-related-arrow {
-    color: #73579f;
+    color: #ce0e2d;
     font-size: 0.8rem;
   }
 
@@ -3970,7 +3971,7 @@
     display: inline-flex;
     justify-self: center;
     align-items: center;
-    color: #0f8f80;
+    color: #0074ac;
     font-size: 0.88rem;
     font-weight: 850;
     text-decoration: none;
@@ -3978,7 +3979,7 @@
 
   .fiestas-related-more:hover,
   .fiestas-related-more:focus-visible {
-    color: #087569;
+    color: #005c86;
     text-decoration: underline;
     text-underline-offset: 0.2rem;
   }
@@ -4020,8 +4021,8 @@
 
   .fiestas-detail-community-plan:hover,
   .fiestas-detail-community-plan:focus-visible {
-    border-color: rgba(15, 159, 141, 0.5);
-    background: rgba(15, 159, 141, 0.06);
+    border-color: rgba(15, 113, 159, 0.5);
+    background: rgba(15, 113, 159, 0.06);
     transform: translateY(-1px);
   }
 
@@ -4031,8 +4032,8 @@
     height: 2.5rem;
     place-items: center;
     border-radius: 0.8rem;
-    background: rgba(115, 87, 159, 0.12);
-    color: #73579f;
+    background: rgba(166, 80, 93, 0.12);
+    color: #ce0e2d;
     font-size: 1.05rem;
   }
 
@@ -4060,13 +4061,13 @@
   }
 
   .fiestas-detail-community-plan-arrow {
-    color: #73579f;
+    color: #ce0e2d;
     font-size: 0.8rem;
   }
 
   .fiestas-app :focus-visible,
   .fiestas-detail-main :focus-visible {
-    outline: 3px solid rgba(15, 159, 141, 0.45);
+    outline: 3px solid rgba(15, 113, 159, 0.45);
     outline-offset: 3px;
   }
 
@@ -4206,7 +4207,7 @@
 
   html.dark .fiestas-finished-toggle:hover,
   html.dark .fiestas-finished-toggle:focus-visible {
-    color: #c8b3e5;
+    color: #e5b3bb;
   }
 
   html.dark .fiestas-finished-count {
@@ -4223,7 +4224,7 @@
 
   html.dark .fiestas-agenda-sort-toggle:hover,
   html.dark .fiestas-agenda-sort-toggle:focus-visible {
-    color: #c8b3e5;
+    color: #e5b3bb;
   }
 
   html.dark .fiestas-finished-list {
@@ -4246,9 +4247,9 @@
 
   html.dark .fiestas-date-nav:hover,
   html.dark .fiestas-date-nav:focus-visible {
-    border-color: #c8b3e5;
-    background: #30283c;
-    color: #71d8cb;
+    border-color: #e5b3bb;
+    background: #3a0810;
+    color: #71b7d8;
   }
 
   html.dark .fiestas-date-weather {
@@ -4267,7 +4268,7 @@
   }
 
   html.dark .fiestas-date-card.is-active .fiestas-date-temperature {
-    color: #99f6e4;
+    color: #99d9f6;
     opacity: 1;
   }
 
@@ -4276,7 +4277,7 @@
   }
 
   html.dark .fiestas-weather-attribution a {
-    color: #c8b3e5;
+    color: #e5b3bb;
   }
 
   html.dark .fiestas-search input,
@@ -4293,7 +4294,7 @@
   }
 
   html.dark .fiestas-search-scope i {
-    color: #71d8cb;
+    color: #71b7d8;
   }
 
   html.dark .fiestas-detail-fact + .fiestas-detail-fact,
@@ -4321,27 +4322,27 @@
 
   html.dark .fiestas-detail-transit {
     border-color: #313743;
-    background: linear-gradient(135deg, rgba(23, 184, 164, 0.1), rgba(115, 87, 159, 0.14));
+    background: linear-gradient(135deg, rgba(23, 133, 184, 0.1), rgba(166, 80, 93, 0.14));
   }
 
   html.dark .fiestas-detail-directions-options {
     border-color: #313743;
-    background: rgba(23, 184, 164, 0.06);
+    background: rgba(23, 133, 184, 0.06);
   }
 
   html.dark .fiestas-detail-directions-option {
     background: transparent;
-    color: #5dd4c4;
+    color: #5daed4;
   }
 
   html.dark .fiestas-detail-directions-option i {
-    color: #5dd4c4;
+    color: #5daed4;
   }
 
   html.dark .fiestas-detail-directions-option:hover,
   html.dark .fiestas-detail-directions-option:focus-visible {
-    background: rgba(93, 212, 196, 0.14);
-    color: #8ce5da;
+    background: rgba(93, 174, 212, 0.14);
+    color: #8cc9e5;
   }
 
   html.dark .fiestas-detail-transit-summary {
@@ -4351,7 +4352,7 @@
   html.dark .fiestas-detail-transit-icon,
   html.dark .fiestas-detail-transit-scroll,
   html.dark .fiestas-detail-transit-planner {
-    color: #5dd4c4;
+    color: #5daed4;
   }
 
   html.dark .fiestas-detail-transit-scroll {
@@ -4360,7 +4361,7 @@
 
   html.dark .fiestas-detail-transit-scroll:hover,
   html.dark .fiestas-detail-transit-scroll:focus-visible {
-    background: rgba(93, 212, 196, 0.16);
+    background: rgba(93, 174, 212, 0.16);
   }
 
   html.dark .fiestas-detail-transit-line:hover,
@@ -4370,7 +4371,7 @@
   }
 
   html.dark .fiestas-detail-transit-details {
-    border-color: rgba(200, 179, 229, 0.24);
+    border-color: rgba(229, 179, 187, 0.24);
   }
 
   html.dark .fiestas-detail-transit-stop {
@@ -4395,19 +4396,19 @@
   }
 
   html.dark .fiestas-detail-transit-stop > i {
-    color: #c8b3e5;
+    color: #e5b3bb;
   }
 
   html.dark .fiestas-detail-map-empty,
   html.dark .fiestas-detail-map-error {
     background:
-      linear-gradient(135deg, rgba(23, 184, 164, 0.16), rgba(115, 87, 159, 0.18)),
+      linear-gradient(135deg, rgba(23, 133, 184, 0.16), rgba(166, 80, 93, 0.18)),
       #171c24;
     color: #d4d9e2;
   }
 
   html.dark .fiestas-detail-copy-fallback {
-    background: rgba(23, 184, 164, 0.12);
+    background: rgba(23, 133, 184, 0.12);
   }
 
   html.dark .fiestas-detail-copy-fallback input {
@@ -4418,18 +4419,18 @@
 
   html.dark .fiestas-detail-action:hover,
   html.dark .fiestas-detail-action:focus-visible {
-    background: rgba(23, 184, 164, 0.12);
-    color: #5dd4c4;
+    background: rgba(23, 133, 184, 0.12);
+    color: #5daed4;
   }
 
   html.dark .fiestas-detail-action.is-active {
-    background: rgba(200, 179, 229, 0.12);
-    color: #c8b3e5;
+    background: rgba(229, 179, 187, 0.12);
+    color: #e5b3bb;
   }
 
   html.dark .fiestas-community-card {
     border-color: #343a45;
-    background: #252231;
+    background: #381b1f;
   }
 
   html.dark .fiestas-community-logo {
@@ -4454,7 +4455,7 @@
   }
 
   html.dark .fiestas-community-secondary a.fiestas-community-telegram i {
-    color: #54b8e8;
+    color: #54b9e8;
   }
 
   html.dark .fiestas-community-secondary a.fiestas-community-whatsapp i {
@@ -4471,7 +4472,7 @@
 
   html.dark .fiestas-related-heading > span,
   html.dark .fiestas-related-arrow {
-    color: #c8b3e5;
+    color: #e5b3bb;
   }
 
   html.dark .fiestas-related-item {
@@ -4480,8 +4481,8 @@
 
   html.dark .fiestas-related-item:hover,
   html.dark .fiestas-related-item:focus-visible {
-    border-color: rgba(23, 184, 164, 0.55);
-    background: rgba(23, 184, 164, 0.08);
+    border-color: rgba(23, 133, 184, 0.55);
+    background: rgba(23, 133, 184, 0.08);
   }
 
   html.dark .fiestas-related-copy strong {
@@ -4493,7 +4494,7 @@
   }
 
   html.dark .fiestas-related-more {
-    color: #5dd4c4;
+    color: #5daed4;
   }
 
   html.dark .fiestas-detail-card.fiestas-related-card {
@@ -4515,13 +4516,13 @@
 
   html.dark .fiestas-detail-community-plan:hover,
   html.dark .fiestas-detail-community-plan:focus-visible {
-    border-color: rgba(23, 184, 164, 0.55);
-    background: rgba(23, 184, 164, 0.08);
+    border-color: rgba(23, 133, 184, 0.55);
+    background: rgba(23, 133, 184, 0.08);
   }
 
   html.dark .fiestas-detail-community-plan-icon {
-    background: rgba(200, 179, 229, 0.14);
-    color: #c8b3e5;
+    background: rgba(229, 179, 187, 0.14);
+    color: #e5b3bb;
   }
 
   html.dark .fiestas-detail-community-plan-copy strong {
@@ -4539,12 +4540,12 @@
 
   html.dark .fiestas-hero-subtitle,
   html.dark .fiestas-intro {
-    color: #b7a3d8;
+    color: #d8a3ab;
   }
 
   html.dark .fiestas-search-toggle.is-active {
-    background: rgba(23, 184, 164, 0.14);
-    color: #17b8a4;
+    background: rgba(23, 133, 184, 0.14);
+    color: #3cb4e5;
   }
 
   html.dark .fiestas-scroll-header {
@@ -4561,7 +4562,7 @@
     border-color: transparent;
     background: transparent;
     box-shadow: none;
-    color: #f1eef7;
+    color: #f7eeef;
   }
 
   html.dark .fiestas-share-toggle,
@@ -4569,7 +4570,7 @@
     border-color: transparent;
     background: rgba(35, 41, 51, 0.94);
     box-shadow: 0 0.3rem 0.85rem rgba(0, 0, 0, 0.3);
-    color: #f1eef7;
+    color: #f7eeef;
   }
 
   html.dark .fiestas-scroll-action:hover,
@@ -4578,13 +4579,13 @@
   html.dark .fiestas-share-toggle:focus-visible,
   html.dark .fiestas-search-toggle:hover,
   html.dark .fiestas-search-toggle:focus-visible {
-    background: #0f766e;
+    background: #00658f;
     color: #fff;
   }
 
   html.dark .fiestas-search-panel:not([hidden]) .fiestas-search {
-    border-color: #17b8a4;
-    box-shadow: inset 0 0 0 1px #17b8a4;
+    border-color: #3cb4e5;
+    box-shadow: inset 0 0 0 1px #3cb4e5;
   }
 
   html.dark .fiestas-type-option:hover {
@@ -4592,28 +4593,28 @@
   }
 
   html.dark .fiestas-type-option input {
-    accent-color: #17b8a4;
+    accent-color: #3cb4e5;
   }
 
   html.dark .fiestas-plan-card {
-    background: #272235;
+    background: #3b1c21;
     color: #f5f3ee;
   }
 
   html.dark .fiestas-community-plans-cta {
-    background: #272235;
+    background: #3b1c21;
     color: #f5f3ee;
   }
 
   html.dark .fiestas-community-plans-cta:hover,
   html.dark .fiestas-community-plans-cta:focus-visible {
-    background: #30283c;
+    background: #3a0810;
   }
 
   html.dark .fiestas-community-plans-cta strong,
   html.dark .fiestas-community-plans-cta-icon,
   html.dark .fiestas-community-plans-cta > i:last-child {
-    color: #c8b3e5;
+    color: #e5b3bb;
   }
 
   html.dark .fiestas-community-plans-cta small {
@@ -4621,18 +4622,18 @@
   }
 
   html.dark .fiestas-community-plans-cta.is-install {
-    background: #183a37;
+    background: #182f3a;
   }
 
   html.dark .fiestas-community-plans-cta.is-install:hover,
   html.dark .fiestas-community-plans-cta.is-install:focus-visible {
-    background: #1e4641;
+    background: #1e3946;
   }
 
   html.dark .fiestas-community-plans-cta.is-install .fiestas-community-plans-cta-icon,
   html.dark .fiestas-community-plans-cta.is-install strong,
   html.dark .fiestas-community-plans-cta.is-install > i:last-child {
-    color: #7be0d1;
+    color: #7bc0e0;
   }
 
   html.dark .fiestas-map-control,
@@ -4662,18 +4663,18 @@
   html.dark .fiestas-map-share-button {
     border-color: transparent;
     background: transparent;
-    color: #7be0d1;
+    color: #7bc0e0;
   }
 
   html.dark .fiestas-map-filter-kicker,
   html.dark .fiestas-map-date-toggle,
   html.dark .fiestas-map-filter-toggle {
-    color: #5dd4c4;
+    color: #5daed4;
   }
 
   html.dark .fiestas-map-filter-toggle.is-active {
-    border-color: #17b8a4;
-    background: #0f766e;
+    border-color: #3cb4e5;
+    background: #00658f;
     color: #fff;
   }
 
@@ -4706,14 +4707,14 @@
   }
 
   html.dark .fiestas-app.is-map-mode .fiestas-date-card.is-active {
-    border-color: #17b8a4;
-    color: #5dd4c4;
+    border-color: #3cb4e5;
+    color: #5daed4;
   }
 
   html.dark .fiestas-map-cluster-reset {
-    border-color: rgba(23, 184, 164, 0.32);
-    background: rgba(23, 184, 164, 0.14);
-    color: #b7f3ea;
+    border-color: rgba(23, 133, 184, 0.32);
+    background: rgba(23, 133, 184, 0.14);
+    color: #b7e0f3;
   }
 
   html.dark .fiestas-map-sheet-handle {
@@ -4735,13 +4736,13 @@
   }
 
   html.dark .fiestas-map-result.is-selected::before {
-    background: color-mix(in srgb, var(--fiestas-type-color, #17b8a4) 15%, #1a1f28);
+    background: color-mix(in srgb, var(--fiestas-type-color, #3cb4e5) 15%, #1a1f28);
   }
 
   html.dark .fiestas-map-result-type,
   html.dark .fiestas-detail-type {
-    background: color-mix(in srgb, var(--fiestas-type-color, #17b8a4) 22%, #1a1f28);
-    color: var(--fiestas-type-color, #5dd4c4);
+    background: color-mix(in srgb, var(--fiestas-type-color, #3cb4e5) 22%, #1a1f28);
+    color: var(--fiestas-type-color, #5daed4);
   }
 
   html.dark .fiestas-map-result-meta {
@@ -4749,16 +4750,16 @@
   }
 
   html.dark .fiestas-map-location-note {
-    border-color: rgba(23, 184, 164, 0.3);
-    background: rgba(23, 184, 164, 0.12);
-    color: #b7f3ea;
+    border-color: rgba(23, 133, 184, 0.3);
+    background: rgba(23, 133, 184, 0.12);
+    color: #b7e0f3;
   }
 
   html.dark .fiestas-map-location-note:hover,
   html.dark .fiestas-map-location-note:focus-visible {
-    border-color: #5dd4c4;
-    background: rgba(23, 184, 164, 0.2);
-    color: #d9fff8;
+    border-color: #5daed4;
+    background: rgba(23, 133, 184, 0.2);
+    color: #d9f3ff;
   }
 
   @media (max-width: 719px) {
@@ -4933,14 +4934,14 @@ html:not(.dark) body:has(.fiestas-app) {
   width: fit-content;
   align-items: center;
   gap: 0.45rem;
-  color: #0f9f8d;
+  color: #0083c1;
   font-weight: 800;
   text-decoration: none;
 }
 
 .fiestas-plan-kicker {
   margin: 0.9rem 0 0;
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -4979,8 +4980,8 @@ html:not(.dark) body:has(.fiestas-app) {
 }
 
 .fiestas-plan-tab.is-active {
-  border-bottom-color: #0f9f8d;
-  color: #0f766e;
+  border-bottom-color: #0083c1;
+  color: #00658f;
 }
 
 .fiestas-plan-section[hidden],
@@ -5052,19 +5053,19 @@ html:not(.dark) body:has(.fiestas-app) {
 
 .fiestas-plan-action:hover,
 .fiestas-plan-action:focus-visible {
-  border-color: #0f9f8d;
-  color: #0f766e;
+  border-color: #0083c1;
+  color: #00658f;
 }
 
 .fiestas-plan-action-primary {
-  border-color: #0f9f8d;
-  background: #0f9f8d;
+  border-color: #0083c1;
+  background: #0083c1;
   color: #fff;
 }
 
 .fiestas-plan-action-primary:hover,
 .fiestas-plan-action-primary:focus-visible {
-  background: #0b8173;
+  background: #0b5c81;
   color: #fff;
 }
 
@@ -5105,7 +5106,7 @@ html:not(.dark) body:has(.fiestas-app) {
 .fiestas-plan-empty a,
 .fiestas-plan-import-link {
   width: fit-content;
-  color: #0f8f80;
+  color: #0074ac;
   font-weight: 850;
 }
 
@@ -5158,7 +5159,7 @@ html:not(.dark) body:has(.fiestas-app) {
 }
 
 .fiestas-plan-event-time {
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.85rem;
   font-weight: 900;
 }
@@ -5198,13 +5199,13 @@ html:not(.dark) body:has(.fiestas-app) {
   display: grid;
   gap: 0.45rem;
   border-radius: 1rem;
-  background: #f0eaf8;
+  background: #f8eaec;
   padding: 1rem;
 }
 
 .fiestas-plan-create-form label,
 .fiestas-plan-selector-create label {
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.8rem;
   font-weight: 900;
 }
@@ -5219,7 +5220,7 @@ html:not(.dark) body:has(.fiestas-app) {
 .fiestas-plan-selector-create input {
   min-width: 0;
   flex: 1;
-  border: 1px solid #d9d2e5;
+  border: 1px solid #e8cfd3;
   border-radius: 0.7rem;
   background: #fff;
   padding: 0.7rem 0.8rem;
@@ -5229,8 +5230,8 @@ html:not(.dark) body:has(.fiestas-app) {
 .fiestas-plan-feedback,
 .fiestas-plan-import-status {
   border-radius: 0.75rem;
-  background: #e8f7f4;
-  color: #0f766e;
+  background: #e9f4f9;
+  color: #00658f;
   padding: 0.7rem 0.85rem;
   font-size: 0.86rem;
   font-weight: 750;
@@ -5337,7 +5338,7 @@ html:not(.dark) body:has(.fiestas-app) {
 }
 
 .fiestas-plan-import-activity time {
-  color: #0f8f80;
+  color: #0074ac;
   font-size: 0.78rem;
   font-weight: 900;
 }
@@ -5369,7 +5370,7 @@ html:not(.dark) body:has(.fiestas-app) {
   width: fit-content;
   border: 0;
   background: transparent;
-  color: #0f8f80;
+  color: #0074ac;
   cursor: pointer;
   padding: 0.35rem 0;
   font-size: 0.8rem;
@@ -5378,7 +5379,7 @@ html:not(.dark) body:has(.fiestas-app) {
 
 .fiestas-plan-import-activity-toggle:hover,
 .fiestas-plan-import-activity-toggle:focus-visible {
-  color: #0f766e;
+  color: #00658f;
   text-decoration: underline;
 }
 
@@ -5391,7 +5392,7 @@ html:not(.dark) body:has(.fiestas-app) {
   width: fit-content;
   border: 0;
   background: transparent;
-  color: #0f8f80;
+  color: #0074ac;
   cursor: pointer;
   padding: 0.25rem 0;
   font-size: 0.84rem;
@@ -5400,7 +5401,7 @@ html:not(.dark) body:has(.fiestas-app) {
 
 .fiestas-plan-import-expand:hover,
 .fiestas-plan-import-expand:focus-visible {
-  color: #0f766e;
+  color: #00658f;
   text-decoration: underline;
 }
 
@@ -5426,7 +5427,7 @@ html.dark .fiestas-plan-import-activity {
 }
 
 html.dark .fiestas-plan-import-activity-toggle {
-  color: #78e2d4;
+  color: #78c0e2;
 }
 
 .fiestas-plan-selector {
@@ -5502,7 +5503,7 @@ html.dark .fiestas-plan-import-activity-toggle {
   gap: 0.4rem;
   border: 0;
   background: transparent;
-  color: #0f766e;
+  color: #00658f;
   padding: 0.15rem 0;
   font: inherit;
   font-size: 0.84rem;
@@ -5511,7 +5512,7 @@ html.dark .fiestas-plan-import-activity-toggle {
 
 .fiestas-plan-selector-create-toggle:hover,
 .fiestas-plan-selector-create-toggle:focus-visible {
-  color: #73579f;
+  color: #ce0e2d;
   text-decoration: underline;
   text-underline-offset: 0.18rem;
 }
@@ -5536,7 +5537,7 @@ html.dark .fiestas-plan-import-activity-toggle {
 .fiestas-plan-selector-option input {
   width: 1.15rem;
   height: 1.15rem;
-  accent-color: #0f9f8d;
+  accent-color: #0083c1;
 }
 
 .fiestas-plan-selector-feedback {
@@ -5560,7 +5561,7 @@ html.dark .fiestas-plan-import-activity-toggle {
   justify-content: center;
   border: 0;
   background: transparent;
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 1.15rem;
 }
 
@@ -5637,7 +5638,7 @@ html.dark .fiestas-plan-import-activity-toggle {
 }
 
 .fiestas-event-option i {
-  color: #73579f;
+  color: #ce0e2d;
 }
 
 html.dark .fiestas-more-options {
@@ -5723,13 +5724,13 @@ html.dark .fiestas-event-option {
 }
 
 .fiestas-casetas-filter-option--toggle.is-active {
-  border-color: rgba(15, 159, 141, 0.55);
-  background: rgba(15, 159, 141, 0.08);
-  box-shadow: 0 0 0 2px rgba(15, 159, 141, 0.08);
+  border-color: rgba(15, 113, 159, 0.55);
+  background: rgba(15, 113, 159, 0.08);
+  box-shadow: 0 0 0 2px rgba(15, 113, 159, 0.08);
 }
 
 .fiestas-casetas-filter-option--toggle:focus-visible {
-  outline: 3px solid rgba(15, 159, 141, 0.35);
+  outline: 3px solid rgba(15, 113, 159, 0.35);
   outline-offset: 2px;
 }
 
@@ -5763,7 +5764,7 @@ html.dark .fiestas-event-option {
 }
 
 .fiestas-casetas-filter-option.is-active .fiestas-casetas-filter-option-copy strong i {
-  color: #0f9f8d;
+  color: #0083c1;
 }
 
 .fiestas-casetas-filter-option.is-active .fiestas-casetas-filter-icon--gluten-free {
@@ -5820,7 +5821,7 @@ html.dark .fiestas-event-option {
 
 .fiestas-casetas-search-status {
   overflow: hidden;
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.76rem;
   font-weight: 800;
   text-overflow: ellipsis;
@@ -5857,16 +5858,16 @@ html.dark .fiestas-event-option {
 .fiestas-casetas-search-toggle:focus-visible {
   border-color: #b8c5d2;
   background: #f8fafc;
-  color: #0f766e;
+  color: #00658f;
   box-shadow: 0 0.35rem 0.8rem rgba(15, 23, 42, 0.1);
-  outline: 3px solid rgba(15, 159, 141, 0.18);
+  outline: 3px solid rgba(15, 113, 159, 0.18);
   outline-offset: 2px;
 }
 
 .fiestas-casetas-search-toggle.is-active {
-  border-color: rgba(15, 159, 141, 0.42);
-  background: rgba(15, 159, 141, 0.09);
-  color: #0f766e;
+  border-color: rgba(15, 113, 159, 0.42);
+  background: rgba(15, 113, 159, 0.09);
+  color: #00658f;
 }
 
 .fiestas-casetas-search {
@@ -5883,7 +5884,7 @@ html.dark .fiestas-event-option {
 }
 
 .fiestas-casetas-search > i {
-  color: #0f9f8d;
+  color: #0083c1;
   font-size: 0.88rem;
 }
 
@@ -5918,9 +5919,9 @@ html.dark .fiestas-event-option {
 
 .fiestas-casetas-search button:hover,
 .fiestas-casetas-search button:focus-visible {
-  background: rgba(15, 159, 141, 0.12);
-  color: #0f766e;
-  outline: 2px solid rgba(15, 159, 141, 0.2);
+  background: rgba(15, 113, 159, 0.12);
+  color: #00658f;
+  outline: 2px solid rgba(15, 113, 159, 0.2);
   outline-offset: 1px;
 }
 
@@ -5936,22 +5937,22 @@ html.dark .fiestas-event-option {
 .fiestas-casetas-app .fiestas-caseta-zone-marker button {
   width: 2.75rem;
   height: 2.75rem;
-  background: var(--fiestas-type-color, #0f9f8d);
+  background: var(--fiestas-type-color, #0083c1);
   font-size: 1rem;
 }
 
 .fiestas-casetas-app .fiestas-caseta-zone-marker.is-selected button {
   width: 3.1rem;
   height: 3.1rem;
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 26%, transparent), 0 0.45rem 1.1rem rgba(15, 23, 42, 0.28);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--fiestas-type-color, #0083c1) 26%, transparent), 0 0.45rem 1.1rem rgba(15, 23, 42, 0.28);
 }
 
 .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-time-line {
-  color: var(--fiestas-type-color, #0f9f8d);
+  color: var(--fiestas-type-color, #0083c1);
 }
 
 .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-date {
-  color: var(--fiestas-type-color, #0f9f8d);
+  color: var(--fiestas-type-color, #0083c1);
   font-weight: 850;
 }
 
@@ -5960,7 +5961,7 @@ html.dark .fiestas-event-option {
   align-items: flex-start;
   gap: 0.35rem;
   margin-top: 0.22rem;
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.76rem;
   font-weight: 650;
   line-height: 1.3;
@@ -5969,7 +5970,7 @@ html.dark .fiestas-event-option {
   .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search-match i {
   flex: 0 0 auto;
   margin-top: 0.12rem;
-  color: #0f9f8d;
+  color: #0083c1;
     font-size: 0.72rem;
   }
 
@@ -5979,19 +5980,19 @@ html.dark .fiestas-event-option {
   }
 
   .fiestas-caseta-favorite-button.is-active {
-    color: var(--fiestas-type-color, #0f9f8d);
+    color: var(--fiestas-type-color, #0083c1);
   }
 
   .fiestas-caseta-favorite-button:hover,
   .fiestas-caseta-favorite-button:focus-visible {
-    color: #0f766e;
-    outline: 3px solid rgba(15, 159, 141, 0.18);
+    color: #00658f;
+    outline: 3px solid rgba(15, 113, 159, 0.18);
     outline-offset: 1px;
   }
 
   .fiestas-caseta-favorite-button.is-active:hover,
   .fiestas-caseta-favorite-button.is-active:focus-visible {
-    color: var(--fiestas-type-color, #0f9f8d);
+    color: var(--fiestas-type-color, #0083c1);
   }
 
   html.dark .fiestas-map-result-favorite,
@@ -6001,7 +6002,7 @@ html.dark .fiestas-event-option {
 
   html.dark .fiestas-map-result-favorite.is-active,
   html.dark .fiestas-caseta-favorite-button.is-active {
-    color: var(--fiestas-type-color, #71d8cb);
+    color: var(--fiestas-type-color, #71b7d8);
   }
 
 .fiestas-casetas-app .fiestas-map-cluster-reset {
@@ -6028,7 +6029,7 @@ html.dark .fiestas-event-option {
 }
 
 .fiestas-casetas-empty-hint {
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.8rem;
   font-weight: 750;
 }
@@ -6047,8 +6048,8 @@ html.dark .fiestas-casetas-filter-option {
 }
 
 html.dark .fiestas-casetas-filter-option--toggle.is-active {
-  border-color: rgba(113, 216, 203, 0.58);
-  background: rgba(23, 184, 164, 0.14);
+  border-color: rgba(113, 183, 216, 0.58);
+  background: rgba(23, 133, 184, 0.14);
 }
 
 html.dark .fiestas-casetas-filter-option-copy strong i,
@@ -6062,7 +6063,7 @@ html.dark .fiestas-casetas-filter-clear {
 }
 
 html.dark .fiestas-casetas-filter-option.is-active .fiestas-casetas-filter-option-copy strong i {
-  color: #71d8cb;
+  color: #71b7d8;
 }
 
 html.dark .fiestas-casetas-filter-clear:hover,
@@ -6078,14 +6079,14 @@ html.dark .fiestas-casetas-search-toggle {
 }
 
 html.dark .fiestas-casetas-search-toggle.is-active {
-  border-color: rgba(113, 216, 203, 0.42);
-  background: rgba(23, 184, 164, 0.14);
-  color: #9ae8dd;
+  border-color: rgba(113, 183, 216, 0.42);
+  background: rgba(23, 133, 184, 0.14);
+  color: #9acfe8;
 }
 
 html.dark .fiestas-casetas-search-status,
 html.dark .fiestas-casetas-empty-hint {
-  color: #c8b3e5;
+  color: #e5b3bb;
 }
 
 html.dark .fiestas-casetas-search input {
@@ -6093,11 +6094,11 @@ html.dark .fiestas-casetas-search input {
 }
 
 html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search-match {
-  color: #c8b3e5;
+  color: #e5b3bb;
 }
 
 html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search-match i {
-  color: #71d8cb;
+  color: #71b7d8;
 }
 
 .fiestas-caseta-detail-main {
@@ -6115,7 +6116,7 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
   gap: 0.7rem;
   border-radius: 1.25rem;
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 16%, #fff), rgba(255, 255, 255, 0.92)),
+    linear-gradient(135deg, color-mix(in srgb, var(--fiestas-type-color, #0083c1) 16%, #fff), rgba(255, 255, 255, 0.92)),
     #fff;
   padding: clamp(1.4rem, 5vw, 2.35rem);
 }
@@ -6126,7 +6127,7 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
   align-items: center;
   gap: 0.45rem;
   border-radius: 9999px;
-  background: var(--fiestas-type-color, #0f9f8d);
+  background: var(--fiestas-type-color, #0083c1);
   color: #fff;
   padding: 0.35rem 0.65rem;
   font-size: 0.78rem;
@@ -6146,7 +6147,7 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
 }
 
 .fiestas-caseta-facts h2 i {
-  color: var(--fiestas-type-color, #0f9f8d);
+  color: var(--fiestas-type-color, #0083c1);
 }
 
 .fiestas-caseta-location-pending {
@@ -6159,7 +6160,7 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
 }
 
 .fiestas-caseta-location-pending i {
-  color: var(--fiestas-type-color, #0f9f8d);
+  color: var(--fiestas-type-color, #0083c1);
 }
 
 .fiestas-caseta-menu {
@@ -6186,10 +6187,10 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
-  border: 1px solid #cfe4e1;
+  border: 1px solid #cfdde4;
   border-radius: 0.55rem;
   background: transparent;
-  color: #0f766e;
+  color: #00658f;
   cursor: pointer;
   font: inherit;
   font-size: 0.76rem;
@@ -6199,9 +6200,9 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
 
 .fiestas-caseta-qr-button:hover,
 .fiestas-caseta-qr-button:focus-visible {
-  border-color: #0f9f8d;
-  background: #eef9f7;
-  color: #087569;
+  border-color: #0083c1;
+  background: #eef6f9;
+  color: #005c86;
 }
 
 .fiestas-caseta-type-muted {
@@ -6216,7 +6217,7 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
   flex: 0 0 auto;
   place-items: center;
   border-radius: 50%;
-  background: var(--fiestas-type-color, #0f9f8d);
+  background: var(--fiestas-type-color, #0083c1);
   color: #fff;
   font-size: 0.88rem;
 }
@@ -6294,7 +6295,7 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
 }
 
 .fiestas-caseta-menu-item-disclosure > summary:focus-visible {
-  outline: 2px solid var(--fiestas-type-color, #0f9f8d);
+  outline: 2px solid var(--fiestas-type-color, #0083c1);
   outline-offset: 2px;
 }
 
@@ -6379,12 +6380,12 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
 
 .fiestas-caseta-dish-like:hover,
 .fiestas-caseta-dish-like:focus-visible {
-  background: color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 10%, transparent);
-  color: var(--fiestas-type-color, #0f9f8d);
+  background: color-mix(in srgb, var(--fiestas-type-color, #0083c1) 10%, transparent);
+  color: var(--fiestas-type-color, #0083c1);
 }
 
 .fiestas-caseta-dish-like.is-active {
-  color: var(--fiestas-type-color, #0f9f8d);
+  color: var(--fiestas-type-color, #0083c1);
 }
 
 .fiestas-caseta-dish-like-count {
@@ -6477,7 +6478,7 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
 
 .fiestas-caseta-dietary-legend-icon--vegan,
 .fiestas-caseta-dietary-pill--vegan {
-  color: #126b42;
+  color: #124f6b;
 }
 
 .fiestas-caseta-dietary-legend-icon--gluten-free,
@@ -6490,7 +6491,7 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
 }
 
 .fiestas-caseta-dietary-pill--vegan {
-  background: #d9f2e6;
+  background: #d9eaf2;
 }
 
 .fiestas-caseta-dietary-pill--gluten-free {
@@ -6511,9 +6512,9 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
   grid-template-columns: auto minmax(0, 1fr);
   gap: 1rem;
   align-items: start;
-  border: 1px solid color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 24%, #dfe5ec);
+  border: 1px solid color-mix(in srgb, var(--fiestas-type-color, #0083c1) 24%, #dfe5ec);
   border-radius: 1.1rem;
-  background: color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 7%, #fff);
+  background: color-mix(in srgb, var(--fiestas-type-color, #0083c1) 7%, #fff);
   padding: 1.1rem;
 }
 
@@ -6523,7 +6524,7 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
   height: 2.8rem;
   place-items: center;
   border-radius: 0.85rem;
-  background: var(--fiestas-type-color, #0f9f8d);
+  background: var(--fiestas-type-color, #0083c1);
   color: #fff;
   font-size: 1.1rem;
 }
@@ -6563,14 +6564,14 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
 }
 
 .fiestas-caseta-placeholder-link {
-  color: #0f766e;
+  color: #00658f;
   font-weight: 850;
   text-underline-offset: 0.16rem;
 }
 
 .fiestas-caseta-placeholder-link:hover,
 .fiestas-caseta-placeholder-link:focus-visible {
-  color: #087569;
+  color: #005c86;
 }
 
 .fiestas-caseta-back-link {
@@ -6578,7 +6579,7 @@ html.dark .fiestas-casetas-app .fiestas-caseta-result .fiestas-map-result-search
   width: fit-content;
   align-items: center;
   gap: 0.45rem;
-  color: #0f766e;
+  color: #00658f;
   font-weight: 850;
   text-decoration: none;
 }
@@ -6594,7 +6595,7 @@ html.dark .fiestas-caseta-detail-main {
 }
 
 html.dark .fiestas-caseta-hero {
-  background: linear-gradient(135deg, color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 25%, #1a1f28), #1a1f28);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--fiestas-type-color, #0083c1) 25%, #1a1f28), #1a1f28);
 }
 
 html.dark .fiestas-caseta-lead,
@@ -6605,8 +6606,8 @@ html.dark .fiestas-caseta-placeholder-list {
 }
 
 html.dark .fiestas-caseta-placeholder {
-  border-color: color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 38%, #313743);
-  background: color-mix(in srgb, var(--fiestas-type-color, #0f9f8d) 15%, #1a1f28);
+  border-color: color-mix(in srgb, var(--fiestas-type-color, #0083c1) 38%, #313743);
+  background: color-mix(in srgb, var(--fiestas-type-color, #0083c1) 15%, #1a1f28);
 }
 
 html.dark .fiestas-caseta-menu-section,
@@ -6630,11 +6631,11 @@ html.dark .fiestas-caseta-menu-item-price {
 }
 
 html.dark .fiestas-caseta-dietary-pill--vegetarian {
-  background: #214333;
+  background: #213843;
 }
 
 html.dark .fiestas-caseta-dietary-pill--vegan {
-  background: #1d4b36;
+  background: #1d3c4b;
 }
 
 html.dark .fiestas-caseta-dietary-pill--gluten-free {
@@ -6676,13 +6677,13 @@ html.dark .fiestas-caseta-dish-like {
 
 html.dark .fiestas-caseta-dish-like:hover,
 html.dark .fiestas-caseta-dish-like:focus-visible {
-  background: color-mix(in srgb, var(--fiestas-type-color, #17b8a4) 16%, transparent);
-  color: #7be0d1;
+  background: color-mix(in srgb, var(--fiestas-type-color, #3cb4e5) 16%, transparent);
+  color: #7bc0e0;
 }
 
 html.dark .fiestas-caseta-dish-like.is-active,
 html.dark .fiestas-caseta-dish-like:disabled {
-  color: var(--fiestas-type-color, #7be0d1);
+  color: var(--fiestas-type-color, #7bc0e0);
 }
 
 html.dark .fiestas-caseta-type-muted {
@@ -6691,15 +6692,15 @@ html.dark .fiestas-caseta-type-muted {
 }
 
 html.dark .fiestas-caseta-qr-button {
-  border-color: #3a5b59;
-  color: #7be0d1;
+  border-color: #3a515b;
+  color: #7bc0e0;
 }
 
 html.dark .fiestas-caseta-qr-button:hover,
 html.dark .fiestas-caseta-qr-button:focus-visible {
-  border-color: #7be0d1;
-  background: #17312f;
-  color: #a8eee5;
+  border-color: #7bc0e0;
+  background: #172931;
+  color: #a8d8ee;
 }
 
 html.dark .fiestas-caseta-placeholder h2 {
@@ -6707,7 +6708,7 @@ html.dark .fiestas-caseta-placeholder h2 {
 }
 
 html.dark .fiestas-caseta-placeholder-link {
-  color: #71d8cb;
+  color: #71b7d8;
 }
 
 .fiestas-plan-more {
@@ -6725,14 +6726,14 @@ html.dark .fiestas-caseta-placeholder-link {
 
 .fiestas-plan-more:hover,
 .fiestas-plan-more:focus-visible {
-  background: #f3eff7;
-  color: #73579f;
+  background: #f7eff0;
+  color: #ce0e2d;
 }
 
 html.dark .fiestas-plan-more:hover,
 html.dark .fiestas-plan-more:focus-visible {
-  background: #30283c;
-  color: #c8b3e5;
+  background: #3a0810;
+  color: #e5b3bb;
 }
 
 .fiestas-plan-timeline-card-footer {
@@ -6789,7 +6790,7 @@ html.dark .fiestas-plan-selector-empty {
 }
 
 html.dark .fiestas-plan-tab.is-active {
-  color: #78e2d4;
+  color: #78c0e2;
 }
 
 html.dark .fiestas-plan-event-card,
@@ -6809,17 +6810,17 @@ html.dark .fiestas-plan-selector-option {
 }
 
 html.dark .fiestas-plan-selector-create-toggle {
-  color: #78e2d4;
+  color: #78c0e2;
 }
 
 html.dark .fiestas-plan-selector-create-toggle:hover,
 html.dark .fiestas-plan-selector-create-toggle:focus-visible {
-  color: #c8b3e5;
+  color: #e5b3bb;
 }
 
 html.dark .fiestas-plan-create-form,
 html.dark .fiestas-plan-selector-create {
-  background: #272235;
+  background: #3b1c21;
 }
 
 html.dark .fiestas-plan-create-form input,
@@ -6908,7 +6909,7 @@ html.dark .fiestas-plan-selector-create input {
   border: 0;
   border-radius: 50%;
   background: transparent;
-  color: #159b8b;
+  color: #0083c1;
   font-size: 1.65rem;
 }
 
@@ -6937,8 +6938,8 @@ html.dark .fiestas-plan-selector-create input {
 .fiestas-plan-header-manage:focus-visible,
 .fiestas-plan-header-share:hover,
 .fiestas-plan-header-share:focus-visible {
-  background: #f4eff8;
-  color: #73579f;
+  background: #f8eff0;
+  color: #ce0e2d;
 }
 
 .fiestas-plan-header-manage[hidden] {
@@ -6982,13 +6983,13 @@ html.dark .fiestas-plan-selector-create input {
 
 .fiestas-plan-manage-menu button:hover,
 .fiestas-plan-manage-menu button:focus-visible {
-  background: #f4eff8;
-  color: #73579f;
+  background: #f8eff0;
+  color: #ce0e2d;
 }
 
 .fiestas-plan-manage-menu button i {
   width: 1.1rem;
-  color: #73579f;
+  color: #ce0e2d;
   text-align: center;
 }
 
@@ -7015,7 +7016,7 @@ html.dark .fiestas-plan-selector-create input {
   max-width: min(20rem, calc(100vw - 2rem));
   border: 0;
   border-radius: 9999px;
-  background: #f3eff7;
+  background: #f7eff0;
   color: #20232b;
   padding: 0.25rem 1.2rem;
   font: inherit;
@@ -7025,12 +7026,12 @@ html.dark .fiestas-plan-selector-create input {
 
 .fiestas-plan-picker-trigger:focus-visible,
 .fiestas-plan-picker-trigger[aria-expanded="true"] {
-  outline: 3px solid rgba(15, 159, 141, 0.28);
+  outline: 3px solid rgba(15, 113, 159, 0.28);
   outline-offset: 2px;
 }
 
 .fiestas-plan-picker-trigger > i:first-child {
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 1.15rem;
 }
 
@@ -7094,7 +7095,7 @@ html.dark .fiestas-plan-selector-create input {
 }
 
 .fiestas-plan-picker-option > i:first-child {
-  color: #73579f;
+  color: #ce0e2d;
   text-align: center;
 }
 
@@ -7106,14 +7107,14 @@ html.dark .fiestas-plan-selector-create input {
 }
 
 .fiestas-plan-picker-option > i:last-child {
-  color: #159b8b;
+  color: #0083c1;
   opacity: 0;
 }
 
 .fiestas-plan-picker-option:hover,
 .fiestas-plan-picker-option:focus-visible,
 .fiestas-plan-picker-option[aria-selected="true"] {
-  background: #f3eff7;
+  background: #f7eff0;
   color: #20232b;
   outline: 0;
 }
@@ -7123,11 +7124,11 @@ html.dark .fiestas-plan-selector-create input {
 }
 
 .fiestas-plan-picker-option.is-action {
-  color: #0f8f80;
+  color: #0074ac;
 }
 
 .fiestas-plan-picker-option.is-action > i:first-child {
-  color: #0f8f80;
+  color: #0074ac;
 }
 
 .fiestas-plan-picker-group-label {
@@ -7178,7 +7179,7 @@ html.dark .fiestas-plan-selector-create input {
 }
 
 .fiestas-plan-summary strong {
-  color: #159b8b;
+  color: #0083c1;
   font-weight: 850;
 }
 
@@ -7250,9 +7251,9 @@ html.dark .fiestas-plan-selector-create input {
 }
 
 .fiestas-plan-date.is-active {
-  background: #159b8b;
+  background: #0083c1;
   color: #fff;
-  box-shadow: 0 0.35rem 0.8rem rgba(21, 155, 139, 0.2);
+  box-shadow: 0 0.35rem 0.8rem rgba(21, 113, 155, 0.2);
 }
 
 .fiestas-plan-timeline {
@@ -7278,7 +7279,7 @@ html.dark .fiestas-plan-selector-create input {
 
 .fiestas-plan-timeline-rail time {
   align-self: start;
-  color: #159b8b;
+  color: #0083c1;
   font-size: 1rem;
   font-weight: 900;
   line-height: 1.1;
@@ -7292,14 +7293,14 @@ html.dark .fiestas-plan-selector-create input {
   justify-content: center;
   align-self: center;
   border-radius: 50%;
-  background: #e2f1ef;
-  color: #159b8b;
+  background: #e2ecf1;
+  color: #0083c1;
   font-size: 1.65rem;
 }
 
 .fiestas-plan-timeline-icon.has-image {
   overflow: hidden;
-  background: #edf7f5;
+  background: #edf4f7;
 }
 
 .fiestas-plan-timeline-image {
@@ -7328,8 +7329,8 @@ html.dark .fiestas-plan-selector-create input {
 }
 
 .fiestas-plan-timeline-card.is-overlap-target {
-  border-color: #159b8b;
-  box-shadow: 0 0 0 0.22rem rgba(21, 155, 139, 0.18), 0 0.55rem 1.1rem rgba(34, 39, 47, 0.12);
+  border-color: #0083c1;
+  box-shadow: 0 0 0 0.22rem rgba(21, 113, 155, 0.18), 0 0.55rem 1.1rem rgba(34, 39, 47, 0.12);
 }
 
 .fiestas-plan-timeline-card-top {
@@ -7359,23 +7360,23 @@ html.dark .fiestas-plan-selector-create input {
   border: 0;
   border-radius: 0;
   background: transparent;
-  color: #159b8b;
+  color: #0083c1;
   font-size: 1.35rem;
 }
 
 .fiestas-plan-bookmark.is-active {
-  color: #73579f;
+  color: #ce0e2d;
 }
 
 .fiestas-plan-bookmark:hover,
 .fiestas-plan-bookmark:focus-visible {
   background: transparent;
-  color: #0f806f;
+  color: #0f5c80;
 }
 
 .fiestas-plan-bookmark.is-active:hover,
 .fiestas-plan-bookmark.is-active:focus-visible {
-  color: #5e4387;
+  color: #88424c;
 }
 
 .fiestas-plan-timeline-location {
@@ -7399,8 +7400,8 @@ html.dark .fiestas-plan-selector-create input {
   width: fit-content;
   margin: 0 1.15rem 1.25rem;
   border-radius: 9999px;
-  background: #f4eff8;
-  color: #73579f;
+  background: #f8eff0;
+  color: #ce0e2d;
   padding: 0.42rem 0.8rem;
   font-size: 0.95rem;
   font-weight: 700;
@@ -7428,7 +7429,7 @@ html.dark .fiestas-plan-selector-create input {
 .fiestas-plan-overlap-review {
   border: 0;
   background: transparent;
-  color: #5b8f86;
+  color: #5b7f8f;
   padding: 0;
   font-size: 0.82rem;
   font-weight: 800;
@@ -7451,14 +7452,14 @@ html.dark .fiestas-plan-selector-create input {
 }
 
 .fiestas-plan-share-button {
-  background: #159b8b;
+  background: #0083c1;
   color: #fff;
-  box-shadow: 0 0.4rem 0.8rem rgba(21, 155, 139, 0.16);
+  box-shadow: 0 0.4rem 0.8rem rgba(21, 113, 155, 0.16);
 }
 
 .fiestas-plan-calendar-button {
   background: transparent;
-  color: #159b8b;
+  color: #0083c1;
 }
 
 .fiestas-plan-management {
@@ -7673,8 +7674,8 @@ body.fiestas-plan-share-open {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #f4eff8;
-  color: #73579f;
+  background: #f8eff0;
+  color: #ce0e2d;
   font-size: 0.9rem;
   font-weight: 900;
 }
@@ -7735,21 +7736,21 @@ body.fiestas-plan-share-open {
 }
 
 .fiestas-plan-share-native {
-  border-color: #0f9f8d;
-  background: #0f9f8d;
+  border-color: #0083c1;
+  background: #0083c1;
   color: #fff;
 }
 
 .fiestas-plan-share-native:hover,
 .fiestas-plan-share-native:focus-visible {
-  border-color: #0b8173;
-  background: #0b8173;
+  border-color: #0b5c81;
+  background: #0b5c81;
   color: #fff;
 }
 
 .fiestas-plan-share-feedback {
   margin: -0.25rem 0 0;
-  color: #0f766e;
+  color: #00658f;
   font-size: 0.82rem;
   font-weight: 800;
 }
@@ -7783,8 +7784,8 @@ html.dark .fiestas-plan-share-steps p {
 }
 
 html.dark .fiestas-plan-share-steps li > span {
-  background: #30283c;
-  color: #c8b3e5;
+  background: #3a0810;
+  color: #e5b3bb;
 }
 
 html.dark .fiestas-plan-share-message-label textarea {
@@ -7800,13 +7801,13 @@ html.dark .fiestas-plan-share-copy {
 }
 
 html.dark .fiestas-plan-share-native {
-  border-color: #159b8b;
-  background: #159b8b;
+  border-color: #0083c1;
+  background: #0083c1;
   color: #fff;
 }
 
 html.dark .fiestas-plan-share-feedback {
-  color: #78e2d4;
+  color: #78c0e2;
 }
 
 html.dark .fiestas-plan-share-feedback.is-error {
@@ -7856,8 +7857,8 @@ html.dark .fiestas-plan-header-manage:hover,
 html.dark .fiestas-plan-header-manage:focus-visible,
 html.dark .fiestas-plan-header-share:hover,
 html.dark .fiestas-plan-header-share:focus-visible {
-  background: #30283c;
-  color: #c8b3e5;
+  background: #3a0810;
+  color: #e5b3bb;
 }
 
 html.dark .fiestas-plan-manage-menu {
@@ -7871,7 +7872,7 @@ html.dark .fiestas-plan-manage-menu button {
 
 html.dark .fiestas-plan-manage-menu button:hover,
 html.dark .fiestas-plan-manage-menu button:focus-visible {
-  background: #30283c;
+  background: #3a0810;
   color: #f7f8fa;
 }
 
@@ -7888,7 +7889,7 @@ html.dark .fiestas-plan-picker-menu {
 html.dark .fiestas-plan-picker-option:hover,
 html.dark .fiestas-plan-picker-option:focus-visible,
 html.dark .fiestas-plan-picker-option[aria-selected="true"] {
-  background: #30283c;
+  background: #3a0810;
   color: #f7f8fa;
 }
 
@@ -7901,12 +7902,12 @@ html.dark .fiestas-plan-picker-divider {
 }
 
 html.dark .fiestas-plan-timeline-card.is-overlap-target {
-  border-color: #78e2d4;
-  box-shadow: 0 0 0 0.22rem rgba(120, 226, 212, 0.18), 0 0.55rem 1.1rem rgba(0, 0, 0, 0.28);
+  border-color: #78c0e2;
+  box-shadow: 0 0 0 0.22rem rgba(120, 192, 226, 0.18), 0 0.55rem 1.1rem rgba(0, 0, 0, 0.28);
 }
 
 html.dark .fiestas-plan-date.is-active {
-  background: #159b8b;
+  background: #0083c1;
 }
 
 html.dark .fiestas-plan-summary,
@@ -7916,15 +7917,15 @@ html.dark .fiestas-plan-management .fiestas-plan-action {
 }
 
 html.dark .fiestas-plan-tag {
-  background: #30283c;
+  background: #3a0810;
 }
 
 html.dark .fiestas-plan-bookmark {
-  color: #78e2d4;
+  color: #78c0e2;
 }
 
 html.dark .fiestas-plan-bookmark.is-active {
-  color: #c8b3e5;
+  color: #e5b3bb;
 }
 
 html.dark .fiestas-plan-overlap-warning {
@@ -7938,11 +7939,11 @@ html.dark .fiestas-plan-overlap-warning > i {
 }
 
 html.dark .fiestas-plan-overlap-review {
-  color: #8bb8ae;
+  color: #8baab8;
 }
 
 html.dark .fiestas-event-date {
-  color: #c9b5e4;
+  color: #e4b5bc;
 }
 
 html.dark .fiestas-popular-intro p {
@@ -7959,13 +7960,13 @@ html.dark .fiestas-popular-tab {
 }
 
 html.dark .fiestas-popular-tab.is-active {
-  background: #73579f;
+  background: #ce0e2d;
   color: #fff;
 }
 
 html.dark .fiestas-popular-tab:not(.is-active):hover {
-  background: #30283c;
-  color: #e8ddf7;
+  background: #3a0810;
+  color: #f7dde1;
 }
 
 html.dark .fiestas-popular-finished-toggle {
@@ -7973,11 +7974,11 @@ html.dark .fiestas-popular-finished-toggle {
 }
 
 html.dark .fiestas-popular-finished-toggle i {
-  color: #c8b3e5;
+  color: #e5b3bb;
 }
 
 html.dark .fiestas-event-ranking-count {
-  color: #c8b3e5;
+  color: #e5b3bb;
 }
 
 html.dark .fiestas-popular-status {
@@ -8004,8 +8005,8 @@ html.dark .fiestas-popular-dish-link:focus-visible {
 }
 
 html.dark .fiestas-popular-dish-icon {
-  background: #263b3c;
-  background: color-mix(in srgb, var(--fiestas-dish-color, #71d8cb) 20%, #1a1f28);
+  background: #26353c;
+  background: color-mix(in srgb, var(--fiestas-dish-color, #71b7d8) 20%, #1a1f28);
 }
 
 html.dark .fiestas-popular-dish-title-line strong {
@@ -8017,7 +8018,7 @@ html.dark .fiestas-popular-dish-location {
 }
 
 html.dark .fiestas-popular-dish-likes {
-  color: #71d8cb;
+  color: #71b7d8;
 }
 
 @media (min-width: 720px) {
@@ -8102,9 +8103,9 @@ html.dark .fiestas-popular-dish-likes {
   gap: 0.2rem;
   margin-top: 0.7rem;
   padding: 0.2rem;
-  border: 1px solid #e2dced;
+  border: 1px solid #eedbde;
   border-radius: 0.9rem;
-  background: #f6f3fa;
+  background: #faf3f4;
 }
 
 .fiestas-popular-tab {
@@ -8125,18 +8126,18 @@ html.dark .fiestas-popular-dish-likes {
 }
 
 .fiestas-popular-tab.is-active {
-  background: #73579f;
+  background: #ce0e2d;
   color: #fff;
-  box-shadow: 0 0.2rem 0.5rem rgba(77, 58, 111, 0.18);
+  box-shadow: 0 0.2rem 0.5rem rgba(114, 55, 64, 0.18);
 }
 
 .fiestas-popular-tab:not(.is-active):hover {
-  background: #ebe5f4;
-  color: #59477f;
+  background: #f4e5e7;
+  color: #86404b;
 }
 
 .fiestas-popular-tab:focus-visible {
-  outline: 3px solid rgba(15, 159, 141, 0.42);
+  outline: 3px solid rgba(15, 113, 159, 0.42);
   outline-offset: 2px;
 }
 
@@ -8171,17 +8172,17 @@ html.dark .fiestas-popular-dish-likes {
 }
 
 .fiestas-popular-finished-toggle i {
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.72rem;
 }
 
 .fiestas-popular-finished-toggle:hover,
 .fiestas-popular-finished-toggle:focus-visible {
-  color: #0f8f80;
+  color: #0074ac;
 }
 
 .fiestas-popular-finished-toggle:focus-visible {
-  outline: 3px solid rgba(15, 159, 141, 0.42);
+  outline: 3px solid rgba(15, 113, 159, 0.42);
   outline-offset: 3px;
   border-radius: 0.2rem;
 }
@@ -8209,20 +8210,20 @@ html.dark .fiestas-popular-dish-likes {
 }
 
 .fiestas-popular-status > i {
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 1.15rem;
   animation: fiestas-popular-spin 0.9s linear infinite;
 }
 
 .fiestas-popular-status a {
-  color: #0f8f80;
+  color: #0074ac;
   font-weight: 850;
   text-decoration: none;
 }
 
 .fiestas-popular-status a:hover,
 .fiestas-popular-status a:focus-visible {
-  color: #0f766e;
+  color: #00658f;
   text-decoration: underline;
 }
 
@@ -8236,7 +8237,7 @@ html.dark .fiestas-popular-dish-likes {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.72rem;
   font-weight: 800;
   line-height: 1.1;
@@ -8277,7 +8278,7 @@ html.dark .fiestas-popular-dish-likes {
 }
 
 .fiestas-popular-dish-link:focus-visible {
-  outline: 3px solid rgba(15, 159, 141, 0.4);
+  outline: 3px solid rgba(15, 113, 159, 0.4);
   outline-offset: -3px;
 }
 
@@ -8288,9 +8289,9 @@ html.dark .fiestas-popular-dish-likes {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #e8f7f4;
-  background: color-mix(in srgb, var(--fiestas-dish-color, #0f9f8d) 14%, white);
-  color: var(--fiestas-dish-color, #0f9f8d);
+  background: #e9f4f9;
+  background: color-mix(in srgb, var(--fiestas-dish-color, #0083c1) 14%, white);
+  color: var(--fiestas-dish-color, #0083c1);
   font-size: 1.3rem;
 }
 
@@ -8331,7 +8332,7 @@ html.dark .fiestas-popular-dish-likes {
 }
 
 .fiestas-popular-dish-caseta {
-  color: var(--fiestas-dish-color, #0f9f8d);
+  color: var(--fiestas-dish-color, #0083c1);
   font-weight: 800;
 }
 
@@ -8345,14 +8346,14 @@ html.dark .fiestas-popular-dish-likes {
   align-self: start;
   align-items: center;
   gap: 0.3rem;
-  color: #0f8f80;
+  color: #0074ac;
   font-size: 0.88rem;
   font-weight: 850;
   white-space: nowrap;
 }
 
 .fiestas-popular-dish-arrow {
-  color: #0f9f8d;
+  color: #0083c1;
   font-size: 0.95rem;
 }
 
@@ -8421,7 +8422,7 @@ html.dark .fiestas-popular-dish-likes {
   align-items: center;
   gap: 0.45rem;
   margin: -0.1rem 0 0.2rem;
-  color: #159b8b;
+  color: #0083c1;
   font-size: 0.85rem;
   font-weight: 850;
   text-decoration: none;
@@ -8429,7 +8430,7 @@ html.dark .fiestas-popular-dish-likes {
 
 .fiestas-plan-import-back:hover,
 .fiestas-plan-import-back:focus-visible {
-  color: #0f766e;
+  color: #00658f;
   text-decoration: underline;
 }
 
@@ -8516,7 +8517,7 @@ html.dark .fiestas-popular-dish-likes {
 }
 
 .fiestas-plan-date.is-active {
-  background: #159b8b;
+  background: #0083c1;
   color: #fff;
 }
 
@@ -8649,7 +8650,7 @@ html.dark .fiestas-plan-date.is-disabled strong {
 }
 
 .fiestas-plan-summary-card:focus-visible {
-  outline: 3px solid rgba(15, 159, 141, 0.48);
+  outline: 3px solid rgba(15, 113, 159, 0.48);
   outline-offset: 2px;
 }
 
@@ -8691,7 +8692,7 @@ html.dark .fiestas-plan-date.is-disabled strong {
   gap: 0.55rem;
   border: 1px solid #dfe4ea;
   border-radius: 9999px;
-  color: #0f8f80;
+  color: #0074ac;
   padding: 0.2rem 0.85rem;
   font-size: 0.88rem;
   font-weight: 850;
@@ -8712,9 +8713,9 @@ html.dark .fiestas-plan-date.is-disabled strong {
 
 .fiestas-plan-community-link:hover,
 .fiestas-plan-community-link:focus-visible {
-  border-color: #159b8b;
-  background: #e8f7f4;
-  color: #0f766e;
+  border-color: #0083c1;
+  background: #e9f4f9;
+  color: #00658f;
 }
 
 .fiestas-community-plans-screen {
@@ -8775,13 +8776,13 @@ html.dark .fiestas-plan-date.is-disabled strong {
 }
 
 .fiestas-community-plans-loading i {
-  color: #159b8b;
+  color: #0083c1;
   animation: fiestas-community-plans-spin 0.9s linear infinite;
 }
 
 .fiestas-community-plans-empty > i {
   flex: 0 0 auto;
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 1.6rem;
 }
 
@@ -8830,7 +8831,7 @@ html.dark .fiestas-plan-date.is-disabled strong {
 
 .fiestas-community-plan-card-kicker {
   margin: 0;
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.11em;
@@ -8961,7 +8962,7 @@ html.dark .fiestas-plan-date.is-disabled strong {
 }
 
 .fiestas-community-plan-preview-item time {
-  color: #0f8f80;
+  color: #0074ac;
   font-size: 0.8rem;
   font-weight: 900;
 }
@@ -8996,8 +8997,8 @@ html.dark .fiestas-plan-date.is-disabled strong {
 .fiestas-community-plan-dialog-feedback {
   margin: 0;
   border-radius: 0.65rem;
-  background: #e8f7f4;
-  color: #0f766e;
+  background: #e9f4f9;
+  color: #00658f;
   padding: 0.65rem 0.75rem;
   font-size: 0.8rem;
   font-weight: 750;
@@ -9015,12 +9016,12 @@ html.dark .fiestas-plan-community-link,
 html.dark .fiestas-community-plan-dialog-close {
   border-color: #313743;
   background: #1a1f28;
-  color: #78e2d4;
+  color: #78c0e2;
 }
 
 html.dark .fiestas-plan-community-link:hover,
 html.dark .fiestas-plan-community-link:focus-visible {
-  background: #1d3938;
+  background: #1d3039;
 }
 
 html.dark .fiestas-community-plans-intro h2,
@@ -9091,12 +9092,12 @@ html.dark .fiestas-community-plan-preview-item {
   gap: 0.4rem;
   max-width: 38rem;
   border-radius: 1rem;
-  background: #f3eff7;
+  background: #f7eff0;
   padding: 0.8rem 0.95rem 0.85rem;
 }
 
 .fiestas-community-plans-intro .fiestas-plan-kicker {
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.66rem;
 }
 
@@ -9142,8 +9143,8 @@ html.dark .fiestas-community-plan-preview-item {
   flex: 0 0 auto;
   place-items: center;
   border-radius: 50%;
-  background: #f3eff7;
-  color: #73579f;
+  background: #f7eff0;
+  color: #ce0e2d;
   font-size: 1rem;
 }
 
@@ -9185,7 +9186,7 @@ html.dark .fiestas-community-plan-preview-item {
 }
 
 .fiestas-community-plan-card:focus-visible {
-  outline: 3px solid rgba(15, 159, 141, 0.42);
+  outline: 3px solid rgba(15, 113, 159, 0.42);
   outline-offset: 0.2rem;
 }
 
@@ -9194,7 +9195,7 @@ html.dark .fiestas-community-plan-preview-item {
   min-width: 0;
   aspect-ratio: 1200 / 630;
   overflow: hidden;
-  background: #f3eff7;
+  background: #f7eff0;
 }
 
 .fiestas-community-plan-card-image-link {
@@ -9252,8 +9253,8 @@ html.dark .fiestas-community-plan-preview-item {
   height: 100%;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #efeaf7, #e2f4f1);
-  color: #73579f;
+  background: linear-gradient(135deg, #f7eaec, #e9f4f9);
+  color: #ce0e2d;
   font-size: 2.1rem;
 }
 
@@ -9289,7 +9290,7 @@ html.dark .fiestas-community-plan-preview-item {
   min-width: 0;
   overflow: hidden;
   margin: 0;
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.76rem;
   font-weight: 800;
   line-height: 1.35;
@@ -9314,10 +9315,10 @@ html.dark .fiestas-community-plan-preview-item {
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
-  border: 1px solid #dce8e6;
+  border: 1px solid #dce4e8;
   border-radius: 9999px;
-  background: #fbfdfd;
-  color: #0f8f80;
+  background: #fbfcfd;
+  color: #0074ac;
   padding: 0.2rem 0.45rem;
   font-size: 0.67rem;
   font-weight: 850;
@@ -9344,7 +9345,7 @@ html.dark .fiestas-community-plan-preview-item {
 }
 
 .fiestas-community-plan-text-action i {
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.65rem;
 }
 
@@ -9359,13 +9360,13 @@ html.dark .fiestas-community-plan-preview-item {
 }
 
 .fiestas-community-plan-text-action-add {
-  border-color: #bfe5df;
-  background: #eefaf8;
-  color: #0f8f80;
+  border-color: #bfd9e5;
+  background: #eef6fa;
+  color: #0074ac;
 }
 
 .fiestas-community-plan-text-action-add i {
-  color: #0f8f80;
+  color: #0074ac;
 }
 
 .fiestas-community-plan-share-action i {
@@ -9376,9 +9377,9 @@ html.dark .fiestas-community-plan-preview-item {
 
 .fiestas-community-plan-text-action:hover,
 .fiestas-community-plan-text-action:focus-visible {
-  border-color: #0f9f8d;
-  background: #f0faf8;
-  color: #0f766e;
+  border-color: #0083c1;
+  background: #f0f7fa;
+  color: #00658f;
 }
 
 .fiestas-community-plan-text-action[data-community-plan-busy="true"] {
@@ -9399,7 +9400,7 @@ html.dark .fiestas-community-plan-preview-item {
 
 .fiestas-community-plan-link-feedback {
   grid-column: 2 / -1;
-  color: #0f766e;
+  color: #00658f;
   font-size: 0.72rem;
   font-weight: 750;
   text-align: right;
@@ -9412,11 +9413,11 @@ html.dark .fiestas-community-plan-preview-item {
   left: 50%;
   max-width: min(28rem, calc(100vw - 2rem));
   margin: 0;
-  border: 1px solid #dce8e6;
+  border: 1px solid #dce4e8;
   border-radius: 0.8rem;
   background: #fff;
   box-shadow: 0 0.8rem 2rem rgba(31, 41, 55, 0.2);
-  color: #0f766e;
+  color: #00658f;
   padding: 0.7rem 0.95rem;
   font-size: 0.82rem;
   font-weight: 800;
@@ -9458,7 +9459,7 @@ html.dark .fiestas-community-plan-preview-item {
   aspect-ratio: 1200 / 630;
   margin-inline: -0.8rem;
   overflow: hidden;
-  background: #211631;
+  background: #31161a;
 }
 
 .fiestas-community-plan-detail-hero-image {
@@ -9472,7 +9473,7 @@ html.dark .fiestas-community-plan-preview-item {
   position: absolute;
   inset: auto 0 0;
   height: 34%;
-  background: linear-gradient(transparent, rgba(20, 13, 34, 0.88));
+  background: linear-gradient(transparent, rgba(34, 13, 16, 0.88));
   content: '';
   pointer-events: none;
 }
@@ -9528,7 +9529,7 @@ html.dark .fiestas-community-plan-preview-item {
   gap: 0.55rem;
   aspect-ratio: auto;
   padding: 1.5rem 0.9rem 1.1rem;
-  background: linear-gradient(135deg, #2a1c3d, #123f3a);
+  background: linear-gradient(135deg, #3d1c21, #12313f);
 }
 
 .fiestas-community-plan-detail-hero--textual::after {
@@ -9545,7 +9546,7 @@ html.dark .fiestas-community-plan-preview-item {
   align-items: center;
   gap: 0.4rem;
   margin: 0;
-  color: #b9eee8;
+  color: #b9ddee;
   font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0.09em;
@@ -9642,7 +9643,7 @@ html.dark .fiestas-community-plan-preview-item {
 .fiestas-community-plan-detail-summary {
   grid-column: 2;
   margin: 0.05rem 0 0;
-  color: #0f8f80;
+  color: #0074ac;
   font-size: 0.86rem;
   font-weight: 850;
 }
@@ -9661,7 +9662,7 @@ html.dark .fiestas-community-plan-preview-item {
 }
 
 .fiestas-community-plan-detail-item time {
-  color: #0f8f80;
+  color: #0074ac;
   font-size: 0.86rem;
   font-weight: 900;
 }
@@ -9685,7 +9686,7 @@ html.dark .fiestas-community-plan-preview-item {
 
 .fiestas-community-plan-detail-item-copy a:hover,
 .fiestas-community-plan-detail-item-copy a:focus-visible {
-  color: #0f8f80;
+  color: #0074ac;
   text-decoration: underline;
 }
 
@@ -9709,8 +9710,8 @@ html.dark .fiestas-community-plan-preview-item {
 }
 
 .fiestas-community-plan-status.is-success {
-  background: #e8f7f4;
-  color: #0f766e;
+  background: #e9f4f9;
+  color: #00658f;
 }
 
 .fiestas-community-plan-status.is-error {
@@ -9731,7 +9732,7 @@ html.dark .fiestas-community-plan-preview-item {
   justify-content: center;
   gap: 0.45rem;
   border-radius: 9999px;
-  background: #0f9f8d;
+  background: #0083c1;
   color: #fff;
   font-size: 0.88rem;
   font-weight: 850;
@@ -9740,7 +9741,7 @@ html.dark .fiestas-community-plan-preview-item {
 
 .fiestas-community-plan-add:hover,
 .fiestas-community-plan-add:focus-visible {
-  background: #0f766e;
+  background: #00658f;
 }
 
 .fiestas-community-plan-add[data-community-plan-busy="true"] {
@@ -9753,7 +9754,7 @@ html.dark .fiestas-community-plan-preview-item {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  color: #0f8f80;
+  color: #0074ac;
   font-size: 0.8rem;
   font-weight: 850;
   text-decoration: none;
@@ -9767,12 +9768,12 @@ html.dark .fiestas-community-plan-preview-item {
 html.dark .fiestas-community-plans-intro,
 html.dark .fiestas-community-plan-card-icon,
 html.dark .fiestas-community-plans-empty > i {
-  background: #292332;
+  background: #391c20;
 }
 
 html.dark .fiestas-community-plan-card-cover {
-  background: linear-gradient(135deg, #2a2436, #17342f);
-  color: #c9b6ec;
+  background: linear-gradient(135deg, #3d1d22, #172b34);
+  color: #ecb6be;
 }
 
 html.dark .fiestas-community-plans-intro h2,
@@ -9794,9 +9795,9 @@ html.dark .fiestas-community-plans-empty p {
 }
 
 html.dark .fiestas-community-share-toast {
-  border-color: #3b5a57;
+  border-color: #3b505a;
   background: #1a1f28;
-  color: #78e2d4;
+  color: #78c0e2;
 }
 
 html.dark .fiestas-community-plan-card-add-count {
@@ -9809,7 +9810,7 @@ html.dark .fiestas-community-share-toast.is-error {
 }
 
 html.dark .fiestas-community-plan-card:hover {
-  background: rgba(48, 40, 60, 0.42);
+  background: rgba(68, 32, 38, 0.42);
 }
 
 html.dark .fiestas-community-plan-share-action,
@@ -9850,9 +9851,9 @@ html.dark .fiestas-community-plan-detail-item {
 }
 
 html.dark .fiestas-community-plan-text-action {
-  border-color: #3b5a57;
-  background: #182524;
-  color: #78e2d4;
+  border-color: #3b505a;
+  background: #182125;
+  color: #78c0e2;
 }
 
 html.dark .fiestas-community-plan-text-action-preview {
@@ -9862,13 +9863,13 @@ html.dark .fiestas-community-plan-text-action-preview {
 }
 
 html.dark .fiestas-community-plan-text-action-add {
-  border-color: #3b5a57;
-  background: #182524;
-  color: #78e2d4;
+  border-color: #3b505a;
+  background: #182125;
+  color: #78c0e2;
 }
 
 html.dark .fiestas-community-plan-text-action i {
-  color: #c7b4e7;
+  color: #e7b4bc;
 }
 
 html.dark .fiestas-community-plan-text-action-preview i {
@@ -9876,14 +9877,14 @@ html.dark .fiestas-community-plan-text-action-preview i {
 }
 
 html.dark .fiestas-community-plan-text-action-add i {
-  color: #78e2d4;
+  color: #78c0e2;
 }
 
 html.dark .fiestas-community-plan-text-action:hover,
 html.dark .fiestas-community-plan-text-action:focus-visible {
-  border-color: #78e2d4;
-  background: #1d3938;
-  color: #b9f0e8;
+  border-color: #78c0e2;
+  background: #1d3039;
+  color: #b9dff0;
 }
 
 .fiestas-plan-delete-dialog {
@@ -9984,7 +9985,7 @@ html.dark .fiestas-plan-delete-confirm-title {
 }
 
 .fiestas-plan-icon-picker legend {
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.78rem;
   font-weight: 850;
 }
@@ -10000,26 +10001,26 @@ html.dark .fiestas-plan-delete-confirm-title {
   min-width: 2.25rem;
   min-height: 2.25rem;
   place-items: center;
-  border: 1px solid #ddd7e7;
+  border: 1px solid #ead4d7;
   border-radius: 0.7rem;
   background: #fff;
-  color: #73579f;
+  color: #ce0e2d;
   font-size: 0.95rem;
   transition: border-color 140ms ease, background 140ms ease, color 140ms ease, transform 140ms ease;
 }
 
 .fiestas-plan-icon-choice:hover,
 .fiestas-plan-icon-choice:focus-visible {
-  border-color: #0f9f8d;
-  color: #0f766e;
+  border-color: #0083c1;
+  color: #00658f;
   transform: translateY(-1px);
 }
 
 .fiestas-plan-icon-choice.is-selected {
-  border-color: #0f9f8d;
-  background: #e8f7f4;
-  color: #0f8f80;
-  box-shadow: 0 0 0 2px rgba(15, 159, 141, 0.12);
+  border-color: #0083c1;
+  background: #e9f4f9;
+  color: #0074ac;
+  box-shadow: 0 0 0 2px rgba(15, 113, 159, 0.12);
 }
 
 .fiestas-plan-summary-heading {
@@ -10036,8 +10037,8 @@ html.dark .fiestas-plan-delete-confirm-title {
   flex: 0 0 auto;
   place-items: center;
   border-radius: 50%;
-  background: #f3eff7;
-  color: #73579f;
+  background: #f7eff0;
+  color: #ce0e2d;
   font-size: 0.92rem;
 }
 
@@ -10064,8 +10065,8 @@ html.dark .fiestas-plan-delete-confirm-title {
   flex: 0 0 auto;
   place-items: center;
   border-radius: 50%;
-  background: #f3eff7;
-  color: #73579f;
+  background: #f7eff0;
+  color: #ce0e2d;
   font-size: 0.8rem;
 }
 
@@ -10134,7 +10135,7 @@ html.dark .fiestas-plan-delete-confirm-title {
 
 .fiestas-plan-editor-name input {
   min-width: 0;
-  border: 1px solid #d9d2e5;
+  border: 1px solid #e8cfd3;
   border-radius: 0.7rem;
   background: #fff;
   padding: 0.7rem 0.8rem;
@@ -10171,7 +10172,7 @@ body.fiestas-plan-editor-open {
 
 html.dark .fiestas-plan-icon-picker legend,
 html.dark .fiestas-plan-editor-name {
-  color: #c8b3e5;
+  color: #e5b3bb;
 }
 
 html.dark .fiestas-plan-icon-choice,
@@ -10184,16 +10185,16 @@ html.dark .fiestas-plan-editor-close {
 }
 
 html.dark .fiestas-plan-icon-choice.is-selected {
-  border-color: #159b8b;
-  background: #1d3938;
-  color: #b9f0e8;
+  border-color: #0083c1;
+  background: #1d3039;
+  color: #b9dff0;
 }
 
 html.dark .fiestas-plan-summary-icon,
 html.dark .fiestas-plan-import-item-icon,
 html.dark .fiestas-community-plan-detail-icon {
-  background: #30283c;
-  color: #c8b3e5;
+  background: #3a0810;
+  color: #e5b3bb;
 }
 
 @media (min-width: 720px) {
@@ -10220,8 +10221,8 @@ html.dark .fiestas-community-plan-detail-icon {
   display: grid;
   gap: 0.55rem;
   max-width: 43rem;
-  border-left: 0.28rem solid #0f9f8d;
-  background: #f3eff7;
+  border-left: 0.28rem solid #0083c1;
+  background: #f7eff0;
   padding: 1.1rem 1.15rem 1.15rem;
 }
 
@@ -10232,7 +10233,7 @@ html.dark .fiestas-community-plan-detail-icon {
 
 .fiestas-collaborators-intro h2 {
   max-width: 36rem;
-  color: #242032;
+  color: #371b1f;
   font-size: clamp(1.1rem, 4.4vw, 1.45rem);
   font-weight: 900;
   letter-spacing: -0.03em;
@@ -10273,8 +10274,8 @@ html.dark .fiestas-community-plan-detail-icon {
   flex: 0 0 auto;
   place-items: center;
   border-radius: 50%;
-  background: #f3eff7;
-  color: #73579f;
+  background: #f7eff0;
+  color: #ce0e2d;
 }
 
 .fiestas-collaborators-empty p {
@@ -10285,12 +10286,12 @@ html.dark .fiestas-community-plan-detail-icon {
 }
 
 html.dark .fiestas-collaborators-empty {
-  border-color: #3a3550;
+  border-color: #5a2b32;
 }
 
 html.dark .fiestas-collaborators-empty > i {
-  background: #292332;
-  color: #c9b6ec;
+  background: #391c20;
+  color: #ecb6be;
 }
 
 html.dark .fiestas-collaborators-empty p {
@@ -10314,13 +10315,13 @@ html.dark .fiestas-collaborators-empty p {
 
 .fiestas-collaborator-card:hover,
 .fiestas-collaborator-card:focus-visible {
-  border-color: #b9a9cb;
-  box-shadow: 0 0.85rem 1.8rem rgba(68, 53, 88, 0.13);
+  border-color: #d2a2a9;
+  box-shadow: 0 0.85rem 1.8rem rgba(95, 46, 53, 0.13);
   transform: translateY(-0.12rem);
 }
 
 .fiestas-collaborator-card:focus-visible {
-  outline: 3px solid rgba(15, 159, 141, 0.34);
+  outline: 3px solid rgba(15, 113, 159, 0.34);
   outline-offset: 3px;
 }
 
@@ -10361,7 +10362,7 @@ html.dark .fiestas-collaborators-empty p {
 }
 
 html.dark .fiestas-collaborators-intro {
-  background: #282331;
+  background: #391b20;
 }
 
 html.dark .fiestas-collaborators-intro h2,
@@ -10382,7 +10383,7 @@ html.dark .fiestas-collaborator-card {
 
 html.dark .fiestas-collaborator-card:hover,
 html.dark .fiestas-collaborator-card:focus-visible {
-  border-color: #75678a;
+  border-color: #a34e5b;
   box-shadow: 0 0.85rem 1.8rem rgba(0, 0, 0, 0.3);
 }
 
@@ -10437,21 +10438,21 @@ html.dark .fiestas-collaborator-card:focus-visible {
 
 .fiestas-popular-dishes-filter-toggle:hover,
 .fiestas-popular-dishes-filter-toggle:focus-visible {
-  border-color: #0f9f8d;
-  color: #0f766e;
+  border-color: #0083c1;
+  color: #00658f;
 }
 
 .fiestas-popular-dishes-filter-toggle:focus-visible,
 .fiestas-popular-dishes-filter-close:focus-visible,
 .fiestas-popular-dishes-filter-option:focus-visible,
 .fiestas-popular-dishes-filter-clear:focus-visible {
-  outline: 3px solid rgba(15, 159, 141, 0.38);
+  outline: 3px solid rgba(15, 113, 159, 0.38);
   outline-offset: 2px;
 }
 
 .fiestas-popular-dishes-filter-toggle.is-active {
-  border-color: #0f9f8d;
-  background: #0f9f8d;
+  border-color: #0083c1;
+  background: #0083c1;
   color: #fff;
 }
 
@@ -10462,7 +10463,7 @@ html.dark .fiestas-collaborator-card:focus-visible {
   place-items: center;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.9);
-  color: #0f766e;
+  color: #00658f;
   font-size: 0.72rem;
   line-height: 1;
 }
@@ -10478,7 +10479,7 @@ html.dark .fiestas-collaborator-card:focus-visible {
   display: grid;
   width: min(100%, 34rem);
   gap: 0.95rem;
-  border: 1px solid #e2dced;
+  border: 1px solid #eedbde;
   border-radius: 1rem;
   background: #fbfcfd;
   padding: 0.95rem;
@@ -10553,8 +10554,8 @@ html.dark .fiestas-collaborator-card:focus-visible {
 
 .fiestas-popular-dishes-zone-select:hover,
 .fiestas-popular-dishes-zone-select:focus-visible {
-  border-color: #8bcfc5;
-  outline: 3px solid rgba(15, 159, 141, 0.2);
+  border-color: #8bb9cf;
+  outline: 3px solid rgba(15, 113, 159, 0.2);
   outline-offset: 1px;
 }
 
@@ -10588,14 +10589,14 @@ html.dark .fiestas-collaborator-card:focus-visible {
 }
 
 .fiestas-popular-dishes-filter-option:hover {
-  border-color: #8bcfc5;
-  color: #0f766e;
+  border-color: #8bb9cf;
+  color: #00658f;
 }
 
 .fiestas-popular-dishes-filter-option.is-active {
-  border-color: rgba(15, 159, 141, 0.55);
-  background: rgba(15, 159, 141, 0.1);
-  color: #0f766e;
+  border-color: rgba(15, 113, 159, 0.55);
+  background: rgba(15, 113, 159, 0.1);
+  color: #00658f;
 }
 
 .fiestas-popular-dishes-filter-option i {
@@ -10638,13 +10639,13 @@ html.dark .fiestas-popular-dishes-filter-toggle {
 
 html.dark .fiestas-popular-dishes-filter-toggle:hover,
 html.dark .fiestas-popular-dishes-filter-toggle:focus-visible {
-  border-color: #71d8cb;
-  color: #9be8dd;
+  border-color: #71b7d8;
+  color: #9bd0e8;
 }
 
 html.dark .fiestas-popular-dishes-filter-toggle.is-active {
-  border-color: #159b8b;
-  background: #159b8b;
+  border-color: #0083c1;
+  background: #0083c1;
   color: #fff;
 }
 
@@ -10680,9 +10681,9 @@ html.dark .fiestas-popular-dishes-filter-clear {
 }
 
 html.dark .fiestas-popular-dishes-filter-option.is-active {
-  border-color: rgba(113, 216, 203, 0.58);
-  background: rgba(23, 184, 164, 0.14);
-  color: #9be8dd;
+  border-color: rgba(113, 183, 216, 0.58);
+  background: rgba(23, 133, 184, 0.14);
+  color: #9bd0e8;
 }
 
 @media (max-width: 360px) {

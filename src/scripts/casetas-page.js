@@ -18,8 +18,8 @@ const CARTO_LAYERS = {
 const LEAFLET_SCRIPT_URL = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
 const LEAFLET_SCRIPT_INTEGRITY = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
 const ZONE_COLORS = {
-  'Zona 1': '#0f9f8d',
-  'Zona 2': '#73579f',
+  'Zona 1': '#0083c1',
+  'Zona 2': '#ce0e2d',
   'Zona 3': '#d48625',
   'Zona 4': '#1976a8',
   'Zona 5': '#ba3d3d',
@@ -867,7 +867,7 @@ function renderUserMarker(leaflet) {
   if (!state.userLocation || state.locationStatus !== 'granted') return;
   state.userMarker = leaflet.circleMarker([state.userLocation.lat, state.userLocation.lng], {
     radius: 8,
-    color: '#0f9f8d',
+    color: '#0083c1',
     fillColor: '#17b8a4',
     fillOpacity: 0.85,
     weight: 3
@@ -1000,7 +1000,7 @@ function ensureLeafletCss() {
 }
 
 function zoneColor(zone) {
-  return ZONE_COLORS[zone] || '#0f9f8d';
+  return ZONE_COLORS[zone] || '#0083c1';
 }
 
 function zoneLabel(zone) {

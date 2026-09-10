@@ -40,8 +40,8 @@ const communityPlanIcons = new Set([
   'culture', 'map', 'calendar', 'heart', 'layers'
 ]);
 const casetaPalette = [
-  '#0f9f8d', '#73579f', '#d48625', '#1976a8', '#ba3d3d', '#087e8c',
-  '#b94f72', '#4f7cac', '#d06b37', '#657a3b', '#9b5de5', '#a44a3f'
+  '#0083c1', '#ce0e2d', '#f5a800', '#a4541c', '#3cb4e5', '#0b7ba0',
+  '#d84f8f', '#4f6f9c', '#c9772e', '#6b52a3', '#e0559a', '#a12b34'
 ];
 const casetaMenuCollator = new Intl.Collator('es', { sensitivity: 'base', numeric: true });
 const casetaDietaryLabels = new Set(['vegetarian', 'vegan']);
