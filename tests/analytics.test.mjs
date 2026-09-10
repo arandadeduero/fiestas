@@ -1,13 +1,17 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
+const CONSENT_STORAGE_KEY = 'fiestasAranda:analytics-consent';
 const TRACKED_FAVORITES_STORAGE_KEY = 'fiestasAranda:analytics:saved-activities';
 const TRACKED_CASETA_FAVORITES_STORAGE_KEY = 'fiestasAranda:analytics:saved-casetas';
 const TRACKED_CASETA_DISH_LIKES_STORAGE_KEY = 'fiestasAranda:analytics:liked-caseta-dishes';
 const TRACKED_COMMUNITY_PLANS_STORAGE_KEY = 'fiestasAranda:analytics:added-community-plans';
 
-function installBrowserGlobals() {
+// consent: 'granted' | 'denied' | '' (sin decidir)
+function installBrowserGlobals({ consent = 'granted' } = {}) {
   const values = new Map();
+  if (consent) values.set(CONSENT_STORAGE_KEY, consent);
+  const signals = [];
 
   globalThis.window = {
     location: {
@@ -19,191 +23,179 @@ function installBrowserGlobals() {
       getItem: (key) => values.get(key) ?? null,
       setItem: (key, value) => values.set(key, value)
     },
-    _paq: []
+    dataLayer: [],
+    CustomEvent: class CustomEvent {
+      constructor(type, init = {}) {
+        this.type = type;
+        this.detail = init.detail;
+      }
+    },
+    dispatchEvent: (event) => signals.push(event)
   };
 
   globalThis.document = {
-    createElement: () => ({
-      dataset: {},
-      addEventListener: () => {}
-    }),
+    querySelector: () => null,
+    createElement: () => ({ dataset: {}, addEventListener: () => {} }),
     head: { append: () => {} }
   };
 
-  return values;
+  return { values, signals };
 }
 
-test('tracks and deduplicates saves after Matomo replaces the initial array queue', async () => {
-  const values = installBrowserGlobals();
-  const analytics = await import(`../src/scripts/analytics.js?test=${Date.now()}`);
-  const sent = [];
+// Eventos GA enviados: [action, params].
+function gaEvents() {
+  return [...window.dataLayer]
+    .map((args) => Array.from(args))
+    .filter((args) => args[0] === 'event')
+    .map((args) => [args[1], args[2]]);
+}
 
-  window._paq = { push: (event) => sent.push(event) };
+test('envía a GA y deduplica los guardados de actividad', async () => {
+  const { values } = installBrowserGlobals();
+  const analytics = await import(`../src/scripts/analytics.js?test=${Date.now()}`);
 
   assert.equal(analytics.trackFavoriteChanged('307', true), true);
   assert.equal(analytics.trackFavoriteChanged('307', true), false);
-  assert.deepEqual(sent, [['trackEvent', 'activity', 'save', '307']]);
+  assert.deepEqual(gaEvents(), [['save', { event_category: 'activity', event_label: '307' }]]);
   assert.deepEqual(JSON.parse(values.get(TRACKED_FAVORITES_STORAGE_KEY)), ['307']);
 });
 
-test('tracks the stable id when a community plan is added', async () => {
-  const values = installBrowserGlobals();
-  const analytics = await import(`../src/scripts/analytics.js?community=${Date.now()}`);
-  const sent = [];
+test('carga gtag.js y lo configura solo una vez al conceder el consentimiento', async () => {
+  installBrowserGlobals({ consent: '' });
+  const scripts = [];
+  const realCreate = document.createElement;
+  document.createElement = (tag) => {
+    const el = realCreate(tag);
+    scripts.push(el);
+    return el;
+  };
+  const analytics = await import(`../src/scripts/analytics.js?load=${Date.now()}`);
 
-  window._paq = { push: (event) => sent.push(event) };
+  // Sin consentimiento: nada de GA.
+  assert.equal(analytics.trackFavoriteChanged('1', true), false);
+  assert.equal(scripts.length, 0);
+  assert.equal(typeof window.gtag, 'undefined');
 
-  assert.equal(analytics.trackCommunityPlanAdded('indie-pero-no-solo'), true);
-  assert.equal(analytics.trackCommunityPlanAdded('indie-pero-no-solo'), false);
-  assert.deepEqual(sent, [['trackEvent', 'plan', 'add_community', 'indie_pero_no_solo']]);
-  assert.deepEqual(JSON.parse(values.get(TRACKED_COMMUNITY_PLANS_STORAGE_KEY)), ['indie_pero_no_solo']);
+  analytics.grantAnalyticsConsent();
+  assert.equal(scripts.length, 1);
+  assert.equal(scripts[0].src, 'https://www.googletagmanager.com/gtag/js?id=G-BXMC22W46S');
+  const config = [...window.dataLayer].map((a) => Array.from(a)).find((a) => a[0] === 'config');
+  assert.deepEqual(config, ['config', 'G-BXMC22W46S', { anonymize_ip: true }]);
+
+  analytics.grantAnalyticsConsent();
+  assert.equal(scripts.length, 1, 'no debe recargar gtag.js');
 });
 
-test('tracks and deduplicates caseta favorites independently from activities', async () => {
-  const values = installBrowserGlobals();
-  const analytics = await import(`../src/scripts/analytics.js?caseta=${Date.now()}`);
-  const sent = [];
+test('con el consentimiento denegado nunca carga GA ni envía eventos', async () => {
+  installBrowserGlobals({ consent: 'denied' });
+  const scripts = [];
+  const realCreate = document.createElement;
+  document.createElement = (tag) => { const el = realCreate(tag); scripts.push(el); return el; };
+  const analytics = await import(`../src/scripts/analytics.js?denied=${Date.now()}`);
 
-  window._paq = { push: (event) => sent.push(event) };
+  assert.equal(analytics.trackFavoriteChanged('1', true), false);
+  assert.equal(scripts.length, 0);
+  assert.deepEqual(gaEvents(), []);
+});
+
+test('respeta Do Not Track aunque haya consentimiento guardado', async () => {
+  installBrowserGlobals({ consent: 'granted' });
+  window.navigator.doNotTrack = '1';
+  const analytics = await import(`../src/scripts/analytics.js?dnt=${Date.now()}`);
+
+  assert.equal(analytics.trackFavoriteChanged('1', true), false);
+  assert.deepEqual(gaEvents(), []);
+});
+
+test('registra el id estable al añadir un plan vecinal', async () => {
+  const { values } = installBrowserGlobals();
+  const analytics = await import(`../src/scripts/analytics.js?community=${Date.now()}`);
+
+  assert.equal(analytics.trackCommunityPlanAdded('grandes-conciertos'), true);
+  assert.equal(analytics.trackCommunityPlanAdded('grandes-conciertos'), false);
+  assert.deepEqual(gaEvents(), [['add_community', { event_category: 'plan', event_label: 'grandes_conciertos' }]]);
+  assert.deepEqual(JSON.parse(values.get(TRACKED_COMMUNITY_PLANS_STORAGE_KEY)), ['grandes_conciertos']);
+});
+
+test('deduplica favoritos de caseta de forma independiente a las actividades', async () => {
+  const { values } = installBrowserGlobals();
+  const analytics = await import(`../src/scripts/analytics.js?caseta=${Date.now()}`);
 
   assert.equal(analytics.trackCasetaFavoriteChanged('Z1-05', true), true);
   assert.equal(analytics.trackCasetaFavoriteChanged('z1-05', true), false);
-  assert.deepEqual(sent, [['trackEvent', 'caseta', 'save', 'z1_05']]);
+  assert.deepEqual(gaEvents(), [['save', { event_category: 'caseta', event_label: 'z1_05' }]]);
   assert.deepEqual(JSON.parse(values.get(TRACKED_CASETA_FAVORITES_STORAGE_KEY)), ['z1-05']);
   assert.equal(values.has(TRACKED_FAVORITES_STORAGE_KEY), false);
 });
 
-test('tracks caseta removals and rejects invalid caseta IDs', async () => {
+test('registra retiradas de caseta y rechaza IDs no válidos', async () => {
   installBrowserGlobals();
   const analytics = await import(`../src/scripts/analytics.js?caseta-remove=${Date.now()}`);
-  const sent = [];
-
-  window._paq = { push: (event) => sent.push(event) };
 
   assert.equal(analytics.trackCasetaFavoriteChanged('z2-07', false), true);
   assert.equal(analytics.trackCasetaFavoriteChanged('event-307', true), false);
-  assert.deepEqual(sent, [['trackEvent', 'caseta', 'remove_save', 'z2_07']]);
+  assert.deepEqual(gaEvents(), [['remove_save', { event_category: 'caseta', event_label: 'z2_07' }]]);
 });
 
-test('tracks QR opens and image downloads with the stable caseta id', async () => {
-  installBrowserGlobals();
-  const analytics = await import(`../src/scripts/analytics.js?caseta-qr=${Date.now()}`);
-  const sent = [];
-
-  window._paq = { push: (event) => sent.push(event) };
-
-  assert.equal(analytics.trackCasetaQrOpened('Z2-07'), true);
-  assert.equal(analytics.trackCasetaQrDownloaded('z2-07'), true);
-  assert.equal(analytics.trackCasetaQrOpened('event-307'), false);
-  assert.equal(analytics.trackCasetaQrDownloaded(''), false);
-  assert.deepEqual(sent, [
-    ['trackEvent', 'caseta', 'open_qr', 'z2_07'],
-    ['trackEvent', 'caseta', 'download_qr', 'z2_07']
-  ]);
-});
-
-test('does not send caseta favorite events when analytics is disabled or DNT is enabled', async () => {
+test('no envía eventos cuando la analítica está desactivada por configuración', async () => {
   installBrowserGlobals();
   window.__FIESTAS_ANALYTICS_CONFIG__ = { enabled: false };
-  const disabled = await import(`../src/scripts/analytics.js?caseta-disabled=${Date.now()}`);
-  window._paq = { push: () => { throw new Error('disabled analytics should not push'); } };
+  const disabled = await import(`../src/scripts/analytics.js?disabled=${Date.now()}`);
   assert.equal(disabled.trackCasetaFavoriteChanged('z1-01', true), false);
-
-  installBrowserGlobals();
-  window.navigator.doNotTrack = '1';
-  const dnt = await import(`../src/scripts/analytics.js?caseta-dnt=${Date.now()}`);
-  window._paq = { push: () => { throw new Error('DNT analytics should not push'); } };
-  assert.equal(dnt.trackCasetaFavoriteChanged('z1-01', true), false);
+  assert.deepEqual(gaEvents(), []);
 });
 
-test('tracks and deduplicates one like per caseta dish with a stable technical name', async () => {
-  const values = installBrowserGlobals();
+test('deduplica un «me gusta» por plato de caseta con nombre técnico estable', async () => {
+  const { values } = installBrowserGlobals();
   const analytics = await import(`../src/scripts/analytics.js?dish=${Date.now()}`);
-  const sent = [];
-
-  window._paq = { push: (event) => sent.push(event) };
 
   assert.equal(analytics.trackCasetaDishLiked('Z2-07', 'pincho-brocheta-pollo'), true);
   assert.equal(analytics.trackCasetaDishLiked('z2-07', 'pincho-brocheta-pollo'), false);
   assert.equal(analytics.trackCasetaDishUnliked('z2-07', 'pincho-brocheta-pollo'), true);
   assert.equal(analytics.trackCasetaDishLiked('z2-07', 'pincho-brocheta-pollo-renamed'), true);
-  assert.deepEqual(sent, [
-    ['trackEvent', 'caseta_dish', 'like', 'z2_07_pincho_brocheta_pollo'],
-    ['trackEvent', 'caseta_dish', 'remove_like', 'z2_07_pincho_brocheta_pollo'],
-    ['trackEvent', 'caseta_dish', 'like', 'z2_07_pincho_brocheta_pollo_renamed']
+  assert.deepEqual(gaEvents(), [
+    ['like', { event_category: 'caseta_dish', event_label: 'z2_07_pincho_brocheta_pollo' }],
+    ['remove_like', { event_category: 'caseta_dish', event_label: 'z2_07_pincho_brocheta_pollo' }],
+    ['like', { event_category: 'caseta_dish', event_label: 'z2_07_pincho_brocheta_pollo_renamed' }]
   ]);
   assert.deepEqual(JSON.parse(values.get(TRACKED_CASETA_DISH_LIKES_STORAGE_KEY)), [
     'z2_07_pincho_brocheta_pollo',
     'z2_07_pincho_brocheta_pollo_renamed'
   ]);
-  assert.equal(values.has(TRACKED_CASETA_FAVORITES_STORAGE_KEY), false);
 });
 
-test('rejects invalid caseta dish identifiers and tolerates disabled analytics', async () => {
-  const values = installBrowserGlobals();
-  const analytics = await import(`../src/scripts/analytics.js?dish-invalid=${Date.now()}`);
-  const sent = [];
-
-  window._paq = { push: (event) => sent.push(event) };
-  assert.equal(analytics.trackCasetaDishLiked('z8-01', 'pincho-rabas'), false);
-  assert.equal(analytics.trackCasetaDishLiked('z2-07', 'Pincho con espacios'), false);
-  assert.deepEqual(sent, []);
-  assert.equal(values.has(TRACKED_CASETA_DISH_LIKES_STORAGE_KEY), false);
-
-  installBrowserGlobals();
-  window.__FIESTAS_ANALYTICS_CONFIG__ = { enabled: false };
-  const disabled = await import(`../src/scripts/analytics.js?dish-disabled=${Date.now()}`);
-  window._paq = { push: () => { throw new Error('disabled analytics should not push'); } };
-  assert.equal(disabled.trackCasetaDishLiked('z2-07', 'pincho-rabas'), false);
-});
-
-test('tracks an explicit PWA install action without tracking availability', async () => {
+test('registra una acción explícita de instalación PWA', async () => {
   installBrowserGlobals();
   const analytics = await import(`../src/scripts/analytics.js?pwa=${Date.now()}`);
-  const sent = [];
-
-  window._paq = { push: (event) => sent.push(event) };
 
   assert.equal(analytics.trackPwaInstallClicked('menu'), true);
-  assert.deepEqual(sent, [['trackEvent', 'pwa', 'install_clicked', 'install', 'menu']]);
+  assert.deepEqual(gaEvents(), [['install_clicked', { event_category: 'pwa', event_label: 'install', event_detail: 'menu' }]]);
   assert.equal('trackPwaInstallAvailable' in analytics, false);
 });
 
-test('tracks community prompt views, channel clicks and exclusive dismissals', async () => {
+test('registra vistas, clics de canal y descartes del aviso de comunidad', async () => {
   installBrowserGlobals();
   const analytics = await import(`../src/scripts/analytics.js?community-prompt=${Date.now()}`);
-  const sent = [];
-
-  window._paq = { push: (event) => sent.push(event) };
 
   assert.equal(analytics.trackCommunityPromptViewed(1), true);
-  assert.equal(analytics.trackCommunityPromptClicked('whatsapp', 1), true);
+  assert.equal(analytics.trackCommunityPromptClicked('facebook', 1), true);
   assert.equal(analytics.trackCommunityPromptDismissed('snooze_5d', 1), true);
   assert.equal(analytics.trackCommunityPromptDismissed('never_again', 2), true);
   assert.equal(analytics.trackCommunityPromptClicked('unknown', 1), false);
   assert.equal(analytics.trackCommunityPromptViewed(3), false);
 
-  assert.deepEqual(sent, [
-    ['trackEvent', 'community_prompt', 'view', 'shown', 1],
-    ['trackEvent', 'community_prompt', 'click', 'whatsapp', 1],
-    ['trackEvent', 'community_prompt', 'dismiss', 'snooze_5d', 1],
-    ['trackEvent', 'community_prompt', 'dismiss', 'never_again', 2]
+  assert.deepEqual(gaEvents(), [
+    ['view', { event_category: 'community_prompt', event_label: 'shown', value: 1 }],
+    ['click', { event_category: 'community_prompt', event_label: 'facebook', value: 1 }],
+    ['dismiss', { event_category: 'community_prompt', event_label: 'snooze_5d', value: 1 }],
+    ['dismiss', { event_category: 'community_prompt', event_label: 'never_again', value: 2 }]
   ]);
 });
 
-test('publishes engagement signals even when Matomo is disabled', async () => {
-  installBrowserGlobals();
-  const signals = [];
-  window.CustomEvent = class CustomEvent {
-    constructor(type, init = {}) {
-      this.type = type;
-      this.detail = init.detail;
-    }
-  };
-  window.dispatchEvent = (event) => signals.push(event);
+test('emite señales de engagement aunque la analítica esté desactivada', async () => {
+  const { signals } = installBrowserGlobals();
   window.__FIESTAS_ANALYTICS_CONFIG__ = { enabled: false };
-  const analytics = await import(`../src/scripts/analytics.js?community-signal=${Date.now()}`);
-  window._paq = { push: () => { throw new Error('disabled analytics should not push'); } };
+  const analytics = await import(`../src/scripts/analytics.js?signal=${Date.now()}`);
 
   assert.equal(analytics.trackCommunityPromptViewed(1), false);
   assert.deepEqual(signals.map((event) => ({ type: event.type, detail: event.detail })), [{

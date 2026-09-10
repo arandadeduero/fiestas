@@ -69,7 +69,6 @@
     <link rel="preload" href="/assets/fontawesome/fa-solid-900.woff2?v={{ fontAwesomeVersions.solid }}" as="font" type="font/woff2" crossorigin />
     {% for moduleHref in modulePreloads %}<link rel="modulepreload" href="{{ moduleHref }}" />
     {% endfor %}<link rel="dns-prefetch" href="https://api.arandadeduero.es" />
-    <link rel="dns-prefetch" href="https://stats.arandadeduero.es" />
   </head>
   <body class="{% block bodyClass %}{% endblock %}">
     {% block header %}{% endblock %}
@@ -175,6 +174,16 @@
       </section>
     </div>
     {% include "partials/community-prompt.njk" %}
+    <div class="analytics-consent" data-analytics-consent role="region" aria-label="Aviso de privacidad y analítica" hidden>
+      <p class="analytics-consent-text">
+        Usamos Google Analytics para saber cómo se utiliza esta web. El script no se carga ni envía ningún dato hasta que pulsas «Aceptar». Más información en la
+        <a href="https://www.arandadeduero.es/politica-privacidad/" target="_blank" rel="noopener noreferrer">política de privacidad</a>.
+      </p>
+      <div class="analytics-consent-actions">
+        <button class="analytics-consent-btn analytics-consent-deny" type="button" data-analytics-consent-deny>Denegar</button>
+        <button class="analytics-consent-btn analytics-consent-accept" type="button" data-analytics-consent-accept>Aceptar</button>
+      </div>
+    </div>
     {# Sin ?v=: el nombre ya lleva hash y la query impedía que el SW sirviera el módulo precacheado offline. #}
     <script type="module" src="/assets/js/community-prompt.{{ jsVersion }}.js" defer></script>
     <script type="module" src="/assets/js/{{ pageJs }}" defer></script>

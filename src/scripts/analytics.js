@@ -1,8 +1,10 @@
 const CONFIG_KEY = '__FIESTAS_ANALYTICS_CONFIG__';
-const INITIALIZED_KEY = '__FIESTAS_MATOMO_INITIALIZED__';
+const INITIALIZED_KEY = '__FIESTAS_ANALYTICS_INITIALIZED__';
 const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '[::1]', '::1']);
-const DEFAULT_TRACKER_URL = 'https://stats.arandadeduero.es/';
-const DEFAULT_SITE_ID = '29';
+const DEFAULT_MEASUREMENT_ID = 'G-BXMC22W46S';
+const CONSENT_STORAGE_KEY = 'fiestasAranda:analytics-consent';
+const CONSENT_GRANTED = 'granted';
+const CONSENT_DENIED = 'denied';
 const TRACKED_FAVORITES_STORAGE_KEY = 'fiestasAranda:analytics:saved-activities';
 const TRACKED_CASETA_FAVORITES_STORAGE_KEY = 'fiestasAranda:analytics:saved-casetas';
 const TRACKED_CASETA_DISH_LIKES_STORAGE_KEY = 'fiestasAranda:analytics:liked-caseta-dishes';
@@ -23,36 +25,94 @@ const COMMUNITY_PROMPT_CHANNELS = new Set(['chat', 'whatsapp', 'newsletter', 'in
 const COMMUNITY_PROMPT_DISMISS_REASONS = new Set(['snooze_5d', 'never_again']);
 
 const filterNames = new Set(['type', 'area', 'ticket']);
-let analyticsReady = false;
+let gaLoaded = false;
+let measurementId = '';
+let analyticsEnabled = false;
 const trackedFavoriteIds = new Set();
 const trackedCasetaFavoriteIds = new Set();
 const trackedCasetaDishLikeIds = new Set();
 const trackedCommunityPlanIds = new Set();
 
+// Google Analytics con consentimiento explícito (GDPR): el script de GA no se
+// descarga ni envía nada hasta que la persona pulsa "Aceptar" en el aviso.
 export function initAnalytics() {
   if (typeof window === 'undefined' || window[INITIALIZED_KEY]) return;
   window[INITIALIZED_KEY] = true;
 
   const config = getConfig();
-  if (!config.enabled || isDoNotTrackEnabled()) return;
+  measurementId = config.measurementId;
+  analyticsEnabled = config.enabled && Boolean(measurementId) && !isDoNotTrackEnabled();
 
-  const queue = hasPushQueue(window._paq) ? window._paq : [];
-  window._paq = queue;
-  queue.push(['setTrackerUrl', `${config.trackerUrl}matomo.php`]);
-  queue.push(['setSiteId', config.siteId]);
-  queue.push(['disableCookies']);
-  queue.push(['enableLinkTracking']);
-  queue.push(['trackPageView']);
+  if (analyticsEnabled && getAnalyticsConsent() === CONSENT_GRANTED) {
+    loadGa();
+  }
+  setupConsentBanner();
+}
+
+// Estado guardado: 'granted' | 'denied' | '' (sin decidir).
+export function getAnalyticsConsent() {
+  try {
+    const value = window.localStorage.getItem(CONSENT_STORAGE_KEY);
+    return value === CONSENT_GRANTED || value === CONSENT_DENIED ? value : '';
+  } catch (_) {
+    return '';
+  }
+}
+
+export function grantAnalyticsConsent() {
+  persistConsent(CONSENT_GRANTED);
+  if (analyticsEnabled) loadGa();
+  hideConsentBanner();
+}
+
+export function denyAnalyticsConsent() {
+  persistConsent(CONSENT_DENIED);
+  hideConsentBanner();
+}
+
+function persistConsent(value) {
+  try {
+    window.localStorage.setItem(CONSENT_STORAGE_KEY, value);
+  } catch (_) {
+    // Sin localStorage el aviso se volverá a mostrar; nunca cargamos GA sin "Aceptar".
+  }
+}
+
+function loadGa() {
+  if (gaLoaded || !measurementId || typeof document === 'undefined') return;
+  gaLoaded = true;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', measurementId, { anonymize_ip: true });
 
   const script = document.createElement('script');
   script.async = true;
-  script.src = `${config.trackerUrl}matomo.js`;
-  script.dataset.fiestasMatomoLoader = 'true';
-  script.addEventListener('error', () => {
-    analyticsReady = false;
-  }, { once: true });
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+  script.dataset.fiestasGaLoader = 'true';
+  script.addEventListener('error', () => { gaLoaded = false; }, { once: true });
   document.head.append(script);
-  analyticsReady = true;
+}
+
+function setupConsentBanner() {
+  if (typeof document === 'undefined') return;
+  const banner = document.querySelector('[data-analytics-consent]');
+  if (!banner) return;
+
+  const shouldAsk = analyticsEnabled && !getAnalyticsConsent();
+  banner.hidden = !shouldAsk;
+  if (!shouldAsk) return;
+
+  banner.querySelector('[data-analytics-consent-accept]')?.addEventListener('click', () => {
+    grantAnalyticsConsent();
+  }, { once: true });
+  banner.querySelector('[data-analytics-consent-deny]')?.addEventListener('click', () => {
+    denyAnalyticsConsent();
+  }, { once: true });
+}
+
+function hideConsentBanner() {
+  document.querySelector('[data-analytics-consent]')?.setAttribute('hidden', '');
 }
 
 export function trackActivityViewed(activityId) {
@@ -263,19 +323,9 @@ function getConfig() {
   const enabled = typeof configuredEnabled === 'boolean'
     ? configuredEnabled
     : !LOCAL_HOSTS.has(hostname);
-  const trackerUrl = normalizeTrackerUrl(configured.trackerUrl || DEFAULT_TRACKER_URL);
-  const siteId = normalizeToken(configured.siteId || DEFAULT_SITE_ID);
-  return { enabled, trackerUrl, siteId };
-}
-
-function normalizeTrackerUrl(value) {
-  try {
-    const url = new URL(String(value), window.location.href);
-    if (!['http:', 'https:'].includes(url.protocol)) return DEFAULT_TRACKER_URL;
-    return url.href.endsWith('/') ? url.href : `${url.href}/`;
-  } catch (_) {
-    return DEFAULT_TRACKER_URL;
-  }
+  const rawMeasurementId = String(configured.measurementId || DEFAULT_MEASUREMENT_ID).trim();
+  const measurementId = /^G-[A-Z0-9]+$/.test(rawMeasurementId) ? rawMeasurementId : '';
+  return { enabled, measurementId };
 }
 
 function isDoNotTrackEnabled() {
@@ -287,12 +337,11 @@ function pushEvent(category, action, name, value) {
   const normalizedName = normalizeToken(name);
   if (!normalizedName) return false;
   publishEngagement({ category, action, name: normalizedName, value });
-  if (!analyticsReady) return false;
-  const queue = window._paq;
-  if (!hasPushQueue(queue)) return false;
-  const event = ['trackEvent', category, action, normalizedName];
-  if (value !== undefined) event.push(value);
-  queue.push(event);
+  if (!gaLoaded || typeof window.gtag !== 'function') return false;
+  const params = { event_category: category, event_label: normalizedName };
+  if (typeof value === 'number' && Number.isFinite(value)) params.value = value;
+  else if (value !== undefined) params.event_detail = String(value);
+  window.gtag('event', action, params);
   return true;
 }
 
@@ -451,10 +500,6 @@ function normalizeCasetaDishEventName(casetaId, dishId) {
 
 function isCasetaDishEventName(value) {
   return /^z[1-7]_[0-9]+_[a-z0-9]+(?:_[a-z0-9]+)*$/.test(String(value || ''));
-}
-
-function hasPushQueue(value) {
-  return Boolean(value && typeof value.push === 'function');
 }
 
 initAnalytics();

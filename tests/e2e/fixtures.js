@@ -55,6 +55,14 @@ function stubFor(url) {
     return { status: 200, contentType: 'font/woff2', headers: CORS, body: Buffer.alloc(0) };
   }
 
+  // Google Analytics: solo se llama tras aceptar el consentimiento; la suite lo simula.
+  if (hostname === 'www.googletagmanager.com') {
+    return { status: 200, contentType: 'text/javascript; charset=utf-8', headers: CORS, body: '' };
+  }
+  if (hostname === 'www.google-analytics.com' || hostname.endsWith('.google-analytics.com') || hostname === 'analytics.google.com') {
+    return { status: 200, contentType: 'text/plain', headers: CORS, body: '' };
+  }
+
   if (hostname === 'api.arandadeduero.es') {
     if (pathname === '/weather') return json({ daily: [], hourly: [] });
     if (pathname === '/fiestas/saves') return json({ ok: true, activities: [] });

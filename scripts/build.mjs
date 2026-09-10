@@ -32,8 +32,7 @@ const communityPromptCampaign = {
 };
 const analyticsConfig = {
   enabled: parseBooleanEnv(process.env.FIESTAS_ANALYTICS_ENABLED),
-  trackerUrl: process.env.FIESTAS_MATOMO_URL || 'https://stats.arandadeduero.es/',
-  siteId: process.env.FIESTAS_MATOMO_SITE_ID || '29'
+  measurementId: process.env.FIESTAS_GA_MEASUREMENT_ID || 'G-BXMC22W46S'
 };
 const communityPlanIcons = new Set([
   'stars', 'music', 'microphone', 'cocktail', 'beer', 'food', 'dance', 'theater', 'masks',

@@ -184,8 +184,7 @@ El build admite estas variables:
 
 | Variable | Uso |
 | --- | --- |
-| <code>FIESTAS_ANALYTICS_ENABLED</code> | <code>true</code> activa la analítica y <code>false</code> la desactiva. |
-| <code>FIESTAS_MATOMO_URL</code> | Cambia la URL base de Matomo. |
-| <code>FIESTAS_MATOMO_SITE_ID</code> | Cambia el site ID de Matomo. |
+| <code>FIESTAS_ANALYTICS_ENABLED</code> | <code>true</code> activa la analítica y <code>false</code> la desactiva. Sin definir: activa salvo en <code>localhost</code>/<code>127.0.0.1</code>. |
+| <code>FIESTAS_GA_MEASUREMENT_ID</code> | ID de medición de Google Analytics 4 (por defecto <code>G-BXMC22W46S</code>). |
 
-La taxonomía y los límites de privacidad están en [docs/matomo.md](matomo.md).
+Google Analytics solo se carga y envía datos **después** de que la persona pulse «Aceptar» en el aviso de consentimiento. Ver [docs/analytics.md](analytics.md).
