@@ -43,7 +43,7 @@ jobs:
 
   build:
     needs: publication-window
-    if: needs.publication-window.outputs.run == 'true' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    if: needs.publication-window.outputs.run == 'true' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.ref == 'refs/heads/aranda' )
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -131,7 +131,7 @@ jobs:
           path: dist
 
   deploy:
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.ref == 'refs/heads/aranda'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
