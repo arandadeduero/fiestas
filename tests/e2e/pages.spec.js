@@ -3,6 +3,27 @@ import { test, expect } from './fixtures.js';
 // La página /populares/ está desactivada (FIESTAS_POPULAR_ENABLED) porque el
 // backend de contadores todavía no existe; sus pruebas se reactivan con ella.
 
+test('sitemap.xml lista las páginas indexables y excluye las noindex y redirecciones', async ({ page }) => {
+  const res = await page.request.get('/sitemap.xml');
+  expect(res.ok()).toBe(true);
+  const xml = await res.text();
+  const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+
+  expect(locs.length).toBeGreaterThan(10);
+  expect(locs).toContain('https://fiestas.arandadeduero.dev/');
+  expect(locs.some((loc) => /\/e\/\d+\//.test(loc))).toBe(true);
+  expect(locs.some((loc) => loc.endsWith('/planes/'))).toBe(true);
+
+  // Nada de páginas noindex ni de utilidad en el sitemap.
+  for (const loc of locs) {
+    expect(loc).not.toMatch(/\/plan\/(importar\/)?$/);
+    expect(loc).not.toMatch(/\/qr\/$/);
+  }
+
+  const robots = await (await page.request.get('/robots.txt')).text();
+  expect(robots).toContain('Sitemap: https://fiestas.arandadeduero.dev/sitemap.xml');
+});
+
 test('el catálogo de planes vecinales renderiza y sus fichas abren', async ({ page }) => {
   const planDataRequests = [];
   page.on('request', (request) => {

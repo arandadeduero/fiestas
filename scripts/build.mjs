@@ -180,6 +180,33 @@ async function writeFile(relPath, content) {
   await fs.writeFile(filePath, content);
 }
 
+// Sitemap derivado de la salida real: recorre dist/, incluye cada page (`index.html`)
+// que no lleve `robots: noindex` (quedan fuera /plan/, /plan/importar/, redirecciones,
+// páginas de QR y de actividad no disponible). Así no hay que mantener una lista aparte.
+async function writeSitemapAndRobots() {
+  const files = await fs.readdir(dist, { recursive: true });
+  const lastmod = new Date().toISOString().slice(0, 10);
+  const locs = [];
+  for (const rel of files) {
+    if (path.basename(rel) !== 'index.html') continue;
+    const html = await fs.readFile(path.join(dist, rel), 'utf8');
+    const robotsMeta = html.match(/<meta[^>]+name=["']robots["'][^>]*>/i)?.[0] || '';
+    if (/noindex/i.test(robotsMeta)) continue;
+    locs.push('/' + rel.slice(0, -'index.html'.length).split(path.sep).join('/'));
+  }
+  locs.sort((a, b) => (a === '/' ? -1 : b === '/' ? 1 : a.localeCompare(b, 'en')));
+
+  const sitemap = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...locs.map((loc) => `  <url><loc>${publicBaseUrl}${loc}</loc><lastmod>${lastmod}</lastmod></url>`),
+    '</urlset>',
+    ''
+  ].join('\n');
+  await writeFile('sitemap.xml', sitemap);
+  await writeFile('robots.txt', ['User-agent: *', 'Allow: /', `Sitemap: ${publicBaseUrl}/sitemap.xml`, ''].join('\n'));
+}
+
 function contentVersion(seed) {
   const hash = createHash('sha256');
   for (const [relPath, content] of seed) {
@@ -1462,23 +1489,7 @@ async function build() {
     }
   }
 
-  const urls = [
-    '/', '/mapa/', '/planes/', '/colaboradores/',
-    ...(popularEnabled ? ['/populares/'] : []),
-    ...(casetasEnabled ? ['/casetas/', '/pinchos-populares/'] : []),
-    ...communityPlans.map((plan) => `/planes/${plan.id}/`),
-    ...casetas.flatMap((caseta) => [caseta.urlPath, casetaQrPath(caseta.publicSlug)]),
-    ...events.map((event) => event.urlPath)
-  ];
-  const sitemap = [
-    '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...urls.map((url) => '  <url><loc>' + publicBaseUrl + url + '</loc></url>'),
-    '</urlset>',
-    ''
-  ].join('\n');
-  await writeFile('sitemap.xml', sitemap);
-  await writeFile('robots.txt', ['User-agent: *', 'Allow: /', 'Sitemap: ' + publicBaseUrl + '/sitemap.xml', ''].join('\n'));
+  await writeSitemapAndRobots();
   console.log('Built fiestas repo with ' + events.length + ' events.');
 }
 
