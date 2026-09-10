@@ -47,6 +47,14 @@ function stubFor(url) {
     return { status: 200, contentType: 'image/png', headers: CORS, body: PIXEL_PNG };
   }
 
+  // Tipografía Outfit desde Google Fonts: la suite no baja fuentes reales.
+  if (hostname === 'fonts.googleapis.com') {
+    return { status: 200, contentType: 'text/css; charset=utf-8', headers: CORS, body: '' };
+  }
+  if (hostname === 'fonts.gstatic.com') {
+    return { status: 200, contentType: 'font/woff2', headers: CORS, body: Buffer.alloc(0) };
+  }
+
   if (hostname === 'api.arandadeduero.es') {
     if (pathname === '/weather') return json({ daily: [], hourly: [] });
     if (pathname === '/fiestas/saves') return json({ ok: true, activities: [] });

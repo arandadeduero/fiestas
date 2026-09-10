@@ -87,11 +87,11 @@ test('los clics de canal mantienen el banner abierto y aplican el silencio', asy
 
   await triggerRelevantAction(page);
   await expect(prompt).toBeVisible();
-  await page.locator('[data-community-prompt-channel="whatsapp"]').evaluate((link) => {
+  await page.locator('[data-community-prompt-channel="facebook"]').evaluate((link) => {
     link.removeAttribute('target');
     link.addEventListener('click', (event) => event.preventDefault(), { once: true });
   });
-  await page.locator('[data-community-prompt-channel="whatsapp"]').click();
+  await page.locator('[data-community-prompt-channel="facebook"]').click();
 
   await expect(prompt).toBeVisible();
   const state = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), COMMUNITY_PROMPT_STATE_KEY);

@@ -15,10 +15,12 @@
         <i class="menu-drawer-link-icon fa-solid fa-people-group" aria-hidden="true"></i>
         <span>Planes vecinales</span>
       </a>
+      {% if popularEnabled %}
       <a class="menu-drawer-link menu-drawer-link-internal" href="/populares/">
         <i class="menu-drawer-link-icon fa-solid fa-ranking-star" aria-hidden="true"></i>
         <span>Actividades populares</span>
       </a>
+      {% endif %}
       {% if casetasEnabled %}
       <a class="menu-drawer-link menu-drawer-link-internal" href="/pinchos-populares/">
         <i class="menu-drawer-link-icon fa-solid fa-utensils" aria-hidden="true"></i>
@@ -37,10 +39,6 @@
       <a class="menu-drawer-link" href="https://www.arandadeduero.es" target="_blank" rel="noopener noreferrer">
         <img class="menu-drawer-link-logo" src="/assets/favicon-128.png" alt="" />
         <span>Ayuntamiento de Aranda de Duero. Concejalía de Innovación</span>
-      </a>
-      <a class="menu-drawer-link" href="https://www.arandadeduero.es/whatsapp" target="_blank" rel="noopener noreferrer">
-        <i class="menu-drawer-link-icon fa-brands fa-whatsapp" aria-hidden="true"></i>
-        <span>Canal de WhatsApp</span>
       </a>
       <a class="menu-drawer-link" href="https://www.facebook.com/ayuntamientoarandadeduero" target="_blank" rel="noopener noreferrer">
         <i class="menu-drawer-link-icon fa-brands fa-facebook" aria-hidden="true"></i>

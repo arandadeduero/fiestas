@@ -21,6 +21,10 @@ const publicBaseUrl = 'https://fiestas.arandadeduero.dev';
 // se cargan los datos de casetas, no se generan sus páginas ni se incluye su
 // JS/UI. Se puede reactivar con FIESTAS_CASETAS_ENABLED=true.
 const casetasEnabled = parseBooleanEnv(process.env.FIESTAS_CASETAS_ENABLED) === true;
+// La página de actividades populares depende de un backend de contadores
+// (guardados/visitas) que todavía no existe: sin datos no aporta nada. Se puede
+// reactivar con FIESTAS_POPULAR_ENABLED=true.
+const popularEnabled = parseBooleanEnv(process.env.FIESTAS_POPULAR_ENABLED) === true;
 const communityPromptCampaign = {
   id: 'aranda-2026',
   startDate: '2026-09-07',
@@ -1126,6 +1130,7 @@ function pageContext({ assetVersion, cssVersion, jsVersion, fontAwesomeVersions,
       .map((name) => '/assets/js/' + name + '.' + jsVersion + '.js'),
     communityPlansUrl: '/data/planes.json',
     casetasEnabled,
+    popularEnabled,
     assetVersion,
     cssVersion,
     jsVersion,
@@ -1246,6 +1251,7 @@ async function build() {
   }));
   }
 
+  if (popularEnabled) {
   await writeFile('populares/index.html', render('fiestas-2026-popular.njk', {
     ...homeContext,
     title: 'Actividades populares | Fiestas Patronales de Aranda de Duero 2026',
@@ -1259,6 +1265,7 @@ async function build() {
       url: publicBaseUrl + '/populares/'
     }
   }));
+  }
 
   if (casetasEnabled) {
   await writeFile('pinchos-populares/index.html', render('fiestas-2026-popular-dishes.njk', {
@@ -1457,7 +1464,8 @@ async function build() {
   }
 
   const urls = [
-    '/', '/mapa/', '/populares/', '/planes/', '/colaboradores/',
+    '/', '/mapa/', '/planes/', '/colaboradores/',
+    ...(popularEnabled ? ['/populares/'] : []),
     ...(casetasEnabled ? ['/casetas/', '/pinchos-populares/'] : []),
     ...communityPlans.map((plan) => `/planes/${plan.id}/`),
     ...casetas.flatMap((caseta) => [caseta.urlPath, casetaQrPath(caseta.publicSlug)]),

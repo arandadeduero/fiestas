@@ -17,8 +17,7 @@ const routes = [
   ['/plan/', '[data-fiestas-plans-page]'],
   ['/plan/importar/', '[data-plan-import-title]'],
   ['/planes/', '[data-community-plans-page]'],
-  ['/colaboradores/', '[data-fiesta-collaborators-page]'],
-  ['/populares/', '[data-fiestas-popular-page]']
+  ['/colaboradores/', '[data-fiesta-collaborators-page]']
 ];
 
 function assertClean(page, route) {

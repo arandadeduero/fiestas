@@ -25,7 +25,7 @@ export default {
       },
       fontFamily: {
         display: ['Georgia', 'Times New Roman', 'serif'],
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        sans: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif']
       }
     }
   },
