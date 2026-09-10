@@ -1,0 +1,42 @@
+tests/e2e/fixtures.js
+  s_8ac52af66e15af::t_0a7f817a5dc33a 50-57
+src/templates/partials/menu-drawer.njk
+  s_8ac52af66e15af::t_707a1ab74fd5f5 18,23
+scripts/build.mjs
+  s_8ac52af66e15af::t_96bf6f3d427ed7 24-27
+  s_8ac52af66e15af::t_ad87d9f14d4f88 1467-1468
+  s_8ac52af66e15af::t_00736aad0afa7f 1133
+  s_8ac52af66e15af::t_ee224132014eb1 1254,1268
+src/styles/base.css
+  s_8ac52af66e15af::t_004eb15dbc2a98 35
+src/styles/fiestas-2026.css
+  s_8ac52af66e15af::t_2c1ea3849d8335 1488-1489
+src/templates/layout.njk
+  s_8ac52af66e15af::t_61519622eca643 16-19
+tests/e2e/community-prompt.spec.js
+  s_8ac52af66e15af::t_5af7eca761e5d0 90,94
+tests/e2e/health.spec.js
+  s_8ac52af66e15af::t_e086107ea70622 20
+src/templates/partials/community-prompt.njk
+  s_8ac52af66e15af::t_a10e757497cc8c 33
+tests/e2e/pages.spec.js
+  s_8ac52af66e15af::t_712751f3e6c94c 3-4
+tailwind.config.js
+  s_8ac52af66e15af::t_fd38d21abc2cd6 28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "43444f436371fa01e8f6123e57f1153fec0a9281",
+  "prompts": {},
+  "sessions": {
+    "s_8ac52af66e15af": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b63ac998-a9f6-4233-9da0-de40f9b9931b",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
