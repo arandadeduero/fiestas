@@ -1,7 +1,7 @@
 import { normalizePlanIcon } from './plan-storage.js';
 
 const TIME_ZONE = 'Europe/Madrid';
-const FESTIVAL_ID = 'valladolid-2026';
+const FESTIVAL_ID = 'aranda-2026';
 
 // El JSON de eventos del cliente ya no incluye canonicalUrl: se reconstruye la
 // URL absoluta desde urlPath (los .ics necesitan URLs completas).
@@ -12,11 +12,11 @@ function eventAbsoluteUrl(event) {
   return origin + url;
 }
 
-export function createIcs(events = [], calendarName = 'Fiestas Valladolid 2026') {
+export function createIcs(events = [], calendarName = 'Fiestas Patronales de Aranda de Duero 2026') {
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Ayuntamiento de Aranda de Duero. Concejalía de Innovación//Fiestas Valladolid 2026//ES',
+    'PRODID:-//Ayuntamiento de Aranda de Duero. Concejalía de Innovación//Fiestas Patronales de Aranda de Duero 2026//ES',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     `X-WR-CALNAME:${escapeIcs(calendarName)}`,
@@ -83,7 +83,7 @@ export function decodePlanImportHash(hash) {
   }
 }
 
-export function createIcsFile(events, name = 'fiestas-valladolid-2026') {
+export function createIcsFile(events, name = 'fiestas-aranda-2026') {
   return makeFile(`${slugify(name)}.ics`, createIcs(events, name), 'text/calendar;charset=utf-8');
 }
 

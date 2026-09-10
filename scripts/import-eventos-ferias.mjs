@@ -621,7 +621,7 @@ function locationFor(remote, occurrence = null) {
     2310: 'Calle Calixto Fernández de la Torre, esquina con C. Reina',
     2316: 'Calle Cascajares (zona de El Farolito, La Taberna del Farolito y La Cárcava)',
     2215: 'Bar ZVMO, C. Reina, 1',
-    2313: 'Plaza de Derecho (Facultad de Derecho, Universidad de Valladolid)',
+    2313: 'Plaza de Derecho (Facultad de Derecho, Universidad de Aranda de Duero)',
     2265: 'Bandido Techno Room, Pl. del Pte., 4',
     2218: 'Calle Ebanistería, 2 (Zona Cantarranas)',
     2431: 'Acera de Recoletos',
@@ -631,8 +631,8 @@ function locationFor(remote, occurrence = null) {
     1688: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1',
     2159: 'A Tomar Por Culo Club, Paseo de Marcelino Martín “El Catarro”',
     2136: 'La Pera Limonera, Playa de las Moreras',
-    2183: 'Feria de Valladolid',
-    2194: 'Feria de Valladolid',
+    2183: 'Feria de Aranda de Duero',
+    2194: 'Feria de Aranda de Duero',
     1689: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1',
     1690: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1',
     2181: 'Orbital Club, Plaza de la Rinconada',
@@ -657,13 +657,13 @@ async function resolveCoordinates(remote, location, currentEvents) {
       lat: 41.6518356,
       lng: -4.7295367,
       source: 'Google Maps (consulta manual; coordenadas aproximadas de la intersección)',
-      query: 'C. Reina & Calle Calixto Fernández de la Torre, 47001 Valladolid, España'
+      query: 'C. Reina & Calle Calixto Fernández de la Torre, 47001 Aranda de Duero, España'
     },
     2316: {
       lat: 41.6521118,
       lng: -4.7241231,
       source: 'Google Maps (consulta manual; centro aproximado de tres locales contiguos)',
-      query: 'El Farolito, La Taberna del Farolito y Bar La Cárcava, Valladolid, España'
+      query: 'El Farolito, La Taberna del Farolito y Bar La Cárcava, Aranda de Duero, España'
     },
     2388: {
       lat: 41.6521922,
@@ -671,32 +671,32 @@ async function resolveCoordinates(remote, location, currentEvents) {
       source: 'OpenStreetMap Nominatim (Calle de Cascajares; ubicación del Escenario Cascajares)',
       osmType: 'way',
       osmId: 33821228,
-      query: 'Calle Cascajares, Valladolid, España',
+      query: 'Calle Cascajares, Aranda de Duero, España',
       accuracy: 1
     },
     2215: {
       lat: 41.6517901,
       lng: -4.7295341,
       source: 'Google Maps (consulta manual; ficha de Zvmo)',
-      query: 'Zvmo, C. Reina, 1, 47001 Valladolid, España'
+      query: 'Zvmo, C. Reina, 1, 47001 Aranda de Duero, España'
     },
     2313: {
       lat: 41.6519966,
       lng: -4.7215228,
       source: 'Google Maps (consulta manual; referencia aproximada de la Facultad de Derecho)',
-      query: 'Facultad de Derecho, Universidad de Valladolid, Pl. de la Univ., s/n, 47002 Valladolid, España'
+      query: 'Facultad de Derecho, Universidad de Aranda de Duero, Pl. de la Univ., s/n, 47002 Aranda de Duero, España'
     },
     2265: {
       lat: 41.6525315,
       lng: -4.7307035,
       source: 'Google Maps (consulta manual; dirección aproximada del local)',
-      query: 'Pl. del Pte., 4, 47003 Valladolid, España'
+      query: 'Pl. del Pte., 4, 47003 Aranda de Duero, España'
     },
     2218: {
       lat: 41.6530093,
       lng: -4.7251996,
       source: 'Google Maps (consulta manual)',
-      query: 'Calle Ebanistería, 2, 47002 Valladolid, España'
+      query: 'Calle Ebanistería, 2, 47002 Aranda de Duero, España'
     },
     1784: { lat: 41.6441725, lng: -4.7559683, source: 'OpenStreetMap Nominatim' },
     1688: { lat: 41.6563987, lng: -4.7235721, source: 'OpenStreetMap Nominatim' },
@@ -705,19 +705,19 @@ async function resolveCoordinates(remote, location, currentEvents) {
     1691: { lat: 41.6563987, lng: -4.7235721, source: 'OpenStreetMap Nominatim' },
     1692: { lat: 41.6563987, lng: -4.7235721, source: 'OpenStreetMap Nominatim' },
     2136: { lat: 41.6573, lng: -4.733252, source: 'Inferidas por proximidad a eventos de Playa de las Moreras' },
-    2183: { lat: 41.656398, lng: -4.738248, source: 'Inferidas por proximidad a eventos de Feria de Valladolid' },
-    2194: { lat: 41.656398, lng: -4.738248, source: 'Inferidas por proximidad a eventos de Feria de Valladolid' },
+    2183: { lat: 41.656398, lng: -4.738248, source: 'Inferidas por proximidad a eventos de Feria de Aranda de Duero' },
+    2194: { lat: 41.656398, lng: -4.738248, source: 'Inferidas por proximidad a eventos de Feria de Aranda de Duero' },
     2454: {
       lat: 41.6542815,
       lng: -4.7245378,
       source: 'Google Maps (ficha Faroles Rock coincidente en la dirección publicada)',
-      query: 'Los Faroles Bar / Faroles Rock, C. Alonso Berruguete, 4, 47003 Valladolid, España'
+      query: 'Los Faroles Bar / Faroles Rock, C. Alonso Berruguete, 4, 47003 Aranda de Duero, España'
     },
     2480: {
       lat: 41.6520776,
       lng: -4.7229442,
       source: 'Restaurant Guru / OpenStreetMap (ficha de Bizarro Bar Independiente en la dirección publicada)',
-      query: 'Bizarro Bar Independiente, C. Arribas, 18, 47002 Valladolid, España'
+      query: 'Bizarro Bar Independiente, C. Arribas, 18, 47002 Aranda de Duero, España'
     },
     2489: {
       lat: 41.6573001,
@@ -725,14 +725,14 @@ async function resolveCoordinates(remote, location, currentEvents) {
       source: 'OpenStreetMap Nominatim (Playa de las Moreras; ubicación del escenario principal)',
       osmType: 'way',
       osmId: 61755548,
-      query: 'Playa de las Moreras, Valladolid, España',
+      query: 'Playa de las Moreras, Aranda de Duero, España',
       accuracy: 1
     },
     2496: {
       lat: 41.6520776,
       lng: -4.7229442,
       source: 'Google Maps y OpenStreetMap Nominatim (ficha de Bizarro Bar Independiente coincidente con el club del cartel)',
-      query: 'Bizarro Bar Independiente / Bizarro Calle, C. Arribas, 18, 47002 Valladolid, España'
+      query: 'Bizarro Bar Independiente / Bizarro Calle, C. Arribas, 18, 47002 Aranda de Duero, España'
     }
   };
   if (known[id]) return known[id];
@@ -745,7 +745,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         lat: 41.646342,
         lng: -4.728046,
         source: 'Google Maps (consulta manual; centro aproximado de Acera de Recoletos)',
-        query: 'C. Acera de Recoletos, Valladolid, España'
+        query: 'C. Acera de Recoletos, Aranda de Duero, España'
       }
     },
     {
@@ -754,7 +754,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         lat: 41.6531507,
         lng: -4.7289254,
         source: 'OpenStreetMap Nominatim (ficha local de Orbital Club)',
-        query: 'Orbital Club, Plaza de la Rinconada, Valladolid, España'
+        query: 'Orbital Club, Plaza de la Rinconada, Aranda de Duero, España'
       }
     },
     {
@@ -765,7 +765,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap Nominatim',
         osmType: 'node',
         osmId: 11963626786,
-        query: 'Bar San Pío X, Valladolid, España',
+        query: 'Bar San Pío X, Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -777,7 +777,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap Nominatim',
         osmType: 'node',
         osmId: 12426457236,
-        query: 'La Blanca, 4, Calle del Esperanto, Valladolid, España',
+        query: 'La Blanca, 4, Calle del Esperanto, Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -789,7 +789,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap Nominatim',
         osmType: 'way',
         osmId: 61281999,
-        query: 'Plaza de la Universidad, Valladolid, España',
+        query: 'Plaza de la Universidad, Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -801,7 +801,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap Nominatim',
         osmType: 'relation',
         osmId: 10750492,
-        query: 'Plaza del Colegio de Santa Cruz, Valladolid, España',
+        query: 'Plaza del Colegio de Santa Cruz, Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -813,7 +813,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap Nominatim',
         osmType: 'node',
         osmId: 5376469221,
-        query: 'Molly Malone, Plaza del Poniente, Valladolid, España',
+        query: 'Molly Malone, Plaza del Poniente, Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -825,7 +825,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap (ficha de Beluga, C. Ramón Núñez)',
         osmType: 'node',
         osmId: 9594267126,
-        query: 'Beluga, C. Ramón Núñez, 1, 47003 Valladolid, España',
+        query: 'Beluga, C. Ramón Núñez, 1, 47003 Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -837,7 +837,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap Nominatim',
         osmType: 'way',
         osmId: 60306723,
-        query: 'Plaza de Cantarranillas, Valladolid, España',
+        query: 'Plaza de Cantarranillas, Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -847,7 +847,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         lat: 41.6520776,
         lng: -4.7229442,
         source: 'Restaurant Guru / OpenStreetMap (ficha de Bizarro Bar Independiente en la dirección publicada)',
-        query: 'Bizarro Bar Independiente, C. Arribas, 18, 47002 Valladolid, España'
+        query: 'Bizarro Bar Independiente, C. Arribas, 18, 47002 Aranda de Duero, España'
       }
     },
     {
@@ -856,7 +856,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         lat: 41.6521,
         lng: -4.7239,
         source: 'OpenStreetMap Nominatim (alias local de Plaza Cantarranas)',
-        query: 'Plaza Cantarranas, Valladolid, España'
+        query: 'Plaza Cantarranas, Aranda de Duero, España'
       }
     },
     {
@@ -867,7 +867,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap Nominatim',
         osmType: 'node',
         osmId: 8365740532,
-        query: 'Cadenas de San Gregorio, Valladolid, España',
+        query: 'Cadenas de San Gregorio, Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -879,7 +879,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap Nominatim',
         osmType: 'way',
         osmId: 43306328,
-        query: 'Plaza del Salvador, Valladolid, España',
+        query: 'Plaza del Salvador, Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -889,7 +889,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         lat: 41.652196,
         lng: -4.726358,
         source: 'OpenStreetMap Nominatim',
-        query: 'Plaza Fuente Dorada, Valladolid, España'
+        query: 'Plaza Fuente Dorada, Aranda de Duero, España'
       }
     },
     {
@@ -900,7 +900,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap Nominatim (Calle de Cascajares; ubicación del Escenario Cascajares)',
         osmType: 'way',
         osmId: 33821228,
-        query: 'Calle Cascajares, Valladolid, España',
+        query: 'Calle Cascajares, Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -912,7 +912,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap Nominatim',
         osmType: 'way',
         osmId: 24432961,
-        query: 'Plaza del Poniente, Valladolid, España',
+        query: 'Plaza del Poniente, Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -924,7 +924,7 @@ async function resolveCoordinates(remote, location, currentEvents) {
         source: 'OpenStreetMap Nominatim',
         osmType: 'way',
         osmId: 367406151,
-        query: 'La Pera Limonera, Valladolid, España',
+        query: 'La Pera Limonera, Aranda de Duero, España',
         accuracy: 1
       }
     },
@@ -934,30 +934,30 @@ async function resolveCoordinates(remote, location, currentEvents) {
         lat: 41.6515827,
         lng: -4.7303391,
         source: 'Google Maps (consulta manual; La Cotorra, sede del Cotorrazo)',
-        query: 'La Cotorra, C. Caridad, 2, 47001 Valladolid, España'
+        query: 'La Cotorra, C. Caridad, 2, 47001 Aranda de Duero, España'
       }
     }
   ].find((candidate) => candidate.matches.some((match) => locationKey.includes(match)));
   if (knownLocation) return { ...knownLocation.coordinates };
 
   const queryById = {
-    2509: 'Calle del Conde de Benavente, 1, Valladolid, España',
-    2507: 'Calle de Francisco Zarandona, 10, Valladolid, España',
-    2198: 'Calle del Bao, Valladolid, España',
-    2203: 'Sala Borja, Valladolid, España',
-    2191: 'Calle Espíritu Santo, 9, Valladolid, España',
-    1999: 'Centro Comercial Vallsur, Paseo de Zorrilla, 328, Valladolid, España',
-    1784: 'Centro Cultural Miguel Delibes, Avenida del Real Valladolid, 2, Valladolid, España',
-    1688: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1, Valladolid, España',
-    2159: 'Paseo de Marcelino Martín “El Catarro”, Valladolid, España',
-    1689: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1, Valladolid, España',
-    1690: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1, Valladolid, España',
-    2181: 'Plaza de la Rinconada, Valladolid, España',
-    1691: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1, Valladolid, España',
-    2088: 'Sala Porta Caeli, Valladolid, España',
-    1692: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1, Valladolid, España'
+    2509: 'Calle del Conde de Benavente, 1, Aranda de Duero, España',
+    2507: 'Calle de Francisco Zarandona, 10, Aranda de Duero, España',
+    2198: 'Calle del Bao, Aranda de Duero, España',
+    2203: 'Sala Borja, Aranda de Duero, España',
+    2191: 'Calle Espíritu Santo, 9, Aranda de Duero, España',
+    1999: 'Centro Comercial Vallsur, Paseo de Zorrilla, 328, Aranda de Duero, España',
+    1784: 'Centro Cultural Miguel Delibes, Avenida del Real Valladolid, 2, Aranda de Duero, España',
+    1688: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1, Aranda de Duero, España',
+    2159: 'Paseo de Marcelino Martín “El Catarro”, Aranda de Duero, España',
+    1689: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1, Aranda de Duero, España',
+    1690: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1, Aranda de Duero, España',
+    2181: 'Plaza de la Rinconada, Aranda de Duero, España',
+    1691: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1, Aranda de Duero, España',
+    2088: 'Sala Porta Caeli, Aranda de Duero, España',
+    1692: 'Casa de Zorrilla, Calle Fray Luis de Granada, 1, Aranda de Duero, España'
   };
-  const query = queryById[id] || `${location}, Valladolid, España`;
+  const query = queryById[id] || `${location}, Aranda de Duero, España`;
   const cacheKey = normalizeText(query).toLowerCase();
   if (!cache[cacheKey]) {
     cache[cacheKey] = await searchNominatim(query);

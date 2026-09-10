@@ -10256,6 +10256,46 @@ html.dark .fiestas-community-plan-detail-icon {
   gap: 0.8rem;
 }
 
+.fiestas-collaborators-empty {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px dashed #d7dbe4;
+  border-radius: 1rem;
+  padding: 1rem 1.1rem;
+}
+
+.fiestas-collaborators-empty > i {
+  display: inline-grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #f3eff7;
+  color: #73579f;
+}
+
+.fiestas-collaborators-empty p {
+  margin: 0;
+  color: #667085;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+html.dark .fiestas-collaborators-empty {
+  border-color: #3a3550;
+}
+
+html.dark .fiestas-collaborators-empty > i {
+  background: #292332;
+  color: #c9b6ec;
+}
+
+html.dark .fiestas-collaborators-empty p {
+  color: #b5bcc9;
+}
+
 .fiestas-collaborator-card {
   display: grid;
   min-width: 0;

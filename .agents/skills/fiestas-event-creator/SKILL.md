@@ -1,11 +1,11 @@
 ---
 name: fiestas-event-creator
-description: Crear, corregir o revisar eventos en el JSON de Fiestas Valladolid, especialmente cuando proceden de una importación externa.
+description: Crear, corregir o revisar eventos en el JSON de Fiestas Patronales de Aranda de Duero, especialmente cuando proceden de una importación externa.
 ---
 
 # Fiestas Event Creator
 
-Usa esta skill cuando el usuario pida crear, corregir o revisar un evento del programa de Fiestas Valladolid, incluidos los eventos obtenidos de una fuente externa.
+Usa esta skill cuando el usuario pida crear, corregir o revisar un evento del programa de Fiestas Patronales de Aranda de Duero, incluidos los eventos obtenidos de una fuente externa.
 
 ## Fuente de datos
 

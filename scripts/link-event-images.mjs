@@ -106,7 +106,7 @@ async function fetchText(url) {
   try {
     const response = await fetch(url, {
       signal: controller.signal,
-      headers: { 'user-agent': 'fiestas-valladolid-image-linker/1.0' }
+      headers: { 'user-agent': 'fiestas-aranda-de-duero-image-linker/1.0' }
     });
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
     return await response.text();

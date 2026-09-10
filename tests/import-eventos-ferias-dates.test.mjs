@@ -79,14 +79,14 @@ test('conserva hora, fin, ubicación y actuaciones por ocurrencia', () => {
           date: '2026-09-05',
           startTime: '13:30',
           endTime: '15:00',
-          location: 'Bar San Pío X, Valladolid',
+          location: 'Bar San Pío X, Aranda de Duero',
           performances: ['Los Lunares']
         },
         {
           date: '2026-09-06',
           startTime: '17:00',
           endTime: null,
-          location: 'Bar La Blanca, Calle Esperanto 4, Valladolid',
+          location: 'Bar La Blanca, Calle Esperanto 4, Aranda de Duero',
           performances: ['Santi Borja']
         }
       ]
@@ -99,14 +99,14 @@ test('conserva hora, fin, ubicación y actuaciones por ocurrencia', () => {
       date: '2026-09-05',
       startTime: '13:30',
       endTime: '15:00',
-      location: 'Bar San Pío X, Valladolid',
+      location: 'Bar San Pío X, Aranda de Duero',
       performances: ['Los Lunares']
     },
     {
       date: '2026-09-06',
       startTime: '17:00',
       endTime: null,
-      location: 'Bar La Blanca, Calle Esperanto 4, Valladolid',
+      location: 'Bar La Blanca, Calle Esperanto 4, Aranda de Duero',
       performances: ['Santi Borja']
     }
   ]);
@@ -134,7 +134,7 @@ test('permite sesiones distintas el mismo día sin horario publicado', () => {
           date: '2026-09-05',
           startTime: null,
           endTime: null,
-          location: 'Feria de Valladolid',
+          location: 'Feria de Aranda de Duero',
           performances: ['Benjamín U10 y Alevín U12 M - F']
         },
         {
@@ -142,7 +142,7 @@ test('permite sesiones distintas el mismo día sin horario publicado', () => {
           date: '2026-09-06',
           startTime: null,
           endTime: null,
-          location: 'Feria de Valladolid',
+          location: 'Feria de Aranda de Duero',
           performances: ['Infantil U14 M - F']
         },
         {
@@ -150,7 +150,7 @@ test('permite sesiones distintas el mismo día sin horario publicado', () => {
           date: '2026-09-06',
           startTime: null,
           endTime: null,
-          location: 'Feria de Valladolid',
+          location: 'Feria de Aranda de Duero',
           performances: ['Junior U18 M - F']
         }
       ]

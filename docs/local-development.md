@@ -1,6 +1,6 @@
 # Desarrollo local
 
-Esta guía explica cómo ejecutar y validar Fiestas Valladolid 2026 en local. La documentación general del producto está en [README.md](../README.md).
+Esta guía explica cómo ejecutar y validar Fiestas Patronales de Aranda de Duero 2026 en local. La documentación general del producto está en [README.md](../README.md).
 
 ## Requisitos
 

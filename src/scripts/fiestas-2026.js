@@ -32,7 +32,7 @@ const collator = new Intl.Collator('es', { numeric: true, sensitivity: 'base' })
 const defaultQueryKeys = ['date', 'q', 'type', 'area', 'ticket', 'view', 'event'];
 const DEFAULT_DOCUMENT_TITLE = document.title;
 const SITE_SHARE_URL = 'https://fiestas.arandadeduero.es/?mtm_campaign=share';
-const SITE_SHARE_MESSAGE = `Mira, la mejor web para seguir las fiestas y ferias de Valladolid 2026\n\n${SITE_SHARE_URL}`;
+const SITE_SHARE_MESSAGE = `Mira, la mejor web para seguir las fiestas y fiestas de Aranda de Duero 2026\n\n${SITE_SHARE_URL}`;
 const SAVE_COUNTS_API_URL = 'https://api.arandadeduero.es/fiestas/saves';
 const POPULAR_METRICS_STORAGE_KEY = 'fiestasAranda:popularMetrics:v1';
 const CARTO_BASEMAPS_API_KEY = 'cb1_27ug_1_19138f635d4f03358d12cb43';
@@ -918,7 +918,7 @@ function normalizeEvents(events) {
 
 function updateDocumentTitle() {
   const query = els.search?.value.trim();
-  document.title = query ? `${query} | Fiestas Valladolid 2026` : DEFAULT_DOCUMENT_TITLE;
+  document.title = query ? `${query} | Fiestas Patronales de Aranda de Duero 2026` : DEFAULT_DOCUMENT_TITLE;
 }
 
 function render(options = {}) {
@@ -2244,7 +2244,6 @@ function updateMapTheme(leaflet) {
 function inferTicketKind(ticket) {
   if (!ticket?.required) return 'free';
   const text = normalizeText([ticket.label, ticket.url, ticket.note].filter(Boolean).join(' '));
-  if (text.includes('espaciosjovenesvalladolid')) return 'registration';
   return 'paid';
 }
 
@@ -2915,7 +2914,7 @@ function revokeDetailCalendarObjectUrl() {
 async function shareSite(event) {
   const trigger = event?.currentTarget;
   const shareUrl = trigger?.dataset.shareUrl || '';
-  const shareTitle = trigger?.dataset.shareTitle || 'Fiestas Valladolid 2026';
+  const shareTitle = trigger?.dataset.shareTitle || 'Fiestas Patronales de Aranda de Duero 2026';
   const shareText = trigger?.dataset.shareText || SITE_SHARE_MESSAGE;
   const clipboardText = shareUrl ? `${shareText}\n\n${shareUrl}` : shareText;
   try {

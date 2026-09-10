@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fiestas-valladolid-2026-__APP_VERSION__';
+const CACHE_NAME = 'fiestas-aranda-2026-__APP_VERSION__';
 // Shell mínimo: la home con su grafo completo de módulos, el catálogo de
 // eventos y la página offline. El resto de rutas y assets se cachean en
 // runtime al navegar (cacheFirst para /assets/, networkFirst para páginas).
@@ -45,7 +45,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((key) => key.startsWith('fiestas-valladolid-2026-') && key !== CACHE_NAME).map((key) => caches.delete(key))))
+      .then((keys) => Promise.all(keys.filter((key) => key.startsWith('fiestas-aranda-2026-') && key !== CACHE_NAME).map((key) => caches.delete(key))))
       .then(() => self.clients.claim())
   );
 });

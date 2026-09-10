@@ -3,7 +3,7 @@ import { trackCommunityPlanAdded, trackFavoriteChanged, trackPlanShared } from '
 import { renderPlanTimeline } from './plans-page.js';
 
 const CATALOG_SCHEMA_VERSION = 1;
-const FESTIVAL_ID = 'valladolid-2026';
+const FESTIVAL_ID = 'aranda-2026';
 const MAX_PLAN_NAME_LENGTH = 80;
 const MAX_ACTIVITY_IDS = 200;
 const MAX_JSON_BYTES = 256 * 1024;

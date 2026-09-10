@@ -15,7 +15,7 @@ const eventIds = new Set(['1', '7']);
 function payload(plan) {
   return JSON.stringify({
     schemaVersion: 1,
-    festival: 'valladolid-2026',
+    festival: 'aranda-2026',
     plans: [plan]
   });
 }

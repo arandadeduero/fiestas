@@ -1,5 +1,5 @@
 const WEATHER_API_URL = 'https://api.arandadeduero.es/weather';
-const WEATHER_CACHE_KEY = 'fiestas-valladolid-weather-v3';
+const WEATHER_CACHE_KEY = 'fiestas-aranda-de-duero-weather-v3';
 const WEATHER_CACHE_TTL_MS = 60 * 60 * 1000;
 const WEATHER_TIMEOUT_MS = 5000;
 

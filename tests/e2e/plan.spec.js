@@ -11,7 +11,7 @@ function localDateKey(date) {
 function planHash(activityIds) {
   const payload = {
     schemaVersion: 1,
-    festival: 'valladolid-2026',
+    festival: 'aranda-2026',
     exportedAt: new Date('2026-08-01T10:00:00Z').toISOString(),
     plans: [{ name: 'Plan de prueba E2E', icon: 'layers', activityIds }]
   };

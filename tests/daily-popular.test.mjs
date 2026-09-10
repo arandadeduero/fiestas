@@ -78,7 +78,7 @@ test('does not repeat shared poster files in the story', () => {
 test('generates story and vertical post images with a reusable manifest', async () => {
   const events = [
     { id: 1, date: '2026-09-04', title: 'Gira de verano Nintendo', startTime: '12:00', image: '/assets/events/tia-melitona-illustration.png', location: 'Campo Grande' },
-    { id: 2, date: '2026-09-04', title: 'Paco Devotion', startTime: '20:00', image: '/assets/events/paco-devotion-fiestas-valladolid-tour-2026.jpg', location: 'Valladolid' }
+    { id: 2, date: '2026-09-04', title: 'Paco Devotion', startTime: '20:00', image: '/assets/events/paco-devotion-fiestas-aranda-de-duero-tour-2026.jpg', location: 'Aranda de Duero' }
   ];
   const outputDir = await fs.mkdtemp(path.join(os.tmpdir(), 'fiestas-daily-popular-test-'));
   const result = await generateDailyPopular({

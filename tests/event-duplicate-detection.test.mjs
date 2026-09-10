@@ -44,7 +44,7 @@ test('no mezcla sesiones distintas con el mismo titulo generico', () => {
     startTime: '23:30',
     endTime: null,
     title: 'OrbitalClub - Sesiones fiestas 2026',
-    location: 'Orbital club, Plaza de la Rinconada, Valladolid',
+    location: 'Orbital club, Plaza de la Rinconada, Aranda de Duero',
     performances: ['Nacho a', 'Josua']
   }, [{
     id: 611,
@@ -52,7 +52,7 @@ test('no mezcla sesiones distintas con el mismo titulo generico', () => {
     startTime: '20:00',
     endTime: '23:00',
     title: 'OrbitalClub - Sesiones fiestas 2026',
-    location: 'Terraza de Orbital club, Plaza de la Rinconada, Valladolid',
+    location: 'Terraza de Orbital club, Plaza de la Rinconada, Aranda de Duero',
     performances: ['Funkforward']
   }]);
 
@@ -87,8 +87,8 @@ test('no mezcla sesiones del mismo evento sin horario publicado', () => {
       date: '2026-09-10',
       startTime: null,
       endTime: null,
-      title: '3x3 Feria de Valladolid (Torneo de Baloncesto)',
-      location: 'Feria de Valladolid',
+      title: '3x3 Feria de Aranda de Duero (Torneo de Baloncesto)',
+      location: 'Feria de Aranda de Duero',
       performances: ['Sesión de mañana: Infantil U14 M - F']
     },
     {
@@ -96,8 +96,8 @@ test('no mezcla sesiones del mismo evento sin horario publicado', () => {
       date: '2026-09-10',
       startTime: null,
       endTime: null,
-      title: '3x3 Feria de Valladolid (Torneo de Baloncesto)',
-      location: 'Feria de Valladolid',
+      title: '3x3 Feria de Aranda de Duero (Torneo de Baloncesto)',
+      location: 'Feria de Aranda de Duero',
       performances: ['Sesión de tarde: Junior U18 M - F']
     }
   ];

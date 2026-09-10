@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This repository contains the standalone Fiestas Valladolid 2026 experience. Source data lives in `src/data/fiestas-2026/events.json`. Nunjucks templates are in `src/templates/`, page styles in `src/styles/`, and browser modules in `src/scripts/`. The generated site is written to `dist/` and should not be edited by hand.
+This repository contains the standalone Fiestas Patronales de Aranda de Duero 2026 experience. Source data lives in `src/data/fiestas-2026/events.json`. Nunjucks templates are in `src/templates/`, page styles in `src/styles/`, and browser modules in `src/scripts/`. The generated site is written to `dist/` and should not be edited by hand.
 
 ## Build, Test, and Development Commands
 

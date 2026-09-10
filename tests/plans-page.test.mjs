@@ -6,7 +6,7 @@ import { validateImport } from '../src/scripts/plans-page.js';
 test('plan imports report activities that no longer exist', () => {
   const result = validateImport(JSON.stringify({
     schemaVersion: 1,
-    festival: 'valladolid-2026',
+    festival: 'aranda-2026',
     plans: [
       {
         name: 'Plan con evento eliminado',

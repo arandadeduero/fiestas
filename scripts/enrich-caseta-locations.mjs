@@ -34,7 +34,7 @@ for (const caseta of source.casetas) {
   }
 
   report.totals.audited += 1;
-  const query = normalizeText(caseta.addressQuery || `${caseta.location}, Valladolid, España`);
+  const query = normalizeText(caseta.addressQuery || `${caseta.location}, Aranda de Duero, España`);
   const item = { id: caseta.id, name: caseta.name, location: caseta.location, query };
   if (!query) {
     report.totals.missing += 1;
@@ -88,8 +88,8 @@ console.log(JSON.stringify({
 }, null, 2));
 
 function validateSource(value) {
-  if (value?.schemaVersion !== 1 || value?.festival !== 'valladolid-2026' || !Array.isArray(value.casetas)) {
-    throw new Error('El JSON de casetas debe usar schemaVersion 1 y festival valladolid-2026.');
+  if (value?.schemaVersion !== 1 || value?.festival !== 'aranda-2026' || !Array.isArray(value.casetas)) {
+    throw new Error('El JSON de casetas debe usar schemaVersion 1 y festival aranda-2026.');
   }
 }
 

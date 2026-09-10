@@ -14,7 +14,7 @@ const activity = {
   canonicalUrl: 'https://fiestas.arandadeduero.es/e/2044/cine-de-verano-familiar/'
 };
 
-test('creates a multi-event ICS for a plan with local Valladolid times', () => {
+test('creates a multi-event ICS for a plan with local Aranda de Duero times', () => {
   const ics = createIcs([
     activity,
     { ...activity, id: '2045', title: 'Concierto de verano', startTime: '22:00', endTime: '23:30' }

@@ -32,7 +32,7 @@ import {
   trackPlanShared
 } from './analytics.js';
 
-const FESTIVAL_ID = 'valladolid-2026';
+const FESTIVAL_ID = 'aranda-2026';
 const MAX_IMPORT_BYTES = 256 * 1024;
 const MAX_IMPORT_HASH_LENGTH = Math.ceil(MAX_IMPORT_BYTES * 4 / 3) + 1024;
 const MAX_PLAN_NAME_LENGTH = 80;
@@ -1489,7 +1489,7 @@ function groupEventsByDate(events) {
 }
 
 function createPlanShareText(plan) {
-  return `Échale un vistazo al plan «${plan.name}» para las Fiestas y Ferias de Valladolid 2026.`;
+  return `Échale un vistazo al plan «${plan.name}» para las Fiestas y Ferias de Aranda de Duero 2026.`;
 }
 
 function createPlanShareMessage(plan, shareUrl) {
@@ -1656,7 +1656,7 @@ export function validateImport(text, eventIds, aliases = {}) {
     return { ok: false, message: 'El enlace compartido no contiene un plan válido.', errorType: 'invalid_json' };
   }
   if (!value || typeof value !== 'object' || value.schemaVersion !== 1 || value.festival !== FESTIVAL_ID) {
-    return { ok: false, message: 'El plan compartido no pertenece a Fiestas Valladolid 2026 o usa una versión incompatible.', errorType: 'unsupported_format' };
+    return { ok: false, message: 'El plan compartido no pertenece a Fiestas Patronales de Aranda de Duero 2026 o usa una versión incompatible.', errorType: 'unsupported_format' };
   }
   const hasPlans = Object.prototype.hasOwnProperty.call(value, 'plans');
   if (hasPlans && !Array.isArray(value.plans)) {
@@ -1745,7 +1745,7 @@ function renderImportSharedPreview(container, plan, events, selectedDay, addedPl
     container.append(warning);
   }
   if (!plan.validIds.length) {
-    const empty = textNode('p', 'No hay actividades compatibles con esta edición de Fiestas Valladolid 2026.');
+    const empty = textNode('p', 'No hay actividades compatibles con esta edición de Fiestas Patronales de Aranda de Duero 2026.');
     empty.className = 'fiestas-community-plan-detail-warning';
     container.append(empty);
     return;

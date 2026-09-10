@@ -132,7 +132,7 @@ function buildManifest({ baseUrl, date, events, rankedEvents, postRankedEvents, 
   return {
     ok: true,
     schemaVersion: 3,
-    festival: 'valladolid-2026',
+    festival: 'aranda-2026',
     date,
     dateLabel: formatStoryDate(date),
     generatedAt: new Date().toISOString(),
@@ -193,7 +193,7 @@ function fallbackPosterSvg(event, index, x, y) {
     <path d="M${x + 245} ${y + 5} H${x + 395} V${y + 165} Z" fill="${accent}" fill-opacity="0.3"/>
     <path d="M${x + 5} ${y + 112} L${x + 155} ${y + 5} H${x + 245} L${x + 5} ${y + 196} Z" fill="#ffffff" fill-opacity="0.06"/>
     <path d="M${x + 5} ${y + 225} C${x + 120} ${y + 180} ${x + 255} ${y + 300} ${x + 395} ${y + 205} V${y + 285} H${x + 5}Z" fill="${accent}" fill-opacity="0.84"/>
-    <text x="${x + 28}" y="${y + 42}" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#ffffff" fill-opacity="0.9">FIESTAS VALLADOLID 2026</text>
+    <text x="${x + 28}" y="${y + 42}" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#ffffff" fill-opacity="0.9">FIESTAS DE ARANDA DE DUERO 2026</text>
     <rect x="${x + 5}" y="${y + 285}" width="390" height="100" fill="#211631"/>
     <rect x="${x + 5}" y="${y + 285}" width="390" height="7" fill="${accent}"/>
     ${titleMarkup}`;

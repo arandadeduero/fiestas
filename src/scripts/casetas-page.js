@@ -562,7 +562,7 @@ function resetMapSelection({ collapse = false, render = true } = {}) {
 function updateDocumentTitle() {
   const labels = [...state.dietaryFilters].map((value) => DIETARY_TITLE_LABELS[value]).filter(Boolean).sort();
   document.title = labels.length
-    ? `${labels.join(' y ')} | Casetas Feria de Día | Fiestas Valladolid 2026`
+    ? `${labels.join(' y ')} | Casetas Feria de Día | Fiestas Patronales de Aranda de Duero 2026`
     : DEFAULT_DOCUMENT_TITLE;
 }
 
@@ -574,7 +574,7 @@ function renderSheet(items, options = {}) {
   const isFocused = Boolean(state.selectedZone);
   const zoneTitle = state.selectedZone
     ? `Casetas de la ${state.selectedZone.toLowerCase()}${state.selectedLocation ? ` - ${state.selectedLocation}` : ''}`
-    : 'Casetas en Valladolid';
+    : 'Casetas en Aranda de Duero';
   const count = sorted.length;
   const countText = `${count} ${count === 1 ? 'caseta' : 'casetas'}`;
   els.mapSheet.classList.toggle('is-expanded', state.sheetState === 'expanded');
@@ -1004,7 +1004,7 @@ function zoneColor(zone) {
 }
 
 function zoneLabel(zone) {
-  return ZONE_LABELS[zone] || 'Valladolid';
+  return ZONE_LABELS[zone] || 'Aranda de Duero';
 }
 
 function compareCasetas(a, b) {
@@ -1020,7 +1020,7 @@ function hasCoordinates(coordinates) {
 function representativeCoordinates(items) {
   const positioned = items.filter((item) => hasCoordinates(item.coordinates)
     && item.coordinates.source !== 'zone-fallback');
-  const cityPositioned = positioned.filter((item) => isNearValladolid(item.coordinates));
+  const cityPositioned = positioned.filter((item) => isNearCity(item.coordinates));
   if (!cityPositioned.length) return null;
   return {
     lat: median(cityPositioned.map((item) => item.coordinates.lat)),
@@ -1028,7 +1028,7 @@ function representativeCoordinates(items) {
   };
 }
 
-function isNearValladolid(coordinates) {
+function isNearCity(coordinates) {
   return distanceInKilometres(CENTER, [coordinates.lat, coordinates.lng]) <= MAX_CITY_COORDINATE_DISTANCE_KM;
 }
 

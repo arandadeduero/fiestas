@@ -1,8 +1,8 @@
-# Fiestas Valladolid 2026
+# Fiestas Patronales de Aranda de Duero 2026
 
 Esta es la agenda web de las Fiestas Patronales de Aranda de Duero 2026 (Virgen de las Viñas), publicada en [fiestas.arandadeduero.es](https://fiestas.arandadeduero.es/) por [Ayuntamiento de Aranda de Duero. Concejalía de Innovación](https://www.arandadeduero.es/).
 
-Es un fork del proyecto original [Fiestas Valladolid 2026](https://fiestas.aldeapucela.org/), creado por vecinos voluntarios de [Aldea Pucela](https://aldeapucela.org/), adaptado aquí a la ciudad de Aranda de Duero.
+Es un fork del proyecto original [Fiestas Patronales de Aranda de Duero 2026](https://fiestas.aldeapucela.org/), creado por vecinos voluntarios de [Aldea Pucela](https://aldeapucela.org/), adaptado aquí a la ciudad de Aranda de Duero.
 
 La web de producción concentra el programa en una experiencia sencilla para consultar qué ocurre cada día, dónde, cómo llegar y qué actividades merece la pena guardar.
 
@@ -12,8 +12,8 @@ Las tres pantallas principales de la aplicación:
 
 <table>
   <tr>
-    <td align="center" valign="top"><strong>Agenda</strong><br><img src="docs/screenshots/mobile-agenda-2026.jpg" alt="Agenda de Fiestas Valladolid 2026 en móvil" width="220"></td>
-    <td align="center" valign="top"><strong>Mapa</strong><br><img src="docs/screenshots/mobile-map-2026.jpg" alt="Mapa de Fiestas Valladolid 2026 en móvil" width="220"></td>
+    <td align="center" valign="top"><strong>Agenda</strong><br><img src="docs/screenshots/mobile-agenda-2026.jpg" alt="Agenda de Fiestas Patronales de Aranda de Duero 2026 en móvil" width="220"></td>
+    <td align="center" valign="top"><strong>Mapa</strong><br><img src="docs/screenshots/mobile-map-2026.jpg" alt="Mapa de las Fiestas Patronales de Aranda de Duero 2026 en móvil" width="220"></td>
     <td align="center" valign="top"><strong>Plan vecinal</strong><br><img src="docs/screenshots/mobile-community-plan-2026.jpg" alt="Plan vecinal Cielo y estrellas en móvil" width="220"></td>
   </tr>
 </table>
@@ -97,7 +97,7 @@ Cada actividad tiene un ID numérico estable. El build genera su slug, su URL, s
 
 ## Importación incremental desde Eventos
 
-El script <code>scripts/import-eventos-ferias.mjs</code> consulta <code>https://eventos.arandadeduero.es/site-data.json</code> y procesa únicamente actividades que empiezan entre el 4 y el 13 de septiembre de 2026 en Valladolid. Detecta coincidencias con el catálogo local, enriquece las fichas y añade solo las actividades nuevas; también incorpora carteles remotos cuando faltan y geocodifica los lugares con Nominatim.
+El script <code>scripts/import-eventos-ferias.mjs</code> consulta <code>https://eventos.arandadeduero.es/site-data.json</code> y procesa únicamente actividades que empiezan entre el 4 y el 13 de septiembre de 2026 en Aranda de Duero. Detecta coincidencias con el catálogo local, enriquece las fichas y añade solo las actividades nuevas; también incorpora carteles remotos cuando faltan y geocodifica los lugares con Nominatim.
 
 La ejecución por defecto es una simulación y deja el informe en <code>.cache/fiestas/reports/</code>:
 

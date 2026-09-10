@@ -170,8 +170,8 @@ export function initPopularDishesPage() {
     const shareUrl = new URL(shareButton.dataset.shareUrl || window.location.href);
     shareUrl.search = window.location.search;
     shareUrl.hash = window.location.hash;
-    shareButton.dataset.shareTitle = `${label} | Fiestas Valladolid 2026`;
-    shareButton.dataset.shareText = `Descubre ${label.toLowerCase()} de Valladolid`;
+    shareButton.dataset.shareTitle = `${label} | Fiestas Patronales de Aranda de Duero 2026`;
+    shareButton.dataset.shareText = `Descubre ${label.toLowerCase()} de Aranda de Duero`;
     shareButton.dataset.shareUrl = shareUrl.toString();
     shareButton.setAttribute('aria-label', `Compartir ${label.toLowerCase()}`);
     shareButton.title = `Compartir ${label.toLowerCase()}`;

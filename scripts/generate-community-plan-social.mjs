@@ -103,7 +103,7 @@ function buildSvg({ plan }) {
   <circle cx="900" cy="104" r="290" fill="#0b9e95" />
   <circle cx="1090" cy="560" r="245" fill="#36234f" />
 
-  <text x="133" y="86" font-family="DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="0.5" fill="#67508e">FIESTAS VALLADOLID 2026</text>
+  <text x="133" y="86" font-family="DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="0.5" fill="#67508e">FIESTAS DE ARANDA DE DUERO 2026</text>
 
   <rect x="70" y="195" width="9" height="194" rx="4" fill="#0b9e95" />
   <text x="107" y="251" font-family="DejaVu Sans, Arial, sans-serif" font-size="56" font-weight="700" fill="#20232b">${titleMarkup}</text>
@@ -119,7 +119,7 @@ function buildIllustratedOverlaySvg({ plan }) {
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <text x="133" y="86" font-family="DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="0.5" fill="#b9eee8">FIESTAS VALLADOLID 2026</text>
+  <text x="133" y="86" font-family="DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="0.5" fill="#b9eee8">FIESTAS DE ARANDA DE DUERO 2026</text>
   <rect x="70" y="195" width="9" height="194" rx="4" fill="#4cd5c7" />
   <text x="107" y="251" font-family="DejaVu Sans, Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff">${titleMarkup}</text>
   <text x="107" y="450" font-family="DejaVu Sans, Arial, sans-serif" font-size="28" fill="#b9eee8">por ${escapeXml(plan.author || 'Ayuntamiento de Aranda de Duero. Concejalía de Innovación')}</text>

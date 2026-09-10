@@ -289,8 +289,8 @@ async function copyCommunityPlansData(assetVersionSeed) {
   const sourcePath = path.join(root, 'src', 'data', 'community-plans.json');
   const raw = await fs.readFile(sourcePath, 'utf8');
   const value = JSON.parse(raw);
-  if (value?.schemaVersion !== 1 || value?.festival !== 'valladolid-2026' || !Array.isArray(value?.plans)) {
-    throw new Error('The community plans catalog must use schemaVersion 1 and festival valladolid-2026.');
+  if (value?.schemaVersion !== 1 || value?.festival !== 'aranda-2026' || !Array.isArray(value?.plans)) {
+    throw new Error('The community plans catalog must use schemaVersion 1 and festival aranda-2026.');
   }
   const ids = new Set();
   const plans = await Promise.all(value.plans.map(async (entry, index) => {
@@ -313,7 +313,7 @@ async function copyCommunityPlansData(assetVersionSeed) {
   }));
   const content = JSON.stringify({
     schemaVersion: 1,
-    festival: 'valladolid-2026',
+    festival: 'aranda-2026',
     ...(value.updatedAt ? { updatedAt: String(value.updatedAt) } : {}),
     plans
   }, null, 2) + '\n';
@@ -333,7 +333,7 @@ async function readCommunityPlanMetadata(url, id) {
 
   const raw = await fs.readFile(sourcePath, 'utf8');
   const value = JSON.parse(raw);
-  if (value?.schemaVersion !== 1 || value?.festival !== 'valladolid-2026' || !Array.isArray(value?.plans)) {
+  if (value?.schemaVersion !== 1 || value?.festival !== 'aranda-2026' || !Array.isArray(value?.plans)) {
     throw new Error(`Community plan "${id}" has an invalid export.`);
   }
 
@@ -402,7 +402,7 @@ async function loadCommunityPlanMemberships(communityPlans) {
     const fileName = path.basename(new URL(communityPlan.url, publicBaseUrl).pathname);
     const raw = await fs.readFile(path.join(sourceDir, fileName), 'utf8');
     const value = JSON.parse(raw);
-    if (value?.schemaVersion !== 1 || value?.festival !== 'valladolid-2026' || !Array.isArray(value?.plans)) {
+    if (value?.schemaVersion !== 1 || value?.festival !== 'aranda-2026' || !Array.isArray(value?.plans)) {
       throw new Error(`Community plan "${communityPlan.id}" has an invalid export.`);
     }
 
@@ -449,7 +449,7 @@ async function copyCommunityPlanFiles(assetVersionSeed) {
 async function copyCasetasData(casetas, assetVersionSeed) {
   const content = JSON.stringify({
     schemaVersion: 1,
-    festival: 'valladolid-2026',
+    festival: 'aranda-2026',
     updatedAt: '2026-08-25',
     casetas
   }, null, 2) + '\n';
@@ -783,8 +783,8 @@ async function loadCasetas(vallabusStops = []) {
   const sourcePath = path.join(root, 'src', 'data', 'fiestas-2026', 'casetas.json');
   const raw = await fs.readFile(sourcePath, 'utf8');
   const source = JSON.parse(raw);
-  if (source?.schemaVersion !== 1 || source?.festival !== 'valladolid-2026' || !Array.isArray(source?.casetas)) {
-    throw new Error('The casetas catalog must use schemaVersion 1 and festival valladolid-2026.');
+  if (source?.schemaVersion !== 1 || source?.festival !== 'aranda-2026' || !Array.isArray(source?.casetas)) {
+    throw new Error('The casetas catalog must use schemaVersion 1 and festival aranda-2026.');
   }
 
   const ids = new Set();
@@ -876,8 +876,8 @@ function createCasetaZoneFallback(zone, coordinates) {
     lat: coordinates.lat,
     lng: coordinates.lng,
     source: 'zone-fallback',
-    displayName: `${zone}, Valladolid, España`,
-    query: `${zone}, Valladolid, España`
+    displayName: `${zone}, Aranda de Duero, España`,
+    query: `${zone}, Aranda de Duero, España`
   };
 }
 
@@ -979,10 +979,10 @@ function eventStructuredData(event) {
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     location: {
       '@type': 'Place',
-      name: event.location || event.zone || 'Valladolid',
+      name: event.location || event.zone || 'Aranda de Duero',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Valladolid',
+        addressLocality: 'Aranda de Duero',
         addressCountry: 'ES'
       }
     },
@@ -1056,7 +1056,6 @@ function sortMinutes(time = '') {
 function ticketKind(ticket) {
   if (!ticket?.required) return 'free';
   const text = normalizeForMatch([ticket.label, ticket.url, ticket.note].filter(Boolean).join(' '));
-  if (text.includes('espaciosjovenesvalladolid')) return 'registration';
   return 'paid';
 }
 
@@ -1190,19 +1189,19 @@ async function build() {
   await writePwaFiles(pwaFiles, { appVersion, cssVersion, jsVersion, eventsDataUrl, fontAwesomeVersions });
   const versions = { assetVersion, cssVersion, jsVersion, fontAwesomeVersions, eventAliases, eventAliasVersion };
   const summary = buildSummary(events);
-  const socialImage = publicBaseUrl + '/assets/social/fiestas-valladolid-2026.jpg';
+  const socialImage = publicBaseUrl + '/assets/social/fiestas-aranda-de-duero-2026.jpg';
   const casetasSocialImage = publicBaseUrl + '/assets/social/casetas-feria-de-dia.jpg';
   const popularDishesSocialImage = publicBaseUrl + '/assets/social/pinchos-populares.jpg';
 
   const homeContext = {
     ...pageContext(versions),
-    title: 'Fiestas Valladolid 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
-    meta: { description: 'Agenda de las Fiestas de Valladolid 2026 por días, horarios, espacios, categorías y mapa.' },
+    title: 'Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
+    meta: { description: 'Agenda de las Fiestas Patronales de Aranda de Duero 2026 por días, horarios, espacios, categorías y mapa.' },
     canonicalUrl: publicBaseUrl + '/',
     social: {
-      type: 'website', title: 'Fiestas Valladolid 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
-      description: 'Agenda de las Fiestas de Valladolid 2026 por días, horarios, espacios, categorías y mapa.',
-      image: socialImage, imageAlt: 'Fiestas de Valladolid 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
+      type: 'website', title: 'Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
+      description: 'Agenda de las Fiestas Patronales de Aranda de Duero 2026 por días, horarios, espacios, categorías y mapa.',
+      image: socialImage, imageAlt: 'Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
       imageWidth: 1200, imageHeight: 630, imageType: 'image/jpeg', url: publicBaseUrl + '/'
     },
     eventsDataUrl,
@@ -1216,11 +1215,11 @@ async function build() {
   await writeFile('mapa/index.html', render('fiestas-2026.njk', {
     ...homeContext,
     mapPage: true,
-    title: 'Mapa de Fiestas Valladolid 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
+    title: 'Mapa de las Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
     canonicalUrl: publicBaseUrl + '/mapa/',
     social: {
       ...homeContext.social,
-      title: 'Mapa de Fiestas Valladolid 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
+      title: 'Mapa de las Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
       url: publicBaseUrl + '/mapa/'
     }
   }));
@@ -1228,15 +1227,15 @@ async function build() {
   if (casetasEnabled) {
   await writeFile('casetas/index.html', render('fiestas-2026-casetas.njk', {
     ...pageContext(versions),
-    title: 'Casetas Feria de Día - Fiestas Valladolid 2026',
-    meta: { description: 'Mapa de las casetas de las Fiestas de Valladolid 2026, con ubicaciones por zonas.' },
+    title: 'Casetas Feria de Día - Fiestas Patronales de Aranda de Duero 2026',
+    meta: { description: 'Mapa de las casetas de las Fiestas Patronales de Aranda de Duero 2026, con ubicaciones por zonas.' },
     canonicalUrl: publicBaseUrl + '/casetas/',
     social: {
       ...homeContext.social,
-      title: 'Casetas Feria de Día - Fiestas Valladolid 2026',
-      description: 'Mapa de las casetas de las Fiestas de Valladolid 2026, con ubicaciones por zonas.',
+      title: 'Casetas Feria de Día - Fiestas Patronales de Aranda de Duero 2026',
+      description: 'Mapa de las casetas de las Fiestas Patronales de Aranda de Duero 2026, con ubicaciones por zonas.',
       image: casetasSocialImage,
-      imageAlt: 'Casetas feria de día | Fiestas Valladolid 2026',
+      imageAlt: 'Casetas feria de día | Fiestas Patronales de Aranda de Duero 2026',
       imageWidth: 1731,
       imageHeight: 909,
       imageType: 'image/jpeg',
@@ -1249,14 +1248,14 @@ async function build() {
 
   await writeFile('populares/index.html', render('fiestas-2026-popular.njk', {
     ...homeContext,
-    title: 'Actividades populares | Fiestas Valladolid 2026',
+    title: 'Actividades populares | Fiestas Patronales de Aranda de Duero 2026',
     meta: { description: 'Estas son las actividades más guardadas por los vecinos y vecinas.' },
     canonicalUrl: publicBaseUrl + '/populares/',
     social: {
       ...homeContext.social,
-      title: 'Actividades populares | Fiestas Valladolid 2026',
+      title: 'Actividades populares | Fiestas Patronales de Aranda de Duero 2026',
       description: 'Estas son las actividades más guardadas por los vecinos y vecinas.',
-      imageAlt: 'Actividades populares de las Fiestas Valladolid 2026',
+      imageAlt: 'Actividades populares de las Fiestas Patronales de Aranda de Duero 2026',
       url: publicBaseUrl + '/populares/'
     }
   }));
@@ -1264,15 +1263,15 @@ async function build() {
   if (casetasEnabled) {
   await writeFile('pinchos-populares/index.html', render('fiestas-2026-popular-dishes.njk', {
     ...pageContext(versions),
-    title: 'Pinchos populares | Fiestas Valladolid 2026',
-    meta: { description: 'Descubre los pinchos más gustados de las casetas de las Fiestas de Valladolid 2026.' },
+    title: 'Pinchos populares | Fiestas Patronales de Aranda de Duero 2026',
+    meta: { description: 'Descubre los pinchos más gustados de las casetas de las Fiestas Patronales de Aranda de Duero 2026.' },
     canonicalUrl: publicBaseUrl + '/pinchos-populares/',
     social: {
       ...homeContext.social,
-      title: 'Pinchos populares | Fiestas Valladolid 2026',
-      description: 'Descubre los pinchos más gustados de las casetas de las Fiestas de Valladolid 2026.',
+      title: 'Pinchos populares | Fiestas Patronales de Aranda de Duero 2026',
+      description: 'Descubre los pinchos más gustados de las casetas de las Fiestas Patronales de Aranda de Duero 2026.',
       image: popularDishesSocialImage,
-      imageAlt: 'Pinchos populares de las casetas de las Fiestas Valladolid 2026',
+      imageAlt: 'Pinchos populares de las casetas de las Fiestas Patronales de Aranda de Duero 2026',
       imageWidth: 1731,
       imageHeight: 909,
       imageType: 'image/jpeg',
@@ -1284,38 +1283,38 @@ async function build() {
 
   await writeFile('plan/index.html', render('fiestas-2026-plan.njk', {
     ...homeContext,
-    title: 'Mi plan | Fiestas Valladolid 2026',
+    title: 'Mi plan | Fiestas Patronales de Aranda de Duero 2026',
     robotsMeta: 'noindex,follow',
     canonicalUrl: publicBaseUrl + '/plan/',
     social: {
       ...homeContext.social,
-      title: 'Mi plan | Fiestas Valladolid 2026',
+      title: 'Mi plan | Fiestas Patronales de Aranda de Duero 2026',
       url: publicBaseUrl + '/plan/'
     }
   }));
 
   await writeFile('plan/importar/index.html', render('fiestas-2026-plan-import.njk', {
     ...homeContext,
-    title: 'Importar plan | Fiestas Valladolid 2026',
+    title: 'Importar plan | Fiestas Patronales de Aranda de Duero 2026',
     canonicalUrl: publicBaseUrl + '/plan/importar/',
     robotsMeta: 'noindex,follow',
     social: {
       ...homeContext.social,
-      title: 'Importar plan | Fiestas Valladolid 2026',
+      title: 'Importar plan | Fiestas Patronales de Aranda de Duero 2026',
       url: publicBaseUrl + '/plan/importar/'
     }
   }));
 
   await writeFile('planes/index.html', render('fiestas-2026-community-plans.njk', {
     ...homeContext,
-    title: 'Planes vecinales | Fiestas Valladolid 2026',
+    title: 'Planes vecinales | Fiestas Patronales de Aranda de Duero 2026',
     canonicalUrl: publicBaseUrl + '/planes/',
     social: {
       ...homeContext.social,
-      title: 'Planes vecinales | Fiestas Valladolid 2026',
-      description: 'Descubre colecciones de actividades creadas por vecinos para las Fiestas de Valladolid 2026.',
+      title: 'Planes vecinales | Fiestas Patronales de Aranda de Duero 2026',
+      description: 'Descubre colecciones de actividades creadas por vecinos para las Fiestas Patronales de Aranda de Duero 2026.',
       image: publicBaseUrl + '/assets/social/planes.jpg',
-      imageAlt: 'Los mejores planes para las Fiestas de Valladolid 2026',
+      imageAlt: 'Los mejores planes para las Fiestas Patronales de Aranda de Duero 2026',
       imageWidth: 1200,
       imageHeight: 630,
       imageType: 'image/jpeg',
@@ -1325,12 +1324,12 @@ async function build() {
 
   await writeFile('colaboradores/index.html', render('fiestas-2026-collaborators.njk', {
     ...pageContext(versions),
-    title: 'Colaboradores | Fiestas Valladolid 2026',
+    title: 'Colaboradores | Fiestas Patronales de Aranda de Duero 2026',
     meta: { description: 'Entidades y personas que ayudan a difundir las Fiestas de Aranda de Duero 2026 de la Concejalía de Innovación.' },
     canonicalUrl: publicBaseUrl + '/colaboradores/',
     social: {
       ...homeContext.social,
-      title: 'Colaboradores | Fiestas Valladolid 2026',
+      title: 'Colaboradores | Fiestas Patronales de Aranda de Duero 2026',
       description: 'Entidades y personas que ayudan a difundir las Fiestas de Aranda de Duero 2026 de la Concejalía de Innovación.',
       url: publicBaseUrl + '/colaboradores/'
     }
@@ -1338,8 +1337,8 @@ async function build() {
 
   for (const communityPlan of communityPlans) {
     const planPath = `/planes/${communityPlan.id}/`;
-    const planTitle = `${communityPlan.name} | Planes vecinales | Fiestas Valladolid 2026`;
-    const planDescription = `${communityPlan.name}, creado por ${communityPlan.author}, para disfrutar las Fiestas de Valladolid 2026.`;
+    const planTitle = `${communityPlan.name} | Planes vecinales | Fiestas Patronales de Aranda de Duero 2026`;
+    const planDescription = `${communityPlan.name}, creado por ${communityPlan.author}, para disfrutar las Fiestas Patronales de Aranda de Duero 2026.`;
     const planSocial = await communityPlanSocial(communityPlan);
     await writeFile(`planes/${communityPlan.id}/index.html`, render('fiestas-2026-community-plan.njk', {
       ...homeContext,
@@ -1372,16 +1371,16 @@ async function build() {
       : casetasSocialImage;
     await writeFile(`c/${caseta.publicSlug}/index.html`, render('fiestas-2026-caseta-detail.njk', {
       ...pageContext(versions),
-      title: `${caseta.name} | Casetas de Valladolid 2026`,
-      meta: { description: `${caseta.name}, caseta de las Fiestas de Valladolid 2026 en ${caseta.location}.` },
+      title: `${caseta.name} | Casetas de Aranda de Duero 2026`,
+      meta: { description: `${caseta.name}, caseta de las Fiestas Patronales de Aranda de Duero 2026 en ${caseta.location}.` },
       canonicalUrl: publicBaseUrl + caseta.urlPath,
       social: {
         ...homeContext.social,
         type: 'article',
-        title: `${caseta.name} | Casetas de Valladolid 2026`,
-        description: `${caseta.name}, caseta de las Fiestas de Valladolid 2026 en ${caseta.location}.`,
+        title: `${caseta.name} | Casetas de Aranda de Duero 2026`,
+        description: `${caseta.name}, caseta de las Fiestas Patronales de Aranda de Duero 2026 en ${caseta.location}.`,
         image: casetaSocialImage,
-        imageAlt: caseta.imageAlt || 'Casetas feria de día | Fiestas Valladolid 2026',
+        imageAlt: caseta.imageAlt || 'Casetas feria de día | Fiestas Patronales de Aranda de Duero 2026',
         imageWidth: caseta.image ? 1280 : 1731,
         imageHeight: caseta.image ? 964 : 909,
         imageType: caseta.image?.toLowerCase().endsWith('.png') ? 'image/png' : caseta.image ? 'image/jpeg' : 'image/png',
@@ -1417,11 +1416,11 @@ async function build() {
   for (const event of events) {
     await writeFile('e/' + event.id + '/' + event.slug + '/index.html', render('fiestas-2026-detail.njk', {
       ...pageContext(versions),
-      title: event.title + ' | Fiestas Valladolid 2026',
+      title: event.title + ' | Fiestas Patronales de Aranda de Duero 2026',
       meta: { description: event.summary || event.description || event.dateLabel },
       canonicalUrl: publicBaseUrl + event.urlPath,
       social: {
-        type: 'article', title: event.title + ' | Fiestas Valladolid 2026',
+        type: 'article', title: event.title + ' | Fiestas Patronales de Aranda de Duero 2026',
         description: event.summary || event.description || event.dateLabel,
         image: eventImageUrl(event),
         imageAlt: event.image ? event.title : event.socialImageAlt,

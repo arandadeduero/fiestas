@@ -119,7 +119,7 @@ function hasCoordinates(coordinates) {
 }
 
 function normalizedQuery(event) {
-  return normalizeText([event.location, event.zone, 'Valladolid, España'].filter(Boolean).join(', '));
+  return normalizeText([event.location, event.zone, 'Aranda de Duero, España'].filter(Boolean).join(', '));
 }
 
 function normalizeText(value = '') {
