@@ -1,0 +1,58 @@
+src/scripts/plan-export.js
+  s_8ac52af66e15af::t_a80c9c69834d72 11,28
+README.md
+  s_8ac52af66e15af::t_a80c9c69834d72 3,47
+scripts/generate-caseta-qr.mjs
+  s_8ac52af66e15af::t_a80c9c69834d72 16
+tests/caseta-qr.test.mjs
+  s_8ac52af66e15af::t_a80c9c69834d72 18,37-38
+src/templates/fiestas-2026-popular-dishes.njk
+  s_8ac52af66e15af::t_a80c9c69834d72 24
+src/scripts/chatbot.js
+  s_8ac52af66e15af::t_a80c9c69834d72 23,26,32-34,36,50
+scripts/generate-daily-popular.mjs
+  s_8ac52af66e15af::t_a80c9c69834d72 27,261,305,316
+src/scripts/fiestas-2026.js
+  s_8ac52af66e15af::t_a80c9c69834d72 34
+src/scripts/plan-export.test.js
+  s_8ac52af66e15af::t_a80c9c69834d72 7
+src/templates/partials/map-shell.njk
+  s_8ac52af66e15af::t_a80c9c69834d72 22
+tests/analytics.test.mjs
+  s_8ac52af66e15af::t_a80c9c69834d72 14-15
+tests/casetas-navigation.test.mjs
+  s_8ac52af66e15af::t_a80c9c69834d72 26,30,35,39,46
+tests/daily-popular.test.mjs
+  s_8ac52af66e15af::t_a80c9c69834d72 100,102,104-105
+tests/plan-export.test.mjs
+  s_8ac52af66e15af::t_a80c9c69834d72 14,38
+src/scripts/casetas-navigation.js
+  s_8ac52af66e15af::t_a80c9c69834d72 2
+src/templates/fiestas-2026-popular.njk
+  s_8ac52af66e15af::t_a80c9c69834d72 21
+src/scripts/plans-page.test.js
+  s_8ac52af66e15af::t_a80c9c69834d72 96-97
+scripts/build.mjs
+  s_8ac52af66e15af::t_a80c9c69834d72 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "7a59468d41d714540b0eb22f8553474e831ef2d8",
+  "prompts": {},
+  "humans": {
+    "h_3aa52f59e1a7c5": {
+      "author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_8ac52af66e15af": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b63ac998-a9f6-4233-9da0-de40f9b9931b",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
