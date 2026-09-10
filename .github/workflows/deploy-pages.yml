@@ -5,12 +5,13 @@ on:
     branches:
       - master
       - main
+      - aranda
   schedule:
-    - cron: '0 20 3-12 9 *'
+    - cron: "0 20 3-12 9 *"
   workflow_dispatch:
     inputs:
       daily_date:
-        description: 'Fecha a regenerar (opcional; se publican también las demás fechas)'
+        description: "Fecha a regenerar (opcional; se publican también las demás fechas)"
         required: false
         type: string
 
