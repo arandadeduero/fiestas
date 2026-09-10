@@ -1,0 +1,14 @@
+.github/workflows/deploy-pages.yml
+  h_3aa52f59e1a7c5 8,10,14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2a5eec31f31c1b5dc92869151f935473a8b70d69",
+  "prompts": {},
+  "humans": {
+    "h_3aa52f59e1a7c5": {
+      "author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
