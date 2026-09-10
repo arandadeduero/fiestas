@@ -248,7 +248,7 @@ async function copyJs(jsVersionSeed) {
   // fiestas-2026.js (solo resuelve la ruta de retorno). El resto de JS de
   // casetas solo se incluye si las casetas están activadas.
   const casetaOnlyJs = new Set(['casetas-page.js', 'popular-dishes-page.js', 'casetas-favorites.js', 'caseta-dish-likes.js']);
-  const files = ['analytics.js', 'plan-storage.js', 'plan-export.js', 'plans-page.js', 'community-plans.js', 'community-prompt.js', 'popular-page.js', 'popular-dishes-page.js', 'weather.js', 'fiestas-2026.js', 'casetas-page.js', 'casetas-navigation.js', 'search-text.js', 'casetas-favorites.js', 'caseta-dish-likes.js', 'menu-drawer.js', 'pwa.js', 'scroll-top.js', 'subscribe.js', 'theme.js', 'chatbot.js', 'visit-tracker.js', 'events-data.js']
+  const files = ['analytics.js', 'plan-storage.js', 'plan-export.js', 'plans-page.js', 'community-plans.js', 'community-prompt.js', 'popular-page.js', 'popular-dishes-page.js', 'weather.js', 'fiestas-2026.js', 'casetas-page.js', 'casetas-navigation.js', 'search-text.js', 'casetas-favorites.js', 'caseta-dish-likes.js', 'menu-drawer.js', 'pwa.js', 'scroll-top.js', 'subscribe.js', 'theme.js', 'chatbot.js', 'visit-tracker.js', 'events-data.js', 'reminders.js']
     .filter((file) => casetasEnabled || !casetaOnlyJs.has(file));
   const contents = new Map();
   for (const file of files) {
@@ -1145,16 +1145,17 @@ function normalizeTags(tags, type) {
   return [...new Set([primary, ...values].map((tag) => tag.trim()).filter(Boolean))];
 }
 
-function pageContext({ assetVersion, cssVersion, jsVersion, fontAwesomeVersions, eventAliases = {}, eventAliasVersion = '' }) {
+function pageContext({ assetVersion, cssVersion, jsVersion, fontAwesomeVersions, eventAliases = {}, eventAliasVersion = '', eventsDataUrl = '' }) {
   return {
     activeNav: 'fiestas-2026',
     pageCss: 'fiestas-2026.' + cssVersion + '.css',
     pageJs: 'fiestas-2026.' + jsVersion + '.js',
     // modulepreload de los imports estáticos de fiestas-2026.js: sin esto el
     // navegador los descubre en cascada, módulo a módulo.
-    modulePreloads: ['menu-drawer', 'subscribe', 'theme', 'analytics', 'plan-storage', 'plan-export', 'plans-page', 'community-plans', 'community-prompt', 'popular-page', 'weather', 'events-data', 'search-text', 'casetas-navigation']
+    modulePreloads: ['menu-drawer', 'subscribe', 'theme', 'analytics', 'plan-storage', 'plan-export', 'plans-page', 'community-plans', 'community-prompt', 'popular-page', 'weather', 'events-data', 'search-text', 'casetas-navigation', 'reminders']
       .map((name) => '/assets/js/' + name + '.' + jsVersion + '.js'),
     communityPlansUrl: '/data/planes.json',
+    eventsDataUrl,
     casetasEnabled,
     popularEnabled,
     assetVersion,
@@ -1218,7 +1219,7 @@ async function build() {
     ['pwa/offline.html', pwaFiles.offlinePage]
   ]);
   await writePwaFiles(pwaFiles, { appVersion, cssVersion, jsVersion, eventsDataUrl, fontAwesomeVersions });
-  const versions = { assetVersion, cssVersion, jsVersion, fontAwesomeVersions, eventAliases, eventAliasVersion };
+  const versions = { assetVersion, cssVersion, jsVersion, fontAwesomeVersions, eventAliases, eventAliasVersion, eventsDataUrl };
   const summary = buildSummary(events);
   const socialImage = publicBaseUrl + '/assets/social/fiestas-aranda-de-duero-2026.jpg';
   const casetasSocialImage = publicBaseUrl + '/assets/social/casetas-feria-de-dia.jpg';

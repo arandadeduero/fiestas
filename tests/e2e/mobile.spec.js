@@ -25,7 +25,7 @@ test.describe('navegación móvil', () => {
   });
 
   test('el panel de filtros abre y se puede cerrar', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/?date=all');
     await expect(page.locator('[data-fiestas-card]:visible').first()).toBeVisible();
 
     const panel = page.locator('[data-fiestas-search-panel]');

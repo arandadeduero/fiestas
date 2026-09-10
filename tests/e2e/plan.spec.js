@@ -20,7 +20,7 @@ function planHash(activityIds) {
 
 // Flujo 7
 test('guardar una actividad persiste en localStorage y sobrevive a recargar', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/?date=all');
   const card = page.locator('[data-fiestas-card]:visible').first();
   await expect(card).toBeVisible();
 
@@ -133,7 +133,7 @@ test('los planes personalizados pliegan las actividades pasadas y mantienen los 
 
 // Flujo 8
 test('importar un plan por hash válido lo previsualiza y lo guarda', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/?date=all');
   await expect(page.locator('[data-fiestas-card]:visible').first()).toBeVisible();
   const events = await loadClientEvents(page);
   const ids = events.slice(0, 3).map((event) => String(event.id));

@@ -1336,8 +1336,8 @@ export function isPlanActivityPast(event, now = new Date()) {
   let end = hasRealEnd
     ? realEnd
     : event.endTime
-    ? localPlanEventDateTime(realStartDate || event.date, event.endTime)
-    : null;
+      ? localPlanEventDateTime(realStartDate || event.date, event.endTime)
+      : null;
   if (!hasRealEnd && end && end <= start) end = new Date(end.getTime() + 24 * 60 * 60 * 1000);
   if (!end) end = new Date(start.getTime() + 2 * 60 * 60 * 1000);
   return end <= now;
@@ -1489,7 +1489,7 @@ function groupEventsByDate(events) {
 }
 
 function createPlanShareText(plan) {
-  return `Échale un vistazo al plan «${plan.name}» para las Fiestas y Ferias de Aranda de Duero 2026.`;
+  return `Échale un vistazo al plan «${plan.name}» para las Fiestas Patronales de Aranda de Duero 2026.`;
 }
 
 function createPlanShareMessage(plan, shareUrl) {

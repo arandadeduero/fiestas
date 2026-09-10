@@ -201,7 +201,7 @@ test.describe('agenda', () => {
 
   // Flujo 3
   test('los filtros por tipo reducen el listado y se reflejan en la UI', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/?date=all');
     await expect(page.locator(visibleCards).first()).toBeVisible();
     const total = await page.locator(cards).count();
 

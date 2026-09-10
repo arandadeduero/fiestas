@@ -27,6 +27,7 @@ import { loadEvents } from './events-data.js';
 import { getWeatherAtTime, getWeatherCondition, getWeatherLabel, loadWeatherForecast } from './weather.js';
 import { matchesSearch, normalizeText } from './search-text.js';
 import { getCasetasReturnPath } from './casetas-navigation.js';
+import './reminders.js';
 
 const collator = new Intl.Collator('es', { numeric: true, sensitivity: 'base' });
 const defaultQueryKeys = ['date', 'q', 'type', 'area', 'ticket', 'view', 'event'];

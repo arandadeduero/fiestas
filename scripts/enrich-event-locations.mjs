@@ -188,8 +188,8 @@ function scoreNominatimResult(result, query) {
   if (!words.length) return 0;
   const matches = words.filter((word) => haystack.includes(word)).length;
   const base = matches / words.length;
-  const inValladolid = haystack.includes('valladolid') ? 0.2 : 0;
-  return Math.min(1, Number((base + inValladolid).toFixed(2)));
+  const inCity = haystack.includes('aranda de duero') ? 0.2 : 0;
+  return Math.min(1, Number((base + inCity).toFixed(2)));
 }
 
 async function readJson(filePath, fallback) {

@@ -84,7 +84,23 @@ También puedes comprobar que el service worker generado tiene sintaxis JavaScri
 node --check dist/sw.js
 ~~~
 
-Antes de publicar, revisa al menos la agenda, filtros, mapa, una ficha con coordenadas, una ficha sin coordenadas, favoritos, planes, importación, tema claro/oscuro y la instalación PWA.
+La suite end-to-end (Playwright) se ejecuta aparte:
+
+~~~bash
+npm run test:e2e
+~~~
+
+Si Playwright no tiene navegador para tu sistema, apúntalo a Chrome:
+
+~~~bash
+git config fiestas.playwrightChannel chrome
+# o, para una ejecución puntual:
+PLAYWRIGHT_CHANNEL=chrome npm run test:e2e
+~~~
+
+La suite no toca la red: cualquier host externo no simulado en <code>tests/e2e/fixtures.js</code> hace fallar la prueba.
+
+Antes de publicar, revisa al menos la agenda, filtros, mapa, una ficha con coordenadas, una ficha sin coordenadas, favoritos, planes, importación, tema claro/oscuro, la instalación PWA, el aviso de consentimiento de analítica y el recordatorio del navegador para favoritos.
 
 ## Datos de actividades
 
@@ -143,13 +159,7 @@ Los informes y la caché se guardan en <code>.cache/fiestas/</code>, una carpeta
 
 ## Enlazado de imágenes
 
-El script compara actividades locales con las fichas públicas de Eventos de Aranda de Duero y puede escribir las imágenes coincidentes en <code>events.json</code>:
-
-~~~bash
-npm run images:link
-~~~
-
-Es una operación que modifica el archivo de datos. Revisa el diff antes de conservar sus resultados.
+El script <code>npm run images:link</code> se hereda del proyecto original: comparaba las actividades locales con las fichas de un sitio de eventos externo (<code>eventos.arandadeduero.es</code>) para completar imágenes. **No está operativo en este fork**, porque ese sitio no existe. Los carteles de las actividades se añaden a mano en <code>events.json</code>.
 
 ## Compartir temporalmente el servidor
 
@@ -178,13 +188,18 @@ Después de modificar código o datos:
 4. revisa <code>git diff</code> y <code>git status</code>;
 5. no incluyas <code>dist/</code>, <code>.cache/</code> ni archivos temporales en el commit.
 
-## Configuración de analítica
-
-El build admite estas variables:
+## Variables de entorno del build
 
 | Variable | Uso |
 | --- | --- |
 | <code>FIESTAS_ANALYTICS_ENABLED</code> | <code>true</code> activa la analítica y <code>false</code> la desactiva. Sin definir: activa salvo en <code>localhost</code>/<code>127.0.0.1</code>. |
 | <code>FIESTAS_GA_MEASUREMENT_ID</code> | ID de medición de Google Analytics 4 (por defecto <code>G-BXMC22W46S</code>). |
+| <code>FIESTAS_CASETAS_ENABLED</code> | <code>true</code> compila el mapa y las fichas de casetas de feria de día y «pinchos populares». Apagado en este fork. |
+| <code>FIESTAS_POPULAR_ENABLED</code> | <code>true</code> genera la página <code>/populares/</code>. Necesita un backend de contadores. Apagado en este fork. |
+| <code>FIESTAS_TRANSIT_ENABLED</code> | <code>true</code> muestra paradas y líneas de autobús cercanas en las fichas. Apagado en este fork. |
 
 Google Analytics solo se carga y envía datos **después** de que la persona pulse «Aceptar» en el aviso de consentimiento. Ver [docs/analytics.md](analytics.md).
+
+## Recordatorios de favoritos
+
+Al guardar una actividad, la app puede avisar 15 minutos antes por dos vías: el <code>VALARM</code> incluido en los ficheros <code>.ics</code> exportados (fiable en móvil) y un aviso opcional del navegador (Notification API) que se activa desde el menú lateral. No hay servidor de push. Detalles en [README.md](../README.md#recordatorios-de-favoritos).

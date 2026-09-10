@@ -50,6 +50,22 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const target = new URL(event.notification.data?.url || '/', self.location.origin);
+  event.waitUntil((async () => {
+    const clientList = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+    for (const client of clientList) {
+      if (new URL(client.url).origin === target.origin && 'focus' in client) {
+        await client.focus();
+        if ('navigate' in client && client.url !== target.href) await client.navigate(target.href);
+        return;
+      }
+    }
+    if (self.clients.openWindow) await self.clients.openWindow(target.href);
+  })());
+});
+
 self.addEventListener('fetch', (event) => {
   const request = event.request;
   if (request.method !== 'GET') return;

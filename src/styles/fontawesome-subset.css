@@ -1,7 +1,7 @@
 /* Generado por scripts/build-icons.mjs - no editar a mano. */
-@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url("/assets/fontawesome/fa-solid-900.woff2?v=7f4fb0688782") format("woff2")}
-@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:block;src:url("/assets/fontawesome/fa-regular-400.woff2?v=4efba0195e7b") format("woff2")}
-@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:block;src:url("/assets/fontawesome/fa-brands-400.woff2?v=c8a37b272f2a") format("woff2")}
+@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url("/assets/fontawesome/fa-solid-900.woff2?v=19bda5a92d16") format("woff2")}
+@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:block;src:url("/assets/fontawesome/fa-regular-400.woff2?v=357032e9116b") format("woff2")}
+@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:block;src:url("/assets/fontawesome/fa-brands-400.woff2?v=9491527e4cca") format("woff2")}
 .fa,.fa-solid,.fa-regular,.fa-brands{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;font-style:normal;font-variant:normal;line-height:1;text-rendering:auto}
 .fa,.fa-solid{font-family:"Font Awesome 6 Free";font-weight:900}
 .fa-regular{font-family:"Font Awesome 6 Free";font-weight:400}
@@ -12,6 +12,8 @@
 .fa-arrow-up-from-bracket::before{content:"\e09a"}
 .fa-arrow-up-right-from-square::before{content:"\f08e"}
 .fa-beer-mug-empty::before{content:"\f0fc"}
+.fa-bell::before{content:"\f0f3"}
+.fa-bell-slash::before{content:"\f1f6"}
 .fa-bicycle::before{content:"\f206"}
 .fa-book-open::before{content:"\f518"}
 .fa-bookmark::before{content:"\f02e"}
@@ -108,6 +110,5 @@
 .fa-users::before{content:"\f0c0"}
 .fa-utensils::before{content:"\f2e7"}
 .fa-wand-sparkles::before{content:"\f72b"}
-.fa-whatsapp::before{content:"\f232"}
 .fa-wine-glass::before{content:"\f4e3"}
 .fa-xmark::before{content:"\f00d"}

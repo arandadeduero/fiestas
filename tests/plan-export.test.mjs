@@ -25,6 +25,14 @@ test('creates a multi-event ICS for a plan with local Aranda de Duero times', ()
   assert.match(ics, /DTSTART;TZID=Europe\/Madrid:20260904T193000/);
   assert.match(ics, /DTEND;TZID=Europe\/Madrid:20260904T210000/);
   assert.match(ics, /SUMMARY:Concierto de verano/);
+  // Cada evento lleva un recordatorio 15 min antes.
+  assert.equal((ics.match(/BEGIN:VALARM/g) || []).length, 2);
+  assert.match(ics, /TRIGGER:-PT15M/);
+});
+
+test('permite personalizar o quitar el recordatorio del ICS', () => {
+  assert.match(createIcs([activity], 'x', { reminderMinutes: 30 }), /TRIGGER:-PT30M/);
+  assert.doesNotMatch(createIcs([activity], 'x', { reminderMinutes: 0 }), /BEGIN:VALARM/);
 });
 
 test('keeps an activity that crosses midnight on the following date', () => {

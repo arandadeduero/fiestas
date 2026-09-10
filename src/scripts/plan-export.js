@@ -12,7 +12,8 @@ function eventAbsoluteUrl(event) {
   return origin + url;
 }
 
-export function createIcs(events = [], calendarName = 'Fiestas Patronales de Aranda de Duero 2026') {
+export function createIcs(events = [], calendarName = 'Fiestas Patronales de Aranda de Duero 2026', options = {}) {
+  const reminderMinutes = Number.isFinite(options.reminderMinutes) ? Math.max(0, Math.round(options.reminderMinutes)) : 15;
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
@@ -41,6 +42,13 @@ export function createIcs(events = [], calendarName = 'Fiestas Patronales de Ara
     if (url) lines.push(`URL:${escapeIcs(url)}`);
     if (Number.isFinite(Number(event.coordinates?.lat)) && Number.isFinite(Number(event.coordinates?.lng))) {
       lines.push(`GEO:${Number(event.coordinates.lat)};${Number(event.coordinates.lng)}`);
+    }
+    if (reminderMinutes > 0 && event.startTime) {
+      lines.push('BEGIN:VALARM');
+      lines.push('ACTION:DISPLAY');
+      lines.push(`DESCRIPTION:${escapeIcs(`${event.title || 'Actividad'} empieza en ${reminderMinutes} min`)}`);
+      lines.push(`TRIGGER:-PT${reminderMinutes}M`);
+      lines.push('END:VALARM');
     }
     lines.push('END:VEVENT');
   });
@@ -83,8 +91,8 @@ export function decodePlanImportHash(hash) {
   }
 }
 
-export function createIcsFile(events, name = 'fiestas-aranda-2026') {
-  return makeFile(`${slugify(name)}.ics`, createIcs(events, name), 'text/calendar;charset=utf-8');
+export function createIcsFile(events, name = 'fiestas-aranda-2026', options = {}) {
+  return makeFile(`${slugify(name)}.ics`, createIcs(events, name, options), 'text/calendar;charset=utf-8');
 }
 
 export function createCalendarLinks(event, pageUrl = '') {
@@ -112,6 +120,7 @@ export function createCalendarLinks(event, pageUrl = '') {
   if (location) outlook.searchParams.set('location', location);
   outlook.searchParams.set('startdt', range.start.toISOString());
   outlook.searchParams.set('enddt', range.end.toISOString());
+  outlook.searchParams.set('reminderTime', '15');
 
   return { google: google.toString(), outlook: outlook.toString() };
 }
