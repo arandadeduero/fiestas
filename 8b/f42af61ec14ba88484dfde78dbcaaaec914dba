@@ -1,0 +1,30 @@
+tailwind.config.js
+  s_8ac52af66e15af::t_432b1591a5ee31 27
+src/templates/fiestas-2026-caseta-qr.njk
+  s_8ac52af66e15af::t_810f842385870d 33
+scripts/generate-community-plan-social.mjs
+  s_8ac52af66e15af::t_bca34760a18fae 106,109-110,122,124-125
+scripts/generate-daily-popular.mjs
+  s_8ac52af66e15af::t_bca34760a18fae 190,196,208,233,251-253,255,260-261,295-297,299,304-305
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8bf42af61ec14ba88484dfde78dbcaaaec914dba",
+  "prompts": {},
+  "humans": {
+    "h_3aa52f59e1a7c5": {
+      "author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_8ac52af66e15af": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b63ac998-a9f6-4233-9da0-de40f9b9931b",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
