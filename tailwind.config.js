@@ -24,7 +24,7 @@ export default {
         soft: '0 10px 30px rgba(31, 36, 48, 0.06)'
       },
       fontFamily: {
-        display: ['Georgia', 'Times New Roman', 'serif'],
+        display: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         sans: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif']
       }
     }

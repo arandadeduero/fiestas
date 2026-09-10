@@ -187,13 +187,13 @@ function fallbackPosterSvg(event, index, x, y) {
   const titleFontSize = titleLines.length > 2 || titleLines.some((line) => line.length > 22) ? 22 : 27;
   const titleStartY = titleLines.length === 1 ? 347 : titleLines.length === 2 ? 326 : 316;
   const titleMarkup = titleLines.map((line, lineIndex) => (
-    `<text x="${x + 28}" y="${y + titleStartY + lineIndex * 26}" font-family="Arial, sans-serif" font-size="${titleFontSize}" font-weight="700" fill="#ffffff">${escapeXml(line)}</text>`
+    `<text x="${x + 28}" y="${y + titleStartY + lineIndex * 26}" font-family="Outfit, Arial, sans-serif" font-size="${titleFontSize}" font-weight="700" fill="#ffffff">${escapeXml(line)}</text>`
   )).join('');
   return `<rect x="${x + 5}" y="${y + 5}" width="390" height="280" fill="${background}"/>
     <path d="M${x + 245} ${y + 5} H${x + 395} V${y + 165} Z" fill="${accent}" fill-opacity="0.3"/>
     <path d="M${x + 5} ${y + 112} L${x + 155} ${y + 5} H${x + 245} L${x + 5} ${y + 196} Z" fill="#ffffff" fill-opacity="0.06"/>
     <path d="M${x + 5} ${y + 225} C${x + 120} ${y + 180} ${x + 255} ${y + 300} ${x + 395} ${y + 205} V${y + 285} H${x + 5}Z" fill="${accent}" fill-opacity="0.84"/>
-    <text x="${x + 28}" y="${y + 42}" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#ffffff" fill-opacity="0.9">FIESTAS DE ARANDA DE DUERO 2026</text>
+    <text x="${x + 28}" y="${y + 42}" font-family="Outfit, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#ffffff" fill-opacity="0.9">FIESTAS DE ARANDA DE DUERO 2026</text>
     <rect x="${x + 5}" y="${y + 285}" width="390" height="100" fill="#211631"/>
     <rect x="${x + 5}" y="${y + 285}" width="390" height="7" fill="${accent}"/>
     ${titleMarkup}`;
@@ -205,7 +205,7 @@ function floatingPosterSvg(event, index, imageData, x, y) {
   const titleFontSize = titleLines.length > 2 || titleLines.some((line) => line.length > 22) ? 22 : 27;
   const titleStartY = titleLines.length === 1 ? 347 : titleLines.length === 2 ? 326 : 316;
   const titleMarkup = titleLines.map((line, lineIndex) => (
-    `<text x="${x + 28}" y="${y + titleStartY + lineIndex * 26}" font-family="Arial, sans-serif" font-size="${titleFontSize}" font-weight="700" fill="#ffffff">${escapeXml(line)}</text>`
+    `<text x="${x + 28}" y="${y + titleStartY + lineIndex * 26}" font-family="Outfit, Arial, sans-serif" font-size="${titleFontSize}" font-weight="700" fill="#ffffff">${escapeXml(line)}</text>`
   )).join('');
   const titleBand = `<rect x="${x + 5}" y="${y + 285}" width="390" height="100" fill="#211631"/>
     <rect x="${x + 5}" y="${y + 285}" width="390" height="7" fill="${index % 2 ? '#0b9e95' : '#ed614d'}"/>
@@ -230,7 +230,7 @@ function buildStorySvg({ date, rankedEvents, posterImages, logoData }) {
     posterXs[index % 2],
     posterYs[Math.floor(index / 2)]
   )).join('');
-  const fallback = posterImages.length ? '' : `<text x="540" y="980" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Consulta todas las actividades en la web</text>`;
+  const fallback = posterImages.length ? '' : `<text x="540" y="980" text-anchor="middle" font-family="Outfit, DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Consulta todas las actividades en la web</text>`;
   const footerY = 1822;
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${STORY_WIDTH}" height="${STORY_HEIGHT}" viewBox="0 0 ${STORY_WIDTH} ${STORY_HEIGHT}">
@@ -248,17 +248,17 @@ function buildStorySvg({ date, rankedEvents, posterImages, logoData }) {
   <circle cx="1010" cy="1710" r="320" fill="#36234f" fill-opacity="0.9"/>
 
   <image href="data:image/png;base64,${logoData}" x="500" y="55" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
-  <text x="540" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="700" letter-spacing="3" fill="#67508e">FIESTAS DE VALLADOLID 2026</text>
-  <text x="540" y="410" text-anchor="middle" font-family="DIN Condensed, Arial Narrow, sans-serif" font-weight="700" letter-spacing="-2" fill="#211631"><tspan font-size="${weekday.length > 8 ? 160 : 180}">${escapeXml(weekday)}</tspan><tspan dx="20" font-size="${day.length > 1 ? 210 : 265}">${escapeXml(day)}</tspan></text>
-  <text x="540" y="485" text-anchor="middle" font-family="DIN Condensed, Arial Narrow, sans-serif" font-size="48" font-weight="700" letter-spacing="5" fill="#67508e">DE ${escapeXml(month)}</text>
+  <text x="540" y="180" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="27" font-weight="700" letter-spacing="3" fill="#67508e">FIESTAS DE ARANDA DE DUERO 2026</text>
+  <text x="540" y="410" text-anchor="middle" font-family="Outfit, DIN Condensed, Arial Narrow, sans-serif" font-weight="700" letter-spacing="-2" fill="#211631"><tspan font-size="${weekday.length > 8 ? 160 : 180}">${escapeXml(weekday)}</tspan><tspan dx="20" font-size="${day.length > 1 ? 210 : 265}">${escapeXml(day)}</tspan></text>
+  <text x="540" y="485" text-anchor="middle" font-family="Outfit, DIN Condensed, Arial Narrow, sans-serif" font-size="48" font-weight="700" letter-spacing="5" fill="#67508e">DE ${escapeXml(month)}</text>
   <rect x="248" y="510" width="584" height="66" fill="#0b9e95"/>
-  <text x="540" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="1.5" fill="#ffffff">ACTIVIDADES POPULARES</text>
+  <text x="540" y="555" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="1.5" fill="#ffffff">ACTIVIDADES POPULARES</text>
   <path d="M505 588 C610 575 712 575 812 585" fill="none" stroke="#ed614d" stroke-width="7"/>
 
   <g>${posters || fallback}</g>
 
-  <text x="540" y="${footerY}" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#ffffff">VER TODAS</text>
-  <text x="540" y="${footerY + 49}" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="0.2" fill="#ffffff">fiestas.arandadeduero.dev</text>
+  <text x="540" y="${footerY}" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#ffffff">VER TODAS</text>
+  <text x="540" y="${footerY + 49}" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="0.2" fill="#ffffff">fiestas.arandadeduero.dev</text>
   <path d="M315 ${footerY + 70} C455 ${footerY + 54} 625 ${footerY + 54} 765 ${footerY + 70}" fill="none" stroke="#0b9e95" stroke-width="8"/>
 </svg>`;
 }
@@ -292,17 +292,17 @@ function buildPostSvg({ date, posterImages, logoData, pageIndex = 0 }) {
   <circle cx="1015" cy="1350" r="265" fill="#36234f" fill-opacity="0.9"/>
 
   <image href="data:image/png;base64,${logoData}" x="510" y="28" width="60" height="60" preserveAspectRatio="xMidYMid meet"/>
-  <text x="540" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2.8" fill="#67508e">FIESTAS DE VALLADOLID 2026</text>
-  <text x="540" y="290" text-anchor="middle" font-family="DIN Condensed, Arial Narrow, sans-serif" font-weight="700" letter-spacing="-2" fill="#211631"><tspan font-size="${weekday.length > 8 ? 116 : 132}">${escapeXml(weekday)}</tspan><tspan dx="18" font-size="${day.length > 1 ? 150 : 185}">${escapeXml(day)}</tspan></text>
-  <text x="540" y="350" text-anchor="middle" font-family="DIN Condensed, Arial Narrow, sans-serif" font-size="40" font-weight="700" letter-spacing="4" fill="#67508e">DE ${escapeXml(month)}</text>
+  <text x="540" y="125" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2.8" fill="#67508e">FIESTAS DE ARANDA DE DUERO 2026</text>
+  <text x="540" y="290" text-anchor="middle" font-family="Outfit, DIN Condensed, Arial Narrow, sans-serif" font-weight="700" letter-spacing="-2" fill="#211631"><tspan font-size="${weekday.length > 8 ? 116 : 132}">${escapeXml(weekday)}</tspan><tspan dx="18" font-size="${day.length > 1 ? 150 : 185}">${escapeXml(day)}</tspan></text>
+  <text x="540" y="350" text-anchor="middle" font-family="Outfit, DIN Condensed, Arial Narrow, sans-serif" font-size="40" font-weight="700" letter-spacing="4" fill="#67508e">DE ${escapeXml(month)}</text>
   <rect x="260" y="370" width="560" height="58" fill="#0b9e95"/>
-  <text x="540" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="1.4" fill="#ffffff">ACTIVIDADES POPULARES</text>
+  <text x="540" y="410" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="1.4" fill="#ffffff">ACTIVIDADES POPULARES</text>
   <path d="M510 438 C610 427 710 427 805 436" fill="none" stroke="#ed614d" stroke-width="7"/>
 
   <g>${posters}</g>
 
-  <text x="540" y="1302" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2" fill="#ffffff">VER TODAS</text>
-  <text x="540" y="1357" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="0.1" fill="#ffffff">fiestas.arandadeduero.dev</text>
+  <text x="540" y="1302" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2" fill="#ffffff">VER TODAS</text>
+  <text x="540" y="1357" text-anchor="middle" font-family="Outfit, Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="0.1" fill="#ffffff">fiestas.arandadeduero.dev</text>
   <path d="M300 1380 C450 1363 630 1363 780 1380" fill="none" stroke="#0b9e95" stroke-width="9"/>
 </svg>`;
 }
