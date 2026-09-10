@@ -1,0 +1,138 @@
+src/data/community-plans/gigantes-cabezudos-y-folclore.fiestas-plan.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+README.md
+  s_8ac52af66e15af::t_15894aae0b3bcf 1,5,15-16,100
+src/templates/fiestas-2026-caseta-detail.njk
+  s_8ac52af66e15af::t_15894aae0b3bcf 22-23,25-26,412
+scripts/generate-daily-popular.mjs
+  s_8ac52af66e15af::t_18552da98c5ae4 196
+  s_8ac52af66e15af::t_15894aae0b3bcf 135
+src/templates/layout.njk
+  s_8ac52af66e15af::t_15894aae0b3bcf 138
+src/assets/manifest.webmanifest
+  s_8ac52af66e15af::t_15894aae0b3bcf 2,4
+  s_8ac52af66e15af::t_18552da98c5ae4 3
+scripts/enrich-event-locations.mjs
+  s_8ac52af66e15af::t_15894aae0b3bcf 122
+src/data/community-plans/en-fiestas-con-el-deporte.fiestas-plan.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+src/data/community-plans/de-tardeo-en-tardeo.fiestas-plan.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+tests/import-eventos-ferias-dates.test.mjs
+  s_8ac52af66e15af::t_15894aae0b3bcf 137,145,153
+  s_8ac52af66e15af::t_18552da98c5ae4 82,89,102,109
+src/templates/partials/map-shell.njk
+  s_8ac52af66e15af::t_15894aae0b3bcf 20-21,121
+src/scripts/weather.js
+  s_8ac52af66e15af::t_15894aae0b3bcf 2
+src/data/community-plans/verbenas-plaza-mayor.fiestas-plan.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+scripts/import-eventos-ferias.mjs
+  s_8ac52af66e15af::t_15894aae0b3bcf 624,634-635,660,666,674,681,687,693,699,708-709,714,720,728,735,748,757,768,780,792,804,816,828,840,850,859,870,882,892,903,915,927,937,944-958,960
+src/data/community-plans/actos-religiosos-y-tradicion.fiestas-plan.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+src/data/community-plans/noches-de-fuegos-artificiales.fiestas-plan.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+src/data/community-plans/penas-charangas-y-bodegas.fiestas-plan.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+src/templates/fiestas-2026-collaborators.njk
+  s_8ac52af66e15af::t_d3f410133f60db 35-37
+src/scripts/community-plans.js
+  s_8ac52af66e15af::t_15894aae0b3bcf 6
+src/templates/fiestas-2026-event-unavailable.njk
+  s_8ac52af66e15af::t_15894aae0b3bcf 7
+.agents/skills/fiestas-event-creator/SKILL.md
+  s_8ac52af66e15af::t_18552da98c5ae4 3,8
+src/scripts/popular-dishes-page.js
+  s_8ac52af66e15af::t_15894aae0b3bcf 173-174
+src/data/fiestas-2026/import-event-decisions.json
+  s_8ac52af66e15af::t_cd5a36daf3b7a3 2-3
+  s_8ac52af66e15af::t_1c59e767340cd1 4
+tests/plan-export.test.mjs
+  s_8ac52af66e15af::t_18552da98c5ae4 17
+src/scripts/plan-export.test.js
+  s_8ac52af66e15af::t_15894aae0b3bcf 22
+AGENTS.md
+  s_8ac52af66e15af::t_15894aae0b3bcf 5
+src/styles/fiestas-2026.css
+  s_8ac52af66e15af::t_8db4c93538c169 10259-10298
+tests/daily-popular.test.mjs
+  s_8ac52af66e15af::t_236120c2afcc95 81
+package.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 2
+tests/e2e/plan.spec.js
+  s_8ac52af66e15af::t_15894aae0b3bcf 14
+src/data/community-plans/fiestas-en-familia.fiestas-plan.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+src/scripts/plans-page.test.js
+  s_8ac52af66e15af::t_15894aae0b3bcf 18
+scripts/enrich-caseta-locations.mjs
+  s_8ac52af66e15af::t_15894aae0b3bcf 37,91-92
+src/scripts/casetas-page.js
+  s_8ac52af66e15af::t_bef8b2c31f3717 1023,1031
+  s_8ac52af66e15af::t_15894aae0b3bcf 565,577
+  s_8ac52af66e15af::t_18552da98c5ae4 1007
+scripts/link-event-images.mjs
+  s_8ac52af66e15af::t_15894aae0b3bcf 109
+src/data/community-plans/grandes-conciertos.fiestas-plan.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+src/templates/fiestas-2026-caseta-qr.njk
+  s_8ac52af66e15af::t_15894aae0b3bcf 8,14,21,24,26
+tests/event-duplicate-detection.test.mjs
+  s_8ac52af66e15af::t_18552da98c5ae4 47,55
+  s_8ac52af66e15af::t_15894aae0b3bcf 90-91,99-100
+src/scripts/plans-page.js
+  s_8ac52af66e15af::t_15894aae0b3bcf 35,1492,1659,1748
+src/scripts/fiestas-2026.js
+  s_8ac52af66e15af::t_15894aae0b3bcf 35,921,2917
+src/data/community-plans.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+src/data/community-plans/feria-de-la-musica.fiestas-plan.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+scripts/generate-community-plan-social.mjs
+  s_8ac52af66e15af::t_18552da98c5ae4 106,122
+src/pwa/sw.js
+  s_8ac52af66e15af::t_15894aae0b3bcf 1,48
+src/data/community-plans/teatro-y-artistas-de-calle.fiestas-plan.json
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+tests/plans-page.test.mjs
+  s_8ac52af66e15af::t_15894aae0b3bcf 9
+scripts/build.mjs
+  s_8ac52af66e15af::t_15894aae0b3bcf 292-293,316,336,405,452,786-787,879-880,985,1192,1198-1199,1202-1204,1218,1222,1230-1231,1235-1236,1238,1251,1256,1258,1266-1267,1271-1272,1274,1286,1291,1298,1303,1310,1314-1315,1317,1327,1332,1340-1341,1374-1375,1380-1381,1383,1419,1423
+  s_8ac52af66e15af::t_18552da98c5ae4 982
+src/templates/fiestas-2026-popular-dishes.njk
+  s_8ac52af66e15af::t_15894aae0b3bcf 22-23
+src/templates/fiestas-2026-popular.njk
+  s_8ac52af66e15af::t_15894aae0b3bcf 19-20
+src/templates/partials/menu-drawer.njk
+  s_8ac52af66e15af::t_18552da98c5ae4 106
+src/pwa/offline.html
+  s_8ac52af66e15af::t_18552da98c5ae4 23
+  s_8ac52af66e15af::t_15894aae0b3bcf 7
+tests/event-import-guard.test.mjs
+  s_8ac52af66e15af::t_925c1b4d172c3d 6-26,29,33-34,42,44,48-50
+src/scripts/plan-export.js
+  s_8ac52af66e15af::t_15894aae0b3bcf 4,15,19,86
+src/data/fiestas-2026/verified-event-occurrences.json
+  s_8ac52af66e15af::t_cd5a36daf3b7a3 1
+docs/local-development.md
+  s_8ac52af66e15af::t_15894aae0b3bcf 3
+package-lock.json
+  s_8ac52af66e15af::t_6698cdb9b7eb05 2,8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2aa9a9b6d01768d19fb431f7dff59269017f4a6d",
+  "prompts": {},
+  "sessions": {
+    "s_8ac52af66e15af": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b63ac998-a9f6-4233-9da0-de40f9b9931b",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
