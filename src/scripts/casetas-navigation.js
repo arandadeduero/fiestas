@@ -1,5 +1,5 @@
 const CASETAS_PATH = '/casetas/';
-const NAVIGATION_BASE_URL = 'https://fiestas.arandadeduero.es';
+const NAVIGATION_BASE_URL = 'https://fiestas.arandadeduero.dev';
 
 function isCasetasPath(pathname) {
   return String(pathname || '').replace(/\/+$/, '') === '/casetas';

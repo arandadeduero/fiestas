@@ -11,8 +11,8 @@ function installBrowserGlobals() {
 
   globalThis.window = {
     location: {
-      hostname: 'fiestas.arandadeduero.es',
-      href: 'https://fiestas.arandadeduero.es/'
+      hostname: 'fiestas.arandadeduero.dev',
+      href: 'https://fiestas.arandadeduero.dev/'
     },
     navigator: { doNotTrack: '0' },
     localStorage: {

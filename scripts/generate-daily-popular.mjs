@@ -24,7 +24,7 @@ import {
 
 const root = process.cwd();
 const defaultMetricsUrl = 'https://api.arandadeduero.es/fiestas/saves';
-const defaultBaseUrl = 'https://fiestas.arandadeduero.es';
+const defaultBaseUrl = 'https://fiestas.arandadeduero.dev';
 const remoteImageCache = new Map();
 
 function parseArgs(argv) {
@@ -258,7 +258,7 @@ function buildStorySvg({ date, rankedEvents, posterImages, logoData }) {
   <g>${posters || fallback}</g>
 
   <text x="540" y="${footerY}" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#ffffff">VER TODAS</text>
-  <text x="540" y="${footerY + 49}" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="0.2" fill="#ffffff">fiestas.arandadeduero.es</text>
+  <text x="540" y="${footerY + 49}" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="0.2" fill="#ffffff">fiestas.arandadeduero.dev</text>
   <path d="M315 ${footerY + 70} C455 ${footerY + 54} 625 ${footerY + 54} 765 ${footerY + 70}" fill="none" stroke="#0b9e95" stroke-width="8"/>
 </svg>`;
 }
@@ -302,7 +302,7 @@ function buildPostSvg({ date, posterImages, logoData, pageIndex = 0 }) {
   <g>${posters}</g>
 
   <text x="540" y="1302" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2" fill="#ffffff">VER TODAS</text>
-  <text x="540" y="1357" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="0.1" fill="#ffffff">fiestas.arandadeduero.es</text>
+  <text x="540" y="1357" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="0.1" fill="#ffffff">fiestas.arandadeduero.dev</text>
   <path d="M300 1380 C450 1363 630 1363 780 1380" fill="none" stroke="#0b9e95" stroke-width="9"/>
 </svg>`;
 }
@@ -313,7 +313,7 @@ async function readPosterImage(image) {
       const request = fetch(image, {
         headers: {
           accept: 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
-          'user-agent': 'ArandaDeDueroFiestas/1.0 (+https://fiestas.arandadeduero.es/)'
+          'user-agent': 'ArandaDeDueroFiestas/1.0 (+https://fiestas.arandadeduero.dev/)'
         },
         signal: AbortSignal.timeout(20000)
       }).then(async (response) => {

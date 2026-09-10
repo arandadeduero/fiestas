@@ -23,27 +23,27 @@ test('conserva una query combinada de casetas al enlazar a una ficha', () => {
 
 test('restaura una vuelta válida a casetas y evita anidar retornos', () => {
   const path = getCasetasReturnPath(
-    'https://fiestas.arandadeduero.es/c/madame-x/?return=%2Fcasetas%2F%3Fsearch%3Dcecina%26return%3Dignored'
+    'https://fiestas.arandadeduero.dev/c/madame-x/?return=%2Fcasetas%2F%3Fsearch%3Dcecina%26return%3Dignored'
   );
 
   assert.equal(path, '/casetas/?search=cecina');
-  assert.equal(getCasetasListPath('https://fiestas.arandadeduero.es/c/madame-x/'), '');
+  assert.equal(getCasetasListPath('https://fiestas.arandadeduero.dev/c/madame-x/'), '');
 });
 
 test('rechaza retornos externos o rutas que no sean el listado de casetas', () => {
   assert.equal(
-    getCasetasReturnPath('https://fiestas.arandadeduero.es/c/madame-x/?return=https%3A%2F%2Fevil.example%2F'),
+    getCasetasReturnPath('https://fiestas.arandadeduero.dev/c/madame-x/?return=https%3A%2F%2Fevil.example%2F'),
     ''
   );
   assert.equal(
-    getCasetasReturnPath('https://fiestas.arandadeduero.es/c/madame-x/?return=%2Fmapa%2F%3Ftype%3DM%C3%BAsica'),
+    getCasetasReturnPath('https://fiestas.arandadeduero.dev/c/madame-x/?return=%2Fmapa%2F%3Ftype%3DM%C3%BAsica'),
     ''
   );
 });
 
 test('una ficha sin filtros mantiene su URL pública limpia', () => {
   assert.equal(
-    buildCasetaDetailHref({ slug: 'la-criolla' }, 'https://fiestas.arandadeduero.es/casetas/'),
+    buildCasetaDetailHref({ slug: 'la-criolla' }, 'https://fiestas.arandadeduero.dev/casetas/'),
     '/c/la-criolla/'
   );
 });

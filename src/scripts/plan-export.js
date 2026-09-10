@@ -8,7 +8,7 @@ const FESTIVAL_ID = 'aranda-2026';
 function eventAbsoluteUrl(event) {
   const url = event?.canonicalUrl || event?.urlPath || '';
   if (!url || /^https?:\/\//i.test(url)) return url;
-  const origin = typeof window !== 'undefined' && window.location ? window.location.origin : 'https://fiestas.arandadeduero.es';
+  const origin = typeof window !== 'undefined' && window.location ? window.location.origin : 'https://fiestas.arandadeduero.dev';
   return origin + url;
 }
 
@@ -25,7 +25,7 @@ export function createIcs(events = [], calendarName = 'Fiestas Patronales de Ara
 
   events.filter((event) => event?.id && event.date).forEach((event) => {
     lines.push('BEGIN:VEVENT');
-    lines.push(`UID:${escapeIcs(`${event.id}@fiestas.arandadeduero.es`)}`);
+    lines.push(`UID:${escapeIcs(`${event.id}@fiestas.arandadeduero.dev`)}`);
     lines.push(`DTSTAMP:${formatUtc(new Date())}`);
     lines.push(`DTSTART;TZID=${TIME_ZONE}:${formatLocalDateTime(event.date, event.startTime)}`);
     if (event.endTime) {

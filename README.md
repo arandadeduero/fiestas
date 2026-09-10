@@ -1,6 +1,6 @@
 # Fiestas Patronales de Aranda de Duero 2026
 
-Esta es la agenda web de las Fiestas Patronales de Aranda de Duero 2026 (Virgen de las Viñas), publicada en [fiestas.arandadeduero.es](https://fiestas.arandadeduero.es/) por [Ayuntamiento de Aranda de Duero. Concejalía de Innovación](https://www.arandadeduero.es/).
+Esta es la agenda web de las Fiestas Patronales de Aranda de Duero 2026 (Virgen de las Viñas), publicada en [fiestas.arandadeduero.dev](https://fiestas.arandadeduero.dev/) por [Ayuntamiento de Aranda de Duero. Concejalía de Innovación](https://www.arandadeduero.es/).
 
 Es un fork del proyecto original [Fiestas Patronales de Aranda de Duero 2026](https://fiestas.aldeapucela.org/), creado por vecinos voluntarios de [Aldea Pucela](https://aldeapucela.org/), adaptado aquí a la ciudad de Aranda de Duero.
 
@@ -44,7 +44,7 @@ Los favoritos y planes personales se guardan localmente en el navegador. No requ
 La web se publica en:
 
 ~~~text
-https://fiestas.arandadeduero.es/
+https://fiestas.arandadeduero.dev/
 ~~~
 
 Sus principales rutas son:

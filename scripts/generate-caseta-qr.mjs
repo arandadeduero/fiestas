@@ -13,7 +13,7 @@ const root = path.resolve(__dirname, '..');
 const sourcePath = path.join(root, 'src', 'data', 'fiestas-2026', 'casetas.json');
 const outputDir = path.join(root, 'src', 'assets', 'qr', 'casetas');
 const posterBasePath = path.join(root, 'src', 'assets', 'qr', 'caseta-poster-base.jpg');
-const publicBaseUrl = 'https://fiestas.arandadeduero.es';
+const publicBaseUrl = 'https://fiestas.arandadeduero.dev';
 const force = process.argv.includes('--force');
 const onlyId = process.argv.find((argument) => argument.startsWith('--only='))?.slice('--only='.length) || '';
 const execFileAsync = promisify(execFile);

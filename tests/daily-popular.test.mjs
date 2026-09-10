@@ -97,12 +97,12 @@ test('generates story and vertical post images with a reusable manifest', async 
   assert.equal(result.manifest.safeArea.bottom, STORY_SAFE_BOTTOM);
   assert.equal(STORY_CONTENT_BOTTOM, STORY_HEIGHT - STORY_SAFE_BOTTOM);
   assert.equal(result.manifest.items.length, 2);
-  assert.equal(result.manifest.imageUrl, 'https://fiestas.arandadeduero.es/daily-popular/2026-09-04.jpg');
+  assert.equal(result.manifest.imageUrl, 'https://fiestas.arandadeduero.dev/daily-popular/2026-09-04.jpg');
   assert.equal(result.manifest.storyImageUrl, result.manifest.imageUrl);
-  assert.equal(result.manifest.postImageUrl, 'https://fiestas.arandadeduero.es/daily-popular/2026-09-04-post.jpg');
+  assert.equal(result.manifest.postImageUrl, 'https://fiestas.arandadeduero.dev/daily-popular/2026-09-04-post.jpg');
   assert.deepEqual(result.manifest.postImageUrls, [
-    'https://fiestas.arandadeduero.es/daily-popular/2026-09-04-post.jpg',
-    'https://fiestas.arandadeduero.es/daily-popular/2026-09-04-post-2.jpg'
+    'https://fiestas.arandadeduero.dev/daily-popular/2026-09-04-post.jpg',
+    'https://fiestas.arandadeduero.dev/daily-popular/2026-09-04-post-2.jpg'
   ]);
   assert.equal(result.outputPostImagePaths.length, 2);
   assert.equal(result.manifest.postItems.length, 2);

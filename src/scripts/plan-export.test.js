@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { createPlanImportUrl, createPlanJson, decodePlanImportHash } from './plan-export.js';
 
 test('plan import URL encodes the same JSON used by file export', () => {
-  globalThis.window = { location: { origin: 'https://fiestas.arandadeduero.es' } };
+  globalThis.window = { location: { origin: 'https://fiestas.arandadeduero.dev' } };
 
   const plan = {
     name: 'Sábado con música',

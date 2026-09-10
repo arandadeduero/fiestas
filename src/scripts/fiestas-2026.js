@@ -31,7 +31,7 @@ import { getCasetasReturnPath } from './casetas-navigation.js';
 const collator = new Intl.Collator('es', { numeric: true, sensitivity: 'base' });
 const defaultQueryKeys = ['date', 'q', 'type', 'area', 'ticket', 'view', 'event'];
 const DEFAULT_DOCUMENT_TITLE = document.title;
-const SITE_SHARE_URL = 'https://fiestas.arandadeduero.es/?mtm_campaign=share';
+const SITE_SHARE_URL = 'https://fiestas.arandadeduero.dev/?mtm_campaign=share';
 const SITE_SHARE_MESSAGE = `Mira, la mejor web para seguir las fiestas y fiestas de Aranda de Duero 2026\n\n${SITE_SHARE_URL}`;
 const SAVE_COUNTS_API_URL = 'https://api.arandadeduero.es/fiestas/saves';
 const POPULAR_METRICS_STORAGE_KEY = 'fiestasAranda:popularMetrics:v1';
