@@ -1,0 +1,23 @@
+src/templates/fiestas-2026.njk
+  h_76010f91c016f7 30,42,44,47,59-60,62,76,246,250
+src/templates/partials/community-prompt.njk
+  h_76010f91c016f7 24,30,34,47,50,63-64,68
+src/templates/layout.njk
+  h_76010f91c016f7 6,8,11-12,16-18,24-26,37-38,67-68,83-85
+src/templates/fiestas-2026-detail.njk
+  h_76010f91c016f7 370,375,379,381,383
+src/templates/partials/menu-drawer.njk
+  h_76010f91c016f7 6-7,35,37,39,43,47
+  h_76010f91c016f7 45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "f8a0e18d2eb0413404b11aba73ca85056f48c2af",
+  "prompts": {},
+  "humans": {
+    "h_76010f91c016f7": {
+      "author": "Guillermo López Leal <guillermo.lopezleal@vonage.com>"
+    }
+  }
+}
