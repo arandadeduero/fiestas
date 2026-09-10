@@ -1,89 +1,82 @@
 {
   "schemaVersion": 1,
   "festival": "valladolid-2026",
-  "updatedAt": "2026-08-26T16:00:00.000Z",
+  "updatedAt": "2026-09-01T10:00:00.000Z",
   "plans": [
     {
-      "id": "cielo-y-estrellas",
-      "name": "Cielo y estrellas",
-      "author": "Aldea Pucela",
-      "icon": "stars",
-      "url": "/data/community-plans/cielo-y-estrellas.fiestas-plan.json"
-    },
-    {
-      "id": "plaza-mayor-2026",
-      "name": "Conciertos en la Plaza Mayor",
-      "author": "Aldea Pucela",
+      "id": "grandes-conciertos",
+      "name": "Grandes conciertos",
+      "author": "Ayuntamiento de Aranda de Duero. Concejalía de Innovación",
       "icon": "microphone",
-      "url": "/data/community-plans/plaza-mayor-2026.fiestas-plan.json"
+      "url": "/data/community-plans/grandes-conciertos.fiestas-plan.json"
     },
     {
-      "id": "moreras-penas-2026",
-      "name": "Moreras: peñas y charangas",
-      "author": "Aldea Pucela",
+      "id": "feria-de-la-musica",
+      "name": "Feria de la Música en el Parque",
+      "author": "Ayuntamiento de Aranda de Duero. Concejalía de Innovación",
       "icon": "music",
-      "url": "/data/community-plans/moreras-penas-2026.fiestas-plan.json"
+      "url": "/data/community-plans/feria-de-la-musica.fiestas-plan.json"
     },
     {
-      "id": "ferias-en-familia-2026",
-      "name": "Ferias en familia",
-      "author": "Aldea Pucela",
-      "icon": "family",
-      "url": "/data/community-plans/ferias-en-familia-2026.fiestas-plan.json"
-    },
-    {
-      "id": "folklore-gastronomia-2026",
-      "name": "Feria de Folklore y Gastronomía",
-      "author": "Aldea Pucela",
-      "icon": "food",
-      "url": "/data/community-plans/folklore-gastronomia-2026.fiestas-plan.json"
-    },
-    {
-      "id": "conciertos-moreras",
-      "name": "Conciertos Moreras",
-      "author": "Spacebom",
-      "icon": "microphone",
-      "url": "/data/community-plans/conciertos-moreras.fiestas-plan.json"
-    },
-    {
-      "id": "musica-y-ocio-alternativo",
-      "name": "Música y ocio alternativo",
-      "author": "Spacebom",
-      "icon": "parade",
-      "url": "/data/community-plans/musica-y-ocio-alternativo.fiestas-plan.json"
-    },
-    {
-      "id": "bailes-latinos-sbk",
-      "name": "Bailes Latinos SBK",
-      "author": "Clara",
+      "id": "verbenas-plaza-mayor",
+      "name": "Verbenas y orquestas en la Plaza Mayor",
+      "author": "Ayuntamiento de Aranda de Duero. Concejalía de Innovación",
       "icon": "music",
-      "url": "/data/community-plans/bailes-latinos-sbk.fiestas-plan.json"
-    },
-    {
-      "id": "indie-pero-no-solo",
-      "name": "Indie, pero no solo",
-      "author": "Yustin",
-      "icon": "music",
-      "url": "/data/community-plans/indie-pero-no-solo.fiestas-plan.json"
-    },
-    {
-      "id": "musica-electronica",
-      "name": "Música electrónica",
-      "author": "José Luis",
-      "icon": "music",
-      "url": "/data/community-plans/musica-electronica.fiestas-plan.json"
+      "url": "/data/community-plans/verbenas-plaza-mayor.fiestas-plan.json"
     },
     {
       "id": "en-fiestas-con-el-deporte",
       "name": "En fiestas con el deporte",
-      "author": "Aldea Pucela",
+      "author": "Ayuntamiento de Aranda de Duero. Concejalía de Innovación",
       "icon": "sports",
       "url": "/data/community-plans/en-fiestas-con-el-deporte.fiestas-plan.json"
     },
     {
+      "id": "fiestas-en-familia",
+      "name": "Fiestas en familia",
+      "author": "Ayuntamiento de Aranda de Duero. Concejalía de Innovación",
+      "icon": "family",
+      "url": "/data/community-plans/fiestas-en-familia.fiestas-plan.json"
+    },
+    {
+      "id": "actos-religiosos-y-tradicion",
+      "name": "Actos religiosos y tradición",
+      "author": "Ayuntamiento de Aranda de Duero. Concejalía de Innovación",
+      "icon": "religious",
+      "url": "/data/community-plans/actos-religiosos-y-tradicion.fiestas-plan.json"
+    },
+    {
+      "id": "penas-charangas-y-bodegas",
+      "name": "Peñas, charangas y bodegas",
+      "author": "Ayuntamiento de Aranda de Duero. Concejalía de Innovación",
+      "icon": "parade",
+      "url": "/data/community-plans/penas-charangas-y-bodegas.fiestas-plan.json"
+    },
+    {
+      "id": "gigantes-cabezudos-y-folclore",
+      "name": "Gigantes, cabezudos y folclore",
+      "author": "Ayuntamiento de Aranda de Duero. Concejalía de Innovación",
+      "icon": "masks",
+      "url": "/data/community-plans/gigantes-cabezudos-y-folclore.fiestas-plan.json"
+    },
+    {
+      "id": "teatro-y-artistas-de-calle",
+      "name": "Teatro y artistas de calle",
+      "author": "Ayuntamiento de Aranda de Duero. Concejalía de Innovación",
+      "icon": "theater",
+      "url": "/data/community-plans/teatro-y-artistas-de-calle.fiestas-plan.json"
+    },
+    {
+      "id": "noches-de-fuegos-artificiales",
+      "name": "Noches de fuegos artificiales",
+      "author": "Ayuntamiento de Aranda de Duero. Concejalía de Innovación",
+      "icon": "fireworks",
+      "url": "/data/community-plans/noches-de-fuegos-artificiales.fiestas-plan.json"
+    },
+    {
       "id": "de-tardeo-en-tardeo",
       "name": "De tardeo en tardeo",
-      "author": "Aldea Pucela",
+      "author": "Ayuntamiento de Aranda de Duero. Concejalía de Innovación",
       "icon": "cocktail",
       "url": "/data/community-plans/de-tardeo-en-tardeo.fiestas-plan.json"
     }

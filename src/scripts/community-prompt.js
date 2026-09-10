@@ -5,18 +5,18 @@ import {
 } from './analytics.js';
 import { getVisitedDays } from './visit-tracker.js';
 
-export const COMMUNITY_PROMPT_STORAGE_KEY = 'fiestasPucela:community-prompt:v1';
-export const COMMUNITY_PROMPT_DETAIL_RETURN_KEY = 'fiestasPucela:community-prompt:detail-return:v1';
-export const COMMUNITY_PROMPT_ACTIVE_SESSION_KEY = 'fiestasPucela:community-prompt:active:v1';
+export const COMMUNITY_PROMPT_STORAGE_KEY = 'fiestasAranda:community-prompt:v1';
+export const COMMUNITY_PROMPT_DETAIL_RETURN_KEY = 'fiestasAranda:community-prompt:detail-return:v1';
+export const COMMUNITY_PROMPT_ACTIVE_SESSION_KEY = 'fiestasAranda:community-prompt:active:v1';
 export const COMMUNITY_PROMPT_SCHEMA_VERSION = 1;
 export const COMMUNITY_PROMPT_MAX_EXPOSURES = 2;
 export const COMMUNITY_PROMPT_SNOOZE_DAYS = 5;
 export const COMMUNITY_PROMPT_SNOOZE_MS = COMMUNITY_PROMPT_SNOOZE_DAYS * 24 * 60 * 60 * 1000;
 
 export const DEFAULT_COMMUNITY_PROMPT_CAMPAIGN = Object.freeze({
-  id: 'valladolid-2026',
-  startDate: '2026-08-31',
-  endDate: '2026-09-13'
+  id: 'aranda-2026',
+  startDate: '2026-09-07',
+  endDate: '2026-09-22'
 });
 
 const RELEVANT_ENGAGEMENTS = new Set([

@@ -10,7 +10,7 @@ test('populares renderiza sin romperse aunque no haya datos de guardados', async
 
 test('populares usa el último ranking cacheado si la API no está disponible', async ({ page }) => {
   await page.addInitScript(() => {
-    window.localStorage.setItem('fiestasValladolid:popularMetrics:v1', JSON.stringify({
+    window.localStorage.setItem('fiestasAranda:popularMetrics:v1', JSON.stringify({
       ok: true,
       cachedAt: Date.now(),
       totalVisits: 7,
@@ -39,7 +39,7 @@ test('populares permite cambiar al ranking por visitas', async ({ page }) => {
 test('populares permite ocultar finalizadas en ambos rankings', async ({ page }) => {
   await page.addInitScript(() => {
     const OriginalDate = Date;
-    const fixedNow = OriginalDate.parse('2026-09-07T12:00:00+02:00');
+    const fixedNow = OriginalDate.parse('2026-09-16T12:00:00+02:00');
     class TestDate extends OriginalDate {
       constructor(...args) {
         super(...(args.length ? args : [fixedNow]));
@@ -111,7 +111,7 @@ test('el catálogo de planes vecinales renderiza y sus fichas abren', async ({ p
 test('los planes vecinales pliegan las actividades finalizadas', async ({ page }) => {
   await page.addInitScript(() => {
     const OriginalDate = Date;
-    const fixedNow = OriginalDate.parse('2026-09-07T12:00:00+02:00');
+    const fixedNow = OriginalDate.parse('2026-09-16T12:00:00+02:00');
     class TestDate extends OriginalDate {
       constructor(...args) {
         super(...(args.length ? args : [fixedNow]));
@@ -127,7 +127,7 @@ test('los planes vecinales pliegan las actividades finalizadas', async ({ page }
 
   const finishedToggle = page.locator('[data-plan-finished-toggle]');
   const finishedList = page.locator('[data-plan-finished-list]');
-  const pastGroup = page.locator('[data-plan-day-group="2026-09-04"]');
+  const pastGroup = page.locator('[data-plan-day-group="2026-09-13"]');
   await expect(finishedToggle).toHaveCount(1);
   await expect(finishedToggle).toHaveAttribute('aria-expanded', 'false');
   await expect(finishedList).toBeHidden();

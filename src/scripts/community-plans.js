@@ -1,4 +1,4 @@
-import { createPlan, normalizePlanIcon, readFavoriteIds, readPlans, writeFavoriteIds } from './plan-storage.js';
+import { createPlan, getPlanIcon, normalizePlanIcon, readFavoriteIds, readPlans, writeFavoriteIds } from './plan-storage.js';
 import { trackCommunityPlanAdded, trackFavoriteChanged, trackPlanShared } from './analytics.js';
 import { renderPlanTimeline } from './plans-page.js';
 
@@ -7,8 +7,8 @@ const FESTIVAL_ID = 'valladolid-2026';
 const MAX_PLAN_NAME_LENGTH = 80;
 const MAX_ACTIVITY_IDS = 200;
 const MAX_JSON_BYTES = 256 * 1024;
-const PLAN_ADD_COUNTS_API_URL = 'https://api.aldeapucela.org/fiestas/plan-adds';
-const COMMUNITY_PLANS_RANKING_STORAGE_KEY = 'fiestasValladolid:communityPlansRanking:v1';
+const PLAN_ADD_COUNTS_API_URL = 'https://api.arandadeduero.es/fiestas/plan-adds';
+const COMMUNITY_PLANS_RANKING_STORAGE_KEY = 'fiestasAranda:communityPlansRanking:v1';
 const COMMUNITY_PLANS_RANKING_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 const PLAN_ADD_COUNTS_TIMEOUT_MS = 2500;
 
@@ -44,7 +44,7 @@ export function setupCommunityPlansPage(rawEvents = []) {
       entries = normalizeCatalog(value).map((entry) => ({
         ...entry,
         pageUrl: `/planes/${entry.id}/`,
-        socialImageUrl: `/assets/social/plans/${entry.id}.jpg`
+        socialImageUrl: entry.hasSocialImage ? `/assets/social/plans/${entry.id}.jpg` : null
       }));
       const cachedRanking = readCommunityPlansRankingCache();
       if (cachedRanking) {
@@ -147,6 +147,7 @@ export function setupCommunityPlanDetailPage(rawEvents = []) {
     author: cleanText(page.dataset.communityPlanAuthor, MAX_PLAN_NAME_LENGTH),
     url: safeJsonPlanUrl(page.dataset.communityPlanJsonUrl),
     icon: normalizePlanIcon(page.dataset.communityPlanIcon),
+    hasSocialImage: page.dataset.communityPlanHasSocialImage !== 'false',
     pageUrl: page.dataset.communityPlanPageUrl || window.location.pathname
   };
   let imported = null;
@@ -406,6 +407,7 @@ function normalizeCatalog(value) {
       author,
       url,
       icon: normalizePlanIcon(rawEntry.icon || communityPlanIcon(id, name)),
+      hasSocialImage: rawEntry.hasSocialImage !== false,
       ...(summary ? { summary } : {}),
       ...(Number.isInteger(activityCount) && activityCount >= 0 ? { activityCount } : {})
     };
@@ -447,13 +449,24 @@ function createPlanCard(entry) {
   imageLink.className = 'fiestas-community-plan-card-image-link';
   imageLink.href = entry.pageUrl;
   imageLink.setAttribute('aria-label', `Ver ${entry.name}`);
-  const image = document.createElement('img');
-  image.className = 'fiestas-community-plan-card-image';
-  image.src = entry.socialImageUrl;
-  image.alt = `${entry.name}, creado por ${entry.author}`;
-  image.loading = 'lazy';
-  image.decoding = 'async';
-  imageLink.append(image);
+  // El plan puede no tener imagen social propia (p. ej. sin carteles de
+  // actividades): en ese caso se muestra una portada con el icono del plan.
+  if (entry.socialImageUrl) {
+    const image = document.createElement('img');
+    image.className = 'fiestas-community-plan-card-image';
+    image.src = entry.socialImageUrl;
+    image.alt = `${entry.name}, creado por ${entry.author}`;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    image.addEventListener('error', () => {
+      image.replaceWith(createPlanCoverPlaceholder(entry));
+      media.classList.add('fiestas-community-plan-card-media--cover');
+    }, { once: true });
+    imageLink.append(image);
+  } else {
+    imageLink.append(createPlanCoverPlaceholder(entry));
+    media.classList.add('fiestas-community-plan-card-media--cover');
+  }
   media.append(imageLink);
 
   const topActions = document.createElement('div');
@@ -467,10 +480,13 @@ function createPlanCard(entry) {
 
   const body = document.createElement('div');
   body.className = 'fiestas-community-plan-card-body';
+  const name = document.createElement('h2');
+  name.className = 'fiestas-community-plan-card-name';
+  name.textContent = entry.name || 'Plan vecinal';
   const meta = document.createElement('p');
   meta.className = 'fiestas-community-plan-card-meta';
   meta.textContent = entry.summary || 'Plan vecinal';
-  body.append(meta);
+  body.append(name, meta);
 
   const footer = document.createElement('div');
   footer.className = 'fiestas-community-plan-card-footer';
@@ -557,18 +573,34 @@ function createCommunityPlanDetailHero(entry, imported) {
   hero.className = 'fiestas-community-plan-detail-hero';
   hero.setAttribute('aria-labelledby', 'community-plan-detail-title');
 
-  const image = document.createElement('img');
-  image.className = 'fiestas-community-plan-detail-hero-image';
-  image.src = `/assets/social/plans/${encodeURIComponent(entry.id)}.jpg`;
-  image.alt = `${entry.name || imported.name}, creado por ${entry.author}`;
-  image.loading = 'eager';
-  image.decoding = 'async';
-  hero.append(image);
+  const hasImage = entry.hasSocialImage !== false;
+  if (hasImage) {
+    const image = document.createElement('img');
+    image.className = 'fiestas-community-plan-detail-hero-image';
+    image.src = `/assets/social/plans/${encodeURIComponent(entry.id)}.jpg`;
+    image.alt = `${entry.name || imported.name}, creado por ${entry.author}`;
+    image.loading = 'eager';
+    image.decoding = 'async';
+    image.addEventListener('error', () => {
+      image.remove();
+      hero.classList.add('fiestas-community-plan-detail-hero--textual');
+      title.className = 'fiestas-community-plan-detail-hero-title';
+    }, { once: true });
+    hero.append(image);
+  } else {
+    hero.classList.add('fiestas-community-plan-detail-hero--textual');
+  }
 
   const title = document.createElement('h2');
   title.id = 'community-plan-detail-title';
-  title.className = 'sr-only';
+  title.className = hasImage ? 'sr-only' : 'fiestas-community-plan-detail-hero-title';
   title.textContent = entry.name || imported.name;
+  if (!hasImage) {
+    const kicker = document.createElement('p');
+    kicker.className = 'fiestas-community-plan-detail-hero-kicker';
+    kicker.append(createIcon(getPlanIcon(entry.icon).className), document.createTextNode('Plan vecinal'));
+    hero.append(kicker);
+  }
   hero.append(title);
 
   const stats = document.createElement('div');
@@ -708,6 +740,15 @@ function createIcon(name) {
   icon.className = `fa-solid ${name}`;
   icon.setAttribute('aria-hidden', 'true');
   return icon;
+}
+
+// Portada de respaldo cuando el plan no tiene cartel propio: icono del plan
+// sobre un fondo suave, dentro del hueco de imagen de la tarjeta.
+function createPlanCoverPlaceholder(entry) {
+  const placeholder = document.createElement('div');
+  placeholder.className = 'fiestas-community-plan-card-cover';
+  placeholder.append(createIcon(getPlanIcon(entry.icon).className));
+  return placeholder;
 }
 
 function showLinkFeedback(link, message) {

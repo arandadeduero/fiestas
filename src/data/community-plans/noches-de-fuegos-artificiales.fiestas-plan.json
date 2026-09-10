@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "festival": "valladolid-2026",
+  "exportedAt": "2026-09-01T10:00:00Z",
+  "plans": [
+    {
+      "name": "Noches de fuegos artificiales",
+      "icon": "fireworks",
+      "activityIds": [
+        "23",
+        "34",
+        "53",
+        "146",
+        "162"
+      ]
+    }
+  ]
+}

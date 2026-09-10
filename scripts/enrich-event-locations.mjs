@@ -8,7 +8,7 @@ const root = path.resolve(__dirname, '..');
 const eventsPath = path.join(root, 'src', 'data', 'fiestas-2026', 'events.json');
 const cachePath = path.join(root, '.cache', 'fiestas', 'nominatim-location-cache.json');
 const reportsDir = path.join(root, '.cache', 'fiestas', 'reports');
-const userAgent = 'AldeaPucelaFiestas/1.0 (contacto@aldeapucela.org)';
+const userAgent = 'ArandaDeDueroFiestas/1.0 (contacto@arandadeduero.es)';
 const args = parseArgs(process.argv.slice(2));
 const provider = createProvider(args.provider || 'audit');
 

@@ -2,7 +2,7 @@
 // poder usarse en páginas que no cargan home.js, como la ficha de evento.
 // ponytail: home.js todavía tiene su propia copia inline de esta lógica;
 // migrarla a este módulo cuando se toque.
-const MORE_HINT_SEEN_KEY = 'fiestasPucela:more-hint-seen';
+const MORE_HINT_SEEN_KEY = 'fiestasAranda:more-hint-seen';
 
 function wasMoreHintSeen() {
   try {

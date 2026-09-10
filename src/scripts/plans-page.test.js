@@ -93,8 +93,8 @@ test('community plans use the friendly URL only when their content is unchanged'
 
 test('friendly community URLs include the share campaign', () => {
   assert.equal(
-    createCommunityPlanUrl('cielo-y-estrellas', 'https://fiestas.aldeapucela.org/plan/importar/'),
-    'https://fiestas.aldeapucela.org/planes/cielo-y-estrellas/?mtm_campaign=share'
+    createCommunityPlanUrl('cielo-y-estrellas', 'https://fiestas.arandadeduero.es/plan/importar/'),
+    'https://fiestas.arandadeduero.es/planes/cielo-y-estrellas/?mtm_campaign=share'
   );
 });
 

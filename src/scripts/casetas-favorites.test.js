@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-const STORAGE_KEY = 'fiestasPucela:casetas-favorites';
+const STORAGE_KEY = 'fiestasAranda:casetas-favorites';
 
 function installStorage(initialValue = null) {
   const values = new Map();
@@ -45,7 +45,7 @@ test('normalizes caseta favorite IDs in an independent storage key', async () =>
 
   assert.deepEqual(favorites.writeCasetaFavoriteIds([' z2-07 ', 'z1-01', 'z2-07', '']), ['z2-07', 'z1-01']);
   assert.deepEqual(JSON.parse(values.get(STORAGE_KEY)), ['z2-07', 'z1-01']);
-  assert.equal(values.has('fiestasPucela:favorites'), false);
+  assert.equal(values.has('fiestasAranda:favorites'), false);
 });
 
 test('recovers from malformed or unsupported stored data', async () => {
@@ -63,7 +63,7 @@ test('sets and removes one caseta favorite without affecting event favorites', a
 
   assert.deepEqual(favorites.setCasetaFavorite('z2-07', true), ['z1-01', 'z2-07']);
   assert.deepEqual(favorites.setCasetaFavorite('z1-01', false), ['z2-07']);
-  assert.equal(values.has('fiestasPucela:favorites'), false);
+  assert.equal(values.has('fiestasAranda:favorites'), false);
 });
 
 test('notifies subscribers after local and cross-tab favorite changes', async () => {

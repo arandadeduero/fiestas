@@ -223,8 +223,8 @@ class CdpPage {
     await this.send('Page.enable');
     await this.send('Page.addScriptToEvaluateOnNewDocument', {
       source: `
-        localStorage.setItem('aldeapucela_theme', ${JSON.stringify(theme)});
-        localStorage.removeItem('fiestasPucela:favorites');
+        localStorage.setItem('arandadeduero_theme', ${JSON.stringify(theme)});
+        localStorage.removeItem('fiestasAranda:favorites');
       `
     });
   }

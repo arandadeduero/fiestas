@@ -1,12 +1,12 @@
 const CONFIG_KEY = '__FIESTAS_ANALYTICS_CONFIG__';
 const INITIALIZED_KEY = '__FIESTAS_MATOMO_INITIALIZED__';
 const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '[::1]', '::1']);
-const DEFAULT_TRACKER_URL = 'https://stats.aldeapucela.org/';
+const DEFAULT_TRACKER_URL = 'https://stats.arandadeduero.es/';
 const DEFAULT_SITE_ID = '29';
-const TRACKED_FAVORITES_STORAGE_KEY = 'fiestasPucela:analytics:saved-activities';
-const TRACKED_CASETA_FAVORITES_STORAGE_KEY = 'fiestasPucela:analytics:saved-casetas';
-const TRACKED_CASETA_DISH_LIKES_STORAGE_KEY = 'fiestasPucela:analytics:liked-caseta-dishes';
-const TRACKED_COMMUNITY_PLANS_STORAGE_KEY = 'fiestasPucela:analytics:added-community-plans';
+const TRACKED_FAVORITES_STORAGE_KEY = 'fiestasAranda:analytics:saved-activities';
+const TRACKED_CASETA_FAVORITES_STORAGE_KEY = 'fiestasAranda:analytics:saved-casetas';
+const TRACKED_CASETA_DISH_LIKES_STORAGE_KEY = 'fiestasAranda:analytics:liked-caseta-dishes';
+const TRACKED_COMMUNITY_PLANS_STORAGE_KEY = 'fiestasAranda:analytics:added-community-plans';
 
 const categoryActions = {
   activity: new Set(['view_detail', 'save', 'remove_save', 'share', 'open_directions', 'open_external_link', 'open_tickets']),

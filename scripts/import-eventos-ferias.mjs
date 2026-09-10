@@ -29,8 +29,8 @@ const cachePath = path.join(root, '.cache', 'fiestas', 'nominatim-location-cache
 const reportsDir = path.join(root, '.cache', 'fiestas', 'reports');
 const snapshotsDir = path.join(root, '.cache', 'fiestas', 'import-snapshots');
 const lockPath = path.join(root, '.cache', 'fiestas', 'event-import.lock');
-const sourceUrl = 'https://eventos.aldeapucela.org/site-data.json';
-const userAgent = 'AldeaPucelaFiestas/1.0 (contacto@aldeapucela.org)';
+const sourceUrl = 'https://eventos.arandadeduero.es/site-data.json';
+const userAgent = 'ArandaDeDueroFiestas/1.0 (contacto@arandadeduero.es)';
 const args = parseArgs(process.argv.slice(2));
 const execFile = promisify(execFileCallback);
 

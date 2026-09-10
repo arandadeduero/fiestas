@@ -16,15 +16,19 @@ import { assertRegistryIntegrity, normalizeImportRegistry } from './event-import
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const dist = path.join(root, 'dist');
-const publicBaseUrl = 'https://fiestas.aldeapucela.org';
+const publicBaseUrl = 'https://fiestas.arandadeduero.es';
+// Aranda de Duero no tiene casetas de feria de día. Con este flag desactivado no
+// se cargan los datos de casetas, no se generan sus páginas ni se incluye su
+// JS/UI. Se puede reactivar con FIESTAS_CASETAS_ENABLED=true.
+const casetasEnabled = parseBooleanEnv(process.env.FIESTAS_CASETAS_ENABLED) === true;
 const communityPromptCampaign = {
-  id: 'valladolid-2026',
-  startDate: '2026-08-31',
-  endDate: '2026-09-13'
+  id: 'aranda-2026',
+  startDate: '2026-09-07',
+  endDate: '2026-09-22'
 };
 const analyticsConfig = {
   enabled: parseBooleanEnv(process.env.FIESTAS_ANALYTICS_ENABLED),
-  trackerUrl: process.env.FIESTAS_MATOMO_URL || 'https://stats.aldeapucela.org/',
+  trackerUrl: process.env.FIESTAS_MATOMO_URL || 'https://stats.arandadeduero.es/',
   siteId: process.env.FIESTAS_MATOMO_SITE_ID || '29'
 };
 const communityPlanIcons = new Set([
@@ -38,8 +42,13 @@ const casetaPalette = [
 ];
 const casetaMenuCollator = new Intl.Collator('es', { sensitivity: 'base', numeric: true });
 const casetaDietaryLabels = new Set(['vegetarian', 'vegan']);
-const casetaCityCenter = { lat: 41.6523, lng: -4.7245 };
+const casetaCityCenter = { lat: 41.6706, lng: -3.6893 };
 const casetaCityRadiusKm = 12;
+// El transporte local (paradas y líneas de VallaBus) es específico de
+// Valladolid. En Aranda de Duero no hay una fuente equivalente, así que este
+// flag desactiva la descarga y la sección de transporte de las fichas. Se puede
+// reactivar con FIESTAS_TRANSIT_ENABLED=true (y FIESTAS_VALLABUS_STOPS_URL).
+const transitEnabled = parseBooleanEnv(process.env.FIESTAS_TRANSIT_ENABLED) === true;
 const vallabusStopsUrl = process.env.FIESTAS_VALLABUS_STOPS_URL || 'https://gtfs.vallabus.com/paradas/';
 const vallabusStopsTimeoutMs = 8000;
 const vallabusNearbyRadiusMeters = 500;
@@ -146,8 +155,13 @@ function socialCategorySlug(type = '') {
 }
 
 async function communityPlanSocial(communityPlan) {
-  const relativePath = `/assets/social/plans/${communityPlan.id}.jpg`;
-  await fs.access(path.join(root, 'src', relativePath));
+  // Imagen social propia del plan si existe; si no, la genérica de /planes/.
+  let relativePath = `/assets/social/plans/${communityPlan.id}.jpg`;
+  try {
+    await fs.access(path.join(root, 'src', relativePath));
+  } catch {
+    relativePath = '/assets/social/planes.jpg';
+  }
   return {
     image: publicBaseUrl + relativePath,
     imageAlt: `${communityPlan.name}, creado por ${communityPlan.author}`,
@@ -200,7 +214,12 @@ async function compileCss(cssVersionSeed) {
 }
 
 async function copyJs(jsVersionSeed) {
-  const files = ['analytics.js', 'plan-storage.js', 'plan-export.js', 'plans-page.js', 'community-plans.js', 'community-prompt.js', 'popular-page.js', 'popular-dishes-page.js', 'weather.js', 'fiestas-2026.js', 'casetas-page.js', 'casetas-navigation.js', 'search-text.js', 'casetas-favorites.js', 'caseta-dish-likes.js', 'menu-drawer.js', 'pwa.js', 'scroll-top.js', 'subscribe.js', 'theme.js', 'chatbot.js', 'visit-tracker.js', 'events-data.js'];
+  // casetas-navigation.js se mantiene siempre: es un import estático de
+  // fiestas-2026.js (solo resuelve la ruta de retorno). El resto de JS de
+  // casetas solo se incluye si las casetas están activadas.
+  const casetaOnlyJs = new Set(['casetas-page.js', 'popular-dishes-page.js', 'casetas-favorites.js', 'caseta-dish-likes.js']);
+  const files = ['analytics.js', 'plan-storage.js', 'plan-export.js', 'plans-page.js', 'community-plans.js', 'community-prompt.js', 'popular-page.js', 'popular-dishes-page.js', 'weather.js', 'fiestas-2026.js', 'casetas-page.js', 'casetas-navigation.js', 'search-text.js', 'casetas-favorites.js', 'caseta-dish-likes.js', 'menu-drawer.js', 'pwa.js', 'scroll-top.js', 'subscribe.js', 'theme.js', 'chatbot.js', 'visit-tracker.js', 'events-data.js']
+    .filter((file) => casetasEnabled || !casetaOnlyJs.has(file));
   const contents = new Map();
   for (const file of files) {
     const source = await fs.readFile(path.join(root, 'src', 'scripts', file), 'utf8');
@@ -289,7 +308,8 @@ async function copyCommunityPlansData(assetVersionSeed) {
     if (!url) throw new Error(`Community plan "${id}" must have a valid JSON url.`);
     ids.add(id);
     const metadata = await readCommunityPlanMetadata(url, id);
-    return { id, name, author, icon, url, ...metadata };
+    const hasSocialImage = await fs.access(path.join(root, 'src', 'assets', 'social', 'plans', `${id}.jpg`)).then(() => true, () => false);
+    return { id, name, author, icon, url, hasSocialImage, ...metadata };
   }));
   const content = JSON.stringify({
     schemaVersion: 1,
@@ -968,8 +988,8 @@ function eventStructuredData(event) {
     },
     organizer: {
       '@type': 'Organization',
-      name: 'Aldea Pucela',
-      url: 'https://aldeapucela.org'
+      name: 'Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
+      url: 'https://www.arandadeduero.es'
     }
   };
   if (event.endTime) data.endDate = eventDateTime(eventEndDate(event.date, event.startTime, event.endTime), event.endTime);
@@ -1106,6 +1126,7 @@ function pageContext({ assetVersion, cssVersion, jsVersion, fontAwesomeVersions,
     modulePreloads: ['menu-drawer', 'subscribe', 'theme', 'analytics', 'plan-storage', 'plan-export', 'plans-page', 'community-plans', 'community-prompt', 'popular-page', 'weather', 'events-data', 'search-text', 'casetas-navigation']
       .map((name) => '/assets/js/' + name + '.' + jsVersion + '.js'),
     communityPlansUrl: '/data/planes.json',
+    casetasEnabled,
     assetVersion,
     cssVersion,
     jsVersion,
@@ -1113,7 +1134,7 @@ function pageContext({ assetVersion, cssVersion, jsVersion, fontAwesomeVersions,
     eventAliases,
     eventAliasVersion,
     communityPromptCampaign,
-    // Integración externa aprobada: el modal de suscripción usa el calendario/RSS global de Aldea Pucela Eventos.
+    // Integración externa aprobada: el modal de suscripción usa el calendario/RSS global de Eventos de Aranda de Duero.
     categoryFeeds: [],
     publicBaseUrl,
     analyticsConfig
@@ -1136,10 +1157,12 @@ async function build() {
   const fontAwesomeVersions = await readFontAwesomeVersions();
   const communityPlans = await copyCommunityPlansData(assetVersionSeed);
   await copyCommunityPlanFiles(assetVersionSeed);
-  const vallabusStops = await loadVallabusStops();
-  const casetas = await loadCasetas(vallabusStops);
-  await copyCasetasData(casetas, assetVersionSeed);
-  await verifyCasetaQrPosters(casetas);
+  const vallabusStops = transitEnabled ? await loadVallabusStops() : [];
+  const casetas = casetasEnabled ? await loadCasetas(vallabusStops) : [];
+  if (casetasEnabled) {
+    await copyCasetasData(casetas, assetVersionSeed);
+    await verifyCasetaQrPosters(casetas);
+  }
   const communityPlanMemberships = await loadCommunityPlanMemberships(communityPlans);
   const pwaFiles = await loadPwaFiles();
   const events = await loadEvents(vallabusStops);
@@ -1173,13 +1196,13 @@ async function build() {
 
   const homeContext = {
     ...pageContext(versions),
-    title: 'Fiestas Valladolid 2026 | Aldea Pucela',
+    title: 'Fiestas Valladolid 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
     meta: { description: 'Agenda de las Fiestas de Valladolid 2026 por días, horarios, espacios, categorías y mapa.' },
     canonicalUrl: publicBaseUrl + '/',
     social: {
-      type: 'website', title: 'Fiestas Valladolid 2026 | Aldea Pucela',
+      type: 'website', title: 'Fiestas Valladolid 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
       description: 'Agenda de las Fiestas de Valladolid 2026 por días, horarios, espacios, categorías y mapa.',
-      image: socialImage, imageAlt: 'Fiestas de Valladolid 2026 | Aldea Pucela',
+      image: socialImage, imageAlt: 'Fiestas de Valladolid 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
       imageWidth: 1200, imageHeight: 630, imageType: 'image/jpeg', url: publicBaseUrl + '/'
     },
     eventsDataUrl,
@@ -1193,15 +1216,16 @@ async function build() {
   await writeFile('mapa/index.html', render('fiestas-2026.njk', {
     ...homeContext,
     mapPage: true,
-    title: 'Mapa de Fiestas Valladolid 2026 | Aldea Pucela',
+    title: 'Mapa de Fiestas Valladolid 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
     canonicalUrl: publicBaseUrl + '/mapa/',
     social: {
       ...homeContext.social,
-      title: 'Mapa de Fiestas Valladolid 2026 | Aldea Pucela',
+      title: 'Mapa de Fiestas Valladolid 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
       url: publicBaseUrl + '/mapa/'
     }
   }));
 
+  if (casetasEnabled) {
   await writeFile('casetas/index.html', render('fiestas-2026-casetas.njk', {
     ...pageContext(versions),
     title: 'Casetas Feria de Día - Fiestas Valladolid 2026',
@@ -1221,6 +1245,7 @@ async function build() {
     fiestasCasetasJson: jsonForScript(casetas),
     fiestasCasetasZones: [...new Set(casetas.map((caseta) => caseta.zone))]
   }));
+  }
 
   await writeFile('populares/index.html', render('fiestas-2026-popular.njk', {
     ...homeContext,
@@ -1236,6 +1261,7 @@ async function build() {
     }
   }));
 
+  if (casetasEnabled) {
   await writeFile('pinchos-populares/index.html', render('fiestas-2026-popular-dishes.njk', {
     ...pageContext(versions),
     title: 'Pinchos populares | Fiestas Valladolid 2026',
@@ -1254,6 +1280,7 @@ async function build() {
     },
     fiestasCasetasJson: jsonForScript(casetas)
   }));
+  }
 
   await writeFile('plan/index.html', render('fiestas-2026-plan.njk', {
     ...homeContext,
@@ -1299,12 +1326,12 @@ async function build() {
   await writeFile('colaboradores/index.html', render('fiestas-2026-collaborators.njk', {
     ...pageContext(versions),
     title: 'Colaboradores | Fiestas Valladolid 2026',
-    meta: { description: 'Entidades y personas que ayudan a difundir las Fiestas Valladolid 2026 de Aldea Pucela.' },
+    meta: { description: 'Entidades y personas que ayudan a difundir las Fiestas de Aranda de Duero 2026 de la Concejalía de Innovación.' },
     canonicalUrl: publicBaseUrl + '/colaboradores/',
     social: {
       ...homeContext.social,
       title: 'Colaboradores | Fiestas Valladolid 2026',
-      description: 'Entidades y personas que ayudan a difundir las Fiestas Valladolid 2026 de Aldea Pucela.',
+      description: 'Entidades y personas que ayudan a difundir las Fiestas de Aranda de Duero 2026 de la Concejalía de Innovación.',
       url: publicBaseUrl + '/colaboradores/'
     }
   }));
@@ -1430,7 +1457,13 @@ async function build() {
     }
   }
 
-  const urls = ['/', '/mapa/', '/casetas/', '/populares/', '/pinchos-populares/', '/planes/', '/colaboradores/', ...communityPlans.map((plan) => `/planes/${plan.id}/`), ...casetas.flatMap((caseta) => [caseta.urlPath, casetaQrPath(caseta.publicSlug)]), ...events.map((event) => event.urlPath)];
+  const urls = [
+    '/', '/mapa/', '/populares/', '/planes/', '/colaboradores/',
+    ...(casetasEnabled ? ['/casetas/', '/pinchos-populares/'] : []),
+    ...communityPlans.map((plan) => `/planes/${plan.id}/`),
+    ...casetas.flatMap((caseta) => [caseta.urlPath, casetaQrPath(caseta.publicSlug)]),
+    ...events.map((event) => event.urlPath)
+  ];
   const sitemap = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',

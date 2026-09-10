@@ -107,7 +107,7 @@ function buildSvg({ plan }) {
 
   <rect x="70" y="195" width="9" height="194" rx="4" fill="#0b9e95" />
   <text x="107" y="251" font-family="DejaVu Sans, Arial, sans-serif" font-size="56" font-weight="700" fill="#20232b">${titleMarkup}</text>
-  <text x="107" y="450" font-family="DejaVu Sans, Arial, sans-serif" font-size="28" fill="#6a7285">por ${escapeXml(plan.author || 'Aldea Pucela')}</text>
+  <text x="107" y="450" font-family="DejaVu Sans, Arial, sans-serif" font-size="28" fill="#6a7285">por ${escapeXml(plan.author || 'Ayuntamiento de Aranda de Duero. Concejalía de Innovación')}</text>
 </svg>`;
 }
 
@@ -122,7 +122,7 @@ function buildIllustratedOverlaySvg({ plan }) {
   <text x="133" y="86" font-family="DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="0.5" fill="#b9eee8">FIESTAS VALLADOLID 2026</text>
   <rect x="70" y="195" width="9" height="194" rx="4" fill="#4cd5c7" />
   <text x="107" y="251" font-family="DejaVu Sans, Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff">${titleMarkup}</text>
-  <text x="107" y="450" font-family="DejaVu Sans, Arial, sans-serif" font-size="28" fill="#b9eee8">por ${escapeXml(plan.author || 'Aldea Pucela')}</text>
+  <text x="107" y="450" font-family="DejaVu Sans, Arial, sans-serif" font-size="28" fill="#b9eee8">por ${escapeXml(plan.author || 'Ayuntamiento de Aranda de Duero. Concejalía de Innovación')}</text>
 </svg>`;
 }
 

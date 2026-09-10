@@ -6,7 +6,7 @@ delete globalThis.document;
 
 const prompt = await import(`./community-prompt.js?test=${Date.now()}`);
 const campaign = prompt.DEFAULT_COMMUNITY_PROMPT_CAMPAIGN;
-const campaignDate = new Date('2026-09-05T12:00:00').getTime();
+const campaignDate = new Date('2026-09-13T12:00:00').getTime();
 
 test('requires two active days and one relevant action', () => {
   const state = {
@@ -16,7 +16,7 @@ test('requires two active days and one relevant action', () => {
 
   assert.equal(prompt.canShowCommunityPrompt({ state, visitedDays: 1, campaign, now: campaignDate }), false);
   assert.equal(prompt.canShowCommunityPrompt({ state, visitedDays: 2, campaign, now: campaignDate }), true);
-  assert.equal(prompt.canShowCommunityPrompt({ state, visitedDays: 2, campaign, now: new Date('2026-09-14T00:00:00').getTime() }), false);
+  assert.equal(prompt.canShowCommunityPrompt({ state, visitedDays: 2, campaign, now: new Date('2026-09-30T00:00:00').getTime() }), false);
 });
 
 test('allows only two exposures and applies a five-day cooldown', () => {

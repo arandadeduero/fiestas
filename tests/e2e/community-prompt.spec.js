@@ -1,8 +1,8 @@
 import { test, expect } from './fixtures.js';
 
-const COMMUNITY_PROMPT_STATE_KEY = 'fiestasPucela:community-prompt:v1';
-const COMMUNITY_PROMPT_ACTIVE_SESSION_KEY = 'fiestasPucela:community-prompt:active:v1';
-const VISIT_TRACKER_KEY = 'fiestasPucela:visit-tracker';
+const COMMUNITY_PROMPT_STATE_KEY = 'fiestasAranda:community-prompt:v1';
+const COMMUNITY_PROMPT_ACTIVE_SESSION_KEY = 'fiestasAranda:community-prompt:active:v1';
+const VISIT_TRACKER_KEY = 'fiestasAranda:visit-tracker';
 
 async function seedEligibleVisitor(page) {
   await page.addInitScript(({ visitTrackerKey, promptStateKey, activeSessionKey }) => {
@@ -18,7 +18,7 @@ async function seedEligibleVisitor(page) {
     if (!localStorage.getItem(promptStateKey)) {
       localStorage.setItem(promptStateKey, JSON.stringify({
         schemaVersion: 1,
-        campaignId: 'valladolid-2026',
+        campaignId: 'aranda-2026',
         exposureCount: 0,
         lastShownAt: 0,
         nextEligibleAt: 0,
@@ -27,7 +27,7 @@ async function seedEligibleVisitor(page) {
       }));
       sessionStorage.removeItem(activeSessionKey);
     }
-    const fixedNow = new Date('2026-09-05T12:00:00+02:00').getTime();
+    const fixedNow = new Date('2026-09-13T12:00:00+02:00').getTime();
     Date.now = () => fixedNow;
   }, {
     visitTrackerKey: VISIT_TRACKER_KEY,
@@ -39,7 +39,7 @@ async function seedEligibleVisitor(page) {
 async function triggerRelevantAction(page) {
   await page.evaluate(() => {
     window.dispatchEvent(new CustomEvent('fiestas:engagement', {
-      detail: { category: 'activity', action: 'save', name: '307' }
+      detail: { category: 'activity', action: 'save', name: '30' }
     }));
   });
 }
@@ -99,11 +99,11 @@ test('los clics de canal mantienen el banner abierto y aplican el silencio', asy
   expect(state.nextEligibleAt).toBeGreaterThan(Date.now());
   expect(state.neverAgain).toBe(false);
 
-  await page.locator('[data-community-prompt-channel="chat"]').evaluate((link) => {
+  await page.locator('[data-community-prompt-channel="instagram"]').evaluate((link) => {
     link.removeAttribute('target');
     link.addEventListener('click', (event) => event.preventDefault(), { once: true });
   });
-  await page.locator('[data-community-prompt-channel="chat"]').click();
+  await page.locator('[data-community-prompt-channel="instagram"]').click();
   await expect(prompt).toBeVisible();
 });
 
@@ -125,7 +125,7 @@ test('no vuelve a mostrarse al navegar si el visitante todavía no lo ha cerrado
 
 test('no aparece al abrir una ficha y aparece al volver a la agenda', async ({ page }) => {
   await seedEligibleVisitor(page);
-  await page.goto('/e/1/gira-de-verano-nintendo/');
+  await page.goto('/e/1/escaparate-de-fiestas/');
   const prompt = page.locator('[data-community-prompt]');
 
   await expect(prompt).toBeHidden();

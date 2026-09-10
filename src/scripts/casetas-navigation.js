@@ -1,5 +1,5 @@
 const CASETAS_PATH = '/casetas/';
-const NAVIGATION_BASE_URL = 'https://fiestas.aldeapucela.org';
+const NAVIGATION_BASE_URL = 'https://fiestas.arandadeduero.es';
 
 function isCasetasPath(pathname) {
   return String(pathname || '').replace(/\/+$/, '') === '/casetas';

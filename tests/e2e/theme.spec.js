@@ -13,7 +13,7 @@ test('el tema cambia y se conserva al navegar', async ({ page }) => {
   await page.locator('[data-theme-toggle]').first().click();
   await expect.poll(isDark).toBe(!before);
 
-  const stored = await page.evaluate(() => window.localStorage.getItem('aldeapucela_theme'));
+  const stored = await page.evaluate(() => window.localStorage.getItem('arandadeduero_theme'));
   expect(stored).toBe(before ? 'light' : 'dark');
 
   await page.goto('/mapa/');

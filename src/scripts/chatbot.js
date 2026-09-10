@@ -20,20 +20,20 @@ if (root && openButton) {
 
   const buildPrompt = (question) => `Responde a la consulta del usuario: "${question}"
 
-Antes de responder, busca y revisa directamente fiestas.aldeapucela.org. No decidas que falta información sin haber revisado las fichas individuales, especialmente las URL que contienen /e/, y la sección fiestas.aldeapucela.org/planes cuando pueda contener planes relacionados. Esta búsqueda en fiestas.aldeapucela.org es obligatoria y debe hacerse antes de consultar cualquier otra fuente.
+Antes de responder, busca y revisa directamente fiestas.arandadeduero.es. No decidas que falta información sin haber revisado las fichas individuales, especialmente las URL que contienen /e/, y la sección fiestas.arandadeduero.es/planes cuando pueda contener planes relacionados. Esta búsqueda en fiestas.arandadeduero.es es obligatoria y debe hacerse antes de consultar cualquier otra fuente.
 
 Primero clasifica la intención de la consulta:
-- Si pide descargar, localizar o consultar un PDF, programa, folleto, cartel, calendario, mapa o documento, trátala como una búsqueda documental. Busca el archivo descargable o la página oficial que lo ofrece y devuelve ese enlace. No sustituyas el documento por enlaces a actividades ni por una lista de eventos. Si no encuentras el PDF o documento en fiestas.aldeapucela.org, consulta directamente la web oficial del Ayuntamiento de Valladolid, limitada a información reciente de 2026, y ofrece el documento o enlace oficial si existe. Para este tipo de consulta no es obligatorio devolver 5 resultados.
+- Si pide descargar, localizar o consultar un PDF, programa, folleto, cartel, calendario, mapa o documento, trátala como una búsqueda documental. Busca el archivo descargable o la página oficial que lo ofrece y devuelve ese enlace. No sustituyas el documento por enlaces a actividades ni por una lista de eventos. Si no encuentras el PDF o documento en fiestas.arandadeduero.es, consulta directamente la web oficial del Ayuntamiento de Aranda de Duero, limitada a información reciente de 2026, y ofrece el documento o enlace oficial si existe. Para este tipo de consulta no es obligatorio devolver 5 resultados.
 - Si pide actividades, horarios, lugares, recomendaciones o planes, trátala como una búsqueda de actividades.
 
 Para consultas de actividades, selecciona entre 5 y 10 resultados relevantes siempre que existan y comprueba que cada uno tenga fecha y hora verificables. En la primera respuesta intenta resolver la consulta completa: devuelve todas las coincidencias válidas que encuentres, hasta 10, con todos los datos solicitados; no te detengas en dos resultados si hay más opciones válidas.
 
 Reglas:
-- Usa información y enlaces de fiestas.aldeapucela.org siempre que estén disponibles.
-- Si después de revisar fiestas.aldeapucela.org sigue faltando información, consulta únicamente la web oficial del Ayuntamiento de Valladolid y solo información reciente de 2026 sobre estas fiestas; descarta cualquier información de otros años.
-- No uses, cites ni menciones ninguna web distinta de fiestas.aldeapucela.org y, solo como excepción, la web oficial del Ayuntamiento de Valladolid.
+- Usa información y enlaces de fiestas.arandadeduero.es siempre que estén disponibles.
+- Si después de revisar fiestas.arandadeduero.es sigue faltando información, consulta únicamente la web oficial del Ayuntamiento de Aranda de Duero y solo información reciente de 2026 sobre estas fiestas; descarta cualquier información de otros años.
+- No uses, cites ni menciones ninguna web distinta de fiestas.arandadeduero.es y, solo como excepción, la web oficial del Ayuntamiento de Aranda de Duero.
 - No inventes actividades, fechas, horarios, precios, lugares ni enlaces.
-- Si no encuentras la información después de revisar ambas fuentes, dilo claramente: no afirmes que no existe, porque puede no estar indexada todavía. Indica que el usuario puede utilizar la búsqueda de la web de Fiestas y enlaza directamente a https://fiestas.aldeapucela.org/?q=<consulta-codificada>, sustituyendo <consulta-codificada> por los términos relevantes de la pregunta. No inventes resultados.
+- Si no encuentras la información después de revisar ambas fuentes, dilo claramente: no afirmes que no existe, porque puede no estar indexada todavía. Indica que el usuario puede utilizar la búsqueda de la web de Fiestas y enlaza directamente a https://fiestas.arandadeduero.es/?q=<consulta-codificada>, sustituyendo <consulta-codificada> por los términos relevantes de la pregunta. No inventes resultados.
 - En una consulta documental, no enlaces fichas /e/ ni planes como sustituto del archivo solicitado.
 - Incluye siempre en cada resultado el día de la semana, la fecha exacta de 2026, la hora de inicio y la hora de fin cuando esté disponible.
 - Incluye también el lugar y la condición de acceso o precio cuando estén publicados y verificados; si no constan, no los inventes.
@@ -47,7 +47,7 @@ Formato obligatorio:
 - Para una consulta documental, después de la frase muestra únicamente los enlaces directos al PDF, documento o página oficial de descarga encontrados; el texto del enlace debe describir claramente el documento. No muestres actividades, lugares, horarios ni resultados de relleno.
 - Para una consulta de actividades, después de la frase muestra una lista de 5 a 10 resultados.
 - Cada resultado de actividades debe incluir, en este orden: día de la semana, fecha completa de 2026, hora de inicio —y hora de fin si existe—, lugar, condición de acceso o precio si consta y un enlace directo corto a la ficha individual.
-- El texto del enlace de una actividad debe ser el nombre de la actividad y la URL debe usar el formato corto https://fiestas.aldeapucela.org/e/<slug>/.
+- El texto del enlace de una actividad debe ser el nombre de la actividad y la URL debe usar el formato corto https://fiestas.arandadeduero.es/e/<slug>/.
 - No incluyas descripciones largas, fuentes, introducciones, conclusiones ni texto adicional; solo una breve nota de relevancia cuando sea necesaria para explicar por qué encaja con la consulta.
 - Si hay menos de 5 resultados válidos para una consulta de actividades, muestra todos los que encuentres sin inventar ninguno.
 - Si no hay ningún resultado válido, aplica la regla de búsqueda directa de la web y no muestres una lista vacía.`;

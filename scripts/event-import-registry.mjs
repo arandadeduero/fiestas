@@ -6,7 +6,7 @@ export const PENDING_REVIEW_STATUS = 'pending_review';
 export function emptyImportRegistry() {
   return {
     schemaVersion: EVENT_IMPORT_REGISTRY_VERSION,
-    source: 'eventos.aldeapucela.org',
+    source: 'eventos.arandadeduero.es',
     remoteEvents: {},
     localAliases: {}
   };

@@ -9240,19 +9240,48 @@ html.dark .fiestas-community-plan-preview-item {
   font-size: 0.7rem;
 }
 
+.fiestas-community-plan-card-media--cover {
+  aspect-ratio: auto;
+  height: 5.5rem;
+}
+
+.fiestas-community-plan-card-cover {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #efeaf7, #e2f4f1);
+  color: #73579f;
+  font-size: 2.1rem;
+}
+
 .fiestas-community-plan-card-footer {
   display: flex;
   min-width: 0;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.55rem;
-  padding: 0.65rem 0.85rem 0.8rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  padding: 0.7rem 0.85rem 0.8rem;
 }
 
 .fiestas-community-plan-card-body {
   display: block;
   min-width: 0;
   flex: 1 1 auto;
+}
+
+.fiestas-community-plan-card-name {
+  display: -webkit-box;
+  margin: 0 0 0.12rem;
+  overflow: hidden;
+  color: #1d2430;
+  font-size: 0.98rem;
+  font-weight: 900;
+  line-height: 1.24;
+  letter-spacing: -0.01em;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .fiestas-community-plan-card-meta {
@@ -9490,6 +9519,47 @@ html.dark .fiestas-community-plan-preview-item {
   text-overflow: ellipsis;
 }
 
+/* Hero de respaldo cuando el plan no tiene cartel propio. */
+.fiestas-community-plan-detail-hero--textual {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  aspect-ratio: auto;
+  padding: 1.5rem 0.9rem 1.1rem;
+  background: linear-gradient(135deg, #2a1c3d, #123f3a);
+}
+
+.fiestas-community-plan-detail-hero--textual::after {
+  display: none;
+}
+
+.fiestas-community-plan-detail-hero--textual .fiestas-community-plan-detail-hero-stats {
+  position: static;
+  padding: 0;
+}
+
+.fiestas-community-plan-detail-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  color: #b9eee8;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.fiestas-community-plan-detail-hero-title {
+  margin: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+}
+
 .fiestas-community-plan-detail > *,
 .fiestas-community-plan-detail .fiestas-plan-timeline,
 .fiestas-community-plan-detail .fiestas-plan-timeline-row,
@@ -9697,6 +9767,11 @@ html.dark .fiestas-community-plans-intro,
 html.dark .fiestas-community-plan-card-icon,
 html.dark .fiestas-community-plans-empty > i {
   background: #292332;
+}
+
+html.dark .fiestas-community-plan-card-cover {
+  background: linear-gradient(135deg, #2a2436, #17342f);
+  color: #c9b6ec;
 }
 
 html.dark .fiestas-community-plans-intro h2,

@@ -1,6 +1,6 @@
 import { test, expect, loadClientEvents } from './fixtures.js';
 
-const FAVORITES_KEY = 'fiestasPucela:favorites';
+const FAVORITES_KEY = 'fiestasAranda:favorites';
 function localDateKey(date) {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -45,7 +45,10 @@ test('guardar una actividad persiste en localStorage y sobrevive a recargar', as
   }).not.toContain(activityId);
 });
 
-test('Mi plan usa la miniatura optimizada de una actividad con imagen', async ({ page }) => {
+// El programa de Aranda de Duero todavía no trae carteles propios de cada
+// actividad, así que ninguna ficha tiene imagen local que optimizar. Reactivar
+// cuando `events.json` incluya al menos un evento con `image`.
+test.skip('Mi plan usa la miniatura optimizada de una actividad con imagen', async ({ page }) => {
   await page.goto('/?date=all');
   const card = page.locator('[data-fiestas-card]').filter({ hasText: 'Tío Tragaldabas' }).first();
   await expect(card).toBeVisible();
@@ -69,7 +72,7 @@ test('Mis guardados muestra todos los días y pliega las actividades pasadas', a
   expect(open).toBeTruthy();
 
   await page.evaluate(({ pastId, openId }) => {
-    localStorage.setItem('fiestasPucela:favorites', JSON.stringify([pastId, openId]));
+    localStorage.setItem('fiestasAranda:favorites', JSON.stringify([pastId, openId]));
   }, { pastId: past.id, openId: open.id });
   await page.goto('/plan/');
 
@@ -98,7 +101,7 @@ test('los planes personalizados pliegan las actividades pasadas y mantienen los 
   expect(open).toBeTruthy();
 
   await page.evaluate(({ pastId, openId }) => {
-    localStorage.setItem('fiestasPucela:plans', JSON.stringify({
+    localStorage.setItem('fiestasAranda:plans', JSON.stringify({
       schemaVersion: 1,
       plans: [{
         id: 'local-e2e-plan',
@@ -145,7 +148,7 @@ test('importar un plan por hash válido lo previsualiza y lo guarda', async ({ p
   await page.locator('[data-plan-import-shared-add]').click();
   await expect(page.locator('[data-plan-import-status]')).toContainText(/añadido a Mi plan/i);
 
-  const plans = await page.evaluate(() => JSON.parse(window.localStorage.getItem('fiestasPucela:plans') || '{}'));
+  const plans = await page.evaluate(() => JSON.parse(window.localStorage.getItem('fiestasAranda:plans') || '{}'));
   expect(plans.plans?.length).toBeGreaterThan(0);
 });
 
@@ -160,15 +163,15 @@ test('un hash corrupto muestra el error y no rompe la página', async ({ page })
 
 test('migra favoritos y planes personales que apuntan a un evento fusionado', async ({ page }) => {
   await page.addInitScript(() => {
-    localStorage.setItem('fiestasPucela:favorites', JSON.stringify(['583']));
-    localStorage.setItem('fiestasPucela:plans', JSON.stringify({
+    localStorage.setItem('fiestasAranda:favorites', JSON.stringify(['583']));
+    localStorage.setItem('fiestasAranda:plans', JSON.stringify({
       schemaVersion: 1,
       plans: [{
         id: 'local-legacy-plan',
         name: 'Plan antiguo',
         createdAt: '2026-08-20T10:00:00.000Z',
         updatedAt: '2026-08-20T10:00:00.000Z',
-        activityIds: ['583', '783'],
+        activityIds: ['583', '28'],
         icon: 'music'
       }]
     }));
@@ -176,9 +179,9 @@ test('migra favoritos y planes personales que apuntan a un evento fusionado', as
   await page.goto('/');
 
   await expect.poll(async () => page.evaluate(() => ({
-    favorites: JSON.parse(localStorage.getItem('fiestasPucela:favorites') || '[]'),
-    planIds: JSON.parse(localStorage.getItem('fiestasPucela:plans') || '{}').plans?.[0]?.activityIds
-  }))).toEqual({ favorites: ['783'], planIds: ['783'] });
+    favorites: JSON.parse(localStorage.getItem('fiestasAranda:favorites') || '[]'),
+    planIds: JSON.parse(localStorage.getItem('fiestasAranda:plans') || '{}').plans?.[0]?.activityIds
+  }))).toEqual({ favorites: ['28'], planIds: ['28'] });
 });
 
 test('un hash antiguo resuelve aliases hacia el evento canónico', async ({ page }) => {

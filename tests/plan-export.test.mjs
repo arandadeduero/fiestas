@@ -11,7 +11,7 @@ const activity = {
   title: 'Cine de verano familiar',
   location: 'Plaza Mayor',
   description: 'Una sesión de cine al aire libre.',
-  canonicalUrl: 'https://fiestas.aldeapucela.org/e/2044/cine-de-verano-familiar/'
+  canonicalUrl: 'https://fiestas.arandadeduero.es/e/2044/cine-de-verano-familiar/'
 };
 
 test('creates a multi-event ICS for a plan with local Valladolid times', () => {
@@ -35,7 +35,7 @@ test('keeps an activity that crosses midnight on the following date', () => {
 });
 
 test('creates direct Google Calendar and Outlook links for one activity', () => {
-  const links = createCalendarLinks(activity, 'https://fiestas.aldeapucela.org/e/2044/cine-de-verano-familiar/');
+  const links = createCalendarLinks(activity, 'https://fiestas.arandadeduero.es/e/2044/cine-de-verano-familiar/');
   const google = new URL(links.google);
   const outlook = new URL(links.outlook);
 

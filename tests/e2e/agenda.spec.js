@@ -39,36 +39,43 @@ test.describe('agenda', () => {
   });
 
   test('coloca el día anterior inmediato junto a Todos y no reordena al cambiar de día', async ({ page }) => {
-    await page.goto('/?date=2026-09-06');
+    await page.goto('/?date=2026-09-14');
 
     const dates = page.locator('[data-fiestas-dates] [data-date]');
     const initialOrder = [
+      '2026-09-01',
+      '2026-09-03',
       '2026-09-04',
       '2026-09-05',
-      'all',
       '2026-09-06',
-      '2026-09-07',
-      '2026-09-08',
       '2026-09-09',
       '2026-09-10',
       '2026-09-11',
       '2026-09-12',
-      '2026-09-13'
+      '2026-09-13',
+      'all',
+      '2026-09-14',
+      '2026-09-15',
+      '2026-09-16',
+      '2026-09-17',
+      '2026-09-18',
+      '2026-09-19',
+      '2026-09-20'
     ];
     await expect.poll(() => dates.evaluateAll((cards) => cards.map((card) => card.dataset.date))).toEqual(initialOrder);
-    await expect(dates.nth(1)).toHaveAttribute('data-date', '2026-09-05');
-    await expect(dates.nth(2)).toHaveAttribute('data-date', 'all');
-    await expect(dates.nth(3)).toHaveAttribute('data-date', '2026-09-06');
-    await expect(dates.nth(3)).toHaveClass(/is-active/);
+    await expect(dates.nth(9)).toHaveAttribute('data-date', '2026-09-13');
+    await expect(dates.nth(10)).toHaveAttribute('data-date', 'all');
+    await expect(dates.nth(11)).toHaveAttribute('data-date', '2026-09-14');
+    await expect(dates.nth(11)).toHaveClass(/is-active/);
     await expect.poll(() => dates.locator('..').evaluate((strip) => strip.scrollLeft)).toBeGreaterThan(0);
 
-    await page.locator('[data-fiestas-dates] [data-date="2026-09-07"]').click();
+    await page.locator('[data-fiestas-dates] [data-date="2026-09-16"]').click();
     await expect.poll(() => dates.evaluateAll((cards) => cards.map((card) => card.dataset.date))).toEqual(initialOrder);
-    await expect(dates.nth(4)).toHaveClass(/is-active/);
+    await expect(dates.nth(13)).toHaveClass(/is-active/);
   });
 
   test('señala las medidas de accesibilidad sin ocultarlas en la tarjeta', async ({ page }) => {
-    await page.goto('/?date=2026-09-09&q=tesoro');
+    await page.goto('/?date=2026-09-11&q=acto oficial');
 
     const card = page.locator('[data-fiestas-card]:visible').first();
     await expect(card).toBeVisible();
@@ -79,7 +86,7 @@ test.describe('agenda', () => {
   });
 
   test('pliega las actividades finalizadas sin forzar el scroll', async ({ page }) => {
-    const fixedNow = new Date('2026-09-04T16:31:00+02:00').getTime();
+    const fixedNow = new Date('2026-09-14T13:00:00+02:00').getTime();
     await page.addInitScript((timestamp) => {
       const NativeDate = Date;
       class FixedDate extends NativeDate {
@@ -95,7 +102,7 @@ test.describe('agenda', () => {
       FixedDate.UTC = NativeDate.UTC;
       window.Date = FixedDate;
     }, fixedNow);
-    await page.goto('/?date=2026-09-04');
+    await page.goto('/?date=2026-09-14');
 
     const toggle = page.locator('[data-fiestas-finished-toggle]');
     const finishedList = page.locator('[data-fiestas-finished-list]');
@@ -114,7 +121,7 @@ test.describe('agenda', () => {
   });
 
   test('alterna entre el orden por hora y el orden por popularidad', async ({ page }) => {
-    await page.goto('/?date=2026-09-04');
+    await page.goto('/?date=2026-09-14');
 
     const visibleEventCards = page.locator(`${cards}:visible`);
     const initialIds = await visibleEventCards.evaluateAll((items) => items.map((item) => item.dataset.fiestasCard));
@@ -122,7 +129,7 @@ test.describe('agenda', () => {
 
     const popularId = initialIds[1];
     await page.evaluate((eventId) => {
-      window.localStorage.setItem('fiestasValladolid:popularMetrics:v1', JSON.stringify({
+      window.localStorage.setItem('fiestasAranda:popularMetrics:v1', JSON.stringify({
         ok: true,
         cachedAt: Date.now(),
         activities: [{ id: eventId, saveCount: 99 }]
@@ -144,7 +151,7 @@ test.describe('agenda', () => {
 
   // Flujo 2
   test('la búsqueda filtra y se puede limpiar', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/?date=2026-09-14');
     await expect(page.locator(visibleCards).first()).toBeVisible();
     const total = await page.locator(cards).count();
 

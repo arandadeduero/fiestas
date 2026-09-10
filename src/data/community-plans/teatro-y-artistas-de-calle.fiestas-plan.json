@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "festival": "valladolid-2026",
+  "exportedAt": "2026-09-01T10:00:00Z",
+  "plans": [
+    {
+      "name": "Teatro y artistas de calle",
+      "icon": "theater",
+      "activityIds": [
+        "10",
+        "81",
+        "86",
+        "87",
+        "97",
+        "104",
+        "105",
+        "115",
+        "119",
+        "120"
+      ]
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 import { trackCasetaDishLiked, trackCasetaDishUnliked } from './analytics.js';
 
-export const CASETA_DISH_LIKES_STORAGE_KEY = 'fiestasPucela:liked-caseta-dishes';
+export const CASETA_DISH_LIKES_STORAGE_KEY = 'fiestasAranda:liked-caseta-dishes';
 
 const casetaDishLikesChangedEvent = 'fiestas:caseta-dish-likes-changed';
-const CASETA_DISH_LIKES_API_URL = 'https://api.aldeapucela.org/fiestas/caseta-dish-likes';
+const CASETA_DISH_LIKES_API_URL = 'https://api.arandadeduero.es/fiestas/caseta-dish-likes';
 const LIKES_REQUEST_TIMEOUT = 5000;
 
 let initialized = false;

@@ -98,7 +98,7 @@ jobs:
           for date in "${dates[@]}"; do
             for suffix in '' '-post' '-post-2'; do
               file="${date}${suffix}.jpg"
-              url="https://fiestas.aldeapucela.org/daily-popular/${file}"
+              url="https://fiestas.arandadeduero.es/daily-popular/${file}"
               output="dist/daily-popular/${file}"
               if curl --fail --silent --show-error --location --retry 3 --retry-delay 2 "$url" --output "$output"; then
                 echo "Conservado $file desde Pages"
@@ -109,7 +109,7 @@ jobs:
             done
 
             file="${date}.json"
-            url="https://fiestas.aldeapucela.org/daily-popular/${file}"
+            url="https://fiestas.arandadeduero.es/daily-popular/${file}"
             output="dist/daily-popular/${file}"
             if curl --fail --silent --show-error --location --retry 3 --retry-delay 2 "$url" --output "$output"; then
               echo "Conservado $file desde Pages"

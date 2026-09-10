@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const eventsPath = path.join(root, 'src', 'data', 'fiestas-2026', 'events.json');
-const sourceBase = 'https://eventos.aldeapucela.org';
+const sourceBase = 'https://eventos.arandadeduero.es';
 const sitemapUrl = sourceBase + '/sitemap.xml';
 const writeChanges = process.argv.includes('--write');
 const concurrency = 8;
@@ -132,7 +132,7 @@ function extractJsonLd(html) {
 
 async function loadRemoteEvents() {
   const sitemap = await fetchText(sitemapUrl);
-  const urls = [...sitemap.matchAll(/<loc>(https:\/\/eventos\.aldeapucela\.org\/e\/[^<]+)<\/loc>/g)].map((match) => match[1]);
+  const urls = [...sitemap.matchAll(/<loc>(https:\/\/eventos\.arandadeduero\.es\/e\/[^<]+)<\/loc>/g)].map((match) => match[1]);
   const remotes = [];
   let nextIndex = 0;
 

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "festival": "valladolid-2026",
+  "exportedAt": "2026-09-01T10:00:00Z",
+  "plans": [
+    {
+      "name": "Feria de la Música en el Parque",
+      "icon": "music",
+      "activityIds": [
+        "32",
+        "51",
+        "70",
+        "144"
+      ]
+    }
+  ]
+}

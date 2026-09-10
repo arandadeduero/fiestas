@@ -1939,7 +1939,7 @@ html.dark .site-footer-copy a {
 }
 
 @layer components {
-  /* Copia del diálogo de envío de eventos de eventos.aldeapucela.org. */
+  /* Copia del diálogo de envío de eventos de eventos.arandadeduero.es. */
   .add-event-modal {
     position: fixed;
     inset: 0;

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-const STORAGE_KEY = 'fiestasPucela:visit-tracker';
+const STORAGE_KEY = 'fiestasAranda:visit-tracker';
 
 function installStorage(initialValue = null) {
   const values = new Map();

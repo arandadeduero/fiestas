@@ -47,16 +47,16 @@ function stubFor(url) {
     return { status: 200, contentType: 'image/png', headers: CORS, body: PIXEL_PNG };
   }
 
-  if (hostname === 'api.aldeapucela.org') {
+  if (hostname === 'api.arandadeduero.es') {
     if (pathname === '/weather') return json({ daily: [], hourly: [] });
     if (pathname === '/fiestas/saves') return json({ ok: true, activities: [] });
     if (pathname === '/fiestas/plan-adds') return json({ ok: true, plans: [] });
     return json({ ok: true });
   }
 
-  // Font Awesome y los carteles alojados en otros dominios de Aldea Pucela o
+  // Font Awesome y los carteles alojados en otros dominios de Ayuntamiento de Aranda de Duero. Concejalía de Innovación o
   // en las webs de venta de entradas: no aportan nada al comportamiento.
-  if (hostname === 'eventos.aldeapucela.org') {
+  if (hostname === 'eventos.arandadeduero.es') {
     return { status: 200, contentType: 'text/css; charset=utf-8', headers: CORS, body: '' };
   }
   if (/\.(png|jpe?g|webp|gif|svg|avif)$/i.test(pathname)) {

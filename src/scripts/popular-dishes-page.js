@@ -1,4 +1,4 @@
-const CASETA_DISH_LIKES_API_URL = 'https://api.aldeapucela.org/fiestas/caseta-dish-likes';
+const CASETA_DISH_LIKES_API_URL = 'https://api.arandadeduero.es/fiestas/caseta-dish-likes';
 const REQUEST_TIMEOUT = 5000;
 const popularDishCollator = new Intl.Collator('es', { numeric: true, sensitivity: 'base' });
 const MIN_VISIBLE_POPULAR_DISHES = 5;

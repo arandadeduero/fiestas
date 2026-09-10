@@ -1,8 +1,8 @@
-export const FAVORITES_STORAGE_KEY = 'fiestasPucela:favorites';
-export const PLANS_STORAGE_KEY = 'fiestasPucela:plans';
+export const FAVORITES_STORAGE_KEY = 'fiestasAranda:favorites';
+export const PLANS_STORAGE_KEY = 'fiestasAranda:plans';
 export const PLANS_SCHEMA_VERSION = 1;
 export const EVENT_ID_MIGRATION_VERSION = 1;
-export const EVENT_ID_MIGRATION_STORAGE_KEY = 'fiestasPucela:event-id-migration';
+export const EVENT_ID_MIGRATION_STORAGE_KEY = 'fiestasAranda:event-id-migration';
 export const DEFAULT_PLAN_ICON = 'layers';
 export const PLAN_ICON_OPTIONS = Object.freeze([
   { id: 'stars', label: 'Estrellas', className: 'fa-star' },

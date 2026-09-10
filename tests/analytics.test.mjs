@@ -1,18 +1,18 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-const TRACKED_FAVORITES_STORAGE_KEY = 'fiestasPucela:analytics:saved-activities';
-const TRACKED_CASETA_FAVORITES_STORAGE_KEY = 'fiestasPucela:analytics:saved-casetas';
-const TRACKED_CASETA_DISH_LIKES_STORAGE_KEY = 'fiestasPucela:analytics:liked-caseta-dishes';
-const TRACKED_COMMUNITY_PLANS_STORAGE_KEY = 'fiestasPucela:analytics:added-community-plans';
+const TRACKED_FAVORITES_STORAGE_KEY = 'fiestasAranda:analytics:saved-activities';
+const TRACKED_CASETA_FAVORITES_STORAGE_KEY = 'fiestasAranda:analytics:saved-casetas';
+const TRACKED_CASETA_DISH_LIKES_STORAGE_KEY = 'fiestasAranda:analytics:liked-caseta-dishes';
+const TRACKED_COMMUNITY_PLANS_STORAGE_KEY = 'fiestasAranda:analytics:added-community-plans';
 
 function installBrowserGlobals() {
   const values = new Map();
 
   globalThis.window = {
     location: {
-      hostname: 'fiestas.aldeapucela.org',
-      href: 'https://fiestas.aldeapucela.org/'
+      hostname: 'fiestas.arandadeduero.es',
+      href: 'https://fiestas.arandadeduero.es/'
     },
     navigator: { doNotTrack: '0' },
     localStorage: {

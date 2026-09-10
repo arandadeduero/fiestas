@@ -9,20 +9,20 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Fiestas Patronales de Aranda de Duero" />
-    <title>{{ title or 'Fiestas Patronales de Aranda de Duero 2026 | Sentir Aranda' }}</title>
+    <title>{{ title or 'Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación' }}</title>
     <link rel="icon" type="image/png" href="/assets/favicon-128.png" />
     <link rel="manifest" href="/assets/manifest.webmanifest" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
-    {# Integraciones externas aprobadas de Sentir Aranda Eventos. #}
-    <link rel="alternate" type="application/rss+xml" title="Sentir Aranda Eventos RSS" href="https://eventos.sentiraranda.es/rss.xml" />
-    <link rel="alternate" type="text/calendar" title="Sentir Aranda Eventos Calendario" href="https://eventos.sentiraranda.es/calendar.ics" />
+    {# Integraciones externas aprobadas de Eventos de Aranda de Duero. #}
+    <link rel="alternate" type="application/rss+xml" title="Eventos de Aranda de Duero · RSS" href="https://eventos.arandadeduero.es/rss.xml" />
+    <link rel="alternate" type="text/calendar" title="Eventos de Aranda de Duero · Calendario" href="https://eventos.arandadeduero.es/calendar.ics" />
     {% if canonicalUrl %}<link rel="canonical" href="{{ canonicalUrl }}" />{% endif %}
     {% if robotsMeta %}<meta name="robots" content="{{ robotsMeta }}" />{% endif %}
     {% if structuredData %}<script type="application/ld+json">{{ structuredData | dumpForScript | safe }}</script>{% endif %}
     {% if social %}
     <meta property="og:type" content="{{ social.type or 'website' }}" />
-    <meta property="og:site_name" content="Sentir Aranda" />
-    <meta property="og:title" content="{{ social.title or title or 'Fiestas Patronales de Aranda de Duero 2026 | Sentir Aranda' }}" />
+    <meta property="og:site_name" content="Ayuntamiento de Aranda de Duero. Concejalía de Innovación" />
+    <meta property="og:title" content="{{ social.title or title or 'Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación' }}" />
     <meta property="og:description" content="{{ social.description or meta.description or 'Agenda de las Fiestas de Aranda de Duero 2026' }}" />
     {% if social.image %}
     <meta property="og:image" content="{{ social.image }}" />
@@ -34,7 +34,7 @@
     {% endif %}
     {% if social.url %}<meta property="og:url" content="{{ social.url }}" />{% endif %}
     <meta name="twitter:card" content="{{ social.card or 'summary_large_image' }}" />
-    <meta name="twitter:title" content="{{ social.title or title or 'Fiestas Patronales de Aranda de Duero 2026 | Sentir Aranda' }}" />
+    <meta name="twitter:title" content="{{ social.title or title or 'Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación' }}" />
     <meta name="twitter:description" content="{{ social.description or meta.description or 'Agenda de las Fiestas de Aranda de Duero 2026' }}" />
     {% if social.image %}
     <meta name="twitter:image" content="{{ social.image }}" />
@@ -49,7 +49,7 @@
     </script>
     <script>
       (function () {
-        const key = 'aldeapucela_theme';
+        const key = 'arandadeduero_theme';
         try {
           const saved = window.localStorage.getItem(key);
           const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -64,8 +64,8 @@
     {% if eventsDataUrl %}<link rel="preload" href="{{ eventsDataUrl }}" as="fetch" crossorigin data-fiestas-events />{% endif %}
     <link rel="preload" href="/assets/fontawesome/fa-solid-900.woff2?v={{ fontAwesomeVersions.solid }}" as="font" type="font/woff2" crossorigin />
     {% for moduleHref in modulePreloads %}<link rel="modulepreload" href="{{ moduleHref }}" />
-    {% endfor %}<link rel="dns-prefetch" href="https://api.sentiraranda.es" />
-    <link rel="dns-prefetch" href="https://stats.sentiraranda.es" />
+    {% endfor %}<link rel="dns-prefetch" href="https://api.arandadeduero.es" />
+    <link rel="dns-prefetch" href="https://stats.arandadeduero.es" />
   </head>
   <body class="{% block bodyClass %}{% endblock %}">
     {% block header %}{% endblock %}
@@ -77,12 +77,11 @@
           <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
           · Código
           <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener noreferrer">AGPL-3.0</a>
-          · <a href="https://github.com/aldeapucela/fiestas" target="_blank" rel="noopener noreferrer">GitHub</a>
-          · Proyecto creado por vecinos voluntarios de
-          <a href="https://aldeapucela.org" target="_blank" rel="noopener noreferrer">Aldea Pucela</a>
-          y modificado por
-          <a href="https://www.sentiraranda.es" target="_blank" rel="noopener noreferrer">Sentir Aranda</a>
-          <a href="https://github.com/sentiraranda/fiestas" target="_blank" rel="noopener noreferrer">fork de Sentir Aranda</a>
+          · <a href="https://github.com/arandadeduero/fiestas" target="_blank" rel="noopener noreferrer">GitHub</a>
+          · Proyecto original creado por vecinos voluntarios de
+          <a href="https://aldeapucela.org" target="_blank" rel="noopener noreferrer">Aldea Pucela</a>,
+          adaptado por el
+          <a href="https://www.arandadeduero.es" target="_blank" rel="noopener noreferrer">Ayuntamiento de Aranda de Duero</a> (Concejalía de Innovación)
         </p>
         {% block footerExtra %}{% endblock %}
       </div>

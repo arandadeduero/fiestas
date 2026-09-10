@@ -1,6 +1,6 @@
 import { trackCasetaFavoriteChanged } from './analytics.js';
 
-export const CASETAS_FAVORITES_STORAGE_KEY = 'fiestasPucela:casetas-favorites';
+export const CASETAS_FAVORITES_STORAGE_KEY = 'fiestasAranda:casetas-favorites';
 
 const casetasFavoritesChangedEvent = 'fiestas:casetas-favorites-changed';
 

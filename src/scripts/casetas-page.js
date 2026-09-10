@@ -4,8 +4,8 @@ import { trackCasetaFavoriteChanged } from './analytics.js';
 import { buildCasetaDetailHref } from './casetas-navigation.js';
 import { matchesSearch, normalizeText } from './search-text.js';
 
-const CENTER = [41.645726, -4.732919];
-const DEFAULT_ZOOM = 13;
+const CENTER = [41.6706, -3.6893];
+const DEFAULT_ZOOM = 14;
 // A deliberate click on the locate control should make nearby casetas easy
 // to inspect, so use a closer view than the city-wide default.
 const USER_ZOOM = 16;
@@ -473,7 +473,7 @@ async function initializeMap() {
   });
   state.tileLayer = createCartoLayer(leaflet).addTo(state.map);
   state.markers = leaflet.layerGroup().addTo(state.map);
-  document.addEventListener('aldeapucela:themechange', () => updateMapTheme(leaflet));
+  document.addEventListener('arandadeduero:themechange', () => updateMapTheme(leaflet));
   renderMapMarkers();
   renderUserMarker(leaflet);
   window.requestAnimationFrame(() => {

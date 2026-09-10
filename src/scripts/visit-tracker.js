@@ -1,4 +1,4 @@
-export const VISIT_STATS_STORAGE_KEY = 'fiestasPucela:visit-tracker';
+export const VISIT_STATS_STORAGE_KEY = 'fiestasAranda:visit-tracker';
 export const VISIT_STATS_SCHEMA_VERSION = 1;
 
 const EMPTY_VISIT_STATS = Object.freeze({

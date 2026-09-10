@@ -9,7 +9,7 @@ const eventsPath = path.join(root, 'src', 'data', 'fiestas-2026', 'events.json')
 const registryPath = path.join(root, 'src', 'data', 'fiestas-2026', 'event-import-registry.json');
 const reportsDir = path.join(root, '.cache', 'fiestas', 'reports');
 const communityPlansDir = path.join(root, 'src', 'data', 'community-plans');
-const sourceUrl = 'https://eventos.aldeapucela.org/site-data.json';
+const sourceUrl = 'https://eventos.arandadeduero.es/site-data.json';
 
 const events = JSON.parse(await fs.readFile(eventsPath, 'utf8'));
 const source = await fetch(sourceUrl).then((response) => {
@@ -190,7 +190,7 @@ async function updateCommunityPlans(aliases) {
 }
 
 async function fetch(url) {
-  return globalThis.fetch(url, { headers: { 'User-Agent': 'AldeaPucelaFiestas/1.0 (contacto@aldeapucela.org)' } });
+  return globalThis.fetch(url, { headers: { 'User-Agent': 'ArandaDeDueroFiestas/1.0 (contacto@arandadeduero.es)' } });
 }
 
 function slugify(value = '') {

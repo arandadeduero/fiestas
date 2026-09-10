@@ -1,6 +1,8 @@
 # Fiestas Valladolid 2026
 
-[Fiestas Valladolid 2026](https://fiestas.aldeapucela.org/) es la agenda web de las Fiestas y Ferias de Valladolid, creada por vecinos voluntarios de [Aldea Pucela](https://aldeapucela.org/).
+Esta es la agenda web de las Fiestas Patronales de Aranda de Duero 2026 (Virgen de las Viñas), publicada en [fiestas.arandadeduero.es](https://fiestas.arandadeduero.es/) por [Ayuntamiento de Aranda de Duero. Concejalía de Innovación](https://www.arandadeduero.es/).
+
+Es un fork del proyecto original [Fiestas Valladolid 2026](https://fiestas.aldeapucela.org/), creado por vecinos voluntarios de [Aldea Pucela](https://aldeapucela.org/), adaptado aquí a la ciudad de Aranda de Duero.
 
 La web de producción concentra el programa en una experiencia sencilla para consultar qué ocurre cada día, dónde, cómo llegar y qué actividades merece la pena guardar.
 
@@ -33,7 +35,7 @@ La aplicación permite:
 - compartir actividades y la agenda;
 - instalar la web como PWA y consultar contenido visitado sin conexión;
 - cambiar entre tema claro y oscuro;
-- suscribirse al calendario y al RSS de Aldea Pucela Eventos como integración externa.
+- suscribirse al calendario y al RSS de Eventos de Aranda de Duero como integración externa.
 
 Los favoritos y planes personales se guardan localmente en el navegador. No requieren cuenta y no se sincronizan con un servidor.
 
@@ -42,7 +44,7 @@ Los favoritos y planes personales se guardan localmente en el navegador. No requ
 La web se publica en:
 
 ~~~text
-https://fiestas.aldeapucela.org/
+https://fiestas.arandadeduero.es/
 ~~~
 
 Sus principales rutas son:
@@ -59,13 +61,13 @@ Sus principales rutas son:
 
 La producción es una web estática: el contenido se genera en <code>dist/</code> y se publica mediante GitHub Pages. El workflow de [deploy-pages.yml](.github/workflows/deploy-pages.yml) construye el sitio en cada push a <code>main</code> o <code>master</code>.
 
-Las rutas de Fiestas viven en la raíz de su propio dominio. Los enlaces al resto de Aldea Pucela Eventos deben usar URLs absolutas con base en:
+Las rutas de Fiestas viven en la raíz de su propio dominio. Los enlaces al resto de Eventos de Aranda de Duero deben usar URLs absolutas con base en:
 
 ~~~text
-https://eventos.aldeapucela.org/
+https://eventos.arandadeduero.es/
 ~~~
 
-La app conserva integraciones externas aprobadas con Aldea Pucela Eventos: calendario/RSS globales, boletín, enlaces de comunidad del menú y Font Awesome servido desde `eventos.aldeapucela.org` para aprovechar caché compartida.
+La app conserva integraciones externas aprobadas con Eventos de Aranda de Duero: calendario/RSS globales, boletín, enlaces de comunidad del menú y Font Awesome servido desde `eventos.arandadeduero.es` para aprovechar caché compartida.
 
 ## Estructura técnica
 
@@ -95,7 +97,7 @@ Cada actividad tiene un ID numérico estable. El build genera su slug, su URL, s
 
 ## Importación incremental desde Eventos
 
-El script <code>scripts/import-eventos-ferias.mjs</code> consulta <code>https://eventos.aldeapucela.org/site-data.json</code> y procesa únicamente actividades que empiezan entre el 4 y el 13 de septiembre de 2026 en Valladolid. Detecta coincidencias con el catálogo local, enriquece las fichas y añade solo las actividades nuevas; también incorpora carteles remotos cuando faltan y geocodifica los lugares con Nominatim.
+El script <code>scripts/import-eventos-ferias.mjs</code> consulta <code>https://eventos.arandadeduero.es/site-data.json</code> y procesa únicamente actividades que empiezan entre el 4 y el 13 de septiembre de 2026 en Valladolid. Detecta coincidencias con el catálogo local, enriquece las fichas y añade solo las actividades nuevas; también incorpora carteles remotos cuando faltan y geocodifica los lugares con Nominatim.
 
 La ejecución por defecto es una simulación y deja el informe en <code>.cache/fiestas/reports/</code>:
 
@@ -124,4 +126,4 @@ El código fuente se publica bajo [GNU AGPL versión 3.0](https://www.gnu.org/li
 
 El contenido se publica bajo [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es); consulta [LICENSE-CONTENT](LICENSE-CONTENT).
 
-El código está disponible en [GitHub](https://github.com/aldeapucela/fiestas).
+El código está disponible en [GitHub](https://github.com/arandadeduero/fiestas).

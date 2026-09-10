@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 
 function installStorage(value = null) {
-  const values = new Map(value === null ? [] : [['fiestasPucela:liked-caseta-dishes', value]]);
+  const values = new Map(value === null ? [] : [['fiestasAranda:liked-caseta-dishes', value]]);
   const dispatched = [];
   globalThis.window = {
     localStorage: {
@@ -45,12 +45,12 @@ test('stores a dish like independently from caseta favorites', async () => {
   const likes = await import(`../src/scripts/caseta-dish-likes.js?write=${Date.now()}`);
 
   assert.deepEqual(likes.setCasetaDishLiked('z3-01', 'racion-cecina-leon'), ['z3-01/racion-cecina-leon']);
-  assert.deepEqual(JSON.parse(values.get('fiestasPucela:liked-caseta-dishes')), ['z3-01/racion-cecina-leon']);
-  assert.equal(values.has('fiestasPucela:casetas-favorites'), false);
+  assert.deepEqual(JSON.parse(values.get('fiestasAranda:liked-caseta-dishes')), ['z3-01/racion-cecina-leon']);
+  assert.equal(values.has('fiestasAranda:casetas-favorites'), false);
   assert.deepEqual(dispatched, ['fiestas:caseta-dish-likes-changed']);
 
   assert.deepEqual(likes.setCasetaDishLiked('z3-01', 'racion-cecina-leon', false), []);
-  assert.deepEqual(JSON.parse(values.get('fiestasPucela:liked-caseta-dishes')), []);
+  assert.deepEqual(JSON.parse(values.get('fiestasAranda:liked-caseta-dishes')), []);
   assert.deepEqual(dispatched, ['fiestas:caseta-dish-likes-changed', 'fiestas:caseta-dish-likes-changed']);
 });
 

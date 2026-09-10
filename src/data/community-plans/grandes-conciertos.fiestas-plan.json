@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "festival": "valladolid-2026",
+  "exportedAt": "2026-09-01T10:00:00Z",
+  "plans": [
+    {
+      "name": "Grandes conciertos",
+      "icon": "microphone",
+      "activityIds": [
+        "12",
+        "36",
+        "55",
+        "72",
+        "89",
+        "107",
+        "116",
+        "159"
+      ]
+    }
+  ]
+}

@@ -143,7 +143,7 @@ Los informes y la caché se guardan en <code>.cache/fiestas/</code>, una carpeta
 
 ## Enlazado de imágenes
 
-El script compara actividades locales con las fichas públicas de Eventos de Aldea Pucela y puede escribir las imágenes coincidentes en <code>events.json</code>:
+El script compara actividades locales con las fichas públicas de Eventos de Aranda de Duero y puede escribir las imágenes coincidentes en <code>events.json</code>:
 
 ~~~bash
 npm run images:link

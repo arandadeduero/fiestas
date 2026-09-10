@@ -8,7 +8,7 @@ const FESTIVAL_ID = 'valladolid-2026';
 function eventAbsoluteUrl(event) {
   const url = event?.canonicalUrl || event?.urlPath || '';
   if (!url || /^https?:\/\//i.test(url)) return url;
-  const origin = typeof window !== 'undefined' && window.location ? window.location.origin : 'https://fiestas.aldeapucela.org';
+  const origin = typeof window !== 'undefined' && window.location ? window.location.origin : 'https://fiestas.arandadeduero.es';
   return origin + url;
 }
 
@@ -16,7 +16,7 @@ export function createIcs(events = [], calendarName = 'Fiestas Valladolid 2026')
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Aldea Pucela//Fiestas Valladolid 2026//ES',
+    'PRODID:-//Ayuntamiento de Aranda de Duero. Concejalía de Innovación//Fiestas Valladolid 2026//ES',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     `X-WR-CALNAME:${escapeIcs(calendarName)}`,
@@ -25,7 +25,7 @@ export function createIcs(events = [], calendarName = 'Fiestas Valladolid 2026')
 
   events.filter((event) => event?.id && event.date).forEach((event) => {
     lines.push('BEGIN:VEVENT');
-    lines.push(`UID:${escapeIcs(`${event.id}@fiestas.aldeapucela.org`)}`);
+    lines.push(`UID:${escapeIcs(`${event.id}@fiestas.arandadeduero.es`)}`);
     lines.push(`DTSTAMP:${formatUtc(new Date())}`);
     lines.push(`DTSTART;TZID=${TIME_ZONE}:${formatLocalDateTime(event.date, event.startTime)}`);
     if (event.endTime) {

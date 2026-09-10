@@ -31,10 +31,10 @@ import { getCasetasReturnPath } from './casetas-navigation.js';
 const collator = new Intl.Collator('es', { numeric: true, sensitivity: 'base' });
 const defaultQueryKeys = ['date', 'q', 'type', 'area', 'ticket', 'view', 'event'];
 const DEFAULT_DOCUMENT_TITLE = document.title;
-const SITE_SHARE_URL = 'https://fiestas.aldeapucela.org/?mtm_campaign=share';
+const SITE_SHARE_URL = 'https://fiestas.arandadeduero.es/?mtm_campaign=share';
 const SITE_SHARE_MESSAGE = `Mira, la mejor web para seguir las fiestas y ferias de Valladolid 2026\n\n${SITE_SHARE_URL}`;
-const SAVE_COUNTS_API_URL = 'https://api.aldeapucela.org/fiestas/saves';
-const POPULAR_METRICS_STORAGE_KEY = 'fiestasValladolid:popularMetrics:v1';
+const SAVE_COUNTS_API_URL = 'https://api.arandadeduero.es/fiestas/saves';
+const POPULAR_METRICS_STORAGE_KEY = 'fiestasAranda:popularMetrics:v1';
 const CARTO_BASEMAPS_API_KEY = 'cb1_27ug_1_19138f635d4f03358d12cb43';
 const cartoLayers = {
   light: `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${CARTO_BASEMAPS_API_KEY}`,
@@ -42,11 +42,11 @@ const cartoLayers = {
 };
 const LEAFLET_SCRIPT_URL = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
 const LEAFLET_SCRIPT_INTEGRITY = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
-const valladolidCenter = [41.6523, -4.7245];
+const arandaCenter = [41.6706, -3.6893];
 const userLocationZoom = 14;
 const nearbyRadiusMeters = 2000;
 const UNKNOWN_END_GRACE_MINUTES = 2 * 60;
-const DETAIL_TRANSIT_LOCATION_CACHE_KEY = 'fiestasPucela:detail-transit-location';
+const DETAIL_TRANSIT_LOCATION_CACHE_KEY = 'fiestasAranda:detail-transit-location';
 const DETAIL_TRANSIT_LOCATION_CACHE_TTL = 15 * 60 * 1000;
 const DETAIL_TRANSIT_LOCATION_WAIT = 2000;
 const DETAIL_TRANSIT_LOCATION_TIMEOUT = 15000;
@@ -1410,14 +1410,14 @@ async function renderMap(events) {
   }
 
   if (!state.map) {
-    state.map = leaflet.map(els.mapCanvas, { maxZoom: 19, scrollWheelZoom: true }).setView(valladolidCenter, 14);
+    state.map = leaflet.map(els.mapCanvas, { maxZoom: 19, scrollWheelZoom: true }).setView(arandaCenter, 15);
     state.tileLayer = createCartoLayer(leaflet).addTo(state.map);
     state.tileLayer.on('tileerror', () => {
       showMapEmpty('El mapa tiene problemas de conexión. Puedes seguir consultando las actividades en la lista inferior.');
     });
     state.markers = leaflet.layerGroup().addTo(state.map);
     state.map.on('zoomend moveend', () => renderMapMarkers(state.currentMapEvents, leaflet));
-    document.addEventListener('aldeapucela:themechange', () => updateMapTheme(leaflet));
+    document.addEventListener('arandadeduero:themechange', () => updateMapTheme(leaflet));
   }
 
   renderMapMarkers(withCoordinates, leaflet);
@@ -3007,7 +3007,7 @@ async function initDetailMap() {
       html: `<span class="fiestas-detail-map-marker-content"><i class="fiestas-detail-map-marker-icon fa-solid ${markerIconClass}" aria-hidden="true"></i><span class="fiestas-detail-map-marker-label">${escapeHtml(title)}</span></span>`
     });
     let tileLayer = createCartoLayer(leaflet).addTo(map);
-    document.addEventListener('aldeapucela:themechange', () => {
+    document.addEventListener('arandadeduero:themechange', () => {
       map.removeLayer(tileLayer);
       tileLayer = createCartoLayer(leaflet).addTo(map);
     });

@@ -1,4 +1,4 @@
-const THEME_STORAGE_KEY = 'aldeapucela_theme';
+const THEME_STORAGE_KEY = 'arandadeduero_theme';
 const darkQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
 function getStoredTheme() {
@@ -39,7 +39,7 @@ export function applyTheme(theme) {
   root.classList.toggle('dark', nextTheme === 'dark');
   root.style.colorScheme = nextTheme;
   updateThemeToggles(nextTheme);
-  document.dispatchEvent(new CustomEvent('aldeapucela:themechange', { detail: { theme: nextTheme } }));
+  document.dispatchEvent(new CustomEvent('arandadeduero:themechange', { detail: { theme: nextTheme } }));
 }
 
 export function toggleTheme() {

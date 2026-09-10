@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "festival": "valladolid-2026",
+  "exportedAt": "2026-09-01T10:00:00Z",
+  "plans": [
+    {
+      "name": "Peñas, charangas y bodegas",
+      "icon": "parade",
+      "activityIds": [
+        "22",
+        "33",
+        "49",
+        "52",
+        "68",
+        "71",
+        "88",
+        "106",
+        "123",
+        "145"
+      ]
+    }
+  ]
+}

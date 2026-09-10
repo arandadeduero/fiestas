@@ -15,7 +15,7 @@ test('genera un cartel QR sobre la plantilla visual sin duplicar su composición
   const poster = createCasetaQrPosterSvg({
     qrSvg,
     posterBaseDataUri: 'data:image/jpeg;base64,poster-base',
-    siteUrl: 'https://fiestas.aldeapucela.org/c/z1-05/la-criolla/'
+    siteUrl: 'https://fiestas.arandadeduero.es/c/z1-05/la-criolla/'
   });
 
   assert.match(poster, /data:image\/jpeg;base64,poster-base/);
@@ -34,7 +34,7 @@ test('compacta una matriz QR en una imagen SVG válida', () => {
 
 test('añade la campaña QR a la URL de destino de la caseta', () => {
   assert.equal(
-    createCasetaQrTargetUrl({ baseUrl: 'https://fiestas.aldeapucela.org', publicSlug: 'la-criolla' }),
-    'https://fiestas.aldeapucela.org/c/la-criolla/?mtm_campaign=QR'
+    createCasetaQrTargetUrl({ baseUrl: 'https://fiestas.arandadeduero.es', publicSlug: 'la-criolla' }),
+    'https://fiestas.arandadeduero.es/c/la-criolla/?mtm_campaign=QR'
   );
 });

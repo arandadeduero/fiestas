@@ -33,7 +33,7 @@ Escape hatches, for when you know what you are doing: `git commit --no-verify`,
 `git push --no-verify`, or `SKIP_E2E=1 git push`.
 
 The end-to-end suite never reaches the network. External hosts (`unpkg.com`,
-`api.aldeapucela.org`, the CARTO basemaps, remote posters) are intercepted in
+`api.arandadeduero.es`, the CARTO basemaps, remote posters) are intercepted in
 `tests/e2e/fixtures.js`, and any request to a host that is not stubbed fails the
 test. Leaflet is served from `node_modules/leaflet`, byte-identical to the copy
 on unpkg, so the pinned SRI hashes are verified for real.
@@ -63,4 +63,4 @@ Use short imperative commit messages, for example `Extract fiestas standalone bu
 
 ## URL Policy
 
-Keep Fiestas 2026 routes local. Links to the rest of Aldea Pucela Eventos must be absolute with base `https://eventos.aldeapucela.org/`.
+Keep Fiestas 2026 routes local. Links to the rest of Eventos de Aranda de Duero must be absolute with base `https://eventos.arandadeduero.es/`.

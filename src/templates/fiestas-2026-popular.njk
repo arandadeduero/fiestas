@@ -18,7 +18,7 @@
           data-fiestas-share-site
           data-share-title="Actividades populares | Fiestas Valladolid 2026"
           data-share-text="Mira las actividades más guardadas de las Fiestas Valladolid 2026"
-          data-share-url="https://fiestas.aldeapucela.org/populares/"
+          data-share-url="https://fiestas.arandadeduero.es/populares/"
           aria-label="Compartir actividades populares"
           title="Compartir actividades populares"
         >
@@ -98,10 +98,12 @@
     <i class="fa-regular fa-heart" aria-hidden="true"></i>
     <span>Mi plan</span>
   </a>
+  {% if casetasEnabled %}
   <a class="fiestas-bottom-link" href="/casetas/">
     <i class="fa-solid fa-store" aria-hidden="true"></i>
     <span>Casetas</span>
   </a>
+  {% endif %}
   <button class="fiestas-bottom-link is-active" type="button" data-menu-open aria-label="Abrir más opciones">
     <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
     <span>Más</span>
