@@ -29,7 +29,7 @@ test('la ficha de evento muestra título, hora, lugar y acceso al mapa', async (
 });
 
 test('la ficha muestra una nota breve de accesibilidad cuando aplica', async ({ page }) => {
-  await page.goto('/e/11/acto-oficial-fiestas-patronales-2026/');
+  await page.goto('/e/11/pregon-acto-oficial-fiestas-patronales-2026/');
 
   const note = page.locator('.fiestas-detail-accessibility-note');
   await expect(note).toBeVisible();
