@@ -1,0 +1,19 @@
+README.md
+  s_c3ad8abe8dc2e3::t_14595d04c4ba64 15-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a035224a728b133888b10a3133fcd2c040944671",
+  "prompts": {},
+  "sessions": {
+    "s_c3ad8abe8dc2e3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "22f079ac-da9a-4f81-bd21-1c562269918d",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
