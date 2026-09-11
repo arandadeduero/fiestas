@@ -1,0 +1,20 @@
+src/templates/partials/menu-drawer.njk
+  s_c3ad8abe8dc2e3::t_6b054e3543ede3 87,89,91-92,94-95
+  s_c3ad8abe8dc2e3::t_9f2e6ccb708911 36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "025da8be62af47585af9bb8423ddb7b4b5fc24d4",
+  "prompts": {},
+  "sessions": {
+    "s_c3ad8abe8dc2e3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "22f079ac-da9a-4f81-bd21-1c562269918d",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
