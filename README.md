@@ -12,9 +12,9 @@ Las tres pantallas principales de la aplicación:
 
 <table>
   <tr>
-    <td align="center" valign="top"><strong>Agenda</strong><br><img src="docs/screenshots/mobile-agenda-2026.jpg" alt="Agenda de Fiestas Patronales de Aranda de Duero 2026 en móvil" width="220"></td>
-    <td align="center" valign="top"><strong>Mapa</strong><br><img src="docs/screenshots/mobile-map-2026.jpg" alt="Mapa de las Fiestas Patronales de Aranda de Duero 2026 en móvil" width="220"></td>
-    <td align="center" valign="top"><strong>Plan vecinal</strong><br><img src="docs/screenshots/mobile-community-plan-2026.jpg" alt="Plan vecinal Cielo y estrellas en móvil" width="220"></td>
+    <td align="center" valign="top"><strong>Agenda</strong><br><img src="docs/screenshots/mobile-agenda-2026.png" alt="Agenda de Fiestas Patronales de Aranda de Duero 2026 en móvil" width="220"></td>
+    <td align="center" valign="top"><strong>Mapa</strong><br><img src="docs/screenshots/mobile-map-2026.png" alt="Mapa de las Fiestas Patronales de Aranda de Duero 2026 en móvil" width="220"></td>
+    <td align="center" valign="top"><strong>Planes vecinales</strong><br><img src="docs/screenshots/mobile-planes-2026.png" alt="Listado de planes vecinales de las Fiestas Patronales de Aranda de Duero 2026 en móvil" width="220"></td>
   </tr>
 </table>
 
