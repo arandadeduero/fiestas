@@ -11,9 +11,7 @@
     "description": "Desde el martes 1 de septiembre se podrá ver el Escaparate de Fiestas en la sede de la Asociación de Vecinos Allendeduero, en la Glorieta Rosales nº 3.",
     "summary": "Desde el martes 1 de septiembre se podrá ver el Escaparate de Fiestas en la sede de la Asociación de Vecinos Allendeduero, en la Glorieta Rosales nº 3.",
     "performances": [],
-    "organizers": [
-      "Asociación de Vecinos Allendeduero"
-    ],
+    "organizers": ["Asociación de Vecinos Allendeduero"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.664,
@@ -28,10 +26,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Otros",
-      "Previo"
-    ]
+    "tags": ["Otros", "Previo"]
   },
   {
     "id": 2,
@@ -60,10 +55,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Religioso",
-      "Previo"
-    ]
+    "tags": ["Religioso", "Previo"]
   },
   {
     "id": 3,
@@ -76,13 +68,8 @@
     "zone": "Pabellón Santiago Manguán",
     "description": "Partido amistoso de balonmano entre el Tubos Aranda Villa de Aranda y el Bathco BM Torrelavega en el Pabellón Santiago Manguán.",
     "summary": "Partido amistoso de balonmano entre el Tubos Aranda Villa de Aranda y el Bathco BM Torrelavega en el Pabellón Santiago Manguán.",
-    "performances": [
-      "Tubos Aranda Villa de Aranda",
-      "Bathco BM Torrelavega"
-    ],
-    "organizers": [
-      "Balonmano Tubos Aranda Villa de Aranda"
-    ],
+    "performances": ["Tubos Aranda Villa de Aranda", "Bathco BM Torrelavega"],
+    "organizers": ["Balonmano Tubos Aranda Villa de Aranda"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67075,
@@ -97,10 +84,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Previo"
-    ]
+    "tags": ["Deporte", "Previo"]
   },
   {
     "id": 4,
@@ -114,9 +98,7 @@
     "description": "V Torneo de Tenis de Mesa Virgen de las Viñas en el Polideportivo Chelva.",
     "summary": "V Torneo de Tenis de Mesa Virgen de las Viñas en el Polideportivo Chelva.",
     "performances": [],
-    "organizers": [
-      "Club Tenis de Mesa Aranda"
-    ],
+    "organizers": ["Club Tenis de Mesa Aranda"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.660008,
@@ -131,10 +113,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Previo"
-    ]
+    "tags": ["Deporte", "Previo"]
   },
   {
     "id": 5,
@@ -148,9 +127,7 @@
     "description": "Encuentro con el niño interior «Toma-té tú tiempo» en el Museo de Juegos Tradicionales, con pases a las 12:00, 13:00, 17:00, 18:00 y 19:00 h. Con entrada.",
     "summary": "Encuentro con el niño interior «Toma-té tú tiempo» en el Museo de Juegos Tradicionales, con pases a las 12:00, 13:00, 17:00, 18:00 y 19:00 h. Con entrada.",
     "performances": [],
-    "organizers": [
-      "Asociación Cultural La Tanguilla"
-    ],
+    "organizers": ["Asociación Cultural La Tanguilla"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.670141,
@@ -165,10 +142,7 @@
       "url": null,
       "note": "Actividad con entrada. Consulta precio, disponibilidad y horarios en el punto de venta."
     },
-    "tags": [
-      "Talleres",
-      "Previo"
-    ]
+    "tags": ["Talleres", "Previo"]
   },
   {
     "id": 6,
@@ -182,10 +156,7 @@
     "description": "XL Torneo de Ajedrez El Cordero en el Polideportivo Chelva.",
     "summary": "XL Torneo de Ajedrez El Cordero en el Polideportivo Chelva.",
     "performances": [],
-    "organizers": [
-      "C.D. Torre Negra",
-      "Concejalía de Deportes"
-    ],
+    "organizers": ["C.D. Torre Negra", "Concejalía de Deportes"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.660008,
@@ -200,11 +171,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Previo",
-      "Ajedrez"
-    ]
+    "tags": ["Deporte", "Previo", "Ajedrez"]
   },
   {
     "id": 7,
@@ -218,12 +185,8 @@
     "description": "7º Torneo Trofeo Virgen de las Viñas de golf, torneo benéfico a favor de la Asociación de Discapacitados Aranda y Ribera (A.N.D.A.R.).",
     "summary": "7º Torneo Trofeo Virgen de las Viñas de golf, torneo benéfico a favor de la Asociación de Discapacitados Aranda y Ribera (A.N.D.A.R.).",
     "performances": [],
-    "organizers": [
-      "C.D. Golf Aranda"
-    ],
-    "collaborators": [
-      "A.N.D.A.R."
-    ],
+    "organizers": ["C.D. Golf Aranda"],
+    "collaborators": ["A.N.D.A.R."],
     "coordinates": {
       "lat": 41.673248,
       "lng": -3.607084,
@@ -237,11 +200,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Previo",
-      "Benéfico"
-    ]
+    "tags": ["Deporte", "Previo", "Benéfico"]
   },
   {
     "id": 8,
@@ -255,9 +214,7 @@
     "description": "Engalanamiento de la calle Las Boticas y preparación de la tradicional limonada por la Peña La Amistad.",
     "summary": "Engalanamiento de la calle Las Boticas y preparación de la tradicional limonada por la Peña La Amistad.",
     "performances": [],
-    "organizers": [
-      "Peña La Amistad"
-    ],
+    "organizers": ["Peña La Amistad"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.671138,
@@ -272,11 +229,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Previo",
-      "Limonada"
-    ]
+    "tags": ["Peñas", "Previo", "Limonada"]
   },
   {
     "id": 9,
@@ -290,10 +243,7 @@
     "description": "Torneo Infantil de Ajedrez «Virgen de las Viñas» en la Plaza Mayor.",
     "summary": "Torneo Infantil de Ajedrez «Virgen de las Viñas» en la Plaza Mayor.",
     "performances": [],
-    "organizers": [
-      "C.D. Torre Negra",
-      "Concejalía de Deportes"
-    ],
+    "organizers": ["C.D. Torre Negra", "Concejalía de Deportes"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.670465,
@@ -308,12 +258,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Infantil y familiar",
-      "Previo",
-      "Ajedrez",
-      "Deporte"
-    ]
+    "tags": ["Infantil y familiar", "Previo", "Ajedrez", "Deporte"]
   },
   {
     "id": 10,
@@ -327,9 +272,7 @@
     "description": "Obra teatral «Arte», de Yasmina Reza, a cargo de Teatro Grupo Cartel, en el Cultural Caja de Burgos. Con entrada.",
     "summary": "Obra teatral «Arte», de Yasmina Reza, a cargo de Teatro Grupo Cartel, en el Cultural Caja de Burgos. Con entrada.",
     "performances": [],
-    "organizers": [
-      "Teatro Grupo Cartel"
-    ],
+    "organizers": ["Teatro Grupo Cartel"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.670885,
@@ -344,10 +287,7 @@
       "url": null,
       "note": "Actividad con entrada. Consulta precio, disponibilidad y horarios en el punto de venta."
     },
-    "tags": [
-      "Teatro",
-      "Previo"
-    ]
+    "tags": ["Teatro", "Previo"]
   },
   {
     "id": 11,
@@ -355,17 +295,13 @@
     "dateLabel": "Viernes 11 de septiembre",
     "startTime": "20:00",
     "endTime": null,
-    "title": "Acto Oficial. Fiestas Patronales 2026",
+    "title": "Pregón. Acto Oficial. Fiestas Patronales 2026",
     "location": "Plaza Mayor",
     "zone": "Plaza Mayor",
-    "description": "Acto Oficial de las Fiestas Patronales 2026 en la Plaza Mayor: saluda del Concejal de Festejos, D. José Antonio Fuertes Escusol; imposición de bandas a la Corte Real; lectura del Pregón de las Fiestas a cargo de Miguel Martínez Delso; saluda del Alcalde, D. Antonio Linaje Niño; e interpretación del Himno de Aranda por la Banda Municipal de Música «Villa de Aranda». El acto contará con intérprete de lengua de signos.",
-    "summary": "Acto Oficial de las Fiestas Patronales 2026 en la Plaza Mayor: saluda del Concejal de Festejos, D. José Antonio Fuertes Escusol; imposición de bandas a la Corte Real; lectura del Pregón de las Fiestas a cargo de Miguel Martínez Delso; saluda del Alcalde, D. Antonio Linaje Niño; e interpretación del Himno de Aranda por la Banda Municipal de Música «Villa de Aranda». El acto contará con intérprete de lengua de signos.",
-    "performances": [
-      "Banda Municipal de Música «Villa de Aranda»"
-    ],
-    "organizers": [
-      "Ayuntamiento de Aranda de Duero"
-    ],
+    "description": "Pregón de las Fiestas Patronales 2026 en la Plaza Mayor: saluda del Concejal de Festejos, D. José Antonio Fuertes Escusol; imposición de bandas a la Corte Real; lectura del Pregón de las Fiestas a cargo de Miguel Martínez Delso; saluda del Alcalde, D. Antonio Linaje Niño; e interpretación del Himno de Aranda por la Banda Municipal de Música «Villa de Aranda». El acto contará con intérprete de lengua de signos.",
+    "summary": "Pregón de las Fiestas Patronales 2026 en la Plaza Mayor: saluda del Concejal de Festejos, D. José Antonio Fuertes Escusol; imposición de bandas a la Corte Real; lectura del Pregón de las Fiestas a cargo de Miguel Martínez Delso; saluda del Alcalde, D. Antonio Linaje Niño; e interpretación del Himno de Aranda por la Banda Municipal de Música «Villa de Aranda». El acto contará con intérprete de lengua de signos.",
+    "performances": ["Banda Municipal de Música «Villa de Aranda»"],
+    "organizers": ["Ayuntamiento de Aranda de Duero"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.670465,
@@ -380,12 +316,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Pregón",
-      "Acto oficial",
-      "Accesible"
-    ],
+    "tags": ["Folklore", "Pregón", "Acto oficial", "Accesible"],
     "accessibility": {
       "label": "Accesible",
       "note": "El acto contará con intérprete de Lengua de Signos Española (LSE)."
@@ -402,9 +333,7 @@
     "zone": "Jardines de Don Diego",
     "description": "«Gracias Raphael»: recorrido por las canciones más impactantes del siempre admirado Raphael, por Richard Sánchez.",
     "summary": "«Gracias Raphael»: recorrido por las canciones más impactantes del siempre admirado Raphael, por Richard Sánchez.",
-    "performances": [
-      "Richard Sánchez"
-    ],
+    "performances": ["Richard Sánchez"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -420,11 +349,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Concierto",
-      "Tributo"
-    ]
+    "tags": ["Música", "Concierto", "Tributo"]
   },
   {
     "id": 13,
@@ -437,12 +362,8 @@
     "zone": "Zona Centro",
     "description": "Pasabares Alternativo amenizado por la Charanga Estraperlo, con inicio en el Bar El Barriles y continuando por las calles del centro.",
     "summary": "Pasabares Alternativo amenizado por la Charanga Estraperlo, con inicio en el Bar El Barriles y continuando por las calles del centro.",
-    "performances": [
-      "Charanga Estraperlo"
-    ],
-    "organizers": [
-      "Charanga Estraperlo"
-    ],
+    "performances": ["Charanga Estraperlo"],
+    "organizers": ["Charanga Estraperlo"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.670799,
@@ -457,28 +378,21 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Pasacalles"]
   },
   {
     "id": 14,
     "date": "2026-09-11",
     "dateLabel": "Viernes 11 de septiembre",
-    "startTime": "00:00",
+    "startTime": "23:59",
     "endTime": null,
-    "title": "Concierto Sorpresa",
+    "title": "Concierto de Melón Diesel",
     "location": "Calle La Sal",
     "zone": "Zona Centro",
-    "description": "Concierto Sorpresa en la Plaza La Sal.",
-    "summary": "Concierto Sorpresa en la Plaza La Sal.",
+    "description": "Concierto de Melón Diesel en la Plaza La Sal.",
+    "summary": "Concierto de Melón Diesel en la Plaza La Sal.",
     "performances": [],
-    "organizers": [
-      "Ayuntamiento de Aranda de Duero",
-      "Bares Zona Centro"
-    ],
+    "organizers": ["Ayuntamiento de Aranda de Duero", "Bares Zona Centro"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.670582,
@@ -493,10 +407,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Concierto"
-    ]
+    "tags": ["Música", "Concierto"]
   },
   {
     "id": 15,
@@ -525,9 +436,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Religioso"
-    ]
+    "tags": ["Religioso"]
   },
   {
     "id": 16,
@@ -540,9 +449,7 @@
     "zone": "Plaza Mayor",
     "description": "Fiesta del Cañonazo en la Plaza Mayor, animada por DJ Ziry. A las 11:50 h, disparo de 12 salvas precediendo al Cañonazo que da comienzo a las Fiestas Patronales 2026.",
     "summary": "Fiesta del Cañonazo en la Plaza Mayor, animada por DJ Ziry. A las 11:50 h, disparo de 12 salvas precediendo al Cañonazo que da comienzo a las Fiestas Patronales 2026.",
-    "performances": [
-      "DJ Ziry"
-    ],
+    "performances": ["DJ Ziry"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -558,11 +465,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Cañonazo",
-      "DJ"
-    ]
+    "tags": ["Música", "Cañonazo", "DJ"]
   },
   {
     "id": 17,
@@ -591,11 +494,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Otros",
-      "Cañonazo",
-      "Inauguración"
-    ]
+    "tags": ["Otros", "Cañonazo", "Inauguración"]
   },
   {
     "id": 18,
@@ -608,9 +507,7 @@
     "zone": "Zona Centro",
     "description": "Desfile de Gigantes y Cabezudos por las calles del Centro, amenizado por alumnos de la Escuela Municipal de Folklore.",
     "summary": "Desfile de Gigantes y Cabezudos por las calles del Centro, amenizado por alumnos de la Escuela Municipal de Folklore.",
-    "performances": [
-      "Escuela Municipal de Folklore"
-    ],
+    "performances": ["Escuela Municipal de Folklore"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -626,11 +523,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Gigantes y Cabezudos",
-      "Pasacalles"
-    ]
+    "tags": ["Folklore", "Gigantes y Cabezudos", "Pasacalles"]
   },
   {
     "id": 19,
@@ -659,11 +552,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Religioso",
-      "Romería",
-      "Peñas"
-    ]
+    "tags": ["Religioso", "Romería", "Peñas"]
   },
   {
     "id": 20,
@@ -676,9 +565,7 @@
     "zone": "Virgen de las Viñas",
     "description": "Ofrenda de Flores a la Virgen de las Viñas en la explanada de la Ermita y actuación del grupo de danzas «Alquería» de la Escuela Municipal de Folclore.",
     "summary": "Ofrenda de Flores a la Virgen de las Viñas en la explanada de la Ermita y actuación del grupo de danzas «Alquería» de la Escuela Municipal de Folclore.",
-    "performances": [
-      "Grupo de danzas «Alquería»"
-    ],
+    "performances": ["Grupo de danzas «Alquería»"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -694,11 +581,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Ofrenda de flores",
-      "Danza"
-    ]
+    "tags": ["Folklore", "Ofrenda de flores", "Danza"]
   },
   {
     "id": 21,
@@ -727,9 +610,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Religioso"
-    ]
+    "tags": ["Religioso"]
   },
   {
     "id": 22,
@@ -758,10 +639,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Bajada de Peñas"
-    ]
+    "tags": ["Peñas", "Bajada de Peñas"]
   },
   {
     "id": 23,
@@ -774,9 +652,7 @@
     "zone": "Instituto Tomás Pascual",
     "description": "Fuegos Artificiales a cargo de Pirotecnia Vulcano, junto al Instituto Tomás Pascual.",
     "summary": "Fuegos Artificiales a cargo de Pirotecnia Vulcano, junto al Instituto Tomás Pascual.",
-    "performances": [
-      "Pirotecnia Vulcano"
-    ],
+    "performances": ["Pirotecnia Vulcano"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -792,9 +668,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Fuegos artificiales"
-    ]
+    "tags": ["Fuegos artificiales"]
   },
   {
     "id": 24,
@@ -807,9 +681,7 @@
     "zone": "Plaza Mayor",
     "description": "Verbena en la Plaza Mayor con la Orquesta The Rollers Band.",
     "summary": "Verbena en la Plaza Mayor con la Orquesta The Rollers Band.",
-    "performances": [
-      "Orquesta The Rollers Band"
-    ],
+    "performances": ["Orquesta The Rollers Band"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -825,11 +697,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Verbena",
-      "Orquesta"
-    ]
+    "tags": ["Música", "Verbena", "Orquesta"]
   },
   {
     "id": 25,
@@ -842,12 +710,8 @@
     "zone": "Plaza del Trigo",
     "description": "Concierto de la Charanga Peña La Ribera en la Plaza del Trigo.",
     "summary": "Concierto de la Charanga Peña La Ribera en la Plaza del Trigo.",
-    "performances": [
-      "Charanga Peña La Ribera"
-    ],
-    "organizers": [
-      "Peña La Ribera"
-    ],
+    "performances": ["Charanga Peña La Ribera"],
+    "organizers": ["Peña La Ribera"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.671077,
@@ -862,11 +726,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas"
-    ]
+    "tags": ["Música", "Charanga", "Peñas"]
   },
   {
     "id": 26,
@@ -879,12 +739,8 @@
     "zone": "Barrio de Bodegas",
     "description": "Concierto de la Charanga Peña El Cubillo en la puerta de su bodega.",
     "summary": "Concierto de la Charanga Peña El Cubillo en la puerta de su bodega.",
-    "performances": [
-      "Charanga Peña El Cubillo"
-    ],
-    "organizers": [
-      "Peña El Cubillo"
-    ],
+    "performances": ["Charanga Peña El Cubillo"],
+    "organizers": ["Peña El Cubillo"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.6712,
@@ -899,11 +755,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas"
-    ]
+    "tags": ["Música", "Charanga", "Peñas"]
   },
   {
     "id": 27,
@@ -935,11 +787,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Religioso",
-      "Procesión",
-      "Día de la Función"
-    ]
+    "tags": ["Religioso", "Procesión", "Día de la Función"]
   },
   {
     "id": 28,
@@ -968,11 +816,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Baile Vermú",
-      "Baile agarrado"
-    ]
+    "tags": ["Folklore", "Baile Vermú", "Baile agarrado"]
   },
   {
     "id": 29,
@@ -985,13 +829,9 @@
     "zone": "Virgen de las Viñas",
     "description": "Exhibición de paracaidismo a cargo de la Patrulla Acrobática de Paracaidismo del Ejército del Aire y del Espacio (PAPEA), en el Campo de Rugby Virgen de las Viñas.",
     "summary": "Exhibición de paracaidismo a cargo de la Patrulla Acrobática de Paracaidismo del Ejército del Aire y del Espacio (PAPEA), en el Campo de Rugby Virgen de las Viñas.",
-    "performances": [
-      "PAPEA"
-    ],
+    "performances": ["PAPEA"],
     "organizers": [],
-    "collaborators": [
-      "Centro Cultural Nuestra Señora de Loreto"
-    ],
+    "collaborators": ["Centro Cultural Nuestra Señora de Loreto"],
     "coordinates": {
       "lat": 41.681782,
       "lng": -3.68552,
@@ -1005,10 +845,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Otros",
-      "Exhibición"
-    ]
+    "tags": ["Otros", "Exhibición"]
   },
   {
     "id": 30,
@@ -1021,10 +858,7 @@
     "zone": "Complejo Deportivo Juan Carlos Higuero",
     "description": "Partido de fútbol de liga 3ª RFEF (grupo VIII) entre la Arandina C.F. y el Almazán C.F. Con entrada.",
     "summary": "Partido de fútbol de liga 3ª RFEF (grupo VIII) entre la Arandina C.F. y el Almazán C.F. Con entrada.",
-    "performances": [
-      "Arandina C.F.",
-      "Almazán C.F."
-    ],
+    "performances": ["Arandina C.F.", "Almazán C.F."],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -1040,10 +874,7 @@
       "url": null,
       "note": "Actividad con entrada. Consulta precio, disponibilidad y horarios en el punto de venta."
     },
-    "tags": [
-      "Deporte",
-      "Fútbol"
-    ]
+    "tags": ["Deporte", "Fútbol"]
   },
   {
     "id": 31,
@@ -1056,10 +887,7 @@
     "zone": "Pabellón Santiago Manguán",
     "description": "Partido de balonmano entre Tubos Aranda Villa de Aranda y BM Caserío Ciudad Real, correspondiente a la 1ª jornada de la Liga Nexus Energía Asobal 2026-2027. Con entrada.",
     "summary": "Partido de balonmano entre Tubos Aranda Villa de Aranda y BM Caserío Ciudad Real, correspondiente a la 1ª jornada de la Liga Nexus Energía Asobal 2026-2027. Con entrada.",
-    "performances": [
-      "Tubos Aranda Villa de Aranda",
-      "BM Caserío Ciudad Real"
-    ],
+    "performances": ["Tubos Aranda Villa de Aranda", "BM Caserío Ciudad Real"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -1075,10 +903,7 @@
       "url": null,
       "note": "Actividad con entrada. Consulta precio, disponibilidad y horarios en el punto de venta."
     },
-    "tags": [
-      "Deporte",
-      "Balonmano"
-    ]
+    "tags": ["Deporte", "Balonmano"]
   },
   {
     "id": 32,
@@ -1091,9 +916,7 @@
     "zone": "Parque María Pacheco",
     "description": "XIV Feria de la Música: actuación de Akaldo, grupo de rock con temas propios y clásicos del rock español.",
     "summary": "XIV Feria de la Música: actuación de Akaldo, grupo de rock con temas propios y clásicos del rock español.",
-    "performances": [
-      "Akaldo"
-    ],
+    "performances": ["Akaldo"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -1109,12 +932,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Feria de la Música",
-      "Rock",
-      "Concierto"
-    ]
+    "tags": ["Música", "Feria de la Música", "Rock", "Concierto"]
   },
   {
     "id": 33,
@@ -1143,11 +961,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Bajada de Peñas",
-      "Bodegas"
-    ]
+    "tags": ["Peñas", "Bajada de Peñas", "Bodegas"]
   },
   {
     "id": 34,
@@ -1160,9 +974,7 @@
     "zone": "Instituto Tomás Pascual",
     "description": "Fuegos Artificiales a cargo de Pirotecnia Vulcano, junto al Instituto Tomás Pascual.",
     "summary": "Fuegos Artificiales a cargo de Pirotecnia Vulcano, junto al Instituto Tomás Pascual.",
-    "performances": [
-      "Pirotecnia Vulcano"
-    ],
+    "performances": ["Pirotecnia Vulcano"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -1178,9 +990,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Fuegos artificiales"
-    ]
+    "tags": ["Fuegos artificiales"]
   },
   {
     "id": 35,
@@ -1193,9 +1003,7 @@
     "zone": "Plaza Mayor",
     "description": "Verbena en la Plaza Mayor con la Orquesta La Reina Show.",
     "summary": "Verbena en la Plaza Mayor con la Orquesta La Reina Show.",
-    "performances": [
-      "Orquesta La Reina Show"
-    ],
+    "performances": ["Orquesta La Reina Show"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -1211,11 +1019,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Verbena",
-      "Orquesta"
-    ]
+    "tags": ["Música", "Verbena", "Orquesta"]
   },
   {
     "id": 36,
@@ -1228,9 +1032,7 @@
     "zone": "El Montecillo",
     "description": "Concierto de Barry B en la calle Isabel I de Castilla, junto a la estación El Montecillo.",
     "summary": "Concierto de Barry B en la calle Isabel I de Castilla, junto a la estación El Montecillo.",
-    "performances": [
-      "Barry B"
-    ],
+    "performances": ["Barry B"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -1246,10 +1048,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Concierto"
-    ]
+    "tags": ["Música", "Concierto"]
   },
   {
     "id": 37,
@@ -1263,11 +1062,7 @@
     "description": "Por la mañana, disparo de cohetes y cañonazos anunciando la festividad. Dianas y Pasacalles a cargo de las peñas El Alboroto, La Ribera y La Amistad.",
     "summary": "Por la mañana, disparo de cohetes y cañonazos anunciando la festividad. Dianas y Pasacalles a cargo de las peñas El Alboroto, La Ribera y La Amistad.",
     "performances": [],
-    "organizers": [
-      "Peña El Alboroto",
-      "Peña La Ribera",
-      "Peña La Amistad"
-    ],
+    "organizers": ["Peña El Alboroto", "Peña La Ribera", "Peña La Amistad"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -1282,11 +1077,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Dianas",
-      "Pasacalles"
-    ]
+    "tags": ["Peñas", "Dianas", "Pasacalles"]
   },
   {
     "id": 38,
@@ -1300,9 +1091,7 @@
     "description": "Concurso de puzle del 50 aniversario de la Peña El Jarro, en modalidad por parejas. Bases, premios e inscripciones a través de los canales oficiales de la Peña.",
     "summary": "Concurso de puzle del 50 aniversario de la Peña El Jarro, en modalidad por parejas. Bases, premios e inscripciones a través de los canales oficiales de la Peña.",
     "performances": [],
-    "organizers": [
-      "Peña El Jarro"
-    ],
+    "organizers": ["Peña El Jarro"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.6712,
@@ -1317,10 +1106,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Concurso"
-    ]
+    "tags": ["Peñas", "Concurso"]
   },
   {
     "id": 39,
@@ -1334,9 +1120,7 @@
     "description": "Visita a la residencia de las Hermanitas de los Ancianos Desamparados por la Peña El Alboroto.",
     "summary": "Visita a la residencia de las Hermanitas de los Ancianos Desamparados por la Peña El Alboroto.",
     "performances": [],
-    "organizers": [
-      "Peña El Alboroto"
-    ],
+    "organizers": ["Peña El Alboroto"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67055,
@@ -1351,10 +1135,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Visita a residencias"
-    ]
+    "tags": ["Peñas", "Visita a residencias"]
   },
   {
     "id": 40,
@@ -1383,9 +1164,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Religioso"
-    ]
+    "tags": ["Religioso"]
   },
   {
     "id": 41,
@@ -1416,11 +1195,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Gigantes y Cabezudos",
-      "Pasacalles"
-    ]
+    "tags": ["Folklore", "Gigantes y Cabezudos", "Pasacalles"]
   },
   {
     "id": 42,
@@ -1433,12 +1208,8 @@
     "zone": "Zona Centro",
     "description": "Pasacalle de la Charanga Peña La Amistad por las calles del Centro.",
     "summary": "Pasacalle de la Charanga Peña La Amistad por las calles del Centro.",
-    "performances": [
-      "Charanga Peña La Amistad"
-    ],
-    "organizers": [
-      "Peña La Amistad"
-    ],
+    "performances": ["Charanga Peña La Amistad"],
+    "organizers": ["Peña La Amistad"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -1453,12 +1224,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Peñas", "Pasacalles"]
   },
   {
     "id": 43,
@@ -1472,9 +1238,7 @@
     "description": "Talanquera popular en la bodega de la Peña El Jarro, amenizada por la Charanga, cuya recaudación irá destinada a una asociación benéfica arandina.",
     "summary": "Talanquera popular en la bodega de la Peña El Jarro, amenizada por la Charanga, cuya recaudación irá destinada a una asociación benéfica arandina.",
     "performances": [],
-    "organizers": [
-      "Peña El Jarro"
-    ],
+    "organizers": ["Peña El Jarro"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.6712,
@@ -1489,11 +1253,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Talanquera",
-      "Benéfico"
-    ]
+    "tags": ["Peñas", "Talanquera", "Benéfico"]
   },
   {
     "id": 44,
@@ -1506,12 +1266,8 @@
     "zone": "Zona Centro",
     "description": "Pasacalle de la Charanga Peña El Cubillo por las calles del Centro.",
     "summary": "Pasacalle de la Charanga Peña El Cubillo por las calles del Centro.",
-    "performances": [
-      "Charanga Peña El Cubillo"
-    ],
-    "organizers": [
-      "Peña El Cubillo"
-    ],
+    "performances": ["Charanga Peña El Cubillo"],
+    "organizers": ["Peña El Cubillo"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -1526,12 +1282,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Peñas", "Pasacalles"]
   },
   {
     "id": 45,
@@ -1544,12 +1295,8 @@
     "zone": "Zona Centro",
     "description": "Pasacalle de la Charanga Peña La Capea por las calles del Centro.",
     "summary": "Pasacalle de la Charanga Peña La Capea por las calles del Centro.",
-    "performances": [
-      "Charanga Peña La Capea"
-    ],
-    "organizers": [
-      "Peña La Capea"
-    ],
+    "performances": ["Charanga Peña La Capea"],
+    "organizers": ["Peña La Capea"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -1564,12 +1311,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Peñas", "Pasacalles"]
   },
   {
     "id": 46,
@@ -1586,9 +1328,7 @@
       "Unidad de Música de la Academia Básica del Aire y del Espacio"
     ],
     "organizers": [],
-    "collaborators": [
-      "Centro Cultural Nuestra Señora de Loreto"
-    ],
+    "collaborators": ["Centro Cultural Nuestra Señora de Loreto"],
     "coordinates": {
       "lat": 41.670465,
       "lng": -3.688888,
@@ -1602,11 +1342,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Concierto",
-      "Banda"
-    ]
+    "tags": ["Música", "Concierto", "Banda"]
   },
   {
     "id": 47,
@@ -1635,11 +1371,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Baile Vermú",
-      "Baile agarrado"
-    ]
+    "tags": ["Folklore", "Baile Vermú", "Baile agarrado"]
   },
   {
     "id": 48,
@@ -1653,9 +1385,7 @@
     "description": "Concierto y talanquera popular «Aranda en Dulzaina» en la Plaza del Trigo.",
     "summary": "Concierto y talanquera popular «Aranda en Dulzaina» en la Plaza del Trigo.",
     "performances": [],
-    "organizers": [
-      "A.C. Dulzainas y Tambores «Villa de Aranda»"
-    ],
+    "organizers": ["A.C. Dulzainas y Tambores «Villa de Aranda»"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.671077,
@@ -1670,11 +1400,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Dulzaina",
-      "Talanquera"
-    ]
+    "tags": ["Folklore", "Dulzaina", "Talanquera"]
   },
   {
     "id": 49,
@@ -1688,10 +1414,7 @@
     "description": "Concurso «Tu Kara-oke me suena»: los invitados se enfrentan al reto de cantar las canciones, interpretarlas y bailarlas. Competición por equipos con premios para el ganador.",
     "summary": "Concurso «Tu Kara-oke me suena»: los invitados se enfrentan al reto de cantar las canciones, interpretarlas y bailarlas. Competición por equipos con premios para el ganador.",
     "performances": [],
-    "organizers": [
-      "Peñas",
-      "Concejalía de Festejos"
-    ],
+    "organizers": ["Peñas", "Concejalía de Festejos"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.670271,
@@ -1706,12 +1429,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Concurso",
-      "Karaoke",
-      "Peñas"
-    ]
+    "tags": ["Música", "Concurso", "Karaoke", "Peñas"]
   },
   {
     "id": 50,
@@ -1724,9 +1442,7 @@
     "zone": "Plaza Laguna Negra",
     "description": "Espectáculo infantil y familiar «Bichejos», con Bambalúa Teatro, en la Plaza Laguna Negra.",
     "summary": "Espectáculo infantil y familiar «Bichejos», con Bambalúa Teatro, en la Plaza Laguna Negra.",
-    "performances": [
-      "Bambalúa Teatro"
-    ],
+    "performances": ["Bambalúa Teatro"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -1742,10 +1458,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Infantil y familiar",
-      "Teatro"
-    ]
+    "tags": ["Infantil y familiar", "Teatro"]
   },
   {
     "id": 51,
@@ -1758,9 +1471,7 @@
     "zone": "Parque María Pacheco",
     "description": "XIV Feria de la Música: actuación de Pink Cadillac, pop-rock nacional e internacional.",
     "summary": "XIV Feria de la Música: actuación de Pink Cadillac, pop-rock nacional e internacional.",
-    "performances": [
-      "Pink Cadillac"
-    ],
+    "performances": ["Pink Cadillac"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -1776,12 +1487,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Feria de la Música",
-      "Pop-Rock",
-      "Concierto"
-    ]
+    "tags": ["Música", "Feria de la Música", "Pop-Rock", "Concierto"]
   },
   {
     "id": 52,
@@ -1810,11 +1516,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Bajada de Peñas",
-      "Bodegas"
-    ]
+    "tags": ["Peñas", "Bajada de Peñas", "Bodegas"]
   },
   {
     "id": 53,
@@ -1827,9 +1529,7 @@
     "zone": "Instituto Tomás Pascual",
     "description": "Fuegos Artificiales a cargo de Pirotecnia Vulcano, junto al Instituto Tomás Pascual.",
     "summary": "Fuegos Artificiales a cargo de Pirotecnia Vulcano, junto al Instituto Tomás Pascual.",
-    "performances": [
-      "Pirotecnia Vulcano"
-    ],
+    "performances": ["Pirotecnia Vulcano"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -1845,9 +1545,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Fuegos artificiales"
-    ]
+    "tags": ["Fuegos artificiales"]
   },
   {
     "id": 54,
@@ -1860,9 +1558,7 @@
     "zone": "Plaza Mayor",
     "description": "Verbena en la Plaza Mayor con la Orquesta Azabache.",
     "summary": "Verbena en la Plaza Mayor con la Orquesta Azabache.",
-    "performances": [
-      "Orquesta Azabache"
-    ],
+    "performances": ["Orquesta Azabache"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -1878,11 +1574,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Verbena",
-      "Orquesta"
-    ]
+    "tags": ["Música", "Verbena", "Orquesta"]
   },
   {
     "id": 55,
@@ -1895,9 +1587,7 @@
     "zone": "El Montecillo",
     "description": "Concierto de Camela en la calle Isabel I de Castilla, junto a la estación El Montecillo.",
     "summary": "Concierto de Camela en la calle Isabel I de Castilla, junto a la estación El Montecillo.",
-    "performances": [
-      "Camela"
-    ],
+    "performances": ["Camela"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -1913,10 +1603,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Concierto"
-    ]
+    "tags": ["Música", "Concierto"]
   },
   {
     "id": 56,
@@ -1929,12 +1616,8 @@
     "zone": "Barrio de Bodegas",
     "description": "Concierto de la Charanga Peña La Ribera dentro de su bodega.",
     "summary": "Concierto de la Charanga Peña La Ribera dentro de su bodega.",
-    "performances": [
-      "Charanga Peña La Ribera"
-    ],
-    "organizers": [
-      "Peña La Ribera"
-    ],
+    "performances": ["Charanga Peña La Ribera"],
+    "organizers": ["Peña La Ribera"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.6712,
@@ -1949,12 +1632,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas",
-      "Bodegas"
-    ]
+    "tags": ["Música", "Charanga", "Peñas", "Bodegas"]
   },
   {
     "id": 57,
@@ -1968,11 +1646,7 @@
     "description": "Por la mañana, disparo de cohetes y cañonazos anunciando la festividad. Dianas y pasacalles a cargo de las peñas El Cubillo, La Capea y El Jarro.",
     "summary": "Por la mañana, disparo de cohetes y cañonazos anunciando la festividad. Dianas y pasacalles a cargo de las peñas El Cubillo, La Capea y El Jarro.",
     "performances": [],
-    "organizers": [
-      "Peña El Cubillo",
-      "Peña La Capea",
-      "Peña El Jarro"
-    ],
+    "organizers": ["Peña El Cubillo", "Peña La Capea", "Peña El Jarro"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -1987,11 +1661,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Dianas",
-      "Pasacalles"
-    ]
+    "tags": ["Peñas", "Dianas", "Pasacalles"]
   },
   {
     "id": 58,
@@ -2004,12 +1674,8 @@
     "zone": "Zona Centro",
     "description": "Pasacalle a cargo de la Charanga Peña La Amistad.",
     "summary": "Pasacalle a cargo de la Charanga Peña La Amistad.",
-    "performances": [
-      "Charanga Peña La Amistad"
-    ],
-    "organizers": [
-      "Peña La Amistad"
-    ],
+    "performances": ["Charanga Peña La Amistad"],
+    "organizers": ["Peña La Amistad"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -2024,12 +1690,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Peñas", "Pasacalles"]
   },
   {
     "id": 59,
@@ -2043,9 +1704,7 @@
     "description": "Visita a la residencia Ciudad del Bienestar por la Peña El Cubillo.",
     "summary": "Visita a la residencia Ciudad del Bienestar por la Peña El Cubillo.",
     "performances": [],
-    "organizers": [
-      "Peña El Cubillo"
-    ],
+    "organizers": ["Peña El Cubillo"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67055,
@@ -2060,10 +1719,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Visita a residencias"
-    ]
+    "tags": ["Peñas", "Visita a residencias"]
   },
   {
     "id": 60,
@@ -2077,9 +1733,7 @@
     "description": "Visita a la residencia de las Hermanitas de los Ancianos Desamparados por la Peña Tierra Aranda.",
     "summary": "Visita a la residencia de las Hermanitas de los Ancianos Desamparados por la Peña Tierra Aranda.",
     "performances": [],
-    "organizers": [
-      "Peña Tierra Aranda"
-    ],
+    "organizers": ["Peña Tierra Aranda"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67055,
@@ -2094,10 +1748,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Visita a residencias"
-    ]
+    "tags": ["Peñas", "Visita a residencias"]
   },
   {
     "id": 61,
@@ -2128,11 +1779,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Gigantes y Cabezudos",
-      "Pasacalles"
-    ]
+    "tags": ["Folklore", "Gigantes y Cabezudos", "Pasacalles"]
   },
   {
     "id": 62,
@@ -2150,9 +1797,7 @@
       "Concejalía de Festejos",
       "Club Deportivo Actividades Náuticas, Canoa Kayak, Azayca de Zamora"
     ],
-    "collaborators": [
-      "C.D. Espeleoduero"
-    ],
+    "collaborators": ["C.D. Espeleoduero"],
     "coordinates": {
       "lat": 41.659112,
       "lng": -3.681587,
@@ -2166,11 +1811,7 @@
       "url": null,
       "note": "El programa indica que es una actividad de acceso libre."
     },
-    "tags": [
-      "Deporte",
-      "Río Duero",
-      "Familiar"
-    ]
+    "tags": ["Deporte", "Río Duero", "Familiar"]
   },
   {
     "id": 63,
@@ -2184,9 +1825,7 @@
     "description": "Apertura de la bodega de la Peña La Ribera.",
     "summary": "Apertura de la bodega de la Peña La Ribera.",
     "performances": [],
-    "organizers": [
-      "Peña La Ribera"
-    ],
+    "organizers": ["Peña La Ribera"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.6712,
@@ -2201,10 +1840,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Bodegas"
-    ]
+    "tags": ["Peñas", "Bodegas"]
   },
   {
     "id": 64,
@@ -2217,12 +1853,8 @@
     "zone": "Zona Centro",
     "description": "Pasacalle de la Charanga Peña Tierra Aranda.",
     "summary": "Pasacalle de la Charanga Peña Tierra Aranda.",
-    "performances": [
-      "Charanga Peña Tierra Aranda"
-    ],
-    "organizers": [
-      "Peña Tierra Aranda"
-    ],
+    "performances": ["Charanga Peña Tierra Aranda"],
+    "organizers": ["Peña Tierra Aranda"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -2237,12 +1869,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Peñas", "Pasacalles"]
   },
   {
     "id": 65,
@@ -2255,12 +1882,8 @@
     "zone": "Zona Centro",
     "description": "Baile Vermú en la calle Isilla amenizado por la Charanga Peña El Jarro.",
     "summary": "Baile Vermú en la calle Isilla amenizado por la Charanga Peña El Jarro.",
-    "performances": [
-      "Charanga Peña El Jarro"
-    ],
-    "organizers": [
-      "Peña El Jarro"
-    ],
+    "performances": ["Charanga Peña El Jarro"],
+    "organizers": ["Peña El Jarro"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.671217,
@@ -2275,12 +1898,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Baile Vermú",
-      "Charanga",
-      "Peñas"
-    ]
+    "tags": ["Folklore", "Baile Vermú", "Charanga", "Peñas"]
   },
   {
     "id": 66,
@@ -2293,12 +1911,8 @@
     "zone": "Ribera del Duero",
     "description": "Baile Vermú en el Parque El Barriles a cargo de la Charanga Peña Tierra Aranda.",
     "summary": "Baile Vermú en el Parque El Barriles a cargo de la Charanga Peña Tierra Aranda.",
-    "performances": [
-      "Charanga Peña Tierra Aranda"
-    ],
-    "organizers": [
-      "Peña Tierra Aranda"
-    ],
+    "performances": ["Charanga Peña Tierra Aranda"],
+    "organizers": ["Peña Tierra Aranda"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.671424,
@@ -2313,12 +1927,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Baile Vermú",
-      "Charanga",
-      "Peñas"
-    ]
+    "tags": ["Folklore", "Baile Vermú", "Charanga", "Peñas"]
   },
   {
     "id": 67,
@@ -2336,9 +1945,7 @@
       "Concejalía de Festejos",
       "Club Actividades Náuticas, Canoa Kayak, Azayca de Zamora"
     ],
-    "collaborators": [
-      "C.D. Espeleoduero"
-    ],
+    "collaborators": ["C.D. Espeleoduero"],
     "coordinates": {
       "lat": 41.659112,
       "lng": -3.681587,
@@ -2352,11 +1959,7 @@
       "url": null,
       "note": "El programa indica que es una actividad de acceso libre."
     },
-    "tags": [
-      "Deporte",
-      "Río Duero",
-      "Familiar"
-    ]
+    "tags": ["Deporte", "Río Duero", "Familiar"]
   },
   {
     "id": 68,
@@ -2370,10 +1973,7 @@
     "description": "III Mini Olimpiada Interpeñas: lanzamiento de gavilla, lanzamiento de boina, fútbol mareado, carrera de carretillas… y III Campeonato de futbolín humano Interpeñas.",
     "summary": "III Mini Olimpiada Interpeñas: lanzamiento de gavilla, lanzamiento de boina, fútbol mareado, carrera de carretillas… y III Campeonato de futbolín humano Interpeñas.",
     "performances": [],
-    "organizers": [
-      "Peñas",
-      "Concejalía de Festejos"
-    ],
+    "organizers": ["Peñas", "Concejalía de Festejos"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.668733,
@@ -2388,11 +1988,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Juegos",
-      "Interpeñas"
-    ]
+    "tags": ["Peñas", "Juegos", "Interpeñas"]
   },
   {
     "id": 69,
@@ -2405,9 +2001,7 @@
     "zone": "Parque La Huerta",
     "description": "Superfiesta infantil «El payaso loco», con Agencia Artística, en el Parque La Huerta.",
     "summary": "Superfiesta infantil «El payaso loco», con Agencia Artística, en el Parque La Huerta.",
-    "performances": [
-      "Agencia Artística"
-    ],
+    "performances": ["Agencia Artística"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -2423,10 +2017,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Infantil y familiar",
-      "Payasos"
-    ]
+    "tags": ["Infantil y familiar", "Payasos"]
   },
   {
     "id": 70,
@@ -2439,9 +2030,7 @@
     "zone": "Parque María Pacheco",
     "description": "XIV Feria de la Música: actuación de Hijos del Tercer Acorde, fusión rock con instrumentos tradicionales irlandeses, españoles y americanos.",
     "summary": "XIV Feria de la Música: actuación de Hijos del Tercer Acorde, fusión rock con instrumentos tradicionales irlandeses, españoles y americanos.",
-    "performances": [
-      "Hijos del Tercer Acorde"
-    ],
+    "performances": ["Hijos del Tercer Acorde"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -2457,12 +2046,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Feria de la Música",
-      "Folk-Rock",
-      "Concierto"
-    ]
+    "tags": ["Música", "Feria de la Música", "Folk-Rock", "Concierto"]
   },
   {
     "id": 71,
@@ -2491,11 +2075,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Corte Real",
-      "Pasacalles"
-    ]
+    "tags": ["Peñas", "Corte Real", "Pasacalles"]
   },
   {
     "id": 72,
@@ -2508,9 +2088,7 @@
     "zone": "El Montecillo",
     "description": "Concierto de Juan Magán en la calle Isabel I de Castilla, junto a la estación El Montecillo.",
     "summary": "Concierto de Juan Magán en la calle Isabel I de Castilla, junto a la estación El Montecillo.",
-    "performances": [
-      "Juan Magán"
-    ],
+    "performances": ["Juan Magán"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -2526,10 +2104,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Concierto"
-    ]
+    "tags": ["Música", "Concierto"]
   },
   {
     "id": 73,
@@ -2542,9 +2117,7 @@
     "zone": "Colegios",
     "description": "Magia en los colegios: Mago Nicolás Chevalier en el Colegio Castilla. Coordinación de la programación de magia: Mago Joyra.",
     "summary": "Magia en los colegios: Mago Nicolás Chevalier en el Colegio Castilla. Coordinación de la programación de magia: Mago Joyra.",
-    "performances": [
-      "Mago Nicolás Chevalier"
-    ],
+    "performances": ["Mago Nicolás Chevalier"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -2560,10 +2133,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia en los colegios"
-    ]
+    "tags": ["Magia", "Magia en los colegios"]
   },
   {
     "id": 74,
@@ -2576,9 +2146,7 @@
     "zone": "Residencias",
     "description": "Magia social en residencia de personas mayores: Mago Yimis en la Residencia Ciudad de Aranda.",
     "summary": "Magia social en residencia de personas mayores: Mago Yimis en la Residencia Ciudad de Aranda.",
-    "performances": [
-      "Mago Yimis"
-    ],
+    "performances": ["Mago Yimis"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -2594,10 +2162,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia social"
-    ]
+    "tags": ["Magia", "Magia social"]
   },
   {
     "id": 75,
@@ -2610,9 +2175,7 @@
     "zone": "Colegios",
     "description": "Magia en los colegios: Edu el Mago en el Colegio Vera Cruz.",
     "summary": "Magia en los colegios: Edu el Mago en el Colegio Vera Cruz.",
-    "performances": [
-      "Edu el Mago"
-    ],
+    "performances": ["Edu el Mago"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -2628,10 +2191,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia en los colegios"
-    ]
+    "tags": ["Magia", "Magia en los colegios"]
   },
   {
     "id": 76,
@@ -2644,9 +2204,7 @@
     "zone": "Colegios",
     "description": "Magia en los colegios: Mago Nicolás Chevalier en el Colegio Simón de Colonia.",
     "summary": "Magia en los colegios: Mago Nicolás Chevalier en el Colegio Simón de Colonia.",
-    "performances": [
-      "Mago Nicolás Chevalier"
-    ],
+    "performances": ["Mago Nicolás Chevalier"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -2662,10 +2220,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia en los colegios"
-    ]
+    "tags": ["Magia", "Magia en los colegios"]
   },
   {
     "id": 77,
@@ -2696,11 +2251,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Otros",
-      "Visita a residencias",
-      "Corte Real"
-    ]
+    "tags": ["Otros", "Visita a residencias", "Corte Real"]
   },
   {
     "id": 78,
@@ -2714,9 +2265,7 @@
     "description": "Visita a la residencia Virgen de las Viñas por la Peña La Ribera.",
     "summary": "Visita a la residencia Virgen de las Viñas por la Peña La Ribera.",
     "performances": [],
-    "organizers": [
-      "Peña La Ribera"
-    ],
+    "organizers": ["Peña La Ribera"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67055,
@@ -2731,10 +2280,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Visita a residencias"
-    ]
+    "tags": ["Peñas", "Visita a residencias"]
   },
   {
     "id": 79,
@@ -2748,9 +2294,7 @@
     "description": "Visita a la residencia Río Duero por la Peña La Ribera.",
     "summary": "Visita a la residencia Río Duero por la Peña La Ribera.",
     "performances": [],
-    "organizers": [
-      "Peña La Ribera"
-    ],
+    "organizers": ["Peña La Ribera"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.657688,
@@ -2765,10 +2309,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Visita a residencias"
-    ]
+    "tags": ["Peñas", "Visita a residencias"]
   },
   {
     "id": 80,
@@ -2781,12 +2322,8 @@
     "zone": "Ribera del Duero",
     "description": "Cucañas en la Ribera del Duero. Animación musical a cargo de la Escuela Municipal de Folklore.",
     "summary": "Cucañas en la Ribera del Duero. Animación musical a cargo de la Escuela Municipal de Folklore.",
-    "performances": [
-      "Escuela Municipal de Folklore"
-    ],
-    "organizers": [
-      "C.D. Espeleoduero"
-    ],
+    "performances": ["Escuela Municipal de Folklore"],
+    "organizers": ["C.D. Espeleoduero"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.659112,
@@ -2801,11 +2338,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Infantil y familiar",
-      "Cucañas",
-      "Río Duero"
-    ]
+    "tags": ["Infantil y familiar", "Cucañas", "Río Duero"]
   },
   {
     "id": 81,
@@ -2818,9 +2351,7 @@
     "zone": "Zona Centro",
     "description": "Certamen de artistas callejeros: «Veló como el viento», espectáculo de calle clásico a cargo de la Cía. Javi Javichi, en la Plaza La Sal.",
     "summary": "Certamen de artistas callejeros: «Veló como el viento», espectáculo de calle clásico a cargo de la Cía. Javi Javichi, en la Plaza La Sal.",
-    "performances": [
-      "Cía. Javi Javichi"
-    ],
+    "performances": ["Cía. Javi Javichi"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -2836,11 +2367,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Humor y monólogos",
-      "Artistas de calle",
-      "Circo"
-    ]
+    "tags": ["Humor y monólogos", "Artistas de calle", "Circo"]
   },
   {
     "id": 82,
@@ -2853,9 +2380,7 @@
     "zone": "Plaza Los Tercios",
     "description": "Espectáculo infantil y familiar «Vaya follón con la contaminación», con Teatro Títeres Papamoscas, en la Plaza Los Tercios.",
     "summary": "Espectáculo infantil y familiar «Vaya follón con la contaminación», con Teatro Títeres Papamoscas, en la Plaza Los Tercios.",
-    "performances": [
-      "Teatro Títeres Papamoscas"
-    ],
+    "performances": ["Teatro Títeres Papamoscas"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -2871,10 +2396,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Infantil y familiar",
-      "Títeres"
-    ]
+    "tags": ["Infantil y familiar", "Títeres"]
   },
   {
     "id": 83,
@@ -2903,11 +2425,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Baile de tarde",
-      "Baile agarrado"
-    ]
+    "tags": ["Folklore", "Baile de tarde", "Baile agarrado"]
   },
   {
     "id": 84,
@@ -2920,9 +2438,7 @@
     "zone": "Residencias",
     "description": "Magia social: Mago Yimis en el Centro de Día para personas mayores Arco Pajarito.",
     "summary": "Magia social: Mago Yimis en el Centro de Día para personas mayores Arco Pajarito.",
-    "performances": [
-      "Mago Yimis"
-    ],
+    "performances": ["Mago Yimis"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -2938,10 +2454,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia social"
-    ]
+    "tags": ["Magia", "Magia social"]
   },
   {
     "id": 85,
@@ -2954,9 +2467,7 @@
     "zone": "Jardines de Don Diego",
     "description": "Magia en la calle: Edu el Mago en la Plaza Jardines de Don Diego.",
     "summary": "Magia en la calle: Edu el Mago en la Plaza Jardines de Don Diego.",
-    "performances": [
-      "Edu el Mago"
-    ],
+    "performances": ["Edu el Mago"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -2972,10 +2483,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia en la calle"
-    ]
+    "tags": ["Magia", "Magia en la calle"]
   },
   {
     "id": 86,
@@ -2988,9 +2496,7 @@
     "zone": "Plaza del Trigo",
     "description": "Certamen de artistas callejeros: «Malabarian on the Rox», humor y circo a cargo de la Cía. Roxi Katcheroff, en la Plaza del Trigo.",
     "summary": "Certamen de artistas callejeros: «Malabarian on the Rox», humor y circo a cargo de la Cía. Roxi Katcheroff, en la Plaza del Trigo.",
-    "performances": [
-      "Cía. Roxi Katcheroff"
-    ],
+    "performances": ["Cía. Roxi Katcheroff"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3006,11 +2512,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Humor y monólogos",
-      "Artistas de calle",
-      "Circo"
-    ]
+    "tags": ["Humor y monólogos", "Artistas de calle", "Circo"]
   },
   {
     "id": 87,
@@ -3023,9 +2525,7 @@
     "zone": "Cultural Caja de Burgos",
     "description": "Obra teatral «En un burro tres baturros», a cargo de Teatro Eslava, en el Cultural Caja de Burgos. Venta de entradas desde una hora antes de la función. Entrada: 14 €.",
     "summary": "Obra teatral «En un burro tres baturros», a cargo de Teatro Eslava, en el Cultural Caja de Burgos. Venta de entradas desde una hora antes de la función. Entrada: 14 €.",
-    "performances": [
-      "Teatro Eslava"
-    ],
+    "performances": ["Teatro Eslava"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3041,10 +2541,7 @@
       "url": null,
       "note": "Entrada: 14 €. Venta desde una hora antes de la función en el Cultural Caja de Burgos."
     },
-    "tags": [
-      "Teatro",
-      "Teatro Eslava"
-    ]
+    "tags": ["Teatro", "Teatro Eslava"]
   },
   {
     "id": 88,
@@ -3073,12 +2570,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Pasacalles",
-      "Bodegas",
-      "Canción popular"
-    ]
+    "tags": ["Peñas", "Pasacalles", "Bodegas", "Canción popular"]
   },
   {
     "id": 89,
@@ -3091,13 +2583,9 @@
     "zone": "Plaza Mayor",
     "description": "«La Carroza del Real»: recital lírico del Teatro Real (programa «Teatro Real, cerca de ti»), en la Plaza Mayor. Patrocina: Fundación Caja Rural Caja Viva.",
     "summary": "«La Carroza del Real»: recital lírico del Teatro Real (programa «Teatro Real, cerca de ti»), en la Plaza Mayor. Patrocina: Fundación Caja Rural Caja Viva.",
-    "performances": [
-      "Teatro Real"
-    ],
+    "performances": ["Teatro Real"],
     "organizers": [],
-    "collaborators": [
-      "Fundación Caja Rural Caja Viva"
-    ],
+    "collaborators": ["Fundación Caja Rural Caja Viva"],
     "coordinates": {
       "lat": 41.670465,
       "lng": -3.688888,
@@ -3111,11 +2599,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Lírica",
-      "Ópera"
-    ]
+    "tags": ["Música", "Lírica", "Ópera"]
   },
   {
     "id": 90,
@@ -3128,9 +2612,7 @@
     "zone": "Colegios",
     "description": "Magia en los colegios: Mago Nicolás Chevalier en el Colegio Claret.",
     "summary": "Magia en los colegios: Mago Nicolás Chevalier en el Colegio Claret.",
-    "performances": [
-      "Mago Nicolás Chevalier"
-    ],
+    "performances": ["Mago Nicolás Chevalier"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3146,10 +2628,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia en los colegios"
-    ]
+    "tags": ["Magia", "Magia en los colegios"]
   },
   {
     "id": 91,
@@ -3162,9 +2641,7 @@
     "zone": "Residencias",
     "description": "Magia social en residencia de personas mayores: Mago Yimis en la Residencia Ciudad del Bienestar.",
     "summary": "Magia social en residencia de personas mayores: Mago Yimis en la Residencia Ciudad del Bienestar.",
-    "performances": [
-      "Mago Yimis"
-    ],
+    "performances": ["Mago Yimis"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3180,10 +2657,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia social"
-    ]
+    "tags": ["Magia", "Magia social"]
   },
   {
     "id": 92,
@@ -3196,9 +2670,7 @@
     "zone": "Colegios",
     "description": "Magia en los colegios: Mago Iván Santacruz en el Colegio Fernán González.",
     "summary": "Magia en los colegios: Mago Iván Santacruz en el Colegio Fernán González.",
-    "performances": [
-      "Mago Iván Santacruz"
-    ],
+    "performances": ["Mago Iván Santacruz"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3214,10 +2686,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia en los colegios"
-    ]
+    "tags": ["Magia", "Magia en los colegios"]
   },
   {
     "id": 93,
@@ -3230,9 +2699,7 @@
     "zone": "Colegios",
     "description": "Magia en los colegios: Mago Nicolás Chevalier en el Colegio Dominicas.",
     "summary": "Magia en los colegios: Mago Nicolás Chevalier en el Colegio Dominicas.",
-    "performances": [
-      "Mago Nicolás Chevalier"
-    ],
+    "performances": ["Mago Nicolás Chevalier"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3248,10 +2715,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia en los colegios"
-    ]
+    "tags": ["Magia", "Magia en los colegios"]
   },
   {
     "id": 94,
@@ -3265,9 +2729,7 @@
     "description": "Torneo de Petanca Fiestas Patronales en las pistas de petanca del Parque Príncipe de Asturias.",
     "summary": "Torneo de Petanca Fiestas Patronales en las pistas de petanca del Parque Príncipe de Asturias.",
     "performances": [],
-    "organizers": [
-      "C.D. Petanca Ribera del Duero"
-    ],
+    "organizers": ["C.D. Petanca Ribera del Duero"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.670811,
@@ -3282,10 +2744,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Petanca"
-    ]
+    "tags": ["Deporte", "Petanca"]
   },
   {
     "id": 95,
@@ -3298,9 +2757,7 @@
     "zone": "Residencias",
     "description": "Magia social en residencia de personas mayores: Mago Yimis en la Residencia Virgen de las Viñas.",
     "summary": "Magia social en residencia de personas mayores: Mago Yimis en la Residencia Virgen de las Viñas.",
-    "performances": [
-      "Mago Yimis"
-    ],
+    "performances": ["Mago Yimis"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3316,10 +2773,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia social"
-    ]
+    "tags": ["Magia", "Magia social"]
   },
   {
     "id": 96,
@@ -3333,9 +2787,7 @@
     "description": "Visita a la residencia Ciudad de Aranda por la Peña La Ribera.",
     "summary": "Visita a la residencia Ciudad de Aranda por la Peña La Ribera.",
     "performances": [],
-    "organizers": [
-      "Peña La Ribera"
-    ],
+    "organizers": ["Peña La Ribera"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67968,
@@ -3350,10 +2802,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Visita a residencias"
-    ]
+    "tags": ["Peñas", "Visita a residencias"]
   },
   {
     "id": 97,
@@ -3366,9 +2815,7 @@
     "zone": "Plaza del Trigo",
     "description": "Certamen de artistas callejeros: «Wakamola», humor y circo a cargo de la Cía. Chimichurri, en la Plaza del Trigo.",
     "summary": "Certamen de artistas callejeros: «Wakamola», humor y circo a cargo de la Cía. Chimichurri, en la Plaza del Trigo.",
-    "performances": [
-      "Cía. Chimichurri"
-    ],
+    "performances": ["Cía. Chimichurri"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3384,11 +2831,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Humor y monólogos",
-      "Artistas de calle",
-      "Circo"
-    ]
+    "tags": ["Humor y monólogos", "Artistas de calle", "Circo"]
   },
   {
     "id": 98,
@@ -3401,12 +2844,8 @@
     "zone": "Ribera del Duero",
     "description": "Cucañas en la Ribera del Duero. Animación musical a cargo de la Escuela Municipal de Folklore.",
     "summary": "Cucañas en la Ribera del Duero. Animación musical a cargo de la Escuela Municipal de Folklore.",
-    "performances": [
-      "Escuela Municipal de Folklore"
-    ],
-    "organizers": [
-      "C.D. Espeleoduero"
-    ],
+    "performances": ["Escuela Municipal de Folklore"],
+    "organizers": ["C.D. Espeleoduero"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.659112,
@@ -3421,11 +2860,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Infantil y familiar",
-      "Cucañas",
-      "Río Duero"
-    ]
+    "tags": ["Infantil y familiar", "Cucañas", "Río Duero"]
   },
   {
     "id": 99,
@@ -3439,9 +2874,7 @@
     "description": "Partidos de pelota mano profesional en el Pabellón ADC Michelin. Con entrada.",
     "summary": "Partidos de pelota mano profesional en el Pabellón ADC Michelin. Con entrada.",
     "performances": [],
-    "organizers": [
-      "Fundación Michelin"
-    ],
+    "organizers": ["Fundación Michelin"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.657919,
@@ -3456,10 +2889,7 @@
       "url": null,
       "note": "Actividad con entrada. Consulta precio, disponibilidad y horarios en el punto de venta."
     },
-    "tags": [
-      "Deporte",
-      "Pelota mano"
-    ]
+    "tags": ["Deporte", "Pelota mano"]
   },
   {
     "id": 100,
@@ -3472,9 +2902,7 @@
     "zone": "Parque María Pacheco",
     "description": "Espectáculo infantil y familiar «El aventulibro del Profesor Ludus», con Kamaru Teatro, en el Parque María Pacheco.",
     "summary": "Espectáculo infantil y familiar «El aventulibro del Profesor Ludus», con Kamaru Teatro, en el Parque María Pacheco.",
-    "performances": [
-      "Kamaru Teatro"
-    ],
+    "performances": ["Kamaru Teatro"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3490,10 +2918,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Infantil y familiar",
-      "Teatro"
-    ]
+    "tags": ["Infantil y familiar", "Teatro"]
   },
   {
     "id": 101,
@@ -3506,10 +2931,7 @@
     "zone": "Parque La Huerta",
     "description": "Tarde de magia en la calle con Mago Nicolás Chevalier y Mago Iván Santacruz, en el Parque La Huerta.",
     "summary": "Tarde de magia en la calle con Mago Nicolás Chevalier y Mago Iván Santacruz, en el Parque La Huerta.",
-    "performances": [
-      "Mago Nicolás Chevalier",
-      "Mago Iván Santacruz"
-    ],
+    "performances": ["Mago Nicolás Chevalier", "Mago Iván Santacruz"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3525,10 +2947,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia en la calle"
-    ]
+    "tags": ["Magia", "Magia en la calle"]
   },
   {
     "id": 102,
@@ -3542,9 +2961,7 @@
     "description": "Visita a la residencia Ciudad del Bienestar por la Peña La Ribera.",
     "summary": "Visita a la residencia Ciudad del Bienestar por la Peña La Ribera.",
     "performances": [],
-    "organizers": [
-      "Peña La Ribera"
-    ],
+    "organizers": ["Peña La Ribera"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67055,
@@ -3559,10 +2976,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Visita a residencias"
-    ]
+    "tags": ["Peñas", "Visita a residencias"]
   },
   {
     "id": 103,
@@ -3576,10 +2990,7 @@
     "description": "Pesaje público de los púgiles de la velada de boxeo del día siguiente, en el Restaurante La Cantinaccia.",
     "summary": "Pesaje público de los púgiles de la velada de boxeo del día siguiente, en el Restaurante La Cantinaccia.",
     "performances": [],
-    "organizers": [
-      "C.D. Aranda Box",
-      "Concejalía de Deportes"
-    ],
+    "organizers": ["C.D. Aranda Box", "Concejalía de Deportes"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.672187,
@@ -3594,10 +3005,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Boxeo"
-    ]
+    "tags": ["Deporte", "Boxeo"]
   },
   {
     "id": 104,
@@ -3610,9 +3018,7 @@
     "zone": "Jardines de Don Diego",
     "description": "Certamen de artistas callejeros: «Al Tran Tran», música e improvisación teatral a cargo de la Cía. Al Tran Tran, en los Jardines de Don Diego.",
     "summary": "Certamen de artistas callejeros: «Al Tran Tran», música e improvisación teatral a cargo de la Cía. Al Tran Tran, en los Jardines de Don Diego.",
-    "performances": [
-      "Cía. Al Tran Tran"
-    ],
+    "performances": ["Cía. Al Tran Tran"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3628,10 +3034,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Humor y monólogos",
-      "Artistas de calle"
-    ]
+    "tags": ["Humor y monólogos", "Artistas de calle"]
   },
   {
     "id": 105,
@@ -3644,9 +3047,7 @@
     "zone": "Cultural Caja de Burgos",
     "description": "Obra teatral «Un cura en apuros», a cargo de Teatro Eslava, en el Cultural Caja de Burgos. Venta de entradas desde una hora antes de la función. Entrada: 14 €.",
     "summary": "Obra teatral «Un cura en apuros», a cargo de Teatro Eslava, en el Cultural Caja de Burgos. Venta de entradas desde una hora antes de la función. Entrada: 14 €.",
-    "performances": [
-      "Teatro Eslava"
-    ],
+    "performances": ["Teatro Eslava"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3662,10 +3063,7 @@
       "url": null,
       "note": "Entrada: 14 €. Venta desde una hora antes de la función en el Cultural Caja de Burgos."
     },
-    "tags": [
-      "Teatro",
-      "Teatro Eslava"
-    ]
+    "tags": ["Teatro", "Teatro Eslava"]
   },
   {
     "id": 106,
@@ -3678,12 +3076,8 @@
     "zone": "Barrio de Bodegas",
     "description": "VII Carrera de Barricas «Dominio de CAIR» por las calles Ricaposada, San Pelayo y Ronda, con la participación de las Peñas. Animada por DJ Ziry.",
     "summary": "VII Carrera de Barricas «Dominio de CAIR» por las calles Ricaposada, San Pelayo y Ronda, con la participación de las Peñas. Animada por DJ Ziry.",
-    "performances": [
-      "DJ Ziry"
-    ],
-    "organizers": [
-      "Bodegas Dominio de Cair"
-    ],
+    "performances": ["DJ Ziry"],
+    "organizers": ["Bodegas Dominio de Cair"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.6712,
@@ -3698,10 +3092,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Carrera de barricas"
-    ]
+    "tags": ["Peñas", "Carrera de barricas"]
   },
   {
     "id": 107,
@@ -3714,9 +3105,7 @@
     "zone": "El Picón / Recinto Ferial",
     "description": "Gran espectáculo París de Noia Show: sensacional combinación de música, luz y baile en un mismo evento, en el Recinto Ferial.",
     "summary": "Gran espectáculo París de Noia Show: sensacional combinación de música, luz y baile en un mismo evento, en el Recinto Ferial.",
-    "performances": [
-      "París de Noia"
-    ],
+    "performances": ["París de Noia"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3732,11 +3121,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Orquesta",
-      "Espectáculo"
-    ]
+    "tags": ["Música", "Orquesta", "Espectáculo"]
   },
   {
     "id": 108,
@@ -3749,9 +3134,7 @@
     "zone": "Colegios",
     "description": "Magia en los colegios: Mago Iván Santacruz en el Colegio Fuenteminaya.",
     "summary": "Magia en los colegios: Mago Iván Santacruz en el Colegio Fuenteminaya.",
-    "performances": [
-      "Mago Iván Santacruz"
-    ],
+    "performances": ["Mago Iván Santacruz"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3767,10 +3150,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia en los colegios"
-    ]
+    "tags": ["Magia", "Magia en los colegios"]
   },
   {
     "id": 109,
@@ -3783,9 +3163,7 @@
     "zone": "Residencias",
     "description": "Magia social en residencia de personas mayores: Mago Nicolás Chevalier en la Residencia Sagrada Familia.",
     "summary": "Magia social en residencia de personas mayores: Mago Nicolás Chevalier en la Residencia Sagrada Familia.",
-    "performances": [
-      "Mago Nicolás Chevalier"
-    ],
+    "performances": ["Mago Nicolás Chevalier"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3801,10 +3179,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia social"
-    ]
+    "tags": ["Magia", "Magia social"]
   },
   {
     "id": 110,
@@ -3817,9 +3192,7 @@
     "zone": "Colegios",
     "description": "Magia en los colegios: Mago Yimis en el Colegio Santa Catalina.",
     "summary": "Magia en los colegios: Mago Yimis en el Colegio Santa Catalina.",
-    "performances": [
-      "Mago Yimis"
-    ],
+    "performances": ["Mago Yimis"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3835,10 +3208,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia en los colegios"
-    ]
+    "tags": ["Magia", "Magia en los colegios"]
   },
   {
     "id": 111,
@@ -3851,9 +3221,7 @@
     "zone": "Colegios",
     "description": "Magia en los colegios: Mago Iván Santacruz en el Colegio Santa María.",
     "summary": "Magia en los colegios: Mago Iván Santacruz en el Colegio Santa María.",
-    "performances": [
-      "Mago Iván Santacruz"
-    ],
+    "performances": ["Mago Iván Santacruz"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3869,10 +3237,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia en los colegios"
-    ]
+    "tags": ["Magia", "Magia en los colegios"]
   },
   {
     "id": 112,
@@ -3885,14 +3250,8 @@
     "zone": "Zona Centro",
     "description": "Estrasaka Alternativo por las calles del centro, amenizado por la Charanga Estraperlo y la Charanga Lesaka.",
     "summary": "Estrasaka Alternativo por las calles del centro, amenizado por la Charanga Estraperlo y la Charanga Lesaka.",
-    "performances": [
-      "Charanga Estraperlo",
-      "Charanga Lesaka"
-    ],
-    "organizers": [
-      "Charanga Estraperlo",
-      "Charanga Lesaka"
-    ],
+    "performances": ["Charanga Estraperlo", "Charanga Lesaka"],
+    "organizers": ["Charanga Estraperlo", "Charanga Lesaka"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -3907,11 +3266,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Pasacalles"]
   },
   {
     "id": 113,
@@ -3924,9 +3279,7 @@
     "zone": "Residencias",
     "description": "Magia social en residencia de personas mayores: Mago Iván Santacruz en la Residencia La Luz.",
     "summary": "Magia social en residencia de personas mayores: Mago Iván Santacruz en la Residencia La Luz.",
-    "performances": [
-      "Mago Iván Santacruz"
-    ],
+    "performances": ["Mago Iván Santacruz"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -3942,10 +3295,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Magia",
-      "Magia social"
-    ]
+    "tags": ["Magia", "Magia social"]
   },
   {
     "id": 114,
@@ -3958,12 +3308,8 @@
     "zone": "Ribera del Duero",
     "description": "Cucañas en la Ribera del Duero. Animación musical a cargo de la Escuela Municipal de Folklore.",
     "summary": "Cucañas en la Ribera del Duero. Animación musical a cargo de la Escuela Municipal de Folklore.",
-    "performances": [
-      "Escuela Municipal de Folklore"
-    ],
-    "organizers": [
-      "C.D. Espeleoduero"
-    ],
+    "performances": ["Escuela Municipal de Folklore"],
+    "organizers": ["C.D. Espeleoduero"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.659112,
@@ -3978,11 +3324,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Infantil y familiar",
-      "Cucañas",
-      "Río Duero"
-    ]
+    "tags": ["Infantil y familiar", "Cucañas", "Río Duero"]
   },
   {
     "id": 115,
@@ -3995,9 +3337,7 @@
     "zone": "Jardines de Don Diego",
     "description": "Certamen de artistas callejeros: «Uco, un paisano diferente», clown, teatro gestual, magia y circo a cargo de la Cía. Fernando Caneca, en los Jardines de Don Diego.",
     "summary": "Certamen de artistas callejeros: «Uco, un paisano diferente», clown, teatro gestual, magia y circo a cargo de la Cía. Fernando Caneca, en los Jardines de Don Diego.",
-    "performances": [
-      "Cía. Fernando Caneca"
-    ],
+    "performances": ["Cía. Fernando Caneca"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -4013,11 +3353,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Humor y monólogos",
-      "Artistas de calle",
-      "Clown"
-    ]
+    "tags": ["Humor y monólogos", "Artistas de calle", "Clown"]
   },
   {
     "id": 116,
@@ -4030,11 +3366,7 @@
     "zone": "Parque María Pacheco",
     "description": "Urban Fest Joven en el Parque María Pacheco: Batalla de Gallos y actuaciones de Estado Cuerdo, Kallas & Legend y Víctor Rutty.",
     "summary": "Urban Fest Joven en el Parque María Pacheco: Batalla de Gallos y actuaciones de Estado Cuerdo, Kallas & Legend y Víctor Rutty.",
-    "performances": [
-      "Estado Cuerdo",
-      "Kallas & Legend",
-      "Víctor Rutty"
-    ],
+    "performances": ["Estado Cuerdo", "Kallas & Legend", "Víctor Rutty"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -4050,12 +3382,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Urban",
-      "Rap",
-      "Concierto"
-    ]
+    "tags": ["Música", "Urban", "Rap", "Concierto"]
   },
   {
     "id": 117,
@@ -4069,10 +3396,7 @@
     "description": "XV Torneo de Fútbol de la Resaca entre la Peña El Jarro y la Peña El Cubillo.",
     "summary": "XV Torneo de Fútbol de la Resaca entre la Peña El Jarro y la Peña El Cubillo.",
     "performances": [],
-    "organizers": [
-      "Peña El Jarro",
-      "Peña El Cubillo"
-    ],
+    "organizers": ["Peña El Jarro", "Peña El Cubillo"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -4087,11 +3411,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Fútbol",
-      "Peñas"
-    ]
+    "tags": ["Deporte", "Fútbol", "Peñas"]
   },
   {
     "id": 118,
@@ -4104,9 +3424,7 @@
     "zone": "Paseo Picasso",
     "description": "Espectáculo infantil y familiar «Bricomanazas», con Teatro La Sonrisa, en el Paseo Picasso.",
     "summary": "Espectáculo infantil y familiar «Bricomanazas», con Teatro La Sonrisa, en el Paseo Picasso.",
-    "performances": [
-      "Teatro La Sonrisa"
-    ],
+    "performances": ["Teatro La Sonrisa"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -4122,10 +3440,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Infantil y familiar",
-      "Teatro"
-    ]
+    "tags": ["Infantil y familiar", "Teatro"]
   },
   {
     "id": 119,
@@ -4138,9 +3453,7 @@
     "zone": "Parque La Huerta",
     "description": "Certamen de artistas callejeros: «Gueto Brass Band», dixie, jazz y swing a cargo de la Cía. Gueto Brass Band, en el Parque La Huerta.",
     "summary": "Certamen de artistas callejeros: «Gueto Brass Band», dixie, jazz y swing a cargo de la Cía. Gueto Brass Band, en el Parque La Huerta.",
-    "performances": [
-      "Gueto Brass Band"
-    ],
+    "performances": ["Gueto Brass Band"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -4156,12 +3469,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Artistas de calle",
-      "Jazz",
-      "Swing"
-    ]
+    "tags": ["Música", "Artistas de calle", "Jazz", "Swing"]
   },
   {
     "id": 120,
@@ -4174,9 +3482,7 @@
     "zone": "Cultural Caja de Burgos",
     "description": "Obra teatral «Marido de día, single de noche», a cargo de Teatro Eslava, en el Cultural Caja de Burgos. Venta de entradas desde una hora antes de la función. Entrada: 14 €.",
     "summary": "Obra teatral «Marido de día, single de noche», a cargo de Teatro Eslava, en el Cultural Caja de Burgos. Venta de entradas desde una hora antes de la función. Entrada: 14 €.",
-    "performances": [
-      "Teatro Eslava"
-    ],
+    "performances": ["Teatro Eslava"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -4192,10 +3498,7 @@
       "url": null,
       "note": "Entrada: 14 €. Venta desde una hora antes de la función en el Cultural Caja de Burgos."
     },
-    "tags": [
-      "Teatro",
-      "Teatro Eslava"
-    ]
+    "tags": ["Teatro", "Teatro Eslava"]
   },
   {
     "id": 121,
@@ -4208,13 +3511,8 @@
     "zone": "Pabellón Santiago Manguán",
     "description": "Velada de Boxeo Fiestas: 8 combates amateur y 1 combate profesional del boxeador local Ion Pérez, en el Pabellón Santiago Manguán. Con entrada.",
     "summary": "Velada de Boxeo Fiestas: 8 combates amateur y 1 combate profesional del boxeador local Ion Pérez, en el Pabellón Santiago Manguán. Con entrada.",
-    "performances": [
-      "Ion Pérez"
-    ],
-    "organizers": [
-      "C.D. Aranda Box",
-      "Concejalía de Deportes"
-    ],
+    "performances": ["Ion Pérez"],
+    "organizers": ["C.D. Aranda Box", "Concejalía de Deportes"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67075,
@@ -4229,10 +3527,7 @@
       "url": null,
       "note": "Actividad con entrada. Consulta precio, disponibilidad y horarios en el punto de venta."
     },
-    "tags": [
-      "Deporte",
-      "Boxeo"
-    ]
+    "tags": ["Deporte", "Boxeo"]
   },
   {
     "id": 122,
@@ -4245,12 +3540,8 @@
     "zone": "Plaza San Antonio",
     "description": "Concierto de la Charanga Peña Tierra Aranda en la Plaza San Antonio.",
     "summary": "Concierto de la Charanga Peña Tierra Aranda en la Plaza San Antonio.",
-    "performances": [
-      "Charanga Peña Tierra Aranda"
-    ],
-    "organizers": [
-      "Peña Tierra Aranda"
-    ],
+    "performances": ["Charanga Peña Tierra Aranda"],
+    "organizers": ["Peña Tierra Aranda"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.672638,
@@ -4265,11 +3556,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas"
-    ]
+    "tags": ["Música", "Charanga", "Peñas"]
   },
   {
     "id": 123,
@@ -4283,12 +3570,8 @@
     "description": "Aperitivo y limonada a 1 € (a beneficio de la AECC) y, después, música en la bodega de la Peña La Capea.",
     "summary": "Aperitivo y limonada a 1 € (a beneficio de la AECC) y, después, música en la bodega de la Peña La Capea.",
     "performances": [],
-    "organizers": [
-      "Peña La Capea"
-    ],
-    "collaborators": [
-      "AECC"
-    ],
+    "organizers": ["Peña La Capea"],
+    "collaborators": ["AECC"],
     "coordinates": {
       "lat": 41.6712,
       "lng": -3.691,
@@ -4302,12 +3585,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Limonada",
-      "Benéfico",
-      "Bodegas"
-    ]
+    "tags": ["Peñas", "Limonada", "Benéfico", "Bodegas"]
   },
   {
     "id": 124,
@@ -4320,9 +3598,7 @@
     "zone": "Plaza Mayor",
     "description": "Verbena en la Plaza Mayor con la Orquesta Malassia.",
     "summary": "Verbena en la Plaza Mayor con la Orquesta Malassia.",
-    "performances": [
-      "Orquesta Malassia"
-    ],
+    "performances": ["Orquesta Malassia"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -4338,11 +3614,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Verbena",
-      "Orquesta"
-    ]
+    "tags": ["Música", "Verbena", "Orquesta"]
   },
   {
     "id": 125,
@@ -4355,12 +3627,8 @@
     "zone": "Zona Centro",
     "description": "Dianas y pasacalle por la Charanga de la Peña El Chilindrón.",
     "summary": "Dianas y pasacalle por la Charanga de la Peña El Chilindrón.",
-    "performances": [
-      "Charanga Peña El Chilindrón"
-    ],
-    "organizers": [
-      "Peña El Chilindrón"
-    ],
+    "performances": ["Charanga Peña El Chilindrón"],
+    "organizers": ["Peña El Chilindrón"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -4375,12 +3643,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Dianas",
-      "Charanga",
-      "Peñas"
-    ]
+    "tags": ["Música", "Dianas", "Charanga", "Peñas"]
   },
   {
     "id": 126,
@@ -4394,9 +3657,7 @@
     "description": "Tirada con arma corta en honor a la Virgen de las Viñas en la galería de 50 metros del Polígono de Tiro Andrés Cabestrero (Monte de La Calabaza). Al finalizar, almuerzo para participantes y público asistente.",
     "summary": "Tirada con arma corta en honor a la Virgen de las Viñas en la galería de 50 metros del Polígono de Tiro Andrés Cabestrero (Monte de La Calabaza). Al finalizar, almuerzo para participantes y público asistente.",
     "performances": [],
-    "organizers": [
-      "Club de Tiro Alcotanes"
-    ],
+    "organizers": ["Club de Tiro Alcotanes"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.686064,
@@ -4411,10 +3672,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Tiro"
-    ]
+    "tags": ["Deporte", "Tiro"]
   },
   {
     "id": 127,
@@ -4428,9 +3686,7 @@
     "description": "Gran tirada al plato en honor a la Virgen de las Viñas en el campo de tiro al plato del Polígono de Tiro Andrés Cabestrero (Monte de La Calabaza). Al finalizar, almuerzo para participantes y público asistente.",
     "summary": "Gran tirada al plato en honor a la Virgen de las Viñas en el campo de tiro al plato del Polígono de Tiro Andrés Cabestrero (Monte de La Calabaza). Al finalizar, almuerzo para participantes y público asistente.",
     "performances": [],
-    "organizers": [
-      "Club de Tiro Alcotanes"
-    ],
+    "organizers": ["Club de Tiro Alcotanes"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.686064,
@@ -4445,10 +3701,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Tiro"
-    ]
+    "tags": ["Deporte", "Tiro"]
   },
   {
     "id": 128,
@@ -4462,9 +3715,7 @@
     "description": "Visita a una residencia de la 3ª Edad por la Peña La Amistad y concierto de la Charanga.",
     "summary": "Visita a una residencia de la 3ª Edad por la Peña La Amistad y concierto de la Charanga.",
     "performances": [],
-    "organizers": [
-      "Peña La Amistad"
-    ],
+    "organizers": ["Peña La Amistad"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67055,
@@ -4479,11 +3730,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Visita a residencias",
-      "Charanga"
-    ]
+    "tags": ["Peñas", "Visita a residencias", "Charanga"]
   },
   {
     "id": 129,
@@ -4520,11 +3767,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Gigantes y Cabezudos",
-      "Encuentro"
-    ]
+    "tags": ["Folklore", "Gigantes y Cabezudos", "Encuentro"]
   },
   {
     "id": 130,
@@ -4537,13 +3780,8 @@
     "zone": "Complejo Deportivo Juan Carlos Higuero",
     "description": "Partido de fútbol entre el Aranda C.F. de Veteranos y el Burgos C.F. de Veteranos.",
     "summary": "Partido de fútbol entre el Aranda C.F. de Veteranos y el Burgos C.F. de Veteranos.",
-    "performances": [
-      "Aranda C.F. Veteranos",
-      "Burgos C.F. Veteranos"
-    ],
-    "organizers": [
-      "C.D. Aranda Club de Fútbol de Veteranos"
-    ],
+    "performances": ["Aranda C.F. Veteranos", "Burgos C.F. Veteranos"],
+    "organizers": ["C.D. Aranda Club de Fútbol de Veteranos"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.666159,
@@ -4558,10 +3796,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Fútbol"
-    ]
+    "tags": ["Deporte", "Fútbol"]
   },
   {
     "id": 131,
@@ -4575,9 +3810,7 @@
     "description": "Visita a la residencia de la 3ª Edad Virgen de las Viñas por la Peña El Jarro, con baile concierto a cargo de la Charanga.",
     "summary": "Visita a la residencia de la 3ª Edad Virgen de las Viñas por la Peña El Jarro, con baile concierto a cargo de la Charanga.",
     "performances": [],
-    "organizers": [
-      "Peña El Jarro"
-    ],
+    "organizers": ["Peña El Jarro"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67055,
@@ -4592,11 +3825,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Visita a residencias",
-      "Charanga"
-    ]
+    "tags": ["Peñas", "Visita a residencias", "Charanga"]
   },
   {
     "id": 132,
@@ -4609,12 +3838,8 @@
     "zone": "Zona Centro",
     "description": "Pasacalle de la Charanga Peña Tierra Aranda por las calles del centro.",
     "summary": "Pasacalle de la Charanga Peña Tierra Aranda por las calles del centro.",
-    "performances": [
-      "Charanga Peña Tierra Aranda"
-    ],
-    "organizers": [
-      "Peña Tierra Aranda"
-    ],
+    "performances": ["Charanga Peña Tierra Aranda"],
+    "organizers": ["Peña Tierra Aranda"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -4629,12 +3854,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Peñas", "Pasacalles"]
   },
   {
     "id": 133,
@@ -4648,9 +3868,7 @@
     "description": "Apertura de la bodega de la Peña El Alboroto en la calle Ricaposada.",
     "summary": "Apertura de la bodega de la Peña El Alboroto en la calle Ricaposada.",
     "performances": [],
-    "organizers": [
-      "Peña El Alboroto"
-    ],
+    "organizers": ["Peña El Alboroto"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.6712,
@@ -4665,10 +3883,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Bodegas"
-    ]
+    "tags": ["Peñas", "Bodegas"]
   },
   {
     "id": 134,
@@ -4682,9 +3897,7 @@
     "description": "Talanquera popular en la puerta de la bodega de la Peña El Chilindrón.",
     "summary": "Talanquera popular en la puerta de la bodega de la Peña El Chilindrón.",
     "performances": [],
-    "organizers": [
-      "Peña El Chilindrón"
-    ],
+    "organizers": ["Peña El Chilindrón"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.6712,
@@ -4699,11 +3912,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Talanquera",
-      "Bodegas"
-    ]
+    "tags": ["Peñas", "Talanquera", "Bodegas"]
   },
   {
     "id": 135,
@@ -4716,14 +3925,8 @@
     "zone": "Zona Centro",
     "description": "Pasacalles de las Charangas Peña El Cubillo y Peña La Amistad por las calles del centro.",
     "summary": "Pasacalles de las Charangas Peña El Cubillo y Peña La Amistad por las calles del centro.",
-    "performances": [
-      "Charanga Peña El Cubillo",
-      "Charanga Peña La Amistad"
-    ],
-    "organizers": [
-      "Peña El Cubillo",
-      "Peña La Amistad"
-    ],
+    "performances": ["Charanga Peña El Cubillo", "Charanga Peña La Amistad"],
+    "organizers": ["Peña El Cubillo", "Peña La Amistad"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -4738,12 +3941,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Peñas", "Pasacalles"]
   },
   {
     "id": 136,
@@ -4756,12 +3954,8 @@
     "zone": "Barrio de Bodegas",
     "description": "Concierto de la Charanga Peña El Alboroto en la calle Ricaposada.",
     "summary": "Concierto de la Charanga Peña El Alboroto en la calle Ricaposada.",
-    "performances": [
-      "Charanga Peña El Alboroto"
-    ],
-    "organizers": [
-      "Peña El Alboroto"
-    ],
+    "performances": ["Charanga Peña El Alboroto"],
+    "organizers": ["Peña El Alboroto"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.6712,
@@ -4776,11 +3970,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas"
-    ]
+    "tags": ["Música", "Charanga", "Peñas"]
   },
   {
     "id": 137,
@@ -4793,12 +3983,8 @@
     "zone": "Santa María",
     "description": "Concierto Chilicharanga de la Peña El Chilindrón en la Plaza Santa María.",
     "summary": "Concierto Chilicharanga de la Peña El Chilindrón en la Plaza Santa María.",
-    "performances": [
-      "Charanga Peña El Chilindrón"
-    ],
-    "organizers": [
-      "Peña El Chilindrón"
-    ],
+    "performances": ["Charanga Peña El Chilindrón"],
+    "organizers": ["Peña El Chilindrón"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.671169,
@@ -4813,11 +3999,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas"
-    ]
+    "tags": ["Música", "Charanga", "Peñas"]
   },
   {
     "id": 138,
@@ -4831,9 +4013,7 @@
     "description": "Talanquera popular de la Peña Tierra Aranda y baile vermú en la Plaza del Trigo.",
     "summary": "Talanquera popular de la Peña Tierra Aranda y baile vermú en la Plaza del Trigo.",
     "performances": [],
-    "organizers": [
-      "Peña Tierra Aranda"
-    ],
+    "organizers": ["Peña Tierra Aranda"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.671077,
@@ -4848,11 +4028,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Talanquera",
-      "Baile Vermú"
-    ]
+    "tags": ["Peñas", "Talanquera", "Baile Vermú"]
   },
   {
     "id": 139,
@@ -4865,10 +4041,7 @@
     "zone": "Virgen de las Viñas",
     "description": "Partido de rugby entre Veteranos Rugby Aranda y Veteranos Hortaleza (Madrid), en el Campo de Rugby Virgen de las Viñas.",
     "summary": "Partido de rugby entre Veteranos Rugby Aranda y Veteranos Hortaleza (Madrid), en el Campo de Rugby Virgen de las Viñas.",
-    "performances": [
-      "Veteranos Rugby Aranda",
-      "Veteranos Hortaleza"
-    ],
+    "performances": ["Veteranos Rugby Aranda", "Veteranos Hortaleza"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -4884,10 +4057,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Rugby"
-    ]
+    "tags": ["Deporte", "Rugby"]
   },
   {
     "id": 140,
@@ -4900,10 +4070,7 @@
     "zone": "Complejo Deportivo Juan Carlos Higuero",
     "description": "Partido de fútbol entre el C.D. Aranda Riber y el Villarcayo C.F., correspondiente a la 2ª jornada de la Liga Regional Preferente de Castilla y León.",
     "summary": "Partido de fútbol entre el C.D. Aranda Riber y el Villarcayo C.F., correspondiente a la 2ª jornada de la Liga Regional Preferente de Castilla y León.",
-    "performances": [
-      "C.D. Aranda Riber",
-      "Villarcayo C.F."
-    ],
+    "performances": ["C.D. Aranda Riber", "Villarcayo C.F."],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -4919,10 +4086,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Fútbol"
-    ]
+    "tags": ["Deporte", "Fútbol"]
   },
   {
     "id": 141,
@@ -4935,10 +4099,7 @@
     "zone": "Virgen de las Viñas",
     "description": "Presentación del equipo de División de Honor B Nacional y partido presentación entre Rugby Aranda y Aparejadores Burgos, con la animación de un speaker y de las Peñas.",
     "summary": "Presentación del equipo de División de Honor B Nacional y partido presentación entre Rugby Aranda y Aparejadores Burgos, con la animación de un speaker y de las Peñas.",
-    "performances": [
-      "Rugby Aranda",
-      "Aparejadores Burgos"
-    ],
+    "performances": ["Rugby Aranda", "Aparejadores Burgos"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -4954,10 +4115,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Rugby"
-    ]
+    "tags": ["Deporte", "Rugby"]
   },
   {
     "id": 142,
@@ -4971,9 +4129,7 @@
     "description": "Microtalleres prácticos para fomentar la prevención y la formación en emergencias (RCP, cortes y hemorragias, primeros auxilios…), en la Plaza Jardines de Don Diego.",
     "summary": "Microtalleres prácticos para fomentar la prevención y la formación en emergencias (RCP, cortes y hemorragias, primeros auxilios…), en la Plaza Jardines de Don Diego.",
     "performances": [],
-    "organizers": [
-      "Cruz Roja"
-    ],
+    "organizers": ["Cruz Roja"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.670271,
@@ -4988,11 +4144,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Talleres",
-      "Cruz Roja",
-      "Emergencias"
-    ]
+    "tags": ["Talleres", "Cruz Roja", "Emergencias"]
   },
   {
     "id": 143,
@@ -5005,9 +4157,7 @@
     "zone": "Parque La Huerta",
     "description": "Espectáculo infantil y familiar «Circus Magníficus», con Malabara Circo, en el Parque La Huerta.",
     "summary": "Espectáculo infantil y familiar «Circus Magníficus», con Malabara Circo, en el Parque La Huerta.",
-    "performances": [
-      "Malabara Circo"
-    ],
+    "performances": ["Malabara Circo"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -5023,10 +4173,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Infantil y familiar",
-      "Circo"
-    ]
+    "tags": ["Infantil y familiar", "Circo"]
   },
   {
     "id": 144,
@@ -5039,9 +4186,7 @@
     "zone": "Parque María Pacheco",
     "description": "XIV Feria de la Música: actuación de The Soulutions, música soul enfocada en el baile y la diversión.",
     "summary": "XIV Feria de la Música: actuación de The Soulutions, música soul enfocada en el baile y la diversión.",
-    "performances": [
-      "The Soulutions"
-    ],
+    "performances": ["The Soulutions"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -5057,12 +4202,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Feria de la Música",
-      "Soul",
-      "Concierto"
-    ]
+    "tags": ["Música", "Feria de la Música", "Soul", "Concierto"]
   },
   {
     "id": 145,
@@ -5091,11 +4231,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Peñas",
-      "Bajada de Peñas",
-      "Bodegas"
-    ]
+    "tags": ["Peñas", "Bajada de Peñas", "Bodegas"]
   },
   {
     "id": 146,
@@ -5108,9 +4244,7 @@
     "zone": "Instituto Tomás Pascual",
     "description": "Fuegos Artificiales a cargo de Pirotecnia Vulcano, junto al Instituto Tomás Pascual.",
     "summary": "Fuegos Artificiales a cargo de Pirotecnia Vulcano, junto al Instituto Tomás Pascual.",
-    "performances": [
-      "Pirotecnia Vulcano"
-    ],
+    "performances": ["Pirotecnia Vulcano"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -5126,9 +4260,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Fuegos artificiales"
-    ]
+    "tags": ["Fuegos artificiales"]
   },
   {
     "id": 147,
@@ -5141,9 +4273,7 @@
     "zone": "Plaza Mayor",
     "description": "Verbena en la Plaza Mayor con la Orquesta Maremagnum.",
     "summary": "Verbena en la Plaza Mayor con la Orquesta Maremagnum.",
-    "performances": [
-      "Orquesta Maremagnum"
-    ],
+    "performances": ["Orquesta Maremagnum"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -5159,11 +4289,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Verbena",
-      "Orquesta"
-    ]
+    "tags": ["Música", "Verbena", "Orquesta"]
   },
   {
     "id": 148,
@@ -5176,12 +4302,8 @@
     "zone": "Plaza del Trigo",
     "description": "Concierto de DJ Uri Orante en la Plaza del Trigo.",
     "summary": "Concierto de DJ Uri Orante en la Plaza del Trigo.",
-    "performances": [
-      "DJ Uri Orante"
-    ],
-    "organizers": [
-      "Las Peñas de Aranda"
-    ],
+    "performances": ["DJ Uri Orante"],
+    "organizers": ["Las Peñas de Aranda"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.671077,
@@ -5196,11 +4318,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "DJ",
-      "Peñas"
-    ]
+    "tags": ["Música", "DJ", "Peñas"]
   },
   {
     "id": 149,
@@ -5213,12 +4331,8 @@
     "zone": "Santa María",
     "description": "Concierto de la Charanga Peña La Capea en la Plaza Santa María.",
     "summary": "Concierto de la Charanga Peña La Capea en la Plaza Santa María.",
-    "performances": [
-      "Charanga Peña La Capea"
-    ],
-    "organizers": [
-      "Peña La Capea"
-    ],
+    "performances": ["Charanga Peña La Capea"],
+    "organizers": ["Peña La Capea"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.671169,
@@ -5233,11 +4347,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas"
-    ]
+    "tags": ["Música", "Charanga", "Peñas"]
   },
   {
     "id": 150,
@@ -5250,12 +4360,8 @@
     "zone": "Zona Centro",
     "description": "Pasacalle de la Charanga Peña La Ribera por las calles del centro.",
     "summary": "Pasacalle de la Charanga Peña La Ribera por las calles del centro.",
-    "performances": [
-      "Charanga Peña La Ribera"
-    ],
-    "organizers": [
-      "Peña La Ribera"
-    ],
+    "performances": ["Charanga Peña La Ribera"],
+    "organizers": ["Peña La Ribera"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -5270,12 +4376,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Peñas", "Pasacalles"]
   },
   {
     "id": 151,
@@ -5289,12 +4390,8 @@
     "description": "II Slalom KTR Villa de Aranda: verificaciones técnicas y exposición de vehículos en la Plaza Mayor.",
     "summary": "II Slalom KTR Villa de Aranda: verificaciones técnicas y exposición de vehículos en la Plaza Mayor.",
     "performances": [],
-    "organizers": [
-      "Escudería KTR Racing"
-    ],
-    "collaborators": [
-      "Concejalía de Deportes"
-    ],
+    "organizers": ["Escudería KTR Racing"],
+    "collaborators": ["Concejalía de Deportes"],
     "coordinates": {
       "lat": 41.670465,
       "lng": -3.688888,
@@ -5308,11 +4405,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Automovilismo",
-      "Slalom"
-    ]
+    "tags": ["Deporte", "Automovilismo", "Slalom"]
   },
   {
     "id": 152,
@@ -5326,12 +4419,8 @@
     "description": "II Slalom KTR Villa de Aranda: exhibición de los vehículos participantes mediante caravana por las calles, desde la Plaza Mayor hasta el Polígono Prado Marina.",
     "summary": "II Slalom KTR Villa de Aranda: exhibición de los vehículos participantes mediante caravana por las calles, desde la Plaza Mayor hasta el Polígono Prado Marina.",
     "performances": [],
-    "organizers": [
-      "Escudería KTR Racing"
-    ],
-    "collaborators": [
-      "Concejalía de Deportes"
-    ],
+    "organizers": ["Escudería KTR Racing"],
+    "collaborators": ["Concejalía de Deportes"],
     "coordinates": {
       "lat": 41.670465,
       "lng": -3.688888,
@@ -5345,11 +4434,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Automovilismo",
-      "Slalom"
-    ]
+    "tags": ["Deporte", "Automovilismo", "Slalom"]
   },
   {
     "id": 153,
@@ -5380,11 +4465,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Gigantes y Cabezudos",
-      "Pasacalles"
-    ]
+    "tags": ["Folklore", "Gigantes y Cabezudos", "Pasacalles"]
   },
   {
     "id": 154,
@@ -5397,12 +4478,8 @@
     "zone": "Zona Centro",
     "description": "Pasacalle de la Charanga Peña El Cubillo por las calles del Centro.",
     "summary": "Pasacalle de la Charanga Peña El Cubillo por las calles del Centro.",
-    "performances": [
-      "Charanga Peña El Cubillo"
-    ],
-    "organizers": [
-      "Peña El Cubillo"
-    ],
+    "performances": ["Charanga Peña El Cubillo"],
+    "organizers": ["Peña El Cubillo"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -5417,12 +4494,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Peñas", "Pasacalles"]
   },
   {
     "id": 155,
@@ -5435,12 +4507,8 @@
     "zone": "Zona Centro",
     "description": "Pasacalle de la Charanga Peña La Capea por las calles del Centro.",
     "summary": "Pasacalle de la Charanga Peña La Capea por las calles del Centro.",
-    "performances": [
-      "Charanga Peña La Capea"
-    ],
-    "organizers": [
-      "Peña La Capea"
-    ],
+    "performances": ["Charanga Peña La Capea"],
+    "organizers": ["Peña La Capea"],
     "collaborators": [],
     "coordinates": {
       "lat": 41.67035,
@@ -5455,12 +4523,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Música",
-      "Charanga",
-      "Peñas",
-      "Pasacalles"
-    ]
+    "tags": ["Música", "Charanga", "Peñas", "Pasacalles"]
   },
   {
     "id": 156,
@@ -5489,11 +4552,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Baile Vermú",
-      "Baile agarrado"
-    ]
+    "tags": ["Folklore", "Baile Vermú", "Baile agarrado"]
   },
   {
     "id": 157,
@@ -5507,12 +4566,8 @@
     "description": "II Slalom KTR Villa de Aranda: prueba puntuable para el Campeonato de Castilla y León de Slalom, de 13:30 a 16:00 h en el Polígono Prado Marina. Al finalizar, entrega de premios y trofeos.",
     "summary": "II Slalom KTR Villa de Aranda: prueba puntuable para el Campeonato de Castilla y León de Slalom, de 13:30 a 16:00 h en el Polígono Prado Marina. Al finalizar, entrega de premios y trofeos.",
     "performances": [],
-    "organizers": [
-      "Escudería KTR Racing"
-    ],
-    "collaborators": [
-      "Concejalía de Deportes"
-    ],
+    "organizers": ["Escudería KTR Racing"],
+    "collaborators": ["Concejalía de Deportes"],
     "coordinates": {
       "lat": 41.657472,
       "lng": -3.712945,
@@ -5526,11 +4581,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Deporte",
-      "Automovilismo",
-      "Slalom"
-    ]
+    "tags": ["Deporte", "Automovilismo", "Slalom"]
   },
   {
     "id": 158,
@@ -5543,9 +4594,7 @@
     "zone": "Plaza del Trigo",
     "description": "Espectáculo infantil y familiar de encierros infantiles, con la Cía. Tirotateiro, en la Plaza del Trigo.",
     "summary": "Espectáculo infantil y familiar de encierros infantiles, con la Cía. Tirotateiro, en la Plaza del Trigo.",
-    "performances": [
-      "Cía. Tirotateiro"
-    ],
+    "performances": ["Cía. Tirotateiro"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -5561,10 +4610,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Infantil y familiar",
-      "Encierros infantiles"
-    ]
+    "tags": ["Infantil y familiar", "Encierros infantiles"]
   },
   {
     "id": 159,
@@ -5577,9 +4623,7 @@
     "zone": "Plaza Mayor",
     "description": "Concierto del 30º Aniversario de Abrojo Folk en la Plaza Mayor.",
     "summary": "Concierto del 30º Aniversario de Abrojo Folk en la Plaza Mayor.",
-    "performances": [
-      "Abrojo Folk"
-    ],
+    "performances": ["Abrojo Folk"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -5595,11 +4639,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Concierto",
-      "Folk"
-    ]
+    "tags": ["Folklore", "Concierto", "Folk"]
   },
   {
     "id": 160,
@@ -5630,10 +4670,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Dulzaina"
-    ]
+    "tags": ["Folklore", "Dulzaina"]
   },
   {
     "id": 161,
@@ -5664,11 +4701,7 @@
       "url": null,
       "note": "El programa no indica venta de entradas para este evento."
     },
-    "tags": [
-      "Folklore",
-      "Baile de La Rueda",
-      "Dulzaina"
-    ]
+    "tags": ["Folklore", "Baile de La Rueda", "Dulzaina"]
   },
   {
     "id": 162,
@@ -5681,9 +4714,7 @@
     "zone": "Plaza Mayor",
     "description": "Gran Traca Fin de Fiestas en la Plaza Mayor. Despedida de las Fiestas 2026 con el Entierro de la Sardina a cargo de la Charanga Estraperlo: el recorrido comienza en la Plaza Santa María, transita por calles céntricas y finaliza en la Plaza Mayor.",
     "summary": "Gran Traca Fin de Fiestas en la Plaza Mayor. Despedida de las Fiestas 2026 con el Entierro de la Sardina a cargo de la Charanga Estraperlo: el recorrido comienza en la Plaza Santa María, transita por calles céntricas y finaliza en la Plaza Mayor.",
-    "performances": [
-      "Charanga Estraperlo"
-    ],
+    "performances": ["Charanga Estraperlo"],
     "organizers": [],
     "collaborators": [],
     "coordinates": {
@@ -5743,38 +4774,5 @@
       "label": "Accesible",
       "note": "Los días 13 y 14 de septiembre, de 18:00 a 20:00 h, las atracciones funcionan sin música para que los niños y niñas con trastorno del espectro autista puedan disfrutar de ellas."
     }
-  },
-  {
-    "id": 164,
-    "date": "2026-09-12",
-    "dateLabel": "Sábado 12 de septiembre",
-    "startTime": "19:00",
-    "endTime": "01:00",
-    "title": "GastroAranda: música y gastronomía con food trucks",
-    "location": "El Picón",
-    "zone": "El Picón / Recinto Ferial",
-    "description": "GastroAranda en El Picón, del 12 al 20 de septiembre, desde las 19:00 h hasta la 01:00 h. Evento donde se aúna música y gastronomía, con food trucks y sorpresas musicales (los días 12, 16, 18, 19 y 20 a las 22:00 h).",
-    "summary": "GastroAranda en El Picón, del 12 al 20 de septiembre, desde las 19:00 h hasta la 01:00 h. Evento donde se aúna música y gastronomía, con food trucks y sorpresas musicales (los días 12, 16, 18, 19 y 20 a las 22:00 h).",
-    "performances": [],
-    "organizers": [],
-    "collaborators": [],
-    "coordinates": {
-      "lat": 41.668758,
-      "lng": -3.687177,
-      "source": "OpenStreetMap Nominatim"
-    },
-    "type": "Gastronomía",
-    "ticket": {
-      "required": false,
-      "status": "unknown",
-      "label": "Entrada no indicada",
-      "url": null,
-      "note": "El programa no indica venta de entradas para este evento."
-    },
-    "tags": [
-      "Gastronomía",
-      "Food trucks",
-      "Continuada"
-    ]
   }
 ]
