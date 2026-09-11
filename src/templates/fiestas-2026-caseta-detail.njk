@@ -147,78 +147,27 @@
           <span>Ver en mapa</span>
         </a>
         {% if caseta.coordinates %}
-        <button
+        <a
           class="fiestas-detail-map-action"
-          type="button"
-          data-fiestas-directions-toggle
+          href="https://www.google.com/maps/dir/?api=1&amp;destination={{ caseta.coordinates.lat }},{{ caseta.coordinates.lng }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-fiestas-map-app
           data-fiestas-analytics-action="directions"
-          aria-controls="caseta-directions-options-{{ caseta.id }}"
-          aria-expanded="false"
+          data-lat="{{ caseta.coordinates.lat }}"
+          data-lng="{{ caseta.coordinates.lng }}"
+          data-title="{{ caseta.location }}"
         >
-          <i class="fiestas-detail-directions-icon fa-solid fa-route" aria-hidden="true"></i>
-          <span>Cómo llegar</span>
-        </button>
+          <i class="fiestas-detail-directions-icon fa-solid fa-map-location-dot" aria-hidden="true"></i>
+          <span>Google Maps</span>
+        </a>
         {% else %}
         <span class="fiestas-detail-map-action fiestas-detail-map-action-disabled">
-          <i class="fiestas-detail-directions-icon fa-solid fa-route" aria-hidden="true"></i>
-          <span>Cómo llegar</span>
+          <i class="fiestas-detail-directions-icon fa-solid fa-map-location-dot" aria-hidden="true"></i>
+          <span>Google Maps</span>
         </span>
         {% endif %}
       </div>
-      {% if caseta.coordinates %}
-      <section
-        class="fiestas-detail-directions-options"
-        id="caseta-directions-options-{{ caseta.id }}"
-        data-fiestas-directions-options
-        aria-labelledby="caseta-directions-options-title-{{ caseta.id }}"
-        hidden
-      >
-        <h3 id="caseta-directions-options-title-{{ caseta.id }}" class="sr-only">Opciones para llegar</h3>
-        <div class="fiestas-detail-directions-grid">
-          <a
-            class="fiestas-detail-directions-option"
-            href="https://vallabus.com/#/rutas?origen=fiestasaldea"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-fiestas-vallabus-route
-            data-destination-name="{{ caseta.location }}"
-            data-destination-lat="{{ caseta.coordinates.lat }}"
-            data-destination-lon="{{ caseta.coordinates.lng }}"
-          >
-            <i class="fa-solid fa-bus" aria-hidden="true"></i>
-            <span>Bus</span>
-          </a>
-          <a
-            class="fiestas-detail-directions-option"
-            href="https://vallabus.com/#/rutas?origen=fiestasaldea"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-fiestas-vallabus-route
-            data-destination-name="{{ caseta.location }}"
-            data-destination-lat="{{ caseta.coordinates.lat }}"
-            data-destination-lon="{{ caseta.coordinates.lng }}"
-            data-fiestas-vallabus-mode="bike"
-          >
-            <i class="fa-solid fa-bicycle" aria-hidden="true"></i>
-            <span>Bici/BIKI</span>
-          </a>
-          <a
-            class="fiestas-detail-directions-option"
-            href="https://www.google.com/maps/dir/?api=1&amp;destination={{ caseta.coordinates.lat }},{{ caseta.coordinates.lng }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-fiestas-map-app
-            data-fiestas-analytics-action="directions-app"
-            data-lat="{{ caseta.coordinates.lat }}"
-            data-lng="{{ caseta.coordinates.lng }}"
-            data-title="{{ caseta.location }}"
-          >
-            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
-            <span>Tu App</span>
-          </a>
-        </div>
-      </section>
-      {% endif %}
       {% if caseta.nearbyStops.length %}
       <section class="fiestas-detail-transit" data-fiestas-transit aria-labelledby="caseta-transit-title-{{ caseta.id }}">
         <script type="application/json" data-fiestas-transit-stops>{{ caseta.nearbyStops | dumpForScript | safe }}</script>

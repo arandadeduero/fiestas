@@ -3285,83 +3285,6 @@
     color: #98a2b3;
   }
 
-  .fiestas-detail-directions-options {
-    border-top: 1px solid #e7eaf0;
-    background: rgba(15, 113, 159, 0.035);
-    padding: 0.65rem;
-  }
-
-  .fiestas-detail-directions-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.45rem;
-  }
-
-  .fiestas-detail-directions-option {
-    display: flex;
-    min-width: 0;
-    min-height: 3.8rem;
-    align-items: center;
-    justify-content: center;
-    gap: 0.35rem;
-    flex-direction: column;
-    border: 0;
-    background: transparent;
-    color: #0074ac;
-    padding: 0.45rem 0.25rem;
-    text-align: center;
-    text-decoration: none;
-    font-size: 0.72rem;
-    font-weight: 650;
-    line-height: 1.15;
-  }
-
-  .fiestas-detail .fiestas-detail-directions-option i {
-    color: #0074ac;
-    font-size: 1.1rem;
-    -webkit-text-fill-color: currentColor;
-    -webkit-text-stroke: 0;
-  }
-
-  .fiestas-detail-directions-option span {
-    overflow-wrap: anywhere;
-  }
-
-  .fiestas-detail-directions-option[aria-busy="true"] {
-    cursor: wait;
-    opacity: 0.72;
-    pointer-events: none;
-  }
-
-  .fiestas-detail-directions-option[aria-busy="true"] > i {
-    display: none;
-  }
-
-  .fiestas-detail-directions-option[aria-busy="true"]::before {
-    width: 1.1rem;
-    height: 1.1rem;
-    border: 2px solid currentColor;
-    border-right-color: transparent;
-    border-radius: 9999px;
-    content: '';
-    animation: fiestas-detail-location-spin 700ms linear infinite;
-  }
-
-  @keyframes fiestas-detail-location-spin {
-    to { transform: rotate(360deg); }
-  }
-
-  .fiestas-detail-directions-option:hover,
-  .fiestas-detail-directions-option:focus-visible {
-    background: rgba(15, 113, 159, 0.08);
-    color: #005c86;
-  }
-
-  .fiestas-detail-directions-option:focus-visible {
-    outline: 3px solid rgba(15, 113, 159, 0.3);
-    outline-offset: 2px;
-  }
-
   .fiestas-detail-transit {
     border-top: 1px solid #e7eaf0;
     background: linear-gradient(135deg, rgba(15, 113, 159, 0.055), rgba(166, 80, 93, 0.055));
@@ -4323,26 +4246,6 @@
   html.dark .fiestas-detail-transit {
     border-color: #313743;
     background: linear-gradient(135deg, rgba(23, 133, 184, 0.1), rgba(166, 80, 93, 0.14));
-  }
-
-  html.dark .fiestas-detail-directions-options {
-    border-color: #313743;
-    background: rgba(23, 133, 184, 0.06);
-  }
-
-  html.dark .fiestas-detail-directions-option {
-    background: transparent;
-    color: #5daed4;
-  }
-
-  html.dark .fiestas-detail-directions-option i {
-    color: #5daed4;
-  }
-
-  html.dark .fiestas-detail-directions-option:hover,
-  html.dark .fiestas-detail-directions-option:focus-visible {
-    background: rgba(93, 174, 212, 0.14);
-    color: #8cc9e5;
   }
 
   html.dark .fiestas-detail-transit-summary {

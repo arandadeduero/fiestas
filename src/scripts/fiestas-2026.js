@@ -2549,17 +2549,6 @@ function trackDetailExternalAction(action) {
 }
 
 function initDetailDirections() {
-  const toggle = document.querySelector('[data-fiestas-directions-toggle]');
-  const options = document.querySelector('[data-fiestas-directions-options]');
-  if (toggle && options) {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      options.hidden = expanded;
-      if (!expanded) void requestDetailTransitLocation();
-    });
-  }
-
   document.querySelectorAll('[data-fiestas-vallabus-route]').forEach((link) => initDetailVallaBusRoute(link));
 
   const mapLink = document.querySelector('[data-fiestas-map-app]');

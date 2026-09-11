@@ -168,17 +168,20 @@
           <span>Ver en mapa</span>
         </a>
         {% if event.coordinates and event.directionsUrl %}
-        <button
+        <a
           class="fiestas-detail-map-action"
-          type="button"
-          data-fiestas-directions-toggle
+          href="{{ event.directionsUrl }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-fiestas-map-app
           data-fiestas-analytics-action="directions"
-          aria-controls="event-directions-options-{{ event.id }}"
-          aria-expanded="false"
+          data-lat="{{ event.coordinates.lat }}"
+          data-lng="{{ event.coordinates.lng }}"
+          data-title="{{ event.location or event.title }}"
         >
-          <i class="fiestas-detail-directions-icon fa-solid fa-route" aria-hidden="true"></i>
-          <span>Cómo llegar</span>
-        </button>
+          <i class="fiestas-detail-directions-icon fa-solid fa-map-location-dot" aria-hidden="true"></i>
+          <span>Google Maps</span>
+        </a>
         {% elif event.osmUrl %}
         <a class="fiestas-detail-map-action" href="{{ event.osmUrl }}" target="_blank" rel="noopener noreferrer" data-fiestas-analytics-action="location">
           <i class="fiestas-detail-directions-icon fa-solid fa-location-arrow" aria-hidden="true"></i>
@@ -186,69 +189,11 @@
         </a>
         {% else %}
         <span class="fiestas-detail-map-action fiestas-detail-map-action-disabled">
-          <i class="fiestas-detail-directions-icon fa-solid fa-route" aria-hidden="true"></i>
-          <span>Cómo llegar</span>
+          <i class="fiestas-detail-directions-icon fa-solid fa-map-location-dot" aria-hidden="true"></i>
+          <span>Google Maps</span>
           </span>
         {% endif %}
       </div>
-      {% if event.coordinates and event.directionsUrl %}
-      <section
-        class="fiestas-detail-directions-options"
-        id="event-directions-options-{{ event.id }}"
-        data-fiestas-directions-options
-        aria-labelledby="event-directions-options-title-{{ event.id }}"
-        hidden
-      >
-        <h3 id="event-directions-options-title-{{ event.id }}" class="sr-only">Opciones para llegar</h3>
-        <div class="fiestas-detail-directions-grid">
-          <a
-            class="fiestas-detail-directions-option"
-            href="https://vallabus.com/#/rutas?origen=fiestasaldea"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-fiestas-vallabus-route
-            data-destination-name="{{ event.location or event.title }}"
-            data-destination-lat="{{ event.coordinates.lat }}"
-            data-destination-lon="{{ event.coordinates.lng }}"
-            data-arrival-date="{{ event.date }}"
-            data-arrival-time="{{ event.startTime }}"
-          >
-            <i class="fa-solid fa-bus" aria-hidden="true"></i>
-            <span>Bus</span>
-          </a>
-          <a
-            class="fiestas-detail-directions-option"
-            href="https://vallabus.com/#/rutas?origen=fiestasaldea"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-fiestas-vallabus-route
-            data-destination-name="{{ event.location or event.title }}"
-            data-destination-lat="{{ event.coordinates.lat }}"
-            data-destination-lon="{{ event.coordinates.lng }}"
-            data-arrival-date="{{ event.date }}"
-            data-arrival-time="{{ event.startTime }}"
-            data-fiestas-vallabus-mode="bike"
-          >
-            <i class="fa-solid fa-bicycle" aria-hidden="true"></i>
-            <span>Bici/BIKI</span>
-          </a>
-          <a
-            class="fiestas-detail-directions-option"
-            href="{{ event.directionsUrl }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-fiestas-map-app
-            data-fiestas-analytics-action="directions-app"
-            data-lat="{{ event.coordinates.lat }}"
-            data-lng="{{ event.coordinates.lng }}"
-            data-title="{{ event.location or event.title }}"
-          >
-            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
-            <span>Tu App</span>
-          </a>
-        </div>
-      </section>
-      {% endif %}
       {% if event.nearbyStops.length %}
       <section class="fiestas-detail-transit" data-fiestas-transit aria-labelledby="event-transit-title-{{ event.id }}">
         <script type="application/json" data-fiestas-transit-stops>{{ event.nearbyStops | dumpForScript | safe }}</script>
