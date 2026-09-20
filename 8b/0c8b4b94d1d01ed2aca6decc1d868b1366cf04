@@ -1,0 +1,27 @@
+src/templates/fiestas-2026.njk
+  s_22610d39789c98::t_682e568dfaa8cf 256
+src/styles/base.css
+  s_22610d39789c98::t_fa861caccbd30f 1215-1242
+  s_22610d39789c98::t_f0a7d961eb2594 2213-2214,2226-2227
+src/scripts/fiestas-2026.js
+  s_22610d39789c98::t_421f0e39d734d2 296
+  s_22610d39789c98::t_a7f2cb9775049c 2126-2163
+src/templates/partials/fiestas-ended-modal.njk
+  s_22610d39789c98::t_0c22e2df5e93a5 1-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8b0c8b4b94d1d01ed2aca6decc1d868b1366cf04",
+  "prompts": {},
+  "sessions": {
+    "s_22610d39789c98": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e7438235-35ba-4add-878a-163168acab77",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
