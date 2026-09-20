@@ -1,0 +1,25 @@
+src/assets/fontawesome/manifest.json
+  s_22610d39789c98::t_a519a4b87bd2d4 42
+src/styles/base.css
+  s_22610d39789c98::t_72c879a45bb77b 1239-1242,1244
+src/styles/fontawesome-subset.css
+  s_22610d39789c98::t_a519a4b87bd2d4 2,4,48
+src/templates/partials/fiestas-ended-modal.njk
+  s_22610d39789c98::t_21b765338fc619 14-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c662a5d0adcde7a57cbe00fca7cb68738c6f22ed",
+  "prompts": {},
+  "sessions": {
+    "s_22610d39789c98": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e7438235-35ba-4add-878a-163168acab77",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
