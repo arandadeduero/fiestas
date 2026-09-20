@@ -293,6 +293,7 @@ async function init() {
     if (state.view === 'map') requestLocationOnce();
     renderControlLists();
     setupCommunityCtaPwa();
+    setupFiestasEndedModal(state.events);
     render();
     void loadWeather();
     void loadSaveCounts();
@@ -2120,6 +2121,44 @@ function localDateKey(date) {
   const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
   return `${year}-${month}-${day}`;
+}
+
+const FIESTAS_ENDED_MODAL_STORAGE_KEY = 'fiestasAranda:ended-modal:v1:dismissed';
+
+// Las fiestas han acabado si la fecha de hoy es posterior al último día con
+// eventos programados; el último día en sí sigue mostrando la agenda normal.
+function setupFiestasEndedModal(events) {
+  const modal = document.querySelector('[data-fiestas-ended-modal]');
+  if (!modal || !events.length) return;
+
+  const lastEventDate = events.reduce((max, event) => (event.date > max ? event.date : max), events[0].date);
+  const today = localDateKey(new Date());
+  if (today <= lastEventDate) return;
+
+  try {
+    if (window.localStorage.getItem(FIESTAS_ENDED_MODAL_STORAGE_KEY) === lastEventDate) return;
+  } catch {
+    // Sin localStorage seguimos mostrando el modal en cada visita.
+  }
+
+  const close = () => {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    try {
+      window.localStorage.setItem(FIESTAS_ENDED_MODAL_STORAGE_KEY, lastEventDate);
+    } catch {
+      // Ignorar: el modal simplemente volverá a aparecer en la próxima visita.
+    }
+  };
+
+  modal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  modal.querySelectorAll('[data-fiestas-ended-close]').forEach((button) => {
+    button.addEventListener('click', close);
+  });
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !modal.hidden) close();
+  });
 }
 
 function getDates(events) {

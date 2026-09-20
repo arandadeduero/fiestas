@@ -1212,6 +1212,34 @@
     text-align: left;
   }
 
+  .fiestas-ended-panel {
+    @apply flex max-w-2xl flex-col items-center px-6 py-10 text-center sm:px-10 sm:py-12;
+  }
+
+  .fiestas-ended-panel-close {
+    @apply absolute right-4 top-4;
+  }
+
+  .fiestas-ended-logo {
+    @apply h-24 w-24 sm:h-28 sm:w-28;
+  }
+
+  .fiestas-ended-title {
+    @apply mt-6 font-display text-3xl font-bold text-ink sm:text-4xl;
+  }
+
+  .fiestas-ended-copy {
+    @apply mt-4 max-w-md text-base leading-7 text-slate-600;
+  }
+
+  .fiestas-ended-copy-muted {
+    @apply mt-2 font-semibold text-brand-600;
+  }
+
+  .fiestas-ended-panel-cta {
+    @apply mt-8 w-full sm:w-auto sm:px-10;
+  }
+
   .filter-venue-actions {
     max-height: min(52vh, 28rem);
     overflow-y: auto;
@@ -2182,7 +2210,8 @@ html.dark .site-footer-copy a {
   html.dark .saved-day-label,
   html.dark .event-compact-title,
   html.dark .calendar-modal-title,
-  html.dark .subscribe-section-title {
+  html.dark .subscribe-section-title,
+  html.dark .fiestas-ended-title {
     color: var(--text-header);
   }
 
@@ -2194,7 +2223,8 @@ html.dark .site-footer-copy a {
   html.dark .muted-label,
   html.dark .saved-toast-copy,
   html.dark .calendar-modal-copy,
-  html.dark .subscribe-section-copy {
+  html.dark .subscribe-section-copy,
+  html.dark .fiestas-ended-copy {
     color: var(--text-secondary);
   }
 
