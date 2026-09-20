@@ -1236,8 +1236,12 @@
     @apply mt-2 font-semibold text-brand-600;
   }
 
+  .fiestas-ended-links {
+    @apply mt-6 w-full;
+  }
+
   .fiestas-ended-panel-cta {
-    @apply mt-8 w-full sm:w-auto sm:px-10;
+    @apply mt-6 w-full sm:w-auto sm:px-10;
   }
 
   .filter-venue-actions {

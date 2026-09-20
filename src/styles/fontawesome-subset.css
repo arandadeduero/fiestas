@@ -1,7 +1,7 @@
 /* Generado por scripts/build-icons.mjs - no editar a mano. */
-@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url("/assets/fontawesome/fa-solid-900.woff2?v=19bda5a92d16") format("woff2")}
+@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url("/assets/fontawesome/fa-solid-900.woff2?v=3cd2c7b40661") format("woff2")}
 @font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:block;src:url("/assets/fontawesome/fa-regular-400.woff2?v=357032e9116b") format("woff2")}
-@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:block;src:url("/assets/fontawesome/fa-brands-400.woff2?v=9491527e4cca") format("woff2")}
+@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:block;src:url("/assets/fontawesome/fa-brands-400.woff2?v=68914d55bb20") format("woff2")}
 .fa,.fa-solid,.fa-regular,.fa-brands{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;font-style:normal;font-variant:normal;line-height:1;text-rendering:auto}
 .fa,.fa-solid{font-family:"Font Awesome 6 Free";font-weight:900}
 .fa-regular{font-family:"Font Awesome 6 Free";font-weight:400}
@@ -14,7 +14,6 @@
 .fa-beer-mug-empty::before{content:"\f0fc"}
 .fa-bell::before{content:"\f0f3"}
 .fa-bell-slash::before{content:"\f1f6"}
-.fa-bicycle::before{content:"\f206"}
 .fa-book-open::before{content:"\f518"}
 .fa-bookmark::before{content:"\f02e"}
 .fa-bus::before{content:"\f207"}
@@ -46,6 +45,7 @@
 .fa-envelope::before{content:"\f0e0"}
 .fa-eye::before{content:"\f06e"}
 .fa-facebook::before{content:"\f09a"}
+.fa-flickr::before{content:"\f16e"}
 .fa-globe::before{content:"\f0ac"}
 .fa-google::before{content:"\f1a0"}
 .fa-guitar::before{content:"\f7a6"}
