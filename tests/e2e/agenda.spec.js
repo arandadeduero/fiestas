@@ -1,4 +1,4 @@
-import { test, expect, loadClientEvents } from './fixtures.js';
+import { test, expect, loadClientEvents, mockClock } from './fixtures.js';
 
 const cards = '[data-fiestas-card]';
 const visibleCards = `${cards}:visible`;
@@ -75,6 +75,9 @@ test.describe('agenda', () => {
   });
 
   test('señala las medidas de accesibilidad sin ocultarlas en la tarjeta', async ({ page }) => {
+    // Fija el reloj antes del inicio de las fiestas para que la actividad del
+    // día 11 no aparezca como finalizada y quede oculta bajo el desplegable.
+    await mockClock(page, '2026-09-01T00:00:00+02:00');
     await page.goto('/?date=2026-09-11&q=acto oficial');
 
     const card = page.locator('[data-fiestas-card]:visible').first();
@@ -86,22 +89,7 @@ test.describe('agenda', () => {
   });
 
   test('pliega las actividades finalizadas sin forzar el scroll', async ({ page }) => {
-    const fixedNow = new Date('2026-09-14T13:00:00+02:00').getTime();
-    await page.addInitScript((timestamp) => {
-      const NativeDate = Date;
-      class FixedDate extends NativeDate {
-        constructor(...args) {
-          super(...(args.length ? args : [timestamp]));
-        }
-
-        static now() {
-          return timestamp;
-        }
-      }
-      FixedDate.parse = NativeDate.parse;
-      FixedDate.UTC = NativeDate.UTC;
-      window.Date = FixedDate;
-    }, fixedNow);
+    await mockClock(page, '2026-09-14T13:00:00+02:00');
     await page.goto('/?date=2026-09-14');
 
     const toggle = page.locator('[data-fiestas-finished-toggle]');
@@ -151,6 +139,10 @@ test.describe('agenda', () => {
 
   // Flujo 2
   test('la búsqueda filtra y se puede limpiar', async ({ page }) => {
+    // La búsqueda amplía el alcance a "hoy y próximos días" usando el reloj
+    // real: hay que fijarlo dentro de las fiestas para que el día elegido no
+    // quede excluido por estar en el pasado.
+    await mockClock(page, '2026-09-14T10:00:00+02:00');
     await page.goto('/?date=2026-09-14');
     await expect(page.locator(visibleCards).first()).toBeVisible();
     const total = await page.locator(cards).count();
@@ -169,22 +161,7 @@ test.describe('agenda', () => {
   });
 
   test('la búsqueda incluye hoy y los próximos días aunque haya un día seleccionado', async ({ page }) => {
-    const fixedNow = new Date('2026-09-05T12:00:00+02:00').getTime();
-    await page.addInitScript((timestamp) => {
-      const NativeDate = Date;
-      class FixedDate extends NativeDate {
-        constructor(...args) {
-          super(...(args.length ? args : [timestamp]));
-        }
-
-        static now() {
-          return timestamp;
-        }
-      }
-      FixedDate.parse = NativeDate.parse;
-      FixedDate.UTC = NativeDate.UTC;
-      window.Date = FixedDate;
-    }, fixedNow);
+    await mockClock(page, '2026-09-05T12:00:00+02:00');
     await page.goto('/?date=2026-09-05');
 
     const events = await loadClientEvents(page);

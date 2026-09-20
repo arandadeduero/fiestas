@@ -1,12 +1,11 @@
-import { test, expect, loadClientEvents } from './fixtures.js';
+import { test, expect, loadClientEvents, mockClock } from './fixtures.js';
 
 const FAVORITES_KEY = 'fiestasAranda:favorites';
-function localDateKey(date) {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
-}
+// Fecha de referencia fija dentro del rango de fiestas (2026-09-01 a
+// 2026-09-20): estos tests necesitan a la vez actividades pasadas y
+// abiertas respecto a "hoy", algo que el reloj real ya no puede garantizar
+// una vez las fiestas han terminado.
+const PLAN_TESTS_TODAY = '2026-09-14';
 
 function planHash(activityIds) {
   const payload = {
@@ -63,9 +62,10 @@ test.skip('Mi plan usa la miniatura optimizada de una actividad con imagen', asy
 });
 
 test('Mis guardados muestra todos los días y pliega las actividades pasadas', async ({ page }) => {
+  await mockClock(page, `${PLAN_TESTS_TODAY}T12:00:00+02:00`);
   await page.goto('/');
   const events = await loadClientEvents(page);
-  const today = localDateKey(new Date());
+  const today = PLAN_TESTS_TODAY;
   const past = events.find((event) => event.date < today);
   const open = events.find((event) => event.date > today);
   expect(past).toBeTruthy();
@@ -92,9 +92,10 @@ test('Mis guardados muestra todos los días y pliega las actividades pasadas', a
 });
 
 test('los planes personalizados pliegan las actividades pasadas y mantienen los días visibles', async ({ page }) => {
+  await mockClock(page, `${PLAN_TESTS_TODAY}T12:00:00+02:00`);
   await page.goto('/');
   const events = await loadClientEvents(page);
-  const today = localDateKey(new Date());
+  const today = PLAN_TESTS_TODAY;
   const past = events.find((event) => event.date < today);
   const open = events.find((event) => event.date > today);
   expect(past).toBeTruthy();

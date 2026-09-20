@@ -118,6 +118,31 @@ export const test = base.extend({
   }
 });
 
+// Fija el reloj del navegador a una fecha dentro del rango de fiestas
+// (2026-09-01 a 2026-09-20). La suite navega a URLs con `?date=` concretas,
+// pero varias piezas de la app (finalizadas, "hoy y próximos días", grupos de
+// Mi plan) comparan contra el reloj real: sin fijarlo, los tests dejan de ser
+// deterministas en cuanto el reloj real se aleja del rango de las fiestas.
+export async function mockClock(page, isoString) {
+  const fixedNow = new Date(isoString).getTime();
+  await page.addInitScript((timestamp) => {
+    const NativeDate = Date;
+    class FixedDate extends NativeDate {
+      constructor(...args) {
+        super(...(args.length ? args : [timestamp]));
+      }
+
+      static now() {
+        return timestamp;
+      }
+    }
+    FixedDate.parse = NativeDate.parse;
+    FixedDate.UTC = NativeDate.UTC;
+    window.Date = FixedDate;
+  }, fixedNow);
+  return fixedNow;
+}
+
 export async function loadClientEvents(page) {
   return page.evaluate(async () => {
     const href = document.querySelector('link[data-fiestas-events]')?.href;

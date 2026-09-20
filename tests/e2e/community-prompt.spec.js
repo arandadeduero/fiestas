@@ -1,10 +1,16 @@
-import { test, expect } from './fixtures.js';
+import { test, expect, mockClock } from './fixtures.js';
 
 const COMMUNITY_PROMPT_STATE_KEY = 'fiestasAranda:community-prompt:v1';
 const COMMUNITY_PROMPT_ACTIVE_SESSION_KEY = 'fiestasAranda:community-prompt:active:v1';
 const VISIT_TRACKER_KEY = 'fiestasAranda:visit-tracker';
+// Reloj fijo dentro del rango de fiestas: el aviso comunitario calcula su
+// silencio (nextEligibleAt) a partir del reloj del navegador, así que las
+// aserciones que lo comparan deben usar esta misma referencia en vez del
+// reloj real, que ya ha superado las fiestas.
+const FIXED_NOW = new Date('2026-09-13T12:00:00+02:00').getTime();
 
 async function seedEligibleVisitor(page) {
+  await mockClock(page, '2026-09-13T12:00:00+02:00');
   await page.addInitScript(({ visitTrackerKey, promptStateKey, activeSessionKey }) => {
     const today = new Date();
     const localDate = [today.getFullYear(), String(today.getMonth() + 1).padStart(2, '0'), String(today.getDate()).padStart(2, '0')].join('-');
@@ -27,8 +33,6 @@ async function seedEligibleVisitor(page) {
       }));
       sessionStorage.removeItem(activeSessionKey);
     }
-    const fixedNow = new Date('2026-09-13T12:00:00+02:00').getTime();
-    Date.now = () => fixedNow;
   }, {
     visitTrackerKey: VISIT_TRACKER_KEY,
     promptStateKey: COMMUNITY_PROMPT_STATE_KEY,
@@ -60,7 +64,7 @@ test('aparece tras dos días y una acción relevante, y respeta dos exposiciones
   await expect(prompt).toBeHidden();
   const afterFirstDismiss = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), COMMUNITY_PROMPT_STATE_KEY);
   expect(afterFirstDismiss.exposureCount).toBe(1);
-  expect(afterFirstDismiss.nextEligibleAt).toBeGreaterThan(Date.now());
+  expect(afterFirstDismiss.nextEligibleAt).toBeGreaterThan(FIXED_NOW);
 
   await page.reload();
   await expect(prompt).toBeHidden();
@@ -96,7 +100,7 @@ test('los clics de canal mantienen el banner abierto y aplican el silencio', asy
   await expect(prompt).toBeVisible();
   const state = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), COMMUNITY_PROMPT_STATE_KEY);
   expect(state.exposureCount).toBe(1);
-  expect(state.nextEligibleAt).toBeGreaterThan(Date.now());
+  expect(state.nextEligibleAt).toBeGreaterThan(FIXED_NOW);
   expect(state.neverAgain).toBe(false);
 
   await page.locator('[data-community-prompt-channel="instagram"]').evaluate((link) => {
