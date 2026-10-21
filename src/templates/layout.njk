@@ -24,21 +24,26 @@
     {% if robotsMeta %}<meta name="robots" content="{{ robotsMeta }}" />{% endif %}
     {% if structuredData %}<script type="application/ld+json">{{ structuredData | dumpForScript | safe }}</script>{% endif %}
     {% if social %}
+    {# Previsualizaciones en WhatsApp, Telegram, X, Facebook… og:site_name ya lleva la marca, así que los títulos sociales van sin sufijo. #}
     <meta property="og:type" content="{{ social.type or 'website' }}" />
+    <meta property="og:locale" content="es_ES" />
     <meta property="og:site_name" content="Ayuntamiento de Aranda de Duero. Concejalía de Innovación" />
-    <meta property="og:title" content="{{ social.title or title or 'Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación' }}" />
+    <meta property="og:title" content="{{ social.title or title or 'Fiestas Patronales de Aranda de Duero 2026' }}" />
     <meta property="og:description" content="{{ social.description or meta.description or 'Agenda de las Fiestas de Aranda de Duero 2026' }}" />
     {% if social.image %}
     <meta property="og:image" content="{{ social.image }}" />
     <meta property="og:image:secure_url" content="{{ social.image }}" />
-    <meta property="og:image:width" content="{{ social.imageWidth or 1200 }}" />
-    <meta property="og:image:height" content="{{ social.imageHeight or 630 }}" />
-    <meta property="og:image:type" content="{{ social.imageType or 'image/jpeg' }}" />
+    {# Ancho, alto y tipo solo cuando se conocen de verdad: un valor inventado hace que Facebook/WhatsApp descarten la imagen. #}
+    {% if social.imageWidth and social.imageHeight %}
+    <meta property="og:image:width" content="{{ social.imageWidth }}" />
+    <meta property="og:image:height" content="{{ social.imageHeight }}" />
+    {% endif %}
+    {% if social.imageType %}<meta property="og:image:type" content="{{ social.imageType }}" />{% endif %}
     <meta property="og:image:alt" content="{{ social.imageAlt or social.title or title }}" />
     {% endif %}
     {% if social.url %}<meta property="og:url" content="{{ social.url }}" />{% endif %}
     <meta name="twitter:card" content="{{ social.card or 'summary_large_image' }}" />
-    <meta name="twitter:title" content="{{ social.title or title or 'Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación' }}" />
+    <meta name="twitter:title" content="{{ social.title or title or 'Fiestas Patronales de Aranda de Duero 2026' }}" />
     <meta name="twitter:description" content="{{ social.description or meta.description or 'Agenda de las Fiestas de Aranda de Duero 2026' }}" />
     {% if social.image %}
     <meta name="twitter:image" content="{{ social.image }}" />

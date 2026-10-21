@@ -12,6 +12,7 @@ import { readManifest, scanUsedIcons } from './build-icons.mjs';
 import { jsonForScript } from './json-for-script.mjs';
 import { casetaDetailPath, casetaLegacyPaths, casetaQrPath, getCasetaPublicSlug, slugifyCaseta } from './caseta-routes.mjs';
 import { assertRegistryIntegrity, normalizeImportRegistry } from './event-import-registry.mjs';
+import { eventSocialDescription } from './social-meta.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -996,6 +997,35 @@ function eventImageUrl(event) {
   return /^https?:\/\//i.test(event.image) ? event.image : publicBaseUrl + event.image;
 }
 
+// Imagen social de una actividad. Sin cartel se usa el icono cuadrado de la
+// categoría con tarjeta «summary» (la «summary_large_image» recortaría el
+// cuadrado). Con cartel local, las dimensiones se leen del fichero aplicando
+// el mismo encaje a 1920px que processAssetImage; con cartel remoto no se
+// declaran, porque un valor inventado hace que Facebook descarte la imagen.
+async function eventSocialImage(event) {
+  const image = eventImageUrl(event);
+  if (!event.image) {
+    return {
+      image, imageAlt: event.socialImageAlt, imageWidth: event.socialImageWidth, imageHeight: event.socialImageHeight,
+      imageType: 'image/jpeg', card: 'summary'
+    };
+  }
+  const base = { image, imageAlt: event.imageAlt || event.title, card: 'summary_large_image' };
+  if (/^https?:\/\//i.test(event.image)) return base;
+  try {
+    const meta = await sharp(path.join(root, 'src', event.image.replace(/^\//, ''))).rotate().metadata();
+    const isPng = meta.format === 'png';
+    const scale = isPng ? 1 : Math.min(1, 1920 / Math.max(meta.width, meta.height));
+    return {
+      ...base,
+      imageWidth: Math.round(meta.width * scale), imageHeight: Math.round(meta.height * scale),
+      imageType: isPng ? 'image/png' : 'image/jpeg'
+    };
+  } catch {
+    return base;
+  }
+}
+
 function eventStructuredData(event) {
   const data = {
     '@context': 'https://schema.org',
@@ -1231,9 +1261,9 @@ async function build() {
     meta: { description: 'Agenda de las Fiestas Patronales de Aranda de Duero 2026 por días, horarios, espacios, categorías y mapa.' },
     canonicalUrl: publicBaseUrl + '/',
     social: {
-      type: 'website', title: 'Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
+      type: 'website', title: 'Fiestas Patronales de Aranda de Duero 2026',
       description: 'Agenda de las Fiestas Patronales de Aranda de Duero 2026 por días, horarios, espacios, categorías y mapa.',
-      image: socialImage, imageAlt: 'Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
+      image: socialImage, imageAlt: 'Cartel de las Fiestas Patronales de Aranda de Duero 2026 junto al escudo del Ayuntamiento de Aranda de Duero',
       imageWidth: 1200, imageHeight: 630, imageType: 'image/jpeg', url: publicBaseUrl + '/'
     },
     eventsDataUrl,
@@ -1251,7 +1281,8 @@ async function build() {
     canonicalUrl: publicBaseUrl + '/mapa/',
     social: {
       ...homeContext.social,
-      title: 'Mapa de las Fiestas Patronales de Aranda de Duero 2026 | Ayuntamiento de Aranda de Duero. Concejalía de Innovación',
+      title: 'Mapa de las Fiestas Patronales de Aranda de Duero 2026',
+      description: 'Mapa con todos los espacios de las Fiestas Patronales de Aranda de Duero 2026 y las actividades de cada uno.',
       url: publicBaseUrl + '/mapa/'
     }
   }));
@@ -1455,12 +1486,9 @@ async function build() {
       canonicalUrl: publicBaseUrl + event.urlPath,
       social: {
         type: 'article', title: event.title + ' | Fiestas Patronales de Aranda de Duero 2026',
-        description: event.summary || event.description || event.dateLabel,
-        image: eventImageUrl(event),
-        imageAlt: event.image ? event.title : event.socialImageAlt,
-        imageWidth: event.image ? 1200 : event.socialImageWidth,
-        imageHeight: event.image ? 630 : event.socialImageHeight,
-        imageType: 'image/jpeg', url: publicBaseUrl + event.urlPath
+        description: eventSocialDescription(event),
+        ...(await eventSocialImage(event)),
+        url: publicBaseUrl + event.urlPath
       },
       event,
       structuredData: eventStructuredData(event),
