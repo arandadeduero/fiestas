@@ -1,0 +1,20 @@
+tests/e2e/fixtures.js
+  s_b3e3117173f3c7::t_34cd18432920d5 85-86,117-121
+  s_b3e3117173f3c7::t_131ef2a69bccd3 122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fac1d40fff148b67433a76516bcc95c9d83551de",
+  "prompts": {},
+  "sessions": {
+    "s_b3e3117173f3c7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dcb3a7d0-5d3e-4dac-860e-5a9550d7ff44",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Guillermo López <willyaranda@gmail.com>"
+    }
+  }
+}
