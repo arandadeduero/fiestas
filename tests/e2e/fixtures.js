@@ -82,6 +82,8 @@ function stubFor(url) {
   return null;
 }
 
+const DEFAULT_CLOCK = '2026-09-12T12:00:00+02:00';
+
 export const test = base.extend({
   // Sustituye a `page`: instala el aislamiento de red y recoge errores de
   // consola y respuestas fallidas para que los tests puedan afirmar sobre ellos.
@@ -111,6 +113,12 @@ export const test = base.extend({
 
     page.consoleErrors = consoleErrors;
     page.failedResponses = failedResponses;
+
+    // Reloj por defecto dentro de las fiestas: pasado el último día, el modal
+    // de despedida tapa la página y bloquea cualquier clic. Un test que llame
+    // a mockClock() después lo sobrescribe, porque su init script se registra
+    // más tarde y vuelve a reemplazar window.Date.
+    await mockClock(page, DEFAULT_CLOCK);
 
     await use(page);
 
