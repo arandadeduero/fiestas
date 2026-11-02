@@ -10,7 +10,7 @@ test('sitemap.xml lista las páginas indexables y excluye las noindex y redirecc
   const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 
   expect(locs.length).toBeGreaterThan(10);
-  expect(locs).toContain('https://fiestas.arandadeduero.dev/');
+  expect(locs).toContain('https://fiestas.arandadeduero.es/');
   expect(locs.some((loc) => /\/e\/\d+\//.test(loc))).toBe(true);
   expect(locs.some((loc) => loc.endsWith('/planes/'))).toBe(true);
 
@@ -21,7 +21,7 @@ test('sitemap.xml lista las páginas indexables y excluye las noindex y redirecc
   }
 
   const robots = await (await page.request.get('/robots.txt')).text();
-  expect(robots).toContain('Sitemap: https://fiestas.arandadeduero.dev/sitemap.xml');
+  expect(robots).toContain('Sitemap: https://fiestas.arandadeduero.es/sitemap.xml');
 });
 
 test('el catálogo de planes vecinales renderiza y sus fichas abren', async ({ page }) => {

@@ -17,7 +17,7 @@ import { eventSocialDescription } from './social-meta.mjs';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const dist = path.join(root, 'dist');
-const publicBaseUrl = 'https://fiestas.arandadeduero.dev';
+const publicBaseUrl = 'https://fiestas.arandadeduero.es';
 // Aranda de Duero no tiene casetas de feria de día. Con este flag desactivado no
 // se cargan los datos de casetas, no se generan sus páginas ni se incluye su
 // JS/UI. Se puede reactivar con FIESTAS_CASETAS_ENABLED=true.

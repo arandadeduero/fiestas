@@ -6,7 +6,7 @@ const OPTIN_KEY = 'fiestasAranda:reminders-optin';
 function installGlobals({ permission = 'default', requestResult = 'granted' } = {}) {
   const store = new Map();
   globalThis.window = {
-    location: { href: 'https://fiestas.arandadeduero.dev/', origin: 'https://fiestas.arandadeduero.dev' },
+    location: { href: 'https://fiestas.arandadeduero.es/', origin: 'https://fiestas.arandadeduero.es' },
     localStorage: {
       getItem: (k) => store.get(k) ?? null,
       setItem: (k, v) => store.set(k, String(v)),

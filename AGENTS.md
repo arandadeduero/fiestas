@@ -70,7 +70,7 @@ Use short imperative commit messages, for example `Extract fiestas standalone bu
 
 ## URL Policy
 
-All routes are local to this site (`https://fiestas.arandadeduero.dev/`). There is no companion events site to link out to. `publicBaseUrl` in `scripts/build.mjs` is the single source of truth for absolute URLs (canonical tags, social metadata, sitemap).
+All routes are local to this site (`https://fiestas.arandadeduero.es/`). There is no companion events site to link out to. `publicBaseUrl` in `scripts/build.mjs` is the single source of truth for absolute URLs (canonical tags, social metadata, sitemap).
 
 ## Typography, Colours & Branding
 
