@@ -1,0 +1,59 @@
+src/templates/partials/map-shell.njk
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 22
+src/scripts/casetas-navigation.js
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 2
+tests/daily-popular.test.mjs
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 100,102,104-105
+src/scripts/fiestas-2026.js
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 35
+src/templates/fiestas-2026-popular-dishes.njk
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 24
+tests/plan-export.test.mjs
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 14,46
+tests/e2e/pages.spec.js
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 13,24
+tests/caseta-qr.test.mjs
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 18,37-38
+src/scripts/chatbot.js
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 23,26,32-34,36,50
+src/scripts/plans-page.test.js
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 96-97
+AGENTS.md
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 73
+scripts/generate-caseta-qr.mjs
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 16
+scripts/generate-daily-popular.mjs
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 27,261,305,316
+scripts/build.mjs
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 20
+src/scripts/plan-export.test.js
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 7
+src/templates/fiestas-2026-popular.njk
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 21
+tests/analytics.test.mjs
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 18-19
+src/scripts/reminders.test.js
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 9
+src/scripts/plan-export.js
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 11,29
+README.md
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 3,57
+tests/casetas-navigation.test.mjs
+  s_7fdf8700a3b95b::t_2bb7039a5fa3f8 26,30,35,39,46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c2fbb07088e208fa5ea0991bdb38e1d2154914a6",
+  "prompts": {},
+  "sessions": {
+    "s_7fdf8700a3b95b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8b098c32-5f27-4a25-9fc0-19b704482646",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Guillermo López Leal <guillermo.lopezleal@vonage.com>"
+    }
+  }
+}
